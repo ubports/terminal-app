@@ -1,0 +1,169 @@
+# Romanian translation for ubuntu-terminal-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the ubuntu-terminal-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-terminal-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-09-26 08:27-0700\n"
+"PO-Revision-Date: 2014-07-31 08:01+0000\n"
+"Last-Translator: Marian Vasile <marianvasile1972@gmail.com>\n"
+"Language-Team: Romanian <ro@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-10-02 06:33+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../src/app/qml/AuthenticationDialog.qml:25
+msgid "Authentication required"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:27
+msgid "Enter password:"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:40
+msgid "password"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:50
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:61
+#: ../src/app/qml/ColorDialog.qml:149
+msgid "Cancel"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationService.qml:55
+msgid "Authentication failed"
+msgstr ""
+
+#: ../src/app/qml/ColorDialog.qml:25
+msgid "Pick a color"
+msgstr ""
+
+#: ../src/app/qml/ColorDialog.qml:129
+msgid "OK"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:69
+msgid "Color scheme"
+msgstr "Schemă de culori"
+
+#: ../src/app/qml/Configs.qml:85
+msgid "Font size"
+msgstr "Dimensiune font"
+
+#: ../src/app/qml/Configs.qml:108
+msgid "Enable effects:"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:126
+msgid "Screen color"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:139
+msgid "Color intensity"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:167
+msgid "Bloom"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:195
+msgid "Curvature"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:223
+msgid "Noise"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:251
+msgid "Jitter"
+msgstr ""
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
+msgid "PG_UP"
+msgstr ""
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
+msgid "TAB"
+msgstr ""
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
+msgid "DEL"
+msgstr ""
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
+msgid "HOME"
+msgstr ""
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
+msgid "PG_DN"
+msgstr ""
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
+msgid "END"
+msgstr ""
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:32
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:51
+#: ../src/app/qml/ubuntu-terminal-app.qml:88
+msgid "Settings"
+msgstr "Configurări"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:57
+msgid "Hide all key panels"
+msgstr ""
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:64
+msgid "Control keys"
+msgstr "Taste de control"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:71
+msgid "Function keys"
+msgstr "Taste de funcții"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:78
+msgid "Arrow keys"
+msgstr "Taste săgeți"
+
+#: ../src/plugin/konsole/ColorScheme.cpp:276
+#: ../src/plugin/konsole/ColorScheme.cpp:291
+msgid "Un-named Color Scheme"
+msgstr ""
+
+#: ../src/plugin/konsole/ColorScheme.cpp:426
+msgid "Accessible Color Scheme"
+msgstr ""
+
+#: ../src/plugin/konsole/Filter.cpp:518
+msgid "Open Link"
+msgstr ""
+
+#: ../src/plugin/konsole/Filter.cpp:519
+msgid "Copy Link Address"
+msgstr ""
+
+#: ../src/plugin/konsole/Filter.cpp:523
+msgid "Send Email To..."
+msgstr ""
+
+#: ../src/plugin/konsole/Filter.cpp:524
+msgid "Copy Email Address"
+msgstr ""
+
+#: ../src/plugin/konsole/Vt102Emulation.cpp:961
+msgid ""
+"No keyboard translator available.  The information needed to convert key "
+"presses into characters to send to the terminal is missing."
+msgstr ""

@@ -1,0 +1,172 @@
+# Khmer translation for ubuntu-terminal-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the ubuntu-terminal-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-terminal-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-09-26 08:27-0700\n"
+"PO-Revision-Date: 2014-09-01 07:30+0000\n"
+"Last-Translator: Sok Sophea <sksophea@gmail.com>\n"
+"Language-Team: Khmer <km@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-10-02 06:33+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
+
+#: ../src/app/qml/AuthenticationDialog.qml:25
+msgid "Authentication required"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:27
+msgid "Enter password:"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:40
+msgid "password"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:50
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr ""
+
+#: ../src/app/qml/AuthenticationDialog.qml:61
+#: ../src/app/qml/ColorDialog.qml:149
+msgid "Cancel"
+msgstr "បោះបង់"
+
+#: ../src/app/qml/AuthenticationService.qml:55
+msgid "Authentication failed"
+msgstr ""
+
+#: ../src/app/qml/ColorDialog.qml:25
+msgid "Pick a color"
+msgstr "ជ្រើស​ពណ៌"
+
+#: ../src/app/qml/ColorDialog.qml:129
+msgid "OK"
+msgstr "យល់ព្រម"
+
+#: ../src/app/qml/Configs.qml:69
+msgid "Color scheme"
+msgstr "ពណ៌​ចម្រុះ"
+
+#: ../src/app/qml/Configs.qml:85
+msgid "Font size"
+msgstr "ទំហំ​ពុម្ព​អក្សរ"
+
+#: ../src/app/qml/Configs.qml:108
+msgid "Enable effects:"
+msgstr "បើក​បែបផែន៖"
+
+#: ../src/app/qml/Configs.qml:126
+msgid "Screen color"
+msgstr "ពណ៌​អេក្រង់"
+
+#: ../src/app/qml/Configs.qml:139
+msgid "Color intensity"
+msgstr "អាំងតង់ស៊ីតេ​ពណ៌"
+
+#: ../src/app/qml/Configs.qml:167
+msgid "Bloom"
+msgstr "ពង្រីក"
+
+#: ../src/app/qml/Configs.qml:195
+msgid "Curvature"
+msgstr "កំណោង"
+
+#: ../src/app/qml/Configs.qml:223
+msgid "Noise"
+msgstr "​ជ្រៀតជ្រែក"
+
+#: ../src/app/qml/Configs.qml:251
+msgid "Jitter"
+msgstr "ញ័រ"
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
+msgid "PG_UP"
+msgstr "ទំព័រ​លើ"
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
+msgid "TAB"
+msgstr "ថេប"
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
+msgid "DEL"
+msgstr "លុប"
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
+msgid "HOME"
+msgstr "ដើម"
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
+msgid "PG_DN"
+msgstr "ទំព័រ​ក្រោម"
+
+#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
+msgid "END"
+msgstr "ចុង"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:32
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "ស្ថានីយ"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:51
+#: ../src/app/qml/ubuntu-terminal-app.qml:88
+msgid "Settings"
+msgstr "ការកំណត់"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:57
+msgid "Hide all key panels"
+msgstr "លាក់​បន្ទះ​គ្រាប់ចុច​ទាំងអស់"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:64
+msgid "Control keys"
+msgstr "គ្រាប់​ចុច​បញ្ជា"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:71
+msgid "Function keys"
+msgstr "គ្រាប់​ចុច​មុខងារ"
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:78
+msgid "Arrow keys"
+msgstr "គ្រាប់​ចុច​ព្រួញ"
+
+#: ../src/plugin/konsole/ColorScheme.cpp:276
+#: ../src/plugin/konsole/ColorScheme.cpp:291
+msgid "Un-named Color Scheme"
+msgstr "ពណ៌​ចម្រុះ​ដែល​មិនបាន​ដាក់ឈ្មោះ"
+
+#: ../src/plugin/konsole/ColorScheme.cpp:426
+msgid "Accessible Color Scheme"
+msgstr "ពណ៌​ចម្រុះ​ដែល​អាច​ចូល​ប្រើ​បាន"
+
+#: ../src/plugin/konsole/Filter.cpp:518
+msgid "Open Link"
+msgstr "បើក​តំណ"
+
+#: ../src/plugin/konsole/Filter.cpp:519
+msgid "Copy Link Address"
+msgstr "ចម្លង​អាសយដ្ឋាន​តំណ"
+
+#: ../src/plugin/konsole/Filter.cpp:523
+msgid "Send Email To..."
+msgstr "ផ្ញើ​អ៊ីមែល​ទៅ..."
+
+#: ../src/plugin/konsole/Filter.cpp:524
+msgid "Copy Email Address"
+msgstr "ចម្លង​អាសយដ្ឋាន​អ៊ីមែល"
+
+#: ../src/plugin/konsole/Vt102Emulation.cpp:961
+msgid ""
+"No keyboard translator available.  The information needed to convert key "
+"presses into characters to send to the terminal is missing."
+msgstr ""
+"មិន​មាន​កម្មវិធី​បកប្រែ​ក្ដារចុច។ "
+"ព័ត៌មាន​ដែល​ត្រូវ​បម្លែង​ការ​ចុច​គ្រាប់ចុច​ទៅ​ជា​តួ​អក្សរ​ដើម្បី​ផ្ញើ​ទៅ​ស្ថា"
+"នីយ​គឺ​បាន​បាត់។"

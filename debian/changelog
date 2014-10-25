@@ -1,0 +1,46 @@
+ubuntu-terminal-app (0.5ubuntu2) trusty; urgency=medium
+
+  [ Alan Pope ]
+  * Add -qt5 command line option (LP: #1288885)  
+
+  [ David Planella ]
+  * Merge konsole plugin into the app's repo. 
+
+ -- David Planella <david.planella@ubuntu.com>  Sun, 27 Apr 2014 12:08:04 +0200
+
+ubuntu-terminal-app (0.5) raring; urgency=low
+
+  * Added landscape mode
+  * Fixed click effect on Circle Menu
+
+ -- Dmitry Zagnoyko <hiroshidi@gmail.com>  Fri, 24 May 2013 19:07:40 +0300
+
+ubuntu-terminal-app (0.4) raring; urgency=low
+
+  * Widget uses only available space
+  * Widget scrolling replaced with swipe gestures
+  * Added double tap for autocomplete
+  * Added circle menu (test ver., aliases for CTRL+<key>)
+
+ -- Dmitry Zagnoyko <hiroshidi@gmail.com>  Mon, 20 May 2013 12:52:01 +0300
+
+ubuntu-terminal-app (0.3) raring; urgency=low
+
+  * Added swipe gesture
+  * Added extra keys panels
+  * Sync with latest plugin revision
+
+ -- Michael Hall <mhall119@ubuntu.com>  Mon, 06 May 2013 16:52:17 -0400
+
+ubuntu-terminal-app (0.2) raring; urgency=low
+
+  * Use Konsole plugin
+  * Add Settings tab for color scheme and font size
+
+ -- Michael Hall <mhall119@ubuntu.com>  Tue, 30 Apr 2013 21:28:16 -0400
+
+ubuntu-terminal-app (0.1) raring; urgency=low
+
+  * Initial release
+
+ -- Michael Hall <mhall119@ubuntu.com>  Mon, 11 Feb 2013 16:04:00 -0500

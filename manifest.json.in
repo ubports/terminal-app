@@ -1,0 +1,23 @@
+{
+    "description": "Terminal application",
+    "framework": "ubuntu-sdk-14.10-dev2",
+    "architecture": "@CLICK_ARCH@",
+    "hooks": {
+        "terminal": {
+            "apparmor": "terminal.apparmor",
+            "desktop": "com.ubuntu.terminal.desktop"
+        }
+    },
+    "icon": "terminal64.png",
+    "maintainer": "Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "name": "com.ubuntu.terminal",
+    "title": "Terminal",
+    "version": "0.5.@BZR_REVNO@",
+    "x-source": {
+        "vcs-bzr": "@BZR_SOURCE@",
+        "vcs-bzr-revno": "@BZR_REVNO@"
+    },
+    "x-test": {
+        "autopilot": "@AUTOPILOT_DIR@"
+    }
+}
