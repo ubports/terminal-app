@@ -17,6 +17,9 @@ MultiPointTouchArea{
     signal swipeUpDetected();
     signal swipeDownDetected();
 
+    // Semantic signals
+    signal alternateAction(int x, int y);
+
     anchors.fill: parent
     maximumTouchPoints: 1
     onPressed: {
@@ -41,6 +44,7 @@ MultiPointTouchArea{
         id: mouseArea
         anchors.fill: parent
         enabled: !parent.touchAreaPressed
+        acceptedButtons: Qt.AllButtons
 
         onDoubleClicked: {
             mouseMoveDetected(mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
@@ -49,7 +53,12 @@ MultiPointTouchArea{
             mouseMoveDetected(mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
         }
         onPressed: {
-            mousePressDetected(mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
+            // Do not handle the right click if the terminal needs them.
+            if (mouse.button == Qt.RightButton && !terminal.terminalUsesMouse) {
+                alternateAction(mouse.x, mouse.y);
+            } else {
+                mousePressDetected(mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
+            }
         }
         onReleased: {
             mouseReleaseDetected(mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);
