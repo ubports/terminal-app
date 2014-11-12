@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-24 21:54+0200\n"
+"POT-Creation-Date: 2014-11-12 01:03+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,63 +41,64 @@ msgstr ""
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qmltermwidget.cpp:225
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/qtermwidget.cpp:406
-#, qt-format
-msgid "Cannot load color scheme: %1"
-msgstr ""
-
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/ColorScheme.cpp:277
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/ColorScheme.cpp:292
+#: ../src/plugin/konsole/ColorScheme.cpp:276
+#: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/ColorScheme.cpp:427
+#: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/Filter.cpp:533
+#: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/Filter.cpp:534
+#: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/Filter.cpp:538
+#: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/Filter.cpp:539
+#: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/SearchBar.cpp:39
-msgid "Match case"
-msgstr ""
-
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/SearchBar.cpp:45
-msgid "Regular expression"
-msgstr ""
-
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/SearchBar.cpp:49
-msgid "Higlight all matches"
-msgstr ""
-
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/TerminalDisplay.cpp:2994
-msgid ""
-"<qt>Output has been <a href=\"http://en.wikipedia.org/wiki/Flow_control"
-"\">suspended</a> by pressing Ctrl+S.  Press <b>Ctrl+Q</b> to resume.</qt>"
-msgstr ""
-
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/Vt102Emulation.cpp:977
+#: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/qtermwidget/lib/qtermwidget.cpp:405
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
 msgstr ""
 
 #: com.ubuntu.terminal.desktop.in.in.h:1

@@ -10,8 +10,6 @@ MainView {
     applicationName: "com.ubuntu.terminal"
     automaticOrientation: true
 
-    backgroundColor: terminal.backgroundColor
-
     width: units.gu(50)
     height: units.gu(75)
 
@@ -28,9 +26,11 @@ MainView {
             width: parent.width
             height: parent.height - Qt.inputMethod.keyboardRectangle.height
 
-            //shellProgram: "top"
-            onSessionFinished: Qt.quit()
-            initialWorkingDirectory: "$HOME"
+            session: QMLTermSession {
+                id: terminalSession
+                initialWorkingDirectory: "$HOME"
+            }
+
             colorScheme: "WhiteOnBlack"
 
             TerminalInputArea{
@@ -49,7 +49,7 @@ MainView {
             font.family: "Ubuntu Mono"
 
             Component.onCompleted: {
-                terminal.startShellProgram();
+                terminalSession.startShellProgram();
                 forceActiveFocus();
             }
         }

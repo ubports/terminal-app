@@ -1,30 +1,26 @@
 TEMPLATE = lib
 TARGET = qmltermwidget
 QT += qml quick widgets
-CONFIG += qt plugin debug
+CONFIG += qt plugin
 
-include(qtermwidget.pri)
+include(lib.pri)
 
 DESTDIR = $$OUT_PWD/QMLTermWidget
 
-SOURCES += \
-    qmltermwidget_plugin.cpp \
-    qmltermwidget.cpp \
+DEFINES += HAVE_POSIX_OPENPT HAVE_SYS_TIME_H
+!macx:DEFINES += HAVE_UPDWTMPX
 
-HEADERS += \
-    qmltermwidget_plugin.h \
-    qmltermwidget.h \
+INCLUDEPATH += $$PWD/lib
+DEPENDPATH  += $$PWD/lib
+INCLUDEPATH += $$PWD/src
 
-OTHER_FILES = qmldir
+HEADERS += $$PWD/src/qmltermwidget_plugin.h \
+          $$PWD/src/ksession.h
 
-defineTest(copyToDestdir) {
-    files = $$1
-    for(FILE, files) {
-        DDIR = $$DESTDIR
-        # Replace slashes in paths with backslashes for Windows
-        win32:FILE ~= s,/,\\,g
-        win32:DDIR ~= s,/,\\,g
-        QMAKE_POST_LINK += $$QMAKE_COPY $$quote($$FILE) $$quote($$DDIR) $$escape_expand(\\n\\t)
-    }
-    export(QMAKE_POST_LINK)
-}
+SOURCES += $$PWD/src/qmltermwidget_plugin.cpp \
+          $$PWD/src/ksession.cpp
+
+# Copy the files useful to the plugin in DESTDIR
+QMAKE_POST_LINK = $(COPY_DIR) $$PWD/lib/color-schemes $$DESTDIR && \
+    $(COPY_DIR) $$PWD/lib/kb-layouts $$DESTDIR && \
+    $$QMAKE_COPY $$PWD/src/qmldir $$DESTDIR
