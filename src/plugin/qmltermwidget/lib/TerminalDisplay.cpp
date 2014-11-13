@@ -387,6 +387,11 @@ TerminalDisplay::TerminalDisplay(QQuickItem *parent)
 
   setFlags(ItemHasContents | ItemAcceptsInputMethod);
 
+  //Setup scrollbar. Be sure it is not darw on screen.
+  _scrollBar->setAttribute(Qt::WA_DontShowOnScreen);
+  _scrollBar->setVisible(false);
+  connect(_scrollBar, SIGNAL(valueChanged(int)), this, SIGNAL(scrollbarParamsChanged(int)));
+
   // TODO Forcing rendering to Framebuffer. We need to determine if this is ok
   // always or if we need to make this customizable.
   setRenderTarget(QQuickPaintedItem::FramebufferObject);
@@ -1713,6 +1718,9 @@ void TerminalDisplay::scrollBarPositionChanged(int)
   _screenWindow->setTrackOutput( atEndOfOutput );
 
   updateImage();
+
+  // QMLTermWidget: notify qml side of the change only when needed.
+  emit scrollbarValueChanged();
 }
 
 void TerminalDisplay::setScroll(int cursor, int slines)
@@ -3280,6 +3288,26 @@ QSize TerminalDisplay::getTerminalSize()
 bool TerminalDisplay::getUsesMouse()
 {
     return !usesMouse();
+}
+
+int TerminalDisplay::getScrollbarValue()
+{
+    return _scrollBar->value();
+}
+
+int TerminalDisplay::getScrollbarMaximum()
+{
+    return _scrollBar->maximum();
+}
+
+int TerminalDisplay::getScrollbarMinimum()
+{
+    return _scrollBar->minimum();
+}
+
+QSize TerminalDisplay::getFontMetrics()
+{
+    return QSize(_fontWidth, _fontHeight);
 }
 
 //#include "TerminalDisplay.moc"
