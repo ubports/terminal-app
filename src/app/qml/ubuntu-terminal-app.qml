@@ -31,13 +31,20 @@ MainView {
             id: terminal
             width: parent.width
             height: parent.height - Qt.inputMethod.keyboardRectangle.height
+            colorScheme: "WhiteOnBlack"
 
             session: QMLTermSession {
                 id: terminalSession
                 initialWorkingDirectory: "$HOME"
             }
 
-            colorScheme: "WhiteOnBlack"
+            QMLTermScrollbar {
+                terminal: terminal
+                width: 20
+                Rectangle {
+                    anchors.fill: parent
+                }
+            }
 
             TerminalInputArea{
                 id: inputArea

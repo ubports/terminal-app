@@ -9,7 +9,7 @@ MultiPointTouchArea{
     signal doubleClickDetected(int x, int y, int button, int buttons, int modifiers);
     signal mousePressDetected(int x, int y, int button, int buttons, int modifiers);
     signal mouseReleaseDetected(int x, int y, int button, int buttons, int modifiers);
-    signal mouseWheelDetected(int x, int y, int buttons, int modifiers, int angleDelta);
+    signal mouseWheelDetected(int x, int y, int buttons, int modifiers, point angleDelta);
 
     // Touch signals
     signal touchPress(int x, int y);
