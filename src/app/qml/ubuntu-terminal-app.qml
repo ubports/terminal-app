@@ -29,9 +29,13 @@ MainView {
 
         QMLTermWidget {
             id: terminal
-            width: parent.width
-            height: parent.height - Qt.inputMethod.keyboardRectangle.height
-            colorScheme: "WhiteOnBlack"
+            anchors {
+                left: parent.left;
+                top: parent.top;
+                right: parent.right;
+                bottom: keyboardBar.top
+            }
+            colorScheme: "DarkPastels"
 
             session: QMLTermSession {
                 id: terminalSession
@@ -77,11 +81,25 @@ MainView {
             }
         }
 
+        KeyboardBar {
+            id: keyboardBar
+            height: units.gu(5)
+            anchors {left: parent.left; right: parent.right}
+
+            y: parent.height - height - Qt.inputMethod.keyboardRectangle.height
+            z: parent.z + 0.1
+
+            onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
+        }
+
         // Floating Keyboard button
         Rectangle {
-            anchors.bottom: parent.bottom
-            anchors.right: parent.right
-            anchors.margins: units.gu(2)
+            anchors {
+                bottom: parent.bottom;
+                right: parent.right;
+                margins: units.gu(2);
+                bottomMargin: keyboardBar.height
+            }
             color: "black"
             opacity: 0.3
             width: units.gu(7)
