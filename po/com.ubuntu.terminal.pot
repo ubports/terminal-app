@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-15 15:34+0100\n"
+"POT-Creation-Date: 2014-11-16 14:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,18 @@ msgstr ""
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:27
+msgid "Settings"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:41
+msgid "Font Size:"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:68
+msgid "Color Scheme"
 msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
