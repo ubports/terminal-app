@@ -21,9 +21,8 @@ Component {
         QMLTermScrollbar {
             z: parent.z + 2
             terminal: parent
-            width: units.dp(4)
+            width: units.dp(2)
             Rectangle {
-                // TODO Customize the appearence of the scrollbar.
                 anchors.fill: parent
                 color: UbuntuColors.orange
             }

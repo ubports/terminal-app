@@ -1,6 +1,6 @@
 import QtQuick 2.3
 import QtGraphicalEffects 1.0
-import Ubuntu.Components 1.0
+import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 
 import QMLTermWidget 1.0
@@ -64,34 +64,6 @@ MainView {
 
         TerminalPage {
             id: terminalPage
-
-            CircularTransparentButton {
-                id: settingsButton
-
-                anchors {top: parent.top; right: parent.right; margins: units.gu(1)}
-
-                opacity: 0.7
-                color: "#99000000"
-                border {color: UbuntuColors.orange; width: units.dp(2)}
-                action: Action {
-                    iconName: "settings"
-                    onTriggered: pageStack.push(settingsPage);
-                }
-            }
-
-            CircularTransparentButton {
-                id: tabsButton
-
-                anchors {top: settingsButton.bottom; right: parent.right; margins: units.gu(1)}
-
-                opacity: 0.7
-                color: "#99000000"
-                border {color: UbuntuColors.orange; width: units.dp(2)}
-                action: Action {
-                    iconName: "browser-tabs"
-                    onTriggered: pageStack.push(tabsPage);
-                }
-            }
 
             // TODO: decide between the expandable button or the two buttons.
 //            ExpandableButton {

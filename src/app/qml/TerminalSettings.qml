@@ -4,5 +4,5 @@ import Qt.labs.settings 1.0
 Settings {
     property int fontSize: 14
     property string fontStyle: "Ubuntu Mono"
-    property string colorScheme: "DarkPastels"
+    property string colorScheme: "Ubuntu"
 }

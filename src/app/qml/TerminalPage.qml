@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import Ubuntu.Components 1.0
+import Ubuntu.Components 1.1
 import QMLTermWidget 1.0
 
 Page {
@@ -33,8 +33,9 @@ Page {
         onMouseWheelDetected: terminal.simulateWheel(x, y, buttons, modifiers, angleDelta);
 
         // Touch actions
-        onSwipeUpDetected: terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
-        onSwipeDownDetected: terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
+        property real wheelValue: 100
+        onSwipeUpDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, -wheelValue));
+        onSwipeDownDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, wheelValue));
         onTouchPress: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
 
         // Semantic actions
@@ -54,15 +55,42 @@ Page {
         onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
     }
 
+    // Overlaying buttons.
+
     CircularTransparentButton {
         id: settingsButton
+
+        anchors {top: parent.top; right: parent.right; margins: units.gu(1)}
+
+        innerOpacity: 0.6
+        border {color: UbuntuColors.orange; width: units.dp(2)}
+        action: Action {
+            iconName: "settings"
+            onTriggered: pageStack.push(settingsPage);
+        }
+    }
+
+    CircularTransparentButton {
+        id: tabsButton
+
+        anchors {top: settingsButton.bottom; right: parent.right; margins: units.gu(1)}
+
+        innerOpacity: 0.6
+        border {color: UbuntuColors.orange; width: units.dp(2)}
+        action: Action {
+            iconName: "browser-tabs"
+            onTriggered: pageStack.push(tabsPage);
+        }
+    }
+
+    CircularTransparentButton {
+        id: keyboardButton
 
         anchors {right: parent.right; margins: units.gu(1)}
 
         y: parent.height - height - units.gu(1) - keyboardBar.height
 
-        opacity: 0.7
-        color: "#99000000"
+        innerOpacity: 0.6
         border {color: UbuntuColors.orange; width: units.dp(2)}
         action: Action {
             text: "VKB"
