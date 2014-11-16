@@ -66,7 +66,10 @@ Page {
             id: colorsSchemeSelector
             objectName: "colorsSchemeSelector"
             text: i18n.tr("Color Scheme")
-            model: terminalPage.terminal.availableColorSchemes()
+
+            // TODO This is a workaround at the moment.
+            // The application should get them from the c++.
+            model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow"]
 
             anchors {
                 left: parent.left
@@ -76,6 +79,10 @@ Page {
 
             onSelectedIndexChanged: {
                 settings.colorScheme = model[selectedIndex];
+            }
+
+            Component.onCompleted: {
+                selectedIndex = model.indexOf(settings.colorScheme);
             }
         }
 

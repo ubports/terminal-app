@@ -4,62 +4,42 @@ import QMLTermWidget 1.0
 
 Page {
     id: terminalPage
-
-    property alias terminal: terminal
+    property alias terminalContainer: terminalContainer
+    property Item terminal
 
     anchors.fill: parent
 
-    QMLTermWidget {
-        id: terminal
+    Item {
+        id: terminalContainer
+
         anchors {
             left: parent.left;
             top: parent.top;
             right: parent.right;
             bottom: keyboardBar.top
         }
+    }
 
-        colorScheme: settings.colorScheme
-        font.family: settings.fontStyle
-        font.pointSize: settings.fontSize
+    TerminalInputArea{
+        id: inputArea
+        anchors.fill: parent
+        enabled: terminal
 
-        session: QMLTermSession {
-            id: terminalSession
-            initialWorkingDirectory: "$HOME"
-        }
+        // Mouse actions
+        onMouseMoveDetected: terminal.simulateMouseMove(x, y, button, buttons, modifiers);
+        onDoubleClickDetected: terminal.simulateMouseDoubleClick(x, y, button, buttons, modifiers);
+        onMousePressDetected: terminal.simulateMousePress(x, y, button, buttons, modifiers);
+        onMouseReleaseDetected: terminal.simulateMouseRelease(x, y, button, buttons, modifiers);
+        onMouseWheelDetected: terminal.simulateWheel(x, y, buttons, modifiers, angleDelta);
 
-        QMLTermScrollbar {
-            terminal: terminal
-            width: 20
-            Rectangle {
-                anchors.fill: parent
-            }
-        }
+        // Touch actions
+        onSwipeUpDetected: terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
+        onSwipeDownDetected: terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
+        onTouchPress: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
 
-        TerminalInputArea{
-            id: inputArea
-            anchors.fill: parent
-
-            // Mouse actions
-            onMouseMoveDetected: terminal.simulateMouseMove(x, y, button, buttons, modifiers);
-            onDoubleClickDetected: terminal.simulateMouseDoubleClick(x, y, button, buttons, modifiers);
-            onMousePressDetected: terminal.simulateMousePress(x, y, button, buttons, modifiers);
-            onMouseReleaseDetected: terminal.simulateMouseRelease(x, y, button, buttons, modifiers);
-            onMouseWheelDetected: terminal.simulateWheel(x, y, buttons, modifiers, angleDelta);
-
-            // Touch actions
-            onSwipeUpDetected: terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
-            onSwipeDownDetected: terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
-            onTouchPress: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
-
-            // Semantic actions
-            onAlternateAction: {
-                PopupUtils.open(alternateActionPopover, terminal);
-            }
-        }
-
-        Component.onCompleted: {
-            terminalSession.startShellProgram();
-            forceActiveFocus();
+        // Semantic actions
+        onAlternateAction: {
+            PopupUtils.open(alternateActionPopover, terminal);
         }
     }
 

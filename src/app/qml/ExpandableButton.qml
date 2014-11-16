@@ -48,11 +48,24 @@ Item {
                 NumberAnimation { duration: animationTime }
             }
 
-            Text {
+            Loader {
                 z: parent.z + 0.01
                 anchors.centerIn: parent
-                color: textColor
-                text: actions[index].text;
+                active: actions[index].text
+                sourceComponent: Text {
+                    color: textColor
+                    text: actions[index].text
+                }
+            }
+
+            Loader {
+                anchors.fill: parent
+                scale: 0.5
+                active: actions[index].iconName
+                sourceComponent: Icon {
+                    name: actions[index].iconName
+                    color: "Grey"
+                }
             }
 
             states: [
