@@ -4,7 +4,29 @@ import Ubuntu.Components 1.0
 Rectangle {
     id: container
     property list<Action> actions
-    property Component keyDeleagte
+    property Component keyDeleagte: defaultDelegate
+
+    // TODO: Again we need to decide which is the best looking delegate (if any).
+//    Component {
+//        id: defaultDelegate
+//        Rectangle {
+//            opacity: 0.4
+//            radius: width * 0.10
+//            gradient: Gradient {
+//                GradientStop { position: 0;    color: "#88FFFFFF" }
+//                GradientStop { position: .1;   color: "#55FFFFFF" }
+//                GradientStop { position: .5;   color: "#33FFFFFF" }
+//                GradientStop { position: .501; color: "#11000000" }
+//                GradientStop { position: .8;   color: "#11FFFFFF" }
+//                GradientStop { position: 1;    color: "#55FFFFFF" }
+//            }
+//        }
+//    }
+
+    Component {
+        id: defaultDelegate
+        Rectangle { color: "black" }
+    }
 
     signal simulateKey(int key, int mod);
 
@@ -16,6 +38,15 @@ Rectangle {
     property real __totalWidth: (keyWidth + spacing) * actions.length
     property int __pages: Math.ceil(__totalWidth / width)
     property int __currentPage: 0
+
+    color: "black"
+
+    // TODO: Top orange bar. Decide what to do with this.
+    Rectangle {
+        anchors {left: parent.left; right: parent.right; top: parent.top}
+        height: units.dp(2)
+        color: UbuntuColors.orange;
+    }
 
     Item {
         id: keyContainer

@@ -3,6 +3,9 @@ import Ubuntu.Components 1.1
 import "KeyboardRows"
 
 Rectangle {
+    color: "black"
+
+    // TODO: What do we do with this control from a design perspective?
     ExpandableButton {
         id: keyboardSelector
         height: parent.height
@@ -15,27 +18,38 @@ Rectangle {
         childComponent: Component {
             Rectangle {
                 color: "black"
-                radius: width * 0.5
             }
         }
 
-        parentComponent:  Component {
-            Rectangle {
-                z: parent.z + 0.001
-                color: UbuntuColors.coolGrey
+        Rectangle {
+            anchors.fill: parent
+            color: UbuntuColors.orange
+
+            Icon {
+                scale: 0.5
                 anchors.fill: parent
-                Rectangle {
-                    anchors.fill: parent
-                    color: "black"
-                    radius: 0.5 * width
-                }
+                name: "keypad"
+                color: "black"
             }
         }
 
+        // TODO: We need way to show the users descriptions of key rows.
         actions: [
-            Action {text: "K1"; onTriggered: keyboardLoader.source = "KeyboardRows/ScrollKeyboardRow.qml"},
-            Action {text: "K2"; onTriggered: keyboardLoader.source = "KeyboardRows/FunctionsKeyboardRows.qml"},
-            Action {text: "K3"; onTriggered: keyboardLoader.source = "KeyboardRows/CtrlKeyboardRow.qml"}
+            Action {
+                text: "SRC"
+                description: "Scroll Keys"
+                onTriggered: keyboardLoader.source = "KeyboardRows/ScrollKeyboardRow.qml"
+            },
+            Action {
+                text: "FN"
+                description: "Functions Keys"
+                onTriggered: keyboardLoader.source = "KeyboardRows/FunctionsKeyboardRows.qml"
+            },
+            Action {
+                text: "CTRL"
+                description: "Control Keys"
+                onTriggered: keyboardLoader.source = "KeyboardRows/CtrlKeyboardRow.qml"
+            }
         ]
     }
 

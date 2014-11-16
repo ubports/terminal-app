@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import Ubuntu.Components 1.1
 import QMLTermWidget 1.0
 
 Component {
@@ -19,8 +20,8 @@ Component {
 
         QMLTermScrollbar {
             z: parent.z + 2
-            terminal: terminal
-            width: units.gu(1)
+            terminal: parent
+            width: units.dp(4)
             Rectangle {
                 // TODO Customize the appearence of the scrollbar.
                 anchors.fill: parent

@@ -5,10 +5,6 @@ KeyboardRow {
     id: functionKeyBars
     keyWidth: units.gu(9)
 
-    keyDeleagte: UbuntuShape {
-        color: UbuntuColors.coolGrey
-    }
-
     actions: [
         Action {text: "CTRL+A"; onTriggered: simulateKey(Qt.Key_A, Qt.ControlModifier);},
         Action {text: "CTRL+Z"; onTriggered: simulateKey(Qt.Key_Z, Qt.ControlModifier);},

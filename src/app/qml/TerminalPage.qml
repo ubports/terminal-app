@@ -54,33 +54,19 @@ Page {
         onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
     }
 
-    // TODO This is really really bad and has to improve.
-    // Floating Keyboard button.
-    Rectangle {
-        anchors {
-            bottom: parent.bottom;
-            right: parent.right;
-            margins: units.gu(2);
-            bottomMargin: keyboardBar.height
-        }
-        color: "black"
-        opacity: 0.3
-        width: units.gu(7)
-        height: width
-        radius: width * 0.5
-        border.color: "white"
-        border.width: units.gu(1)
-        z: 2
+    CircularTransparentButton {
+        id: settingsButton
 
-        Text {
-            anchors.centerIn: parent
-            color: "white"
+        anchors {right: parent.right; margins: units.gu(1)}
+
+        y: parent.height - height - units.gu(1) - keyboardBar.height
+
+        opacity: 0.7
+        color: "#99000000"
+        border {color: UbuntuColors.orange; width: units.dp(2)}
+        action: Action {
             text: "VKB"
-        }
-
-        MouseArea{
-            anchors.fill: parent
-            onPressed: {
+            onTriggered: {
                 Qt.inputMethod.show();
                 terminal.forceActiveFocus();
             }

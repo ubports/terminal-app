@@ -5,10 +5,6 @@ KeyboardRow {
     id: functionKeyBars
     keyWidth: units.gu(8)
 
-    keyDeleagte: UbuntuShape {
-        color: UbuntuColors.coolGrey
-    }
-
     actions: [
         Action {text: "PG_UP"; onTriggered: simulateKey(Qt.Key_PageUp, Qt.NoModifier);},
         Action {text: "TAB"; onTriggered: simulateKey(Qt.Key_Tab, Qt.NoModifier);},

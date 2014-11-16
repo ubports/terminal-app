@@ -52,11 +52,13 @@ MainView {
                 // TODO WORKAROUND: Resize event are not processed correctly because the page
                 // is invisible. This forces a resize when the are visible. This is extremely
                 // ugly and should be solved on the c++ side.
-                terminalPage.terminal.width = terminalPage.terminal.width + 100;
-                terminalPage.terminal.width = Qt.binding(function () { return terminalPage.terminalContainer.width; });
-                terminalPage.terminal.height = Qt.binding(function () { return terminalPage.terminalContainer.height; });
-                terminalPage.terminal.update();
-                terminalPage.terminal.forceActiveFocus();
+                if (terminalPage.terminal) {
+                    terminalPage.terminal.width = terminalPage.terminal.width + 100;
+                    terminalPage.terminal.width = Qt.binding(function () { return terminalPage.terminalContainer.width; });
+                    terminalPage.terminal.height = Qt.binding(function () { return terminalPage.terminalContainer.height; });
+                    terminalPage.terminal.update();
+                    terminalPage.terminal.forceActiveFocus();
+                }
             }
         }
 

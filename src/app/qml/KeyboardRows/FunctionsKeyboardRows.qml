@@ -5,10 +5,6 @@ KeyboardRow {
     id: functionKeyBars
     keyWidth: units.gu(6)
 
-    keyDeleagte: UbuntuShape {
-        color: UbuntuColors.coolGrey
-    }
-
     actions: [
         Action {text: "ESC"; onTriggered: simulateKey(Qt.Key_Escape, Qt.NoModifier);},
         Action {text: "F1"; onTriggered: simulateKey(Qt.Key_F1, Qt.NoModifier);},
