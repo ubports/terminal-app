@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Ubuntu.Components 1.1
+import Ubuntu.Components.Popups 0.1
 import QMLTermWidget 1.0
 
 Page {
@@ -8,6 +9,10 @@ Page {
     property Item terminal
 
     anchors.fill: parent
+
+    AlternateActionPopover {
+        id: alternateActionPopover
+    }
 
     Item {
         id: terminalContainer

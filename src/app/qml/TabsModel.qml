@@ -42,6 +42,9 @@ ListModel {
         get(index).terminal.destroy();
         remove(index);
 
-        // TODO remeber to decrease index.
+        // Decrease the selected index to keep the state consistent.
+        if (index <= selectedIndex)
+            selectedIndex = Math.max(selectedIndex - 1, 0);
+        selectTab(selectedIndex);
     }
 }

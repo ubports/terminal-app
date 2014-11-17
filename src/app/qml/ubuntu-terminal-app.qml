@@ -1,7 +1,6 @@
 import QtQuick 2.3
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.1
-import Ubuntu.Components.Popups 0.1
 
 import QMLTermWidget 1.0
 
@@ -18,10 +17,6 @@ MainView {
 
     AuthenticationService {
         onDenied: Qt.quit()
-    }
-
-    AlternateActionPopover {
-        id: alternateActionPopover
     }
 
     TerminalSettings {
@@ -43,20 +38,9 @@ MainView {
 
         onCurrentPageChanged: {
             if(currentPage == terminalPage) {
-                // TODO Remove this check. Check that all the other tabs are invisible.
-                for (var i = 0; i < tabsModel.count; i++) {
-                    if (tabsModel.get(i).terminal.visible === true && i !== tabsModel.selectedIndex)
-                        console.log("Exists a tab visible which is not in foreground. This is wrong!!");
-                }
 
-                // TODO WORKAROUND: Resize event are not processed correctly because the page
-                // is invisible. This forces a resize when the are visible. This is extremely
-                // ugly and should be solved on the c++ side.
+                // Force the focus on the widget when the terminal shown.
                 if (terminalPage.terminal) {
-                    terminalPage.terminal.width = terminalPage.terminal.width + 100;
-                    terminalPage.terminal.width = Qt.binding(function () { return terminalPage.terminalContainer.width; });
-                    terminalPage.terminal.height = Qt.binding(function () { return terminalPage.terminalContainer.height; });
-                    terminalPage.terminal.update();
                     terminalPage.terminal.forceActiveFocus();
                 }
             }
