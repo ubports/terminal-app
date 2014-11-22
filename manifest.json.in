@@ -12,7 +12,7 @@
     "maintainer": "Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>",
     "name": "com.ubuntu.terminal",
     "title": "Terminal",
-    "version": "0.5.@BZR_REVNO@",
+    "version": "0.7.@BZR_REVNO@",
     "x-source": {
         "vcs-bzr": "@BZR_SOURCE@",
         "vcs-bzr-revno": "@BZR_REVNO@"
