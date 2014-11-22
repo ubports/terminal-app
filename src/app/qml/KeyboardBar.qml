@@ -5,6 +5,10 @@ import "KeyboardRows"
 Rectangle {
     color: "black"
 
+    PressFeedback {
+        id: pressFeedbackEffect
+    }
+
     // TODO: What do we do with this control from a design perspective?
     ExpandableButton {
         id: keyboardSelector
@@ -36,7 +40,7 @@ Rectangle {
         // TODO: We need way to show the users descriptions of key rows.
         actions: [
             Action {
-                text: "SRC"
+                text: "SCR"
                 description: "Scroll Keys"
                 onTriggered: keyboardLoader.source = "KeyboardRows/ScrollKeyboardRow.qml"
             },
@@ -54,6 +58,7 @@ Rectangle {
     }
 
     signal simulateKey(int key, int mod);
+    onSimulateKey: pressFeedbackEffect.start();
 
     Loader {
         id: keyboardLoader

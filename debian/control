@@ -20,28 +20,22 @@ Section: misc
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         qtdeclarative5-konsole-qml-plugin (>= 0.1.1),
-         qtdeclarative5-localstorage-plugin,
+         qtdeclarative5-qmltermwidget1.0,
          qtdeclarative5-pamauthentication0.1,
          qtdeclarative5-qtquick2-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin,
 Description: Terminal application
  Core Terminal application
 
-Package: qtdeclarative5-konsole-qml-plugin
+Package: qtdeclarative5-qmltermwidget1.0
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${misc:Pre-Depends},
-Description: KDE Konsole QML plugin - qml terminal plugin
- Konsole is a terminal emulator from KDE. This is a ported
- version for the Ubuntu Terminal app and does not require KDE.
- .
- This package contains the Konsole terminal emulator plugin
- for Qt Qml, which offers access to terminal by KTerminal and
- KSession elements. KTerminal is used for displaying information
- given by KSession.
+Description: QMLTermWidget QML plugin.
+ This package contains the QMLTermWidget terminal emulator plugin
+ for Qt Qml.
 
 Package: qtdeclarative5-pamauthentication0.1
 Architecture: any

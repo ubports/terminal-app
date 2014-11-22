@@ -30,26 +30,16 @@ Page {
         id: mainColumn
 
         spacing: units.gu(1)
-        anchors.fill: parent
+        anchors { margins: units.gu(2); fill: parent }
 
         Label {
-            anchors {
-                left: parent.left
-                leftMargin: units.gu(2)
-            }
-
             text: i18n.tr("Font Size:")
         }
 
         Slider {
             id: slFont
             objectName: "slFont"
-            anchors {
-                left: parent.left
-                leftMargin: units.gu(2)
-                right: parent.right
-                rightMargin: units.gu(2)
-            }
+            anchors { left: parent.left; right: parent.right }
             minimumValue: 8;
             maximumValue: 32;
             onValueChanged: {
@@ -67,15 +57,12 @@ Page {
             objectName: "colorsSchemeSelector"
             text: i18n.tr("Color Scheme")
 
+            // TODO Hackish, but works quite well.
+            containerHeight: parent.height - y - units.gu(4)
+
             // TODO This is a workaround at the moment.
             // The application should get them from the c++.
             model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
-
-            anchors {
-                left: parent.left
-                right: parent.right
-                margins: units.gu(2)
-            }
 
             onSelectedIndexChanged: {
                 settings.colorScheme = model[selectedIndex];
@@ -85,7 +72,5 @@ Page {
                 selectedIndex = model.indexOf(settings.colorScheme);
             }
         }
-
-        ListItem.ThinDivider {}
     }
 }

@@ -14,6 +14,10 @@ Rectangle {
     width: units.gu(5)
     height: units.gu(5)
 
+    PressFeedback {
+        id: pressFeedbackEffect
+    }
+
     Loader {
         active: action.text
         z: parent.z + 0.1
@@ -39,8 +43,9 @@ Rectangle {
 
     MouseArea {
         anchors.fill: parent
-        onClicked: action.trigger();
+        onClicked: {
+            action.trigger();
+            pressFeedbackEffect.start();
+        }
     }
-
-    Component.onCompleted: console.log(action.iconName)
 }

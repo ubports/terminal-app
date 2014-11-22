@@ -36,8 +36,8 @@ Rectangle {
     property real keyWidth: units.gu(5)
 
     property real __totalWidth: (keyWidth + spacing) * actions.length
-    property int __pages: Math.ceil(__totalWidth / width)
-    property int __currentPage: 0
+    property int pages: Math.ceil(__totalWidth / width)
+    property int currentPage: 0
 
     color: "black"
 
@@ -52,7 +52,7 @@ Rectangle {
         id: keyContainer
         anchors.verticalCenter: parent.verticalCenter
         height: keyHeight - spacing
-        width: __pages * container.width
+        width: pages * container.width
         x: spacing * 0.5
 
         layer.enabled: true
@@ -65,6 +65,7 @@ Rectangle {
         }
 
         Repeater {
+            id: keyRepeater
             model: actions
             delegate: Loader {
                 sourceComponent: keyDeleagte
@@ -72,42 +73,107 @@ Rectangle {
                 height: keyHeight - spacing
                 x: index * (keyWidth + spacing)
 
+                property bool pressed: false
+                property bool dragging: mainMouseArea.drag.active
+
+                function handleKeyPress() {
+                    pressed = true;
+                }
+
+                function handleKeyRelease() {
+                    pressed = false;
+                }
+
+                Rectangle {
+                    id: pressedCircle
+                    color: UbuntuColors.orange;
+                    height: parent.height * 2
+                    width: height
+                    radius: width * 0.5
+                    z: parent.z + 0.01
+
+                    states: [
+                        State {
+                            name: "DRAGGING"
+                            when: dragging
+                            PropertyChanges {
+                                target: pressedCircle
+                                opacity: 0.0
+                                visible: false
+                            }
+                        },
+                        State {
+                            name: "SELECTED"
+                            when: pressed
+                            PropertyChanges {
+                                target: pressedCircle
+                                opacity: 1.0
+                                visible: true
+                            }
+                        },
+                        State {
+                            name: "UNSELECTED"
+                            when: (true)
+                            PropertyChanges {
+                                target: pressedCircle
+                                opacity: 0.0
+                                visible: true
+                            }
+                        }
+                    ]
+                       // TODO Make something nice with the transitions.
+                    transitions: [
+                        Transition {
+                            from: "SELECTED"
+                            to: "UNSELECTED"
+                            NumberAnimation { target: pressedCircle; properties: "opacity"; duration: 500 }
+                        }
+                    ]
+                }
+
                 Text {
                     z: parent.z + 0.01
                     anchors.centerIn: parent
                     text: actions[index].text
                     color: textColor
                 }
-
-                MouseArea {
-                    z: parent.z + 0.02
-                    anchors.fill: parent
-                    onClicked: actions[index].trigger();
-                }
             }
         }
 
         MouseArea {
+            id: mainMouseArea
+
             property real overshoot: container.width * 0.25
+            property int __lastPressedIndex: 0
+
             anchors.fill: parent
             drag.target: keyContainer
             drag.axis: Drag.XAxis
             drag.minimumX: - (width - container.width) - overshoot
             drag.maximumX: overshoot
 
-            propagateComposedEvents: true
+            onPressed: {
+                var index = Math.floor(mouse.x / (keyWidth + spacing));
+                __lastPressedIndex = index;
+                keyRepeater.itemAt(index).handleKeyPress();
+            }
+
+            onClicked: {
+                var index = Math.floor(mouse.x / (keyWidth + spacing));
+                actions[index].trigger();
+            }
 
             onReleased: {
                 // Force the current page fall in the right range.
-                var newPage = Math.round((-parent.x / width) * __pages);
-                __currentPage = Math.min(Math.max(0, newPage), __pages - 1);
+                var newPage = Math.round((-parent.x / width) * pages);
+                currentPage = Math.min(Math.max(0, newPage), pages - 1);
 
                 // Force the first control to be aligned.
-                var newPosition = __currentPage * container.width;
+                var newPosition = currentPage * container.width;
                 newPosition = Math.floor(newPosition / (keyWidth + spacing)) * (keyWidth + spacing);
                 keyContainer.x = - newPosition + spacing * 0.5;
 
-                mouse.accepted = false;
+                keyRepeater.itemAt(__lastPressedIndex).handleKeyRelease();
             }
         }
     }

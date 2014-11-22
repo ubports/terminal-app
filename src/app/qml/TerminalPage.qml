@@ -30,6 +30,12 @@ Page {
         anchors.fill: parent
         enabled: terminal
 
+        // This is the minimum wheel event registered by the plugin (with the current settings).
+        property real wheelValue: 40
+
+        // This is needed to fake a "flickable" scrolling.
+        swipeDelta: terminal.fontMetrics.height
+
         // Mouse actions
         onMouseMoveDetected: terminal.simulateMouseMove(x, y, button, buttons, modifiers);
         onDoubleClickDetected: terminal.simulateMouseDoubleClick(x, y, button, buttons, modifiers);
@@ -38,10 +44,9 @@ Page {
         onMouseWheelDetected: terminal.simulateWheel(x, y, buttons, modifiers, angleDelta);
 
         // Touch actions
-        property real wheelValue: 100
         onSwipeUpDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, -wheelValue));
         onSwipeDownDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, wheelValue));
-        onTouchPress: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
+        onTouchClick: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
 
         // Semantic actions
         onAlternateAction: {

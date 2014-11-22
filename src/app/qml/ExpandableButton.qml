@@ -12,21 +12,31 @@ Item {
     property color textColor: "white"
     property real rotation: 0
 
-    Loader {
-        sourceComponent: parentComponent
-        width: size
-        height: size
-    }
-
+    property int selectedIndex: -1
     property bool expanded: false
+
+    width: size
+    height: size
 
     property real __rotationRads: rotation * Math.PI * 0.5
     property bool __isHorizontal: rotation % 2 === 0
     property bool __isInverted: __isHorizontal
                                     ? Math.cos(__rotationRads) < 0
                                     : Math.sin(__rotationRads) < 0
-    width: size
-    height: size
+
+    // Emit haptic feedback
+    onSelectedIndexChanged: pressFeedbackEffect.start();
+    onExpandedChanged: pressFeedbackEffect.start();
+
+    Loader {
+        sourceComponent: parentComponent
+        width: size
+        height: size
+    }
+
+    PressFeedback {
+        id: pressFeedbackEffect
+    }
 
     Component {
         id: repeaterDelegate
@@ -48,6 +58,17 @@ Item {
                 NumberAnimation { duration: animationTime }
             }
 
+            Rectangle {
+                color: UbuntuColors.orange;
+                anchors.fill: parent
+                z: parent.z + 0.01
+                opacity: index == selectedIndex ? 0.5 : 0.0
+
+                Behavior on opacity {
+                    UbuntuNumberAnimation { }
+                }
+            }
+
             Loader {
                 z: parent.z + 0.01
                 anchors.centerIn: parent
@@ -64,7 +85,6 @@ Item {
                 active: actions[index].iconName
                 sourceComponent: Icon {
                     name: actions[index].iconName
-                    color: "Grey"
                 }
             }
 
@@ -109,18 +129,22 @@ Item {
             expanded = true;
         }
 
+        onPositionChanged: {
+            if (containsMouse) {
+                var index = __isHorizontal
+                                ? Math.floor(mouse.x / parent.width)
+                                : Math.floor(mouse.y / parent.height);
+
+                if (__isInverted)
+                    index = actions.length - index;
+
+                selectedIndex = index - 1;
+            }
+        }
+
         onReleased: {
-            var index = __isHorizontal
-                            ? Math.floor(mouse.x / parent.width)
-                            : Math.floor(mouse.y / parent.height);
-
-            if (__isInverted)
-                index = actions.length - index;
-
-            index = index - 1;
-            if(index >= 0 && mainMouseArea.contains(Qt.point(mouse.x, mouse.y)))
-                actions[index].trigger();
-
+            if (selectedIndex >= 0 && mainMouseArea.containsMouse)
+                actions[selectedIndex].trigger();
             expanded = false;
         }
     }

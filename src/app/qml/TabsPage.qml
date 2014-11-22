@@ -18,8 +18,9 @@ Page {
         }
     ]
 
-    Column {
+    Item {
         anchors.fill: parent
+        clip: true
 
         ListView {
             id: tabView
@@ -58,6 +59,7 @@ Page {
                             tabsModel.removeTab(index);
                     }
                 }
+
             }
         }
     }
