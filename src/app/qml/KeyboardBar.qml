@@ -72,5 +72,38 @@ Rectangle {
             item.keyHeight = parent.height
             item.simulateKey.connect(simulateKey);
         }
+
+        Rectangle {
+            property string defaultString: qsTr("Change Keyboard");
+
+            id: toolTip
+
+            Connections {
+                property alias index: keyboardSelector.selectedIndex
+                property alias text: tooltipLabel.text
+
+                target: keyboardSelector
+                onSelectedIndexChanged: {
+                    text = index >= 0
+                                   ? keyboardSelector.actions[index].description
+                                   : toolTip.defaultString
+                }
+            }
+
+            visible: keyboardSelector.expanded
+
+            anchors.fill: parent
+            color: "Black"
+            opacity: 0.8
+            z: parent.z + 0.1
+
+            Label {
+                z: parent.z + 0.1
+                id: tooltipLabel
+                text: toolTip.defaultString
+                anchors.centerIn: parent
+                color: "white"
+            }
+        }
     }
 }
