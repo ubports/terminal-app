@@ -47,6 +47,8 @@ Page {
         onSwipeUpDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, -wheelValue));
         onSwipeDownDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, wheelValue));
         onTouchClick: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
+        onTwoFingerSwipeUp: terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
+        onTwoFingerSwipeDown: terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
 
         // Semantic actions
         onAlternateAction: {

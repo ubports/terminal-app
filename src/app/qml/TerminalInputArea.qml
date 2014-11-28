@@ -1,6 +1,6 @@
 import QtQuick 2.3
 
-MultiPointTouchArea{
+Item{
     property bool touchAreaPressed: false
     property real swipeDelta: units.gu(1)
 
@@ -18,72 +18,125 @@ MultiPointTouchArea{
     signal touchRelease(int x, int y);
     signal swipeUpDetected();
     signal swipeDownDetected();
+    signal twoFingerSwipeUp();
+    signal twoFingerSwipeDown();
 
     // Semantic signals
     signal alternateAction(int x, int y);
 
-    // Private parameters.
-    property bool __moved: false
-    property point __pressPosition: Qt.point(0, 0);
-    property real __prevDragSteps: 0
+    function avg(p1, p2) {
+        return Qt.point((p1.x + p2.x) * 0.5, (p1.y + p2.y) * 0.5);
+    }
 
-    // TODO Interval should be the same used by all system applications.
-    Timer {
-        id: pressAndHoldTimer
-        running: false
-        onTriggered: {
-            touchPressAndHold(__pressPosition.x, __pressPosition.y);
-        }
+    function distance(p1, p2) {
+        return Math.sqrt((p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y));
     }
 
     function absFloor(val) {
         return val > 0 ? Math.floor(val) : Math.ceil(val);
     }
 
-    anchors.fill: parent
-    maximumTouchPoints: 1
-    onPressed: {
-        touchAreaPressed = true;
-        __moved = false;
-        __prevDragSteps = 0.0;
-        __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
-        pressAndHoldTimer.start();
+    MultiPointTouchArea {
+        property bool __moved: false
+        property point __pressPosition: Qt.point(0, 0);
+        property real __prevDragSteps: 0
 
-        touchPress(touchPoints[0].x, touchPoints[0].y);
-    }
-    onUpdated: {
-        var dragValue = touchPoints[0].y - __pressPosition.y;
-        var dragSteps = dragValue / swipeDelta;
+        id: singleTouchTouchArea
 
-        if (absFloor(dragSteps) < absFloor(__prevDragSteps)) {
-            __moved = true;
-            swipeUpDetected();
-        } else if (absFloor(dragSteps) > absFloor(__prevDragSteps)) {
-            __moved = true;
-            swipeDownDetected();
+        anchors.fill: parent
+        z: parent.z + 0.01
+
+        // TODO Interval should be the same used by all system applications.
+        Timer {
+            id: pressAndHoldTimer
+            running: false
+            onTriggered: {
+                touchPressAndHold(singleTouchTouchArea.__pressPosition.x,
+                                  singleTouchTouchArea.__pressPosition.y);
+            }
         }
 
-        __prevDragSteps = dragSteps;
-    }
-    onReleased: {
-        var timerRunning = pressAndHoldTimer.running;
-        pressAndHoldTimer.stop();
-        touchAreaPressed = false;
+        maximumTouchPoints: 1
+        onPressed: {
+            touchAreaPressed = true;
+            __moved = false;
+            __prevDragSteps = 0.0;
+            __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
+            pressAndHoldTimer.start();
 
-        if (!__moved && timerRunning) {
-            touchClick(touchPoints[0].x, touchPoints[0].y);
+            touchPress(touchPoints[0].x, touchPoints[0].y);
+        }
+        onUpdated: {
+            var dragValue = touchPoints[0].y - __pressPosition.y;
+            var dragSteps = dragValue / swipeDelta;
+
+            if (!__moved && distance(touchPoints[0], __pressPosition) > swipeDelta)
+                __moved = true;
+
+            if (absFloor(dragSteps) < absFloor(__prevDragSteps)) {
+                swipeUpDetected();
+            } else if (absFloor(dragSteps) > absFloor(__prevDragSteps)) {
+                swipeDownDetected();
+            }
+
+            __prevDragSteps = dragSteps;
+        }
+        onReleased: {
+            var timerRunning = pressAndHoldTimer.running;
+            pressAndHoldTimer.stop();
+            touchAreaPressed = false;
+
+            if (!__moved && timerRunning) {
+                touchClick(touchPoints[0].x, touchPoints[0].y);
+            }
+
+            touchRelease(touchPoints[0].x, touchPoints[0].y);
         }
 
-        touchRelease(touchPoints[0].x, touchPoints[0].y);
-    }
+        MultiPointTouchArea {
+            property point __pressPosition: Qt.point(0, 0);
+            property real __prevDragSteps: 0
 
-    mouseEnabled: true
+            id: doubleTouchTouchArea
+            anchors.fill: parent
+            z: parent.z + 0.001
+
+            maximumTouchPoints: 2
+            minimumTouchPoints: 2
+            onPressed: {
+                __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
+            }
+            onUpdated: {
+                // WORKAROUND: filter bad events that somehow get here during release.
+                if (touchPoints.length !== 2)
+                    return;
+
+                var touchPoint = avg(touchPoints[0], touchPoints[1]);
+                var dragValue = touchPoint.y - __pressPosition.y;
+                var dragSteps = dragValue / swipeDelta;
+
+                if (absFloor(dragSteps) < absFloor(__prevDragSteps)) {
+                    twoFingerSwipeUp();
+                } else if (absFloor(dragSteps) > absFloor(__prevDragSteps)) {
+                    twoFingerSwipeDown();
+                }
+
+                __prevDragSteps = dragSteps;
+            }
+
+            mouseEnabled: false
+        }
+
+        mouseEnabled: false
+    }
 
     MouseArea {
         id: mouseArea
         anchors.fill: parent
         enabled: !parent.touchAreaPressed
         acceptedButtons: Qt.AllButtons
+
+        z: parent.z
 
         onDoubleClicked: {
             doubleClickDetected(mouse.x, mouse.y, mouse.button, mouse.buttons, mouse.modifiers);

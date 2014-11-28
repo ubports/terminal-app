@@ -6,6 +6,9 @@ Rectangle {
     property list<Action> actions
     property Component keyDeleagte: defaultDelegate
 
+    // TODO Is there a system defined threshold? Should this be tweaked?
+    property real __swipeThreshold: units.gu(7)
+
     // TODO: Again we need to decide which is the best looking delegate (if any).
 //    Component {
 //        id: defaultDelegate
@@ -23,9 +26,10 @@ Rectangle {
 //        }
 //    }
 
+    // WORKAROUND: At the moment we mark this as invisible.
     Component {
         id: defaultDelegate
-        Rectangle { color: "black" }
+        Rectangle { color: "black"; visible: false }
     }
 
     signal simulateKey(int key, int mod);
@@ -48,14 +52,26 @@ Rectangle {
         color: UbuntuColors.orange;
     }
 
+    // WORKAROUND: Since we have no way to know the exact size of the bar (due to
+    // the alignments, we are simply going to make the scrollbar 10% longer).
+    // This is ugly and probably the only solution is to rethink how all this works.
+    Rectangle {
+        anchors.bottom: parent.bottom
+        height: units.dp(2)
+        color: UbuntuColors.orange;
+        width: (container.width / pages) * 1.1
+
+        x: (- (keyContainer.x) / (pages * container.width)) * container.width
+    }
+
     Item {
         id: keyContainer
         anchors.verticalCenter: parent.verticalCenter
         height: keyHeight - spacing
-        width: pages * container.width
+        width: pages * container.width - spacing
         x: spacing * 0.5
 
-        layer.enabled: true
+        property real stablePosition: spacing * 0.5
 
         Behavior on x {
             NumberAnimation {
@@ -152,28 +168,47 @@ Rectangle {
             drag.minimumX: - (width - container.width) - overshoot
             drag.maximumX: overshoot
 
+            function isValidIndex(index) {
+                return index >= 0 && index < actions.length;
+            }
+
             onPressed: {
                 var index = Math.floor(mouse.x / (keyWidth + spacing));
                 __lastPressedIndex = index;
-                keyRepeater.itemAt(index).handleKeyPress();
+
+                if (isValidIndex(index))
+                    keyRepeater.itemAt(index).handleKeyPress();
             }
 
             onClicked: {
                 var index = Math.floor(mouse.x / (keyWidth + spacing));
-                actions[index].trigger();
+
+                if (isValidIndex(index))
+                    actions[index].trigger();
             }
 
             onReleased: {
-                // Force the current page fall in the right range.
-                var newPage = Math.round((-parent.x / width) * pages);
-                currentPage = Math.min(Math.max(0, newPage), pages - 1);
+                // TODO Determine if this threshold is good enough.
+                var delta = parent.x - keyContainer.stablePosition;
+                var pageDelta = Math.abs(delta) > __swipeThreshold
+                                    ? (delta > 0 ? -1 : 1)
+                                    : 0;
+
+                currentPage = Math.min(Math.max(0, currentPage + pageDelta), pages - 1);
+
+//                // Old perfectly fair switch mechanism.
+//                var newPage = Math.round((-parent.x / width) * pages);
+//                currentPage = Math.min(Math.max(0, newPage), pages - 1);
 
                 // Force the first control to be aligned.
                 var newPosition = currentPage * container.width;
                 newPosition = Math.floor(newPosition / (keyWidth + spacing)) * (keyWidth + spacing);
-                keyContainer.x = - newPosition + spacing * 0.5;
 
-                keyRepeater.itemAt(__lastPressedIndex).handleKeyRelease();
+                keyContainer.stablePosition = - newPosition + spacing * 0.5;
+                keyContainer.x = keyContainer.stablePosition;
+
+                if (isValidIndex(__lastPressedIndex))
+                    keyRepeater.itemAt(__lastPressedIndex).handleKeyRelease();
             }
         }
     }
