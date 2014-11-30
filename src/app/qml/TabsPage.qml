@@ -29,9 +29,16 @@ Page {
 
             delegate: ListItemWithActions{
                 width: parent.width
-		height: units.gu(25)
+                height: units.gu(25)
 
-                onItemClicked: { tabsModel.selectTab(index); }
+                onItemClicked: {
+                    // If the currently active tab is pressed. Return to it.
+                    if (tabsModel.selectedIndex == index) {
+                        pageStack.pop();
+                    } else {
+                        tabsModel.selectTab(index);
+                    }
+                }
 
                 contents: Row {
                     anchors.fill: parent
@@ -76,7 +83,6 @@ Page {
                             tabsModel.removeTab(index);
                     }
                 }
-
             }
         }
     }
