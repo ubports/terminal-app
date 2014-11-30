@@ -29,13 +29,30 @@ Page {
 
             delegate: ListItemWithActions{
                 width: parent.width
+		height: units.gu(25)
 
                 onItemClicked: { tabsModel.selectTab(index); }
 
-                contents: Label {
-                    text: tabsModel.get(index).terminal.session.title
-                    anchors.left: parent.left
-                    anchors.verticalCenter: parent.verticalCenter
+                contents: Row {
+                    anchors.fill: parent
+                    spacing: units.gu(4)
+
+                    ShaderEffectSource {
+                        id: thumb
+
+                        width: height * (model.terminal.width / model.terminal.height)
+                        height: parent.height
+
+                        sourceItem: model.terminal
+                    }
+
+                    Label {
+                        width: parent.width - (thumb.width + units.gu(6))
+
+                        text: tabsModel.get(index).terminal.session.title
+                        anchors.verticalCenter: parent.verticalCenter
+                        wrapMode: Text.Wrap
+                    }
                 }
 
                 Rectangle {
