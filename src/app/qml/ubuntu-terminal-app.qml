@@ -38,11 +38,13 @@ MainView {
 
         onCurrentPageChanged: {
             if(currentPage == terminalPage) {
-
                 // Force the focus on the widget when the terminal shown.
                 if (terminalPage.terminal) {
                     terminalPage.terminal.forceActiveFocus();
                 }
+            } else {
+                // Force the focus out of the terminal widget.
+                currentPage.forceActiveFocus();
             }
         }
 
