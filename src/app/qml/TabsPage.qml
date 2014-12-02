@@ -49,6 +49,8 @@ Page {
                     id: thumb
                     sourceItem: model.terminal
 
+                    live: tabsPage.visible
+
                     anchors.margins: units.gu(1)
                     anchors.fill: parent
 
@@ -101,7 +103,13 @@ Page {
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: tabsModel.selectTab(index);
+                        onClicked: {
+                            if (index == tabsModel.selectedIndex) {
+                                pageStack.pop();
+                            } else {
+                                tabsModel.selectTab(index);
+                            }
+                        }
                     }
                 }
             }
