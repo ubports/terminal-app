@@ -36,8 +36,17 @@ MainView {
         id: pageStack
         Component.onCompleted: push(terminalPage)
 
+        property bool prevKeyboardVisible: false
+
         onCurrentPageChanged: {
             if(currentPage == terminalPage) {
+                // Restore previous keyboard state.
+                if (prevKeyboardVisible) {
+                    Qt.inputMethod.show();
+                } else {
+                    Qt.inputMethod.hide();
+                }
+
                 // Force the focus on the widget when the terminal shown.
                 if (terminalPage.terminal) {
                     terminalPage.terminal.forceActiveFocus();
@@ -45,6 +54,8 @@ MainView {
             } else {
                 // Force the focus out of the terminal widget.
                 currentPage.forceActiveFocus();
+                prevKeyboardVisible = Qt.inputMethod.visible;
+                Qt.inputMethod.hide();
             }
         }
 
