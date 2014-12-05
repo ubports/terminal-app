@@ -14,7 +14,7 @@ Rectangle {
         id: keyboardSelector
         height: parent.height
         width: parent.height
-        size: parent.height
+
         z: parent.z + 0.01
 
         rotation: 3
@@ -37,28 +37,35 @@ Rectangle {
             }
         }
 
-        // TODO: We need way to show the users descriptions of key rows.
         actions: [
             Action {
                 text: "SCR"
                 description: "Scroll Keys"
-                onTriggered: keyboardLoader.source = "KeyboardRows/ScrollKeyboardRow.qml"
+                onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/ScrollKeysLayout.qml"
             },
             Action {
                 text: "FN"
                 description: "Functions Keys"
-                onTriggered: keyboardLoader.source = "KeyboardRows/FunctionsKeyboardRows.qml"
+                onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/FunctionKeysLayout.qml"
+            },
+            Action {
+                text: "CMD"
+                description: "Command Keys"
+                onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/SimpleCommandsLayout.qml"
             },
             Action {
                 text: "CTRL"
                 description: "Control Keys"
-                onTriggered: keyboardLoader.source = "KeyboardRows/CtrlKeyboardRow.qml"
+                onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/ControlKeysLayout.qml"
             }
         ]
     }
 
+    signal simulateCommand(string command);
     signal simulateKey(int key, int mod);
+
     onSimulateKey: pressFeedbackEffect.start();
+    onSimulateCommand: pressFeedbackEffect.start();
 
     Loader {
         id: keyboardLoader
@@ -66,11 +73,12 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.right: parent.right
         anchors.top: parent.top
-        source: "KeyboardRows/ScrollKeyboardRow.qml"
+        source: "KeyboardRows/NewScrollKeyboardRow.qml"
 
         onLoaded: {
             item.keyHeight = parent.height
             item.simulateKey.connect(simulateKey);
+            item.simulateCommand.connect(simulateCommand);
         }
 
         Rectangle {

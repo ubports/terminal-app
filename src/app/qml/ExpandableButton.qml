@@ -5,18 +5,17 @@ Item {
     id: container
     property Component childComponent
     property Component parentComponent: childComponent
-    property real size
     property list<Action> actions
 
     property real animationTime: 200
     property color textColor: "white"
     property real rotation: 0
 
-    property int selectedIndex: -1
-    property bool expanded: false
+    property bool expandable: true
 
-    width: size
-    height: size
+    property int selectedIndex: -1
+    property bool expanded: __expanded && expandable
+    property bool __expanded: mainMouseArea.pressed
 
     property real __rotationRads: rotation * Math.PI * 0.5
     property bool __isHorizontal: rotation % 2 === 0
@@ -24,14 +23,14 @@ Item {
                                     ? Math.cos(__rotationRads) < 0
                                     : Math.sin(__rotationRads) < 0
 
-    // Emit haptic feedback
+    // Emit haptic feedback.
     onSelectedIndexChanged: pressFeedbackEffect.start();
     onExpandedChanged: pressFeedbackEffect.start();
 
     Loader {
         sourceComponent: parentComponent
-        width: size
-        height: size
+        width: container.width
+        height: parent.height
     }
 
     PressFeedback {
@@ -43,8 +42,8 @@ Item {
         Loader {
             id: delegateContainer
             sourceComponent: childComponent
-            width: size
-            height: size
+            width: container.width
+            height: container.height
 
             Behavior on x {
                 NumberAnimation { duration: animationTime }
@@ -95,8 +94,8 @@ Item {
                     PropertyChanges {
                         target: delegateContainer
                         opacity: 1.0
-                        x: (index + 1) * size * Math.cos(__rotationRads);
-                        y: (index + 1) * size * Math.sin(__rotationRads);
+                        x: (index + 1) * width * Math.cos(__rotationRads);
+                        y: (index + 1) * height * Math.sin(__rotationRads);
                     }
                 },
                 State {
@@ -115,25 +114,21 @@ Item {
 
     MouseArea {
         id: mainMouseArea
-        property real __expandedWidth: size * (1 + Math.abs(Math.cos(__rotationRads)) * actions.length)
-        property real __expandedHeight: size * (1 + Math.abs(Math.sin(__rotationRads)) * actions.length)
-        width: (expanded ? __expandedWidth : size)
-        height: (expanded ? __expandedHeight : size)
+        property real __expandedWidth: container.width * (1 + Math.abs(Math.cos(__rotationRads)) * actions.length)
+        property real __expandedHeight: container.height * (1 + Math.abs(Math.sin(__rotationRads)) * actions.length)
+        width: (expanded ? __expandedWidth : container.width)
+        height: (expanded ? __expandedHeight : container.height)
         z: parent.z + 0.1
-        x: (__isHorizontal  && __isInverted ? -width + size  : 0)
-        y: (!__isHorizontal && __isInverted ? -height + size : 0)
+        x: (__isHorizontal  && __isInverted ? -width + container.width  : 0)
+        y: (!__isHorizontal && __isInverted ? -height + container.height : 0)
 
-        propagateComposedEvents: true
-
-        onPressed: {
-            expanded = true;
-        }
+        enabled: expandable
 
         onPositionChanged: {
             if (containsMouse) {
                 var index = __isHorizontal
-                                ? Math.floor(mouse.x / parent.width)
-                                : Math.floor(mouse.y / parent.height);
+                                ? Math.floor(mouse.x / container.width)
+                                : Math.floor(mouse.y / container.height);
 
                 if (__isInverted)
                     index = actions.length - index;
@@ -145,7 +140,6 @@ Item {
         onReleased: {
             if (selectedIndex >= 0 && mainMouseArea.containsMouse)
                 actions[selectedIndex].trigger();
-            expanded = false;
         }
     }
 

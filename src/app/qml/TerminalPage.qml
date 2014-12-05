@@ -65,6 +65,7 @@ Page {
         z: parent.z + 0.1
 
         onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
+        onSimulateCommand: terminal.session.sendText(command);
     }
 
     // Overlaying buttons.
