@@ -30,7 +30,7 @@ Dialog {
     signal dialogCanceled
 
     Component.onCompleted: {
-        passwordField.forceActiveFocus()
+        passwordField.forceActiveFocus();
     }
 
     TextField {
@@ -64,7 +64,7 @@ Dialog {
         color: UbuntuColors.red
 
         onClicked: {
-            dialogCanceled()
+            dialogCanceled();
         }
     }
 }

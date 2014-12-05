@@ -16,7 +16,7 @@ MainView {
     height: units.gu(75)
 
     AuthenticationService {
-        onDenied: Qt.quit()
+        onDenied: Qt.quit();
     }
 
     TerminalSettings {

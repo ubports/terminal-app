@@ -154,5 +154,8 @@ int main(int argc, char *argv[])
     view.setSource(QUrl::fromLocalFile(qmlfile));
     view.show();
 
+    // Connect the quit signal
+    QObject::connect((QObject*) view.engine(), SIGNAL(quit()), (QObject*) &a, SLOT(quit()));
+
     return a.exec();
 }
