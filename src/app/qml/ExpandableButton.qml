@@ -133,10 +133,11 @@ Item {
         onPressed: {
             if (mainAction)
                 clickTimer.start();
+            selectedIndex = -1;
         }
 
         onPositionChanged: {
-            if (containsMouse) {
+            if (containsMouse && expanded) {
                 var index = __isHorizontal
                                 ? Math.floor(mouse.x / container.width)
                                 : Math.floor(mouse.y / container.height);
