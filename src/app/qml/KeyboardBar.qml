@@ -73,7 +73,7 @@ Rectangle {
         anchors.bottom: parent.bottom
         anchors.right: parent.right
         anchors.top: parent.top
-        source: "KeyboardRows/NewScrollKeyboardRow.qml"
+        source: "KeyboardRows/Layouts/ScrollKeysLayout.qml"
 
         onLoaded: {
             item.keyHeight = parent.height

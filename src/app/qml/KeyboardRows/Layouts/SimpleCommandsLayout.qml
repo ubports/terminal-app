@@ -8,14 +8,15 @@ KeyboardRow {
     model: [
         KeyModel {
             text: "top"
-            actions: [Action { onTriggered: simulateCommand("top\n"); }]
+            mainAction: Action { onTriggered: simulateCommand("top\n"); }
         },
         KeyModel {
             text: "clear"
-            actions: [Action { onTriggered: simulateCommand("clear\n"); }]
+            mainAction: Action { onTriggered: simulateCommand("clear\n"); }
         },
         KeyModel {
             text: "ls"
+            mainAction: Action { onTriggered: simulateCommand("ls\n"); }
             actions: [
                 Action { text: "-a"; onTriggered: simulateCommand("ls -a\n"); },
                 Action { text: "-l"; onTriggered: simulateCommand("ls -l\n"); }

@@ -50,19 +50,20 @@ Rectangle {
             property int modelIndex: index
             property string modelText: container.model[index].text
             property var modelActions: container.model[index].actions
+            property Action modelMainAction: container.model[index].mainAction
             width: keyWidth
             height: keyHeight
 
             Loader {
                 anchors.fill: parent
-                sourceComponent: (delegateContainer.modelActions.length > 1) ? expandable : nonExpandable
+                sourceComponent: (delegateContainer.modelActions.length > 0) ? expandable : nonExpandable
             }
             Component {
                 id: nonExpandable
                 KeyboardButton {
                     anchors.fill: parent
                     text: delegateContainer.modelText
-                    action: delegateContainer.modelActions[0]
+                    mainAction: delegateContainer.modelMainAction
                 }
             }
             Component {
@@ -70,6 +71,7 @@ Rectangle {
                 ExpandableKeyboardButton {
                     anchors.fill: parent
                     text: delegateContainer.modelText
+                    mainAction: delegateContainer.modelMainAction
                     actions: delegateContainer.modelActions
                     expandable: !gridView.movingHorizontally
                 }

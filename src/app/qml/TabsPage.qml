@@ -104,11 +104,8 @@ Page {
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            if (index == tabsModel.selectedIndex) {
-                                pageStack.pop();
-                            } else {
-                                tabsModel.selectTab(index);
-                            }
+                            tabsModel.selectTab(index);
+                            pageStack.pop();
                         }
                     }
                 }

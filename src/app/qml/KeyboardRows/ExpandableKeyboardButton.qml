@@ -5,6 +5,7 @@ import ".."
 
 Item {
     property alias text: mainLabel.text
+    property alias mainAction: expandableButton.mainAction
     property alias actions: expandableButton.actions
     property alias expandable: expandableButton.expandable
 

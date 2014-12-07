@@ -8,19 +8,19 @@ KeyboardRow {
     model: [
         KeyModel {
             text: "CTRL+R"
-            actions: [Action { onTriggered: simulateKey(Qt.Key_R, Qt.ControlModifier);}]
+            mainAction: Action { onTriggered: simulateKey(Qt.Key_R, Qt.ControlModifier);}
         },
         KeyModel {
             text: "CTRL+C"
-            actions: [Action { onTriggered: simulateKey(Qt.Key_C, Qt.ControlModifier);}]
+            mainAction: Action { onTriggered: simulateKey(Qt.Key_C, Qt.ControlModifier);}
         },
         KeyModel {
             text: "CTRL+Z"
-            actions: [Action { onTriggered: simulateKey(Qt.Key_Z, Qt.ControlModifier);}]
+            mainAction: Action { onTriggered: simulateKey(Qt.Key_Z, Qt.ControlModifier);}
         },
         KeyModel {
             text: "CTRL+A"
-            actions: [Action { onTriggered: simulateKey(Qt.Key_A, Qt.ControlModifier);}]
+            mainAction: Action { onTriggered: simulateKey(Qt.Key_A, Qt.ControlModifier);}
         }
     ]
 }

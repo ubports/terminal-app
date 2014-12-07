@@ -6,6 +6,7 @@ Item {
     property Component childComponent
     property Component parentComponent: childComponent
     property list<Action> actions
+    property Action mainAction
 
     property real animationTime: 200
     property color textColor: "white"
@@ -15,7 +16,7 @@ Item {
 
     property int selectedIndex: -1
     property bool expanded: __expanded && expandable
-    property bool __expanded: mainMouseArea.pressed
+    property bool __expanded: mainMouseArea.pressed && !clickTimer.running
 
     property real __rotationRads: rotation * Math.PI * 0.5
     property bool __isHorizontal: rotation % 2 === 0
@@ -112,6 +113,11 @@ Item {
         }
     }
 
+    Timer {
+        id: clickTimer
+        interval: 400 // TODO This interval might need tweaking.
+    }
+
     MouseArea {
         id: mainMouseArea
         property real __expandedWidth: container.width * (1 + Math.abs(Math.cos(__rotationRads)) * actions.length)
@@ -123,6 +129,11 @@ Item {
         y: (!__isHorizontal && __isInverted ? -height + container.height : 0)
 
         enabled: expandable
+
+        onPressed: {
+            if (mainAction)
+                clickTimer.start();
+        }
 
         onPositionChanged: {
             if (containsMouse) {
@@ -138,7 +149,9 @@ Item {
         }
 
         onReleased: {
-            if (selectedIndex >= 0 && mainMouseArea.containsMouse)
+            if (clickTimer.running && mainAction)
+                mainAction.trigger();
+            else if (selectedIndex >= 0 && mainMouseArea.containsMouse)
                 actions[selectedIndex].trigger();
         }
     }

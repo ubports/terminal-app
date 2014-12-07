@@ -3,7 +3,7 @@ import Ubuntu.Components 1.1
 
 Rectangle {
     property alias text: mainLabel.text
-    property Action action
+    property Action mainAction
 
     color: "black"
 
@@ -15,6 +15,6 @@ Rectangle {
 
     MouseArea {
         anchors.fill: parent
-        onClicked: action.trigger();
+        onClicked: mainAction.trigger();
     }
 }
