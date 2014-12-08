@@ -40,22 +40,22 @@ Rectangle {
         actions: [
             Action {
                 text: "SCR"
-                description: "Scroll Keys"
+                description: i18n.tr("Scroll Keys")
                 onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/ScrollKeysLayout.qml"
             },
             Action {
                 text: "FN"
-                description: "Functions Keys"
+                description: i18n.tr("Functions Keys")
                 onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/FunctionKeysLayout.qml"
             },
             Action {
                 text: "CMD"
-                description: "Command Keys"
+                description: i18n.tr("Command Keys")
                 onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/SimpleCommandsLayout.qml"
             },
             Action {
                 text: "CTRL"
-                description: "Control Keys"
+                description: i18n.tr("Control Keys")
                 onTriggered: keyboardLoader.source = "KeyboardRows/Layouts/ControlKeysLayout.qml"
             }
         ]

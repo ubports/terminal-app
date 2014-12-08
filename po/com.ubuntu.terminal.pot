@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-07 17:55+0100\n"
+"POT-Creation-Date: 2014-12-08 21:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,6 +39,22 @@ msgstr ""
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
+msgstr ""
+
+#: ../src/app/qml/KeyboardBar.qml:43
+msgid "Scroll Keys"
+msgstr ""
+
+#: ../src/app/qml/KeyboardBar.qml:48
+msgid "Functions Keys"
+msgstr ""
+
+#: ../src/app/qml/KeyboardBar.qml:53
+msgid "Command Keys"
+msgstr ""
+
+#: ../src/app/qml/KeyboardBar.qml:58
+msgid "Control Keys"
 msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:27
