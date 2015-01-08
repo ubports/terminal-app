@@ -16,14 +16,14 @@ Component {
                 right: parent.right
             }
             ListItem.Standard {
-                text: "Copy"
+                text: i18n.tr("Copy")
                 onClicked: {
                     terminal.copyClipboard();
                     popover.hide();
                 }
             }
             ListItem.Standard {
-                text: "Paste"
+                text: i18n.tr("Paste")
                 onClicked: {
                     terminal.pasteClipboard();
                     popover.hide();
