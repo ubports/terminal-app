@@ -11,6 +11,11 @@ Rectangle {
     signal simulateKey(int key, int mod);
     signal simulateCommand(string command);
 
+    // Internal variables
+    property int _firstVisibleIndex: gridView.contentX / keyWidth
+    property int _lastVisibleIndex: _firstVisibleIndex + gridView.width / keyWidth
+    property int _avgIndex: (_lastVisibleIndex + _firstVisibleIndex) / 2
+
     color: "black"
 
     GridView {
@@ -74,6 +79,7 @@ Rectangle {
                     mainAction: delegateContainer.modelMainAction
                     actions: delegateContainer.modelActions
                     expandable: !gridView.movingHorizontally
+                    expandRight: delegateContainer.modelIndex <= container._avgIndex
                 }
             }
         }

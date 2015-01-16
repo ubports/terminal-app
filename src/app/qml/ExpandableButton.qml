@@ -8,21 +8,21 @@ Item {
     property list<Action> actions
     property Action mainAction
 
+    // Set this boolean to change the direction of the expansion. True to right and false to left.
+    property bool expandRight: true
+
     property real animationTime: 200
     property color textColor: "white"
-    property real rotation: 0
 
     property bool expandable: true
+
+    property int maxRows: 3
+    property int _rows: Math.min(actions.length, maxRows)
+    property int _columns: Math.ceil(actions.length / _rows)
 
     property int selectedIndex: -1
     property bool expanded: __expanded && expandable
     property bool __expanded: mainMouseArea.pressed && !clickTimer.running
-
-    property real __rotationRads: rotation * Math.PI * 0.5
-    property bool __isHorizontal: rotation % 2 === 0
-    property bool __isInverted: __isHorizontal
-                                    ? Math.cos(__rotationRads) < 0
-                                    : Math.sin(__rotationRads) < 0
 
     // Emit haptic feedback.
     onSelectedIndexChanged: pressFeedbackEffect.start();
@@ -45,18 +45,6 @@ Item {
             sourceComponent: childComponent
             width: container.width
             height: container.height
-
-            Behavior on x {
-                NumberAnimation { duration: animationTime }
-            }
-
-            Behavior on y {
-                NumberAnimation { duration: animationTime }
-            }
-
-            Behavior on opacity {
-                NumberAnimation { duration: animationTime }
-            }
 
             Rectangle {
                 color: UbuntuColors.orange;
@@ -87,29 +75,6 @@ Item {
                     name: actions[index].iconName
                 }
             }
-
-            states: [
-                State {
-                    name: "expanded"
-                    when: expanded
-                    PropertyChanges {
-                        target: delegateContainer
-                        opacity: 1.0
-                        x: (index + 1) * width * Math.cos(__rotationRads);
-                        y: (index + 1) * height * Math.sin(__rotationRads);
-                    }
-                },
-                State {
-                    name: "collapsed"
-                    when: !expanded
-                    PropertyChanges {
-                        target: delegateContainer
-                        opacity: 0.0
-                        x: 0
-                        y: 0
-                    }
-                }
-            ]
         }
     }
 
@@ -120,13 +85,15 @@ Item {
 
     MouseArea {
         id: mainMouseArea
-        property real __expandedWidth: container.width * (1 + Math.abs(Math.cos(__rotationRads)) * actions.length)
-        property real __expandedHeight: container.height * (1 + Math.abs(Math.sin(__rotationRads)) * actions.length)
+        property real __expandedWidth: container.width * _columns
+        property real __expandedHeight: container.height * (_rows + 1)
         width: (expanded ? __expandedWidth : container.width)
         height: (expanded ? __expandedHeight : container.height)
         z: parent.z + 0.1
-        x: (__isHorizontal  && __isInverted ? -width + container.width  : 0)
-        y: (!__isHorizontal && __isInverted ? -height + container.height : 0)
+        y: -height + container.height
+        x: expanded && !expandRight
+           ? -container.width * (container._columns - 1)
+           : 0
 
         enabled: expandable
 
@@ -138,14 +105,13 @@ Item {
 
         onPositionChanged: {
             if (containsMouse && expanded) {
-                var index = __isHorizontal
-                                ? Math.floor(mouse.x / container.width)
-                                : Math.floor(mouse.y / container.height);
-
-                if (__isInverted)
-                    index = actions.length - index;
-
-                selectedIndex = index - 1;
+                var i = Math.floor(mouse.x / container.width);
+                var j = _rows - Math.floor(mouse.y / container.height) - 1;
+                var newIndex = i * _rows + j;
+                selectedIndex =
+                        (i >= 0 && j >= 0 && newIndex >= 0 && newIndex < actions.length)
+                            ? newIndex
+                            : -1;
             }
         }
 
@@ -157,9 +123,33 @@ Item {
         }
     }
 
-    Repeater {
-        id: repeater
-        model: actions
-        delegate: repeaterDelegate
+    Rectangle {
+        id: popupRectangle
+        height: container.height * container._rows
+        width: container.width * container._columns
+
+        color: "black"
+
+        opacity: expanded ? 1.0 : 0.0
+
+        y: -height
+        x: !expandRight
+           ? -container.width * (container._columns - 1)
+           : 0
+
+        GridView {
+            id: repeater
+
+            anchors.fill: parent
+
+            model: actions
+            cellHeight: container.height
+            cellWidth: container.width
+            interactive: false
+            delegate: repeaterDelegate
+
+            flow: GridView.TopToBottom
+            verticalLayoutDirection: GridView.BottomToTop
+        }
     }
 }

@@ -17,8 +17,6 @@ Rectangle {
 
         z: parent.z + 0.01
 
-        rotation: 3
-
         childComponent: Component {
             Rectangle {
                 color: "black"
@@ -82,7 +80,7 @@ Rectangle {
         }
 
         Rectangle {
-            property string defaultString: qsTr("Change Keyboard");
+            property string defaultString: i18n.tr("Change Keyboard");
 
             id: toolTip
 

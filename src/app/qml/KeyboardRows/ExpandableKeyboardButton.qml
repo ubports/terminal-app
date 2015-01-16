@@ -8,6 +8,7 @@ Item {
     property alias mainAction: expandableButton.mainAction
     property alias actions: expandableButton.actions
     property alias expandable: expandableButton.expandable
+    property alias expandRight: expandableButton.expandRight
 
     Rectangle {
         width: parent.width
@@ -27,15 +28,10 @@ Item {
     ExpandableButton {
         id: expandableButton
         anchors.fill: parent
+        parentComponent: Rectangle {
+            color: "black"
+        }
 
         z: parent.z + 0.01
-
-        rotation: 3
-
-        childComponent: Component {
-            Rectangle {
-                color: "black"
-            }
-        }
     }
 }
