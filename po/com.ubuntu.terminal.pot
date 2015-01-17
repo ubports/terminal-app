@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-17 01:46+0100\n"
+"POT-Creation-Date: 2015-01-17 02:58+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,7 +81,11 @@ msgstr ""
 msgid "Font Size:"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:58
+#: ../src/app/qml/SettingsPage.qml:59
+msgid "Show Keyboard Bar"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
 msgstr ""
 
@@ -93,7 +97,7 @@ msgstr ""
 msgid "New tab"
 msgstr ""
 
-#: ../src/app/qml/TerminalPage.qml:97
+#: ../src/app/qml/TerminalPage.qml:108
 msgid "Selection Mode"
 msgstr ""
 

@@ -52,6 +52,21 @@ Page {
 
         ListItem.ThinDivider { }
 
+        ListItem.Empty {
+            showDivider: false
+            Label {
+                anchors { left: parent.left; verticalCenter: parent.verticalCenter }
+                text: i18n.tr("Show Keyboard Bar")
+            }
+            Switch {
+                anchors { right: parent.right; verticalCenter: parent.verticalCenter }
+                onCheckedChanged: settings.showKeyboardBar = checked;
+                Component.onCompleted: checked = settings.showKeyboardBar;
+            }
+        }
+
+        ListItem.ThinDivider { }
+
         OptionSelector {
             id: colorsSchemeSelector
             objectName: "colorsSchemeSelector"

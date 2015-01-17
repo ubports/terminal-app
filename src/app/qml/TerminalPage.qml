@@ -21,7 +21,7 @@ Page {
             left: parent.left;
             top: parent.top;
             right: parent.right;
-            bottom: keyboardBar.top
+            bottom: keyboardBarLoader.top
         }
     }
 
@@ -71,26 +71,37 @@ Page {
         }
     }
 
-    KeyboardBar {
-        id: keyboardBar
-        height: units.gu(5)
+    Loader {
+        id: keyboardBarLoader
+        height: active ? units.gu(5) : 0
         anchors {left: parent.left; right: parent.right}
+        active: settings.showKeyboardBar
 
         y: parent.height - height - Qt.inputMethod.keyboardRectangle.height
         z: parent.z + 0.1
 
-        onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
-        onSimulateCommand: terminal.session.sendText(command);
+        sourceComponent: KeyboardBar {
+            height: units.gu(5)
+            onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
+            onSimulateCommand: terminal.session.sendText(command);
+        }
     }
 
     Loader {
         id: bottomMessage
-        anchors.fill: keyboardBar
+
+        height: units.gu(5)
+        anchors {left: parent.left; right: parent.right}
+
+        y: parent.height - height - Qt.inputMethod.keyboardRectangle.height
         z: parent.z + 0.2
+
         active: false
         sourceComponent:  Rectangle {
             anchors.fill: parent
             color: "black"
+            opacity: 0.7
+
             Text {
                 anchors.centerIn: parent
                 color: "white"
@@ -148,7 +159,7 @@ Page {
 
         anchors {right: parent.right; margins: units.gu(1)}
 
-        y: parent.height - height - units.gu(1) - keyboardBar.height
+        y: parent.height - height - units.gu(1) - keyboardBarLoader.height
 
         innerOpacity: 0.6
         border {color: UbuntuColors.orange; width: units.dp(2)}
@@ -173,7 +184,7 @@ Page {
             PropertyChanges { target: tabsButton; visible: false }
             PropertyChanges { target: keyboardButton; visible: false }
             PropertyChanges { target: bottomMessage; active: true }
-            PropertyChanges { target: keyboardBar; enabled: false }
+            PropertyChanges { target: keyboardBarLoader; enabled: false }
             PropertyChanges { target: inputArea; enabled: false }
         }
     ]
