@@ -1,21 +1,33 @@
 # Slovenian translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-26 08:27-0700\n"
-"PO-Revision-Date: 2014-10-07 09:32+0000\n"
+"POT-Creation-Date: 2015-01-17 02:58+0100\n"
+"PO-Revision-Date: 2015-01-16 15:27+0000\n"
 "Last-Translator: Damir Jerovšek <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-08 07:35+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2015-01-17 07:15+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:19
+msgid "Select"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:26
+msgid "Copy"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:33
+msgid "Paste"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -30,12 +42,10 @@ msgid "password"
 msgstr "geslo"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-#: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
 msgstr "V redu"
 
-#: ../src/app/qml/AuthenticationDialog.qml:61
-#: ../src/app/qml/ColorDialog.qml:149
+#: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
 msgstr "Prekliči"
 
@@ -43,129 +53,116 @@ msgstr "Prekliči"
 msgid "Authentication failed"
 msgstr "Overitev je spodletela"
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr "Izberite barvo"
+#: ../src/app/qml/KeyboardBar.qml:41
+msgid "Scroll Keys"
+msgstr "Drsne tipke"
 
-#: ../src/app/qml/ColorDialog.qml:129
-msgid "OK"
-msgstr "V redu"
+#: ../src/app/qml/KeyboardBar.qml:46
+msgid "Functions Keys"
+msgstr "Funkcijske tipke"
 
-#: ../src/app/qml/Configs.qml:69
-msgid "Color scheme"
-msgstr "Barvna shema"
+#: ../src/app/qml/KeyboardBar.qml:51
+msgid "Command Keys"
+msgstr "Ukazne tipke"
 
-#: ../src/app/qml/Configs.qml:85
-msgid "Font size"
-msgstr "Velikost pisave"
+#: ../src/app/qml/KeyboardBar.qml:56
+msgid "Control Keys"
+msgstr "Nadzorne tipke"
 
-#: ../src/app/qml/Configs.qml:108
-msgid "Enable effects:"
-msgstr "Omogoči učinke:"
+#: ../src/app/qml/KeyboardBar.qml:83
+msgid "Change Keyboard"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:126
-msgid "Screen color"
-msgstr "Barva zaslona"
-
-#: ../src/app/qml/Configs.qml:139
-msgid "Color intensity"
-msgstr "Intenzivnost barve"
-
-#: ../src/app/qml/Configs.qml:167
-msgid "Bloom"
-msgstr "Cvetenje"
-
-#: ../src/app/qml/Configs.qml:195
-msgid "Curvature"
-msgstr "Ukrivljenost"
-
-#: ../src/app/qml/Configs.qml:223
-msgid "Noise"
-msgstr "Hrup"
-
-#: ../src/app/qml/Configs.qml:251
-msgid "Jitter"
-msgstr "Razgibanost"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
-msgid "PG_UP"
-msgstr "PG_UP"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
-msgid "TAB"
-msgstr "TAB"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
-msgid "DEL"
-msgstr "DEL"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
-msgid "HOME"
-msgstr "HOME"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
-msgid "PG_DN"
-msgstr "PG_DN"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
-msgid "END"
-msgstr "END"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:32
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "Terminal"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:51
-#: ../src/app/qml/ubuntu-terminal-app.qml:88
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Nastavitve"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
-msgstr "Skrij vse pulte s tipkami"
+#: ../src/app/qml/SettingsPage.qml:36
+msgid "Font Size:"
+msgstr "Velikost pisave:"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Nadzorne tipke"
+#: ../src/app/qml/SettingsPage.qml:59
+msgid "Show Keyboard Bar"
+msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Funkcijske tipke"
+#: ../src/app/qml/SettingsPage.qml:73
+msgid "Color Scheme"
+msgstr "Barvna shema"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "Smerne tipke"
+#: ../src/app/qml/TabsPage.qml:8
+msgid "Tabs"
+msgstr "Zavihki"
+
+#: ../src/app/qml/TabsPage.qml:14
+msgid "New tab"
+msgstr "Nov zavihek"
+
+#: ../src/app/qml/TerminalPage.qml:108
+msgid "Selection Mode"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr "Nepoimenovana barvna shema"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr "Dostopna barvna shema"
 
 #: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr "Odpri povezavo"
 
 #: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr "Kopiraj naslov povezave"
 
 #: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr "Pošlji e-pošto ..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr "Kopiraj e-poštni naslov"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
 "Na voljo ni prevajalnika tipkovnice. Manjkajo podatki za spreminjanje "
 "pritiskov tipk v znake, ki se pošljejo terminalu."
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr "Razlikovanje velikosti črk"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "Regularni izraz"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "Poudari vsa ujemanja"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+msgid "Color Scheme Error"
+msgstr "Napaka barvne sheme"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "Barvne sheme ni mogoče naložiti: %1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Terminal"
