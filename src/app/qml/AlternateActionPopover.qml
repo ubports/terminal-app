@@ -16,6 +16,13 @@ Component {
                 right: parent.right
             }
             ListItem.Standard {
+                text: i18n.tr("Select")
+                onClicked: {
+                    terminalPage.state = "SELECTION";
+                    popover.hide();
+                }
+            }
+            ListItem.Standard {
                 text: i18n.tr("Copy")
                 onClicked: {
                     terminal.copyClipboard();

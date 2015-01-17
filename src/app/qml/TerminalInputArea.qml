@@ -51,8 +51,9 @@ Item{
             id: pressAndHoldTimer
             running: false
             onTriggered: {
-                touchPressAndHold(singleTouchTouchArea.__pressPosition.x,
-                                  singleTouchTouchArea.__pressPosition.y);
+                if (!parent.__moved)
+                    touchPressAndHold(singleTouchTouchArea.__pressPosition.x,
+                                      singleTouchTouchArea.__pressPosition.y);
             }
         }
 
