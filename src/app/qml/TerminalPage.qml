@@ -164,7 +164,7 @@ Page {
         innerOpacity: 0.6
         border {color: UbuntuColors.orange; width: units.dp(2)}
         action: Action {
-            text: "VKB"
+            iconName: "input-keyboard-symbolic"
             onTriggered: {
                 Qt.inputMethod.show();
                 terminal.forceActiveFocus();
