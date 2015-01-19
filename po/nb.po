@@ -1,169 +1,168 @@
 # Norwegian Bokmal translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-26 08:27-0700\n"
-"PO-Revision-Date: 2014-07-27 18:26+0000\n"
+"POT-Creation-Date: 2015-01-17 02:58+0100\n"
+"PO-Revision-Date: 2015-01-18 20:07+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-02 06:33+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2015-01-19 06:54+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:19
+msgid "Select"
+msgstr "Velg"
+
+#: ../src/app/qml/AlternateActionPopover.qml:26
+msgid "Copy"
+msgstr "Kopier"
+
+#: ../src/app/qml/AlternateActionPopover.qml:33
+msgid "Paste"
+msgstr "Lim inn"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr ""
+msgstr "Autentisering kreves"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr ""
+msgstr "Skriv inn passord>"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr ""
+msgstr "passord"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-#: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
-#: ../src/app/qml/AuthenticationDialog.qml:61
-#: ../src/app/qml/ColorDialog.qml:149
+#: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
-msgstr ""
+msgstr "Autentisering mislyktes"
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr ""
+#: ../src/app/qml/KeyboardBar.qml:41
+msgid "Scroll Keys"
+msgstr "Rulleknapper"
 
-#: ../src/app/qml/ColorDialog.qml:129
-msgid "OK"
-msgstr ""
+#: ../src/app/qml/KeyboardBar.qml:46
+msgid "Functions Keys"
+msgstr "Funksjonsknapper"
 
-#: ../src/app/qml/Configs.qml:69
-msgid "Color scheme"
-msgstr "Fargetema"
+#: ../src/app/qml/KeyboardBar.qml:51
+msgid "Command Keys"
+msgstr "Kommandoknapper"
 
-#: ../src/app/qml/Configs.qml:85
-msgid "Font size"
-msgstr "Skriftstørrelse"
+#: ../src/app/qml/KeyboardBar.qml:56
+msgid "Control Keys"
+msgstr "Kontrollknapper"
 
-#: ../src/app/qml/Configs.qml:108
-msgid "Enable effects:"
-msgstr ""
+#: ../src/app/qml/KeyboardBar.qml:83
+msgid "Change Keyboard"
+msgstr "Endre tastatur"
 
-#: ../src/app/qml/Configs.qml:126
-msgid "Screen color"
-msgstr ""
-
-#: ../src/app/qml/Configs.qml:139
-msgid "Color intensity"
-msgstr ""
-
-#: ../src/app/qml/Configs.qml:167
-msgid "Bloom"
-msgstr ""
-
-#: ../src/app/qml/Configs.qml:195
-msgid "Curvature"
-msgstr ""
-
-#: ../src/app/qml/Configs.qml:223
-msgid "Noise"
-msgstr ""
-
-#: ../src/app/qml/Configs.qml:251
-msgid "Jitter"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
-msgid "PG_UP"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
-msgid "TAB"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
-msgid "DEL"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
-msgid "HOME"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
-msgid "PG_DN"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
-msgid "END"
-msgstr ""
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:32
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "Terminal"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:51
-#: ../src/app/qml/ubuntu-terminal-app.qml:88
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Innstillinger"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
-msgstr ""
+#: ../src/app/qml/SettingsPage.qml:36
+msgid "Font Size:"
+msgstr "Skriftstørrelse:"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Kontrollknapper"
+#: ../src/app/qml/SettingsPage.qml:59
+msgid "Show Keyboard Bar"
+msgstr "Vis tastaturlinje"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Funksjonstaster"
+#: ../src/app/qml/SettingsPage.qml:73
+msgid "Color Scheme"
+msgstr "Fargeoppsett"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "Pilknapper"
+#: ../src/app/qml/TabsPage.qml:8
+msgid "Tabs"
+msgstr "Faner"
+
+#: ../src/app/qml/TabsPage.qml:14
+msgid "New tab"
+msgstr "Ny fane"
+
+#: ../src/app/qml/TerminalPage.qml:108
+msgid "Selection Mode"
+msgstr "Utvalgsmodus"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr ""
+msgstr "Fargeoppsett uten navn"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr ""
+msgstr "Tilgjengelig fargeoppsett"
 
 #: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr ""
+msgstr "Åpne lenke"
 
 #: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr ""
+msgstr "Kopier lenkeadresse"
 
 #: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr ""
+msgstr "Send e-post til …"
 
 #: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr ""
+msgstr "Kopier e-postadresse"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
+"Ingen tasteoversetter er tilgjengelig. Mangler informasjon for å kunne gjøre "
+"om tastetrykk til terminaltegn."
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr "Skill mellom store og små bokstaver"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "Regulært uttrykk"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "Uthev alle søkeresultater"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+msgid "Color Scheme Error"
+msgstr "Feil med fargeoppsett"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "Klarte ikke å laste inn fargeoppsett: %1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Terminal"

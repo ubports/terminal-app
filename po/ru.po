@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-01-17 02:58+0100\n"
-"PO-Revision-Date: 2015-01-17 05:31+0000\n"
-"Last-Translator: Aleksey Kabanov <Unknown>\n"
+"PO-Revision-Date: 2015-01-19 05:38+0000\n"
+"Last-Translator: ☠Jay ZDLin☠ <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-18 05:07+0000\n"
+"X-Launchpad-Export-Date: 2015-01-19 06:54+0000\n"
 "X-Generator: Launchpad (build 17304)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
-msgstr ""
+msgstr "Выбрать"
 
 #: ../src/app/qml/AlternateActionPopover.qml:26
 msgid "Copy"
@@ -39,7 +39,7 @@ msgstr "Введите пароль:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr ""
+msgstr "пароль"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "Ok"
@@ -55,23 +55,23 @@ msgstr "Ошибка аутентификации"
 
 #: ../src/app/qml/KeyboardBar.qml:41
 msgid "Scroll Keys"
-msgstr ""
+msgstr "Клавиши прокрутки"
 
 #: ../src/app/qml/KeyboardBar.qml:46
 msgid "Functions Keys"
-msgstr ""
+msgstr "Функциональные клавиши"
 
 #: ../src/app/qml/KeyboardBar.qml:51
 msgid "Command Keys"
-msgstr ""
+msgstr "Командные клавиши"
 
 #: ../src/app/qml/KeyboardBar.qml:56
 msgid "Control Keys"
-msgstr ""
+msgstr "Клавиши управления"
 
 #: ../src/app/qml/KeyboardBar.qml:83
 msgid "Change Keyboard"
-msgstr ""
+msgstr "Смена клавиатуры"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
@@ -83,7 +83,7 @@ msgstr "Размер шрифта:"
 
 #: ../src/app/qml/SettingsPage.qml:59
 msgid "Show Keyboard Bar"
-msgstr ""
+msgstr "Показать панель клавиатуры"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
@@ -91,15 +91,15 @@ msgstr "Цветовая схема"
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
-msgstr ""
+msgstr "Вкладки"
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr ""
+msgstr "Новая вкладка"
 
 #: ../src/app/qml/TerminalPage.qml:108
 msgid "Selection Mode"
-msgstr ""
+msgstr "Режим выбора"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
@@ -139,18 +139,20 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
+"Преобразование клавиатуры невозможно. Отсутствует информация для "
+"преобразования нажатий клавиш в символы, отправляемые в терминал."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr ""
+msgstr "Учитывать регист"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr ""
+msgstr "Регулярное выражение"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr ""
+msgstr "Выделить все совпадения"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"

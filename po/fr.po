@@ -8,26 +8,26 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-01-17 02:58+0100\n"
-"PO-Revision-Date: 2015-01-16 15:10+0000\n"
-"Last-Translator: Nicolas Delvaux <Unknown>\n"
+"PO-Revision-Date: 2015-01-18 21:09+0000\n"
+"Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-18 05:07+0000\n"
+"X-Launchpad-Export-Date: 2015-01-19 06:54+0000\n"
 "X-Generator: Launchpad (build 17304)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
-msgstr ""
+msgstr "Sélectionner"
 
 #: ../src/app/qml/AlternateActionPopover.qml:26
 msgid "Copy"
-msgstr ""
+msgstr "Copier"
 
 #: ../src/app/qml/AlternateActionPopover.qml:33
 msgid "Paste"
-msgstr ""
+msgstr "Coller"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -55,23 +55,23 @@ msgstr "Échec d'authentification"
 
 #: ../src/app/qml/KeyboardBar.qml:41
 msgid "Scroll Keys"
-msgstr ""
+msgstr "Touches de défilement"
 
 #: ../src/app/qml/KeyboardBar.qml:46
 msgid "Functions Keys"
-msgstr ""
+msgstr "Touches de fonction"
 
 #: ../src/app/qml/KeyboardBar.qml:51
 msgid "Command Keys"
-msgstr ""
+msgstr "Touches de commande"
 
 #: ../src/app/qml/KeyboardBar.qml:56
 msgid "Control Keys"
-msgstr ""
+msgstr "Touches de contrôle"
 
 #: ../src/app/qml/KeyboardBar.qml:83
 msgid "Change Keyboard"
-msgstr ""
+msgstr "Changer de clavier"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
@@ -83,11 +83,11 @@ msgstr "Taille de la police :"
 
 #: ../src/app/qml/SettingsPage.qml:59
 msgid "Show Keyboard Bar"
-msgstr ""
+msgstr "Afficher la barre de clavier"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
-msgstr ""
+msgstr "Thème de couleur"
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
@@ -95,11 +95,11 @@ msgstr "Onglets"
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr ""
+msgstr "Nouvel onglet"
 
 #: ../src/app/qml/TerminalPage.qml:108
 msgid "Selection Mode"
-msgstr ""
+msgstr "Mode de sélection"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
@@ -145,24 +145,24 @@ msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr ""
+msgstr "Respecter la casse"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr ""
+msgstr "Expression régulière"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr ""
+msgstr "Surligner toutes les correspondances"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr ""
+msgstr "Erreur de thème de couleurs"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr ""
+msgstr "Impossible de charger le thème de couleurs : %1"
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
