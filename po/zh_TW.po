@@ -1,169 +1,166 @@
 # Chinese (Traditional) translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-26 08:27-0700\n"
-"PO-Revision-Date: 2014-08-29 10:55+0000\n"
-"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
+"POT-Creation-Date: 2015-01-17 02:58+0100\n"
+"PO-Revision-Date: 2015-01-19 13:12+0000\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-02 06:33+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2015-01-20 07:35+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:19
+msgid "Select"
+msgstr "選取"
+
+#: ../src/app/qml/AlternateActionPopover.qml:26
+msgid "Copy"
+msgstr "複製"
+
+#: ../src/app/qml/AlternateActionPopover.qml:33
+msgid "Paste"
+msgstr "貼上"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr ""
+msgstr "要求核對身分"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr ""
+msgstr "輸入密碼："
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr ""
+msgstr "密碼"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-#: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr ""
+msgstr "確定"
 
-#: ../src/app/qml/AuthenticationDialog.qml:61
-#: ../src/app/qml/ColorDialog.qml:149
+#: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
 msgstr "取消"
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
+msgstr "身分核對失敗"
+
+#: ../src/app/qml/KeyboardBar.qml:41
+msgid "Scroll Keys"
 msgstr ""
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr "挑選顏色"
+#: ../src/app/qml/KeyboardBar.qml:46
+msgid "Functions Keys"
+msgstr ""
 
-#: ../src/app/qml/ColorDialog.qml:129
-msgid "OK"
-msgstr "確定"
+#: ../src/app/qml/KeyboardBar.qml:51
+msgid "Command Keys"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:69
-msgid "Color scheme"
-msgstr "色彩方案"
+#: ../src/app/qml/KeyboardBar.qml:56
+msgid "Control Keys"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:85
-msgid "Font size"
-msgstr "字型大小"
+#: ../src/app/qml/KeyboardBar.qml:83
+msgid "Change Keyboard"
+msgstr "變換鍵盤"
 
-#: ../src/app/qml/Configs.qml:108
-msgid "Enable effects:"
-msgstr "啟用特效："
-
-#: ../src/app/qml/Configs.qml:126
-msgid "Screen color"
-msgstr "螢幕色彩"
-
-#: ../src/app/qml/Configs.qml:139
-msgid "Color intensity"
-msgstr "顏色強度"
-
-#: ../src/app/qml/Configs.qml:167
-msgid "Bloom"
-msgstr "光暈"
-
-#: ../src/app/qml/Configs.qml:195
-msgid "Curvature"
-msgstr "曲率"
-
-#: ../src/app/qml/Configs.qml:223
-msgid "Noise"
-msgstr "雜訊"
-
-#: ../src/app/qml/Configs.qml:251
-msgid "Jitter"
-msgstr "抖動"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
-msgid "PG_UP"
-msgstr "PG_UP"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
-msgid "TAB"
-msgstr "TAB"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
-msgid "DEL"
-msgstr "DEL"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
-msgid "HOME"
-msgstr "HOME"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
-msgid "PG_DN"
-msgstr "PG_DN"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
-msgid "END"
-msgstr "END"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:32
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "終端機"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:51
-#: ../src/app/qml/ubuntu-terminal-app.qml:88
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "設定"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
-msgstr "隱藏所有按鍵面板"
+#: ../src/app/qml/SettingsPage.qml:36
+msgid "Font Size:"
+msgstr "字型大小："
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Control 鍵"
+#: ../src/app/qml/SettingsPage.qml:59
+msgid "Show Keyboard Bar"
+msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Function 鍵"
+#: ../src/app/qml/SettingsPage.qml:73
+msgid "Color Scheme"
+msgstr "色彩方案"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "方向鍵"
+#: ../src/app/qml/TabsPage.qml:8
+msgid "Tabs"
+msgstr "分頁"
+
+#: ../src/app/qml/TabsPage.qml:14
+msgid "New tab"
+msgstr "新增分頁"
+
+#: ../src/app/qml/TerminalPage.qml:108
+msgid "Selection Mode"
+msgstr "選取模式"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr "未命名色彩方案"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr "無障礙色彩方案"
 
 #: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr "開啟連結"
 
 #: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr "複製連結位址"
 
 #: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr "傳送電子郵件到..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr "複製電子郵子位址"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr "沒有可用的鍵盤轉換器。缺少要將鍵盤輸入的字元轉換並送到終端機的資訊。"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr "區分大小寫"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "標明所有符合項目"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+msgid "Color Scheme Error"
+msgstr "色彩方案錯誤"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "無法載入色彩方案：%1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "終端機"
