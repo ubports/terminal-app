@@ -1,4 +1,4 @@
-# Chinese (Simplified) translation for ubuntu-terminal-app
+# English (Australia) translation for ubuntu-terminal-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-01-17 02:58+0100\n"
-"PO-Revision-Date: 2015-01-20 09:16+0000\n"
-"Last-Translator: cthbleachbit <Unknown>\n"
-"Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
+"PO-Revision-Date: 2015-01-21 02:20+0000\n"
+"Last-Translator: Joel Addison <jaddi27@gmail.com>\n"
+"Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,148 +19,150 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
-msgstr "选择"
+msgstr "Select"
 
 #: ../src/app/qml/AlternateActionPopover.qml:26
 msgid "Copy"
-msgstr "复制"
+msgstr "Copy"
 
 #: ../src/app/qml/AlternateActionPopover.qml:33
 msgid "Paste"
-msgstr "粘贴"
+msgstr "Paste"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "需要认证"
+msgstr "Authentication required"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr "输入密码："
+msgstr "Enter password:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr "密码"
+msgstr "password"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "Ok"
-msgstr "确定"
+msgstr "Ok"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
-msgstr "取消"
+msgstr "Cancel"
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
-msgstr "认证失败"
+msgstr "Authentication failed"
 
 #: ../src/app/qml/KeyboardBar.qml:41
 msgid "Scroll Keys"
-msgstr "滚动键"
+msgstr "Scroll Keys"
 
 #: ../src/app/qml/KeyboardBar.qml:46
 msgid "Functions Keys"
-msgstr "功能键"
+msgstr "Function Keys"
 
 #: ../src/app/qml/KeyboardBar.qml:51
 msgid "Command Keys"
-msgstr "命令键"
+msgstr "Command Keys"
 
 #: ../src/app/qml/KeyboardBar.qml:56
 msgid "Control Keys"
-msgstr "控制键"
+msgstr "Control Keys"
 
 #: ../src/app/qml/KeyboardBar.qml:83
 msgid "Change Keyboard"
-msgstr "更改键盘"
+msgstr "Change Keyboard"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "设置"
+msgstr "Settings"
 
 #: ../src/app/qml/SettingsPage.qml:36
 msgid "Font Size:"
-msgstr "字体大小："
+msgstr "Font Size:"
 
 #: ../src/app/qml/SettingsPage.qml:59
 msgid "Show Keyboard Bar"
-msgstr "显示键盘栏"
+msgstr "Show Keyboard Bar"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
-msgstr "配色方案"
+msgstr "Colour Scheme"
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
-msgstr "标签"
+msgstr "Tabs"
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr "新标签页"
+msgstr "New tab"
 
 #: ../src/app/qml/TerminalPage.qml:108
 msgid "Selection Mode"
-msgstr "选择模式"
+msgstr "Selection Mode"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "未命名的配色方案"
+msgstr "Un-named Colour Scheme"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "可用配色方案"
+msgstr "Accessible Colour Scheme"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "打开链接"
+msgstr "Open Link"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "复制链接地址"
+msgstr "Copy Link Address"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "发送电子邮件到..."
+msgstr "Send Email To..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "复制电子邮件地址"
+msgstr "Copy Email Address"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
-msgstr "没有可用的键盘翻译器 ：无法找到将按键转换为终端字符所需的信息。"
+msgstr ""
+"No keyboard translator available.  The information needed to convert key "
+"presses into characters to send to the terminal is missing."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "区分大小写"
+msgstr "Match case"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "正则表达式"
+msgstr "Regular expression"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "高亮所有匹配"
+msgstr "Higlight all matches"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "配色方案错误"
+msgstr "Colour Scheme Error"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "无法加载配色方案：%1"
+msgstr "Cannot load colour scheme: %1"
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr "终端"
+msgstr "Terminal"
