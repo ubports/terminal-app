@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-01-17 02:58+0100\n"
-"PO-Revision-Date: 2015-01-18 19:45+0000\n"
-"Last-Translator: João Fernandes <Unknown>\n"
+"PO-Revision-Date: 2015-01-28 12:54+0000\n"
+"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-19 06:54+0000\n"
-"X-Generator: Launchpad (build 17304)\n"
+"X-Launchpad-Export-Date: 2015-01-29 06:07+0000\n"
+"X-Generator: Launchpad (build 17306)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
-msgstr "Seleccionar"
+msgstr "Selecionar"
 
 #: ../src/app/qml/AlternateActionPopover.qml:26
 msgid "Copy"
@@ -59,19 +59,19 @@ msgstr "Teclas de deslocamento"
 
 #: ../src/app/qml/KeyboardBar.qml:46
 msgid "Functions Keys"
-msgstr "Teclas de Função"
+msgstr "Teclas de função"
 
 #: ../src/app/qml/KeyboardBar.qml:51
 msgid "Command Keys"
-msgstr "Teclas de Comando"
+msgstr "Teclas de comando"
 
 #: ../src/app/qml/KeyboardBar.qml:56
 msgid "Control Keys"
-msgstr "Teclas de Controlo"
+msgstr "Teclas de controlo"
 
 #: ../src/app/qml/KeyboardBar.qml:83
 msgid "Change Keyboard"
-msgstr "Trocar Teclado"
+msgstr "Trocar teclado"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
@@ -79,15 +79,15 @@ msgstr "Definições"
 
 #: ../src/app/qml/SettingsPage.qml:36
 msgid "Font Size:"
-msgstr "Tamanho do Tipo de Letra:"
+msgstr "Tamanho do tipo de letra:"
 
 #: ../src/app/qml/SettingsPage.qml:59
 msgid "Show Keyboard Bar"
-msgstr "Mostrar Barra do Teclado"
+msgstr "Mostrar barra do teclado"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
-msgstr "Esquema de Cores"
+msgstr "Esquema de cores"
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
@@ -99,39 +99,39 @@ msgstr "Novo separador"
 
 #: ../src/app/qml/TerminalPage.qml:108
 msgid "Selection Mode"
-msgstr "Modo de Selecção"
+msgstr "Modo de seleção"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "Esquema de Cores sem Nome"
+msgstr "Esquema de cores sem nome"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "Esquema de Cores Acessível"
+msgstr "Esquema de cores acessível"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "Abrir Ligação"
+msgstr "Abrir ligação"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "Copiar Endereço da Ligação"
+msgstr "Copiar endereço da ligação"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "Enviar E-mail Para..."
+msgstr "Enviar email para..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "Copiar Endereço de E-mail"
+msgstr "Copiar endereço de email"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -156,7 +156,7 @@ msgstr "Destacar todas as correspondências"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "Erro no Esquema de Cores"
+msgstr "Erro no esquema de cores"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
