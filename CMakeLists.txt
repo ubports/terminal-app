@@ -41,7 +41,12 @@ if(CLICK_MODE)
     set(QT_IMPORTS_DIR "/lib/${ARCH_TRIPLET}")
     set(BIN_DIR /lib/${ARCH_TRIPLET}/bin)
     if(NOT BZR_REVNO)
-        set(BZR_REVNO "latest")
+      execute_process(
+        COMMAND bzr revno
+        OUTPUT_VARIABLE BZR_REVNO
+        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        OUTPUT_STRIP_TRAILING_WHITESPACE
+      )
     endif(NOT BZR_REVNO)
 
     execute_process(
