@@ -1,7 +1,8 @@
-file(GLOB_RECURSE QML_SRCS *.qml *.js)
+file(GLOB_RECURSE QML_SRCS *.qml *.js *.json)
 
 set(terminal_SRCS
     main.cpp
+    fileio.cpp
     ${QML_SRCS}
 )
 

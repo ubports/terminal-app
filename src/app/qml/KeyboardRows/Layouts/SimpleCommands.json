@@ -1,0 +1,87 @@
+{
+    "name" : "Comamnds Key",
+    "short_name" : "CMD",
+
+    "buttons": [
+        {
+            "main_action" : {
+                "type": "command",
+                "text" : "top",
+                "command" : "top\n"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "command",
+                "text" : "clear",
+                "command" : "clear\n"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "command",
+                "text" : "ls",
+                "command" : "ls\n"
+            },
+            "other_actions" : [
+                {
+                    "type" : "command",
+                    "text" : "-l",
+                    "command" : "ls -l\n"
+                },
+                {
+                    "type": "command",
+                    "text": "-a",
+                    "command": "ls -a\n"
+                }
+            ]
+        },
+        {
+            "main_action" : {
+                "type": "command",
+                "text" : "rm",
+                "command" : "rm "
+            },
+            "other_actions" : [
+                {
+                    "type" : "command",
+                    "text" : "-r",
+                    "command" : "rm -r "
+                }
+            ]
+        },
+        {
+            "main_action" : {
+                "type": "command",
+                "text" : "find",
+                "command" : "find "
+            },
+            "other_actions" : [
+                {
+                    "type" : "command",
+                    "text" : "-name",
+                    "command" : "find -name "
+                }
+            ]
+        },
+        {
+            "main_action" : {
+                "type": "command",
+                "text" : "chmod",
+                "command" : "chmod "
+            },
+            "other_actions" : [
+                {
+                    "type" : "command",
+                    "text" : "555",
+                    "command" : "chmod 555 "
+                },
+                {
+                    "type": "command",
+                    "text": "777",
+                    "command": "chmod 777 "
+                }
+            ]
+        }
+    ]
+}

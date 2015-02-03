@@ -27,13 +27,31 @@
 #include <QLibrary>
 #include <QDir>
 
+#include "fileio.h"
+
 #include <QDebug>
+
+QStringList getDefaultProfiles(const QString &path) {
+    QDir layoutDir(path);
+    layoutDir.setNameFilters(QStringList("*.json"));
+
+    QStringList jsonFiles = layoutDir.entryList();
+
+    QStringList result;
+    foreach (QString s, jsonFiles) {
+        result.append(s.prepend(path));
+    }
+    return result;
+}
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QQuickView view;
     view.setResizeMode(QQuickView::SizeRootObjectToView);
+
+    FileIO fileIO;
+    view.engine()->rootContext()->setContextProperty("fileIO", &fileIO);
 
     // Set up import paths
     QStringList importPathList = view.engine()->importPathList();
@@ -146,6 +164,8 @@ int main(int argc, char *argv[])
             qDebug() << "Trying to load QML from:" << path + "/qml/ubuntu-terminal-app.qml";
             if (fi.exists()) {
                 qmlfile = path +  "/qml/ubuntu-terminal-app.qml";
+                QStringList keyboardLayouts = getDefaultProfiles(path + "/qml/KeyboardRows/Layouts/");
+                view.engine()->rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
                 break;
             }
         }
