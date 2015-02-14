@@ -1,65 +1,70 @@
 .pragma library
 
-var profileErrorString = "Error loading keyboard profile: ";
+// This small library prints semantic errors of bad profiles.
 
 function isAllowed(value, allowed) {
     return allowed.indexOf(value) !== -1;
 }
 
-function composeErrorString(err) {
-    return profileErrorString + err;
+function raiseException(msg, obj) {
+    throw msg + "\n" + JSON.stringify(obj, null, 2);
 }
 
-function validateKeyAction(keyAction) {
-    if (!keyAction.key)
-        return composeErrorString("key is missing");
-    if (keyAction.mod && !isAllowed(keyAction.mod, ["Control", "Shift", "Alt"]))
-        return composeErrorString("mod is invalid");
+function validateKeyAction(keyObject) {
+    if (!keyObject.key)
+        return raiseException("key is missing");
+    if (keyObject.mod && !isAllowed(keyObject.mod, ["Control", "Shift", "Alt"]))
+        return raiseException("mod is invalid in", keyObject);
     return "";
 }
 
-function validateCommandAction(commandAction) {
-    if (!commandAction.command)
-        return composeErrorString("command is missing");
+function validateCommandAction(commandObject) {
+    if (!commandObject.command)
+        raiseException("command is missing in", commandObject);
     return "";
 }
 
-function validateAction(action) {
-    if (!action.type)
-        return composeErrorString("type is missing");
-    if (isAllowed(action.type, ["key", "command"]))
-        return composeErrorString("type must be either key or command");
-    if (!action.text)
-        return composeErrorString("text is missing");
-    return action.type === "key" ? validateKeyAction(action) : validateCommandAction(action);
+function validateAction(actionObject) {
+    if (!actionObject.type)
+        raiseException("type is missing in", actionObject);
+    if (!isAllowed(actionObject.type, ["key", "command"]))
+        raiseException("type must be either key or command in", actionObject);
+    if (!actionObject.text)
+        raiseException("text is missing in", actionObject);
+
+    switch (actionObject.type) {
+    case "key":
+        validateKeyAction(actionObject);
+        break;
+    case "command":
+        validateCommandAction(actionObject);
+        break;
+    }
 }
 
-function validateButton(button) {
-    if (!button.main_action)
-        return composeErrorString("button main_action is missing");
+function validateButton(buttonObject) {
+    if (!buttonObject.main_action)
+        raiseException("main_action is missing", buttonObject);
+
+    validateAction(buttonObject.main_action);
 }
 
 function validateLayout(layoutObject) {
     if (!layoutObject.name)
-        return composeErrorString("name field is missing");
+        raiseException("name is missing in ", layoutObject);
     if (!layoutObject.short_name)
-        return composeErrorString("short_name field is missing");
+        raiseException("short_name is missing in", layoutObject);
     if (!layoutObject.buttons)
-        return composeErrorString("buttons field is missing");
+        raiseException("buttons is missing in", layoutObject);
 
-    for (var button in layoutObject.buttons) {
-        var error = validateButton(button);
-        if (error)
-            return composeErrorString(error);
+    for (var i = 0; i < layoutObject.buttons.length; i++) {
+        validateButton(layoutObject.buttons[i]);
     }
-
-    return "";
 }
 
 function parseJson(jsonString) {
     var jsonObject = JSON.parse(jsonString);
-//    if (!validateLayout(jsonObject)) {
-//        return jsonObject;
-//    }
+    validateLayout(jsonObject);
+
     return jsonObject;
 }

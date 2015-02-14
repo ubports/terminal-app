@@ -31,7 +31,7 @@
 
 #include <QDebug>
 
-QStringList getDefaultProfiles(const QString &path) {
+QStringList getProfileFromDir(const QString &path) {
     QDir layoutDir(path);
     layoutDir.setNameFilters(QStringList("*.json"));
 
@@ -153,6 +153,7 @@ int main(int argc, char *argv[])
 
     view.engine()->setImportPathList(importPathList);
 
+    QStringList keyboardLayouts;
     // load the qml file
     if (qmlfile.isEmpty()) {
         QStringList paths = QStandardPaths::standardLocations(QStandardPaths::DataLocation);
@@ -164,12 +165,21 @@ int main(int argc, char *argv[])
             qDebug() << "Trying to load QML from:" << path + "/qml/ubuntu-terminal-app.qml";
             if (fi.exists()) {
                 qmlfile = path +  "/qml/ubuntu-terminal-app.qml";
-                QStringList keyboardLayouts = getDefaultProfiles(path + "/qml/KeyboardRows/Layouts/");
-                view.engine()->rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
+                keyboardLayouts << getProfileFromDir(path + "/qml/KeyboardRows/Layouts/");
                 break;
             }
         }
     }
+
+    QStringList configLocations = QStandardPaths::standardLocations(QStandardPaths::ConfigLocation);
+    foreach (const QString &path, configLocations) {
+        QString fullPath = path + "/com.ubuntu.terminal/Layouts/";
+        qDebug() << "Retrieving keyboard profiles from folder: " << fullPath;
+        keyboardLayouts << getProfileFromDir(fullPath);
+    }
+
+    view.engine()->rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
+
     qDebug() << "using main qml file from:" << qmlfile;
     view.setSource(QUrl::fromLocalFile(qmlfile));
     view.show();

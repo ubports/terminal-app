@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-03 22:37+0100\n"
+"POT-Creation-Date: 2015-02-14 11:29+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/app/qml/KeyboardBar.qml:163
+#: ../src/app/qml/KeyboardBar.qml:157
 msgid "Change Keyboard"
 msgstr ""
 

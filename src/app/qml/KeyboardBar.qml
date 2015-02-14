@@ -2,7 +2,6 @@ import QtQuick 2.2
 import Ubuntu.Components 1.1
 import "KeyboardRows"
 
-import "KeyboardRows/namesConvertions.js" as Conv
 import "KeyboardRows/jsonParser.js" as Parser
 
 Rectangle {
@@ -10,12 +9,6 @@ Rectangle {
     color: "black"
 
     property int selectedLayoutIndex: 0
-    property var _profilesPaths: [
-        "file:///home/swordfish/workspaces/ubuntu/reboot/src/app/qml/KeyboardRows/Layouts/FunctionKeys.json",
-        "file:///home/swordfish/workspaces/ubuntu/reboot/src/app/qml/KeyboardRows/Layouts/ControlKeys.json",
-        "file:///home/swordfish/workspaces/ubuntu/reboot/src/app/qml/KeyboardRows/Layouts/SimpleCommands.json",
-        "file:///home/swordfish/workspaces/ubuntu/reboot/src/app/qml/KeyboardRows/Layouts/ScrollKeys.json"
-    ]
 
     signal simulateCommand(string command);
     signal simulateKey(int key, int mod);
@@ -55,7 +48,6 @@ Rectangle {
 
     function disableLayout(index) {
         var layoutObject = layoutsList.get(index).layout;
-        console.log("disable", layoutObject.name);
         layoutObject.visible = false;
         layoutObject.enabled = false;
         layoutObject.z = rootItem.z;
@@ -65,7 +57,6 @@ Rectangle {
 
     function enableLayout(index) {
         var layoutObject = layoutsList.get(index).layout;
-        console.log("enable", layoutObject.name);
         layoutObject.visible = true;
         layoutObject.enabled = true;
         layoutObject.z = rootItem.z + 0.01;
@@ -74,7 +65,6 @@ Rectangle {
     }
 
     function selectLayout(index) {
-        console.log("select layout called", index);
         if (index < 0 || index >= layoutsList.count)
             return;
 
@@ -108,13 +98,17 @@ Rectangle {
 
     function loadProfiles() {
         for (var i = 0; i < keyboardLayouts.length; i++) {
-            console.log(Qt.resolvedUrl(keyboardLayouts[i]));
-            var layoutObject = createLayoutObject(Qt.resolvedUrl(keyboardLayouts[i]));
-            layoutsList.append({layout: layoutObject});
+            try {
+                console.log("Loading Layout:", Qt.resolvedUrl(keyboardLayouts[i]));
+                var layoutObject = createLayoutObject(Qt.resolvedUrl(keyboardLayouts[i]));
+                layoutsList.append({layout: layoutObject});
+            } catch (e) {
+                console.error("Error in profile " + keyboardLayouts[i]);
+                console.error(e);
+            }
         }
         updateSelector();
         selectLayout(0);
-        printLayouts();
     }
 
     PressFeedback {
