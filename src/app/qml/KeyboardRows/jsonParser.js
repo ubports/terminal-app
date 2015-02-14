@@ -47,6 +47,16 @@ function validateButton(buttonObject) {
         raiseException("main_action is missing", buttonObject);
 
     validateAction(buttonObject.main_action);
+
+    var other_actions = buttonObject.other_actions;
+    if (other_actions) {
+        if (!Array.isArray(other_actions))
+            raiseException("other_actions is not an array", other_actions);
+
+        for (var i = 0; i < other_actions.length; i++) {
+            validateAction(other_actions[i]);
+        }
+    }
 }
 
 function validateLayout(layoutObject) {
