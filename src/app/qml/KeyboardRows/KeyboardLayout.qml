@@ -24,8 +24,8 @@ KeyboardRow {
         switch(action.type){
         case "key":
             return createKeyActionString(action.key, action.mod, action.text);
-        case "command":
-            return createCommandActionString(action.command, action.text);
+        case "string":
+            return createStringActionString(action.string, action.text);
         }
     }
 
@@ -50,9 +50,9 @@ KeyboardRow {
         return "Action { " + textString + " onTriggered: simulateKey(Qt.Key_"+ key + ", Qt." + mod + "Modifier); }";
     }
 
-    function createCommandActionString(commandString, text) {
+    function createStringActionString(string, text) {
         var textString = text ? "text: \"" + text + "\";" : "";
-        return "Action { " + textString + " onTriggered: simulateCommand(\"" + commandString + "\"); }";
+        return "Action { " + textString + " onTriggered: simulateCommand(\"" + string + "\"); }";
     }
 
     function createEntryString(text, actionString, otherActionsString) {

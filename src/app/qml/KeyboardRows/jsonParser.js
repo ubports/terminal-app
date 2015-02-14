@@ -18,17 +18,17 @@ function validateKeyAction(keyObject) {
     return "";
 }
 
-function validateCommandAction(commandObject) {
-    if (!commandObject.command)
-        raiseException("command is missing in", commandObject);
+function validateStringAction(stringObject) {
+    if (!stringObject.string)
+        raiseException("string is missing in", stringObject);
     return "";
 }
 
 function validateAction(actionObject) {
     if (!actionObject.type)
         raiseException("type is missing in", actionObject);
-    if (!isAllowed(actionObject.type, ["key", "command"]))
-        raiseException("type must be either key or command in", actionObject);
+    if (!isAllowed(actionObject.type, ["key", "string"]))
+        raiseException("type must be either key or string in", actionObject);
     if (!actionObject.text)
         raiseException("text is missing in", actionObject);
 
@@ -36,8 +36,8 @@ function validateAction(actionObject) {
     case "key":
         validateKeyAction(actionObject);
         break;
-    case "command":
-        validateCommandAction(actionObject);
+    case "string":
+        validateStringAction(actionObject);
         break;
     }
 }

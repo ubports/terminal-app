@@ -5,81 +5,81 @@
     "buttons": [
         {
             "main_action" : {
-                "type": "command",
+                "type": "string",
                 "text" : "top",
-                "command" : "top\n"
+                "string" : "top\n"
             }
         },
         {
             "main_action" : {
-                "type": "command",
+                "type": "string",
                 "text" : "clear",
-                "command" : "clear\n"
+                "string" : "clear\n"
             }
         },
         {
             "main_action" : {
-                "type": "command",
+                "type": "string",
                 "text" : "ls",
-                "command" : "ls\n"
+                "string" : "ls\n"
             },
             "other_actions" : [
                 {
-                    "type" : "command",
+                    "type" : "string",
                     "text" : "-l",
-                    "command" : "ls -l\n"
+                    "string" : "ls -l\n"
                 },
                 {
-                    "type": "command",
+                    "type": "string",
                     "text": "-a",
-                    "command": "ls -a\n"
+                    "string": "ls -a\n"
                 }
             ]
         },
         {
             "main_action" : {
-                "type": "command",
+                "type": "string",
                 "text" : "rm",
-                "command" : "rm "
+                "string" : "rm "
             },
             "other_actions" : [
                 {
-                    "type" : "command",
+                    "type" : "string",
                     "text" : "-r",
-                    "command" : "rm -r "
+                    "string" : "rm -r "
                 }
             ]
         },
         {
             "main_action" : {
-                "type": "command",
+                "type": "string",
                 "text" : "find",
-                "command" : "find "
+                "string" : "find "
             },
             "other_actions" : [
                 {
-                    "type" : "command",
+                    "type" : "string",
                     "text" : "-name",
-                    "command" : "find -name "
+                    "string" : "find -name "
                 }
             ]
         },
         {
             "main_action" : {
-                "type": "command",
+                "type": "string",
                 "text" : "chmod",
-                "command" : "chmod "
+                "string" : "chmod "
             },
             "other_actions" : [
                 {
-                    "type" : "command",
+                    "type" : "string",
                     "text" : "555",
-                    "command" : "chmod 555 "
+                    "string" : "chmod 555 "
                 },
                 {
-                    "type": "command",
+                    "type": "string",
                     "text": "777",
-                    "command": "chmod 777 "
+                    "string": "chmod 777 "
                 }
             ]
         }
