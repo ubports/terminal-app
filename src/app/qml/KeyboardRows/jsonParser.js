@@ -15,13 +15,11 @@ function validateKeyAction(keyObject) {
         return raiseException("key is missing");
     if (keyObject.mod && !isAllowed(keyObject.mod, ["Control", "Shift", "Alt"]))
         return raiseException("mod is invalid in", keyObject);
-    return "";
 }
 
 function validateStringAction(stringObject) {
     if (!stringObject.string)
         raiseException("string is missing in", stringObject);
-    return "";
 }
 
 function validateAction(actionObject) {
