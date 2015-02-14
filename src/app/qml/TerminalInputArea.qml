@@ -105,6 +105,7 @@ Item{
             maximumTouchPoints: 2
             minimumTouchPoints: 2
             onPressed: {
+                singleTouchTouchArea.__moved = true;
                 __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
             }
             onUpdated: {
