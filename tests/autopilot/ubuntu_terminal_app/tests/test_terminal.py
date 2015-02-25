@@ -7,17 +7,4 @@
 
 """Terminal app autopilot tests."""
 
-from __future__ import absolute_import
-
-from autopilot.matchers import Eventually
-from testtools.matchers import Equals
-
-from ubuntu_terminal_app.tests import TerminalTestCase
-from ubuntu_terminal_app import DbMan
-from ubuntuuitoolkit import ToolkitException
-from testscenarios import TestWithScenarios
-
-from time import sleep
-import random
-
 # TODO Insert new tests here.

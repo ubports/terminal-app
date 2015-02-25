@@ -16,9 +16,4 @@
 
 """Terminal app autopilot helpers."""
 
-from time import sleep
-import sqlite3
-import os.path
-import ubuntuuitoolkit
-
 # TODO Insert new tests here
