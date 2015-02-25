@@ -13,4 +13,4 @@ from autopilot.testcase import AutopilotTestCase
 class DummyTest(AutopilotTestCase):
     """This is just a placeholder test"""
     def test_dummy_true(self):
-        self.assertTrue(True);
+        self.assertTrue(True)
