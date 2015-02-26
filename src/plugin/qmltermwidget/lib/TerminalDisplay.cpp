@@ -3248,9 +3248,17 @@ void TerminalDisplay::setColorScheme(const QString &name)
     setFillColor(cs->backgroundColor());
 }
 
-void TerminalDisplay::simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, const QString &text)
+void TerminalDisplay::simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, QString text)
 {
     Q_UNUSED(nativeScanCode);
+
+    // TODO WORKAROUND: If text is not given we try to guess it from the unicode value.
+    // This solution is probably not complete on the domain, but works for the most common cases.
+    if (text.isEmpty()) {
+        bool shiftMod = modifiers & Qt::ShiftModifier;
+        text = QString(shiftMod ? QChar(key) : QChar(key).toLower());
+    }
+
     QEvent::Type type = pressed ? QEvent::KeyPress : QEvent::KeyRelease;
     QKeyEvent event = QKeyEvent(type, key, (Qt::KeyboardModifier) modifiers, text);
     keyPressedSignal(&event);
