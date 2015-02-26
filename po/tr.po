@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-01-17 02:58+0100\n"
+"POT-Creation-Date: 2015-02-14 13:41+0100\n"
 "PO-Revision-Date: 2015-02-04 14:48+0000\n"
 "Last-Translator: Volkan Gezer <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-05 07:46+0000\n"
-"X-Generator: Launchpad (build 17331)\n"
+"X-Launchpad-Export-Date: 2015-02-26 06:07+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
@@ -53,23 +53,7 @@ msgstr "İptal"
 msgid "Authentication failed"
 msgstr "Kimlik denetimi başarısız"
 
-#: ../src/app/qml/KeyboardBar.qml:41
-msgid "Scroll Keys"
-msgstr "Kaydırma Tuşları"
-
-#: ../src/app/qml/KeyboardBar.qml:46
-msgid "Functions Keys"
-msgstr "Fonksiyon Tuşları"
-
-#: ../src/app/qml/KeyboardBar.qml:51
-msgid "Command Keys"
-msgstr "Komut Tuşları"
-
-#: ../src/app/qml/KeyboardBar.qml:56
-msgid "Control Keys"
-msgstr "Kontrol Tuşları"
-
-#: ../src/app/qml/KeyboardBar.qml:83
+#: ../src/app/qml/KeyboardBar.qml:157
 msgid "Change Keyboard"
 msgstr "Klavyeyi Değiştir"
 
@@ -166,3 +150,15 @@ msgstr "Renk şeması yüklenemiyor: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Uçbirim"
+
+#~ msgid "Scroll Keys"
+#~ msgstr "Kaydırma Tuşları"
+
+#~ msgid "Control Keys"
+#~ msgstr "Kontrol Tuşları"
+
+#~ msgid "Functions Keys"
+#~ msgstr "Fonksiyon Tuşları"
+
+#~ msgid "Command Keys"
+#~ msgstr "Komut Tuşları"

@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-01-17 02:58+0100\n"
+"POT-Creation-Date: 2015-02-14 13:41+0100\n"
 "PO-Revision-Date: 2015-01-21 00:32+0000\n"
 "Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-01-21 06:48+0000\n"
-"X-Generator: Launchpad (build 17306)\n"
+"X-Launchpad-Export-Date: 2015-02-26 06:05+0000\n"
+"X-Generator: Launchpad (build 17361)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
@@ -53,23 +53,7 @@ msgstr "Utzi"
 msgid "Authentication failed"
 msgstr "Autentifikazioak huts egin du"
 
-#: ../src/app/qml/KeyboardBar.qml:41
-msgid "Scroll Keys"
-msgstr "Korritze-teklak"
-
-#: ../src/app/qml/KeyboardBar.qml:46
-msgid "Functions Keys"
-msgstr "Funtzio-teklak"
-
-#: ../src/app/qml/KeyboardBar.qml:51
-msgid "Command Keys"
-msgstr "Komando-teklak"
-
-#: ../src/app/qml/KeyboardBar.qml:56
-msgid "Control Keys"
-msgstr "Kontrol-teklak"
-
-#: ../src/app/qml/KeyboardBar.qml:83
+#: ../src/app/qml/KeyboardBar.qml:157
 msgid "Change Keyboard"
 msgstr "Aldatu teklatua"
 
@@ -166,3 +150,15 @@ msgstr "Ezin izan da kolore-eskema kargatu: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminala"
+
+#~ msgid "Scroll Keys"
+#~ msgstr "Korritze-teklak"
+
+#~ msgid "Control Keys"
+#~ msgstr "Kontrol-teklak"
+
+#~ msgid "Functions Keys"
+#~ msgstr "Funtzio-teklak"
+
+#~ msgid "Command Keys"
+#~ msgstr "Komando-teklak"
