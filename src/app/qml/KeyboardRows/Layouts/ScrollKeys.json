@@ -1,0 +1,77 @@
+{
+    "name" : "Scroll Keys",
+    "short_name" : "SCR",
+
+    "buttons": [
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "PG_UP",
+                "key" : "PageUp"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "PG_DN",
+                "key" : "PageDown"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "DEL",
+                "key" : "Delete"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "HOME",
+                "key" : "Home"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "END",
+                "key" : "End"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "TAB",
+                "key" : "Tab"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "\u2191",
+                "key" : "Up"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "\u2193",
+                "key" : "Down"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "\u2190",
+                "key" : "Left"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
+                "text" : "\u2192",
+                "key" : "Right"
+            }
+        }
+    ]
+}

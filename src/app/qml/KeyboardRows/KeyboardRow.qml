@@ -3,7 +3,11 @@ import Ubuntu.Components 1.1
 
 Rectangle {
     id: container
-    property list<QtObject> model
+
+    property string name
+    property string short_name
+
+    property var model: []
     property real keyWidth: units.gu(5)
     property real keyHeight: units.gu(5)
 

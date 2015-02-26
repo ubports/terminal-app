@@ -27,13 +27,31 @@
 #include <QLibrary>
 #include <QDir>
 
+#include "fileio.h"
+
 #include <QDebug>
+
+QStringList getProfileFromDir(const QString &path) {
+    QDir layoutDir(path);
+    layoutDir.setNameFilters(QStringList("*.json"));
+
+    QStringList jsonFiles = layoutDir.entryList();
+
+    QStringList result;
+    foreach (QString s, jsonFiles) {
+        result.append(s.prepend(path));
+    }
+    return result;
+}
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QQuickView view;
     view.setResizeMode(QQuickView::SizeRootObjectToView);
+
+    FileIO fileIO;
+    view.engine()->rootContext()->setContextProperty("fileIO", &fileIO);
 
     // Set up import paths
     QStringList importPathList = view.engine()->importPathList();
@@ -135,6 +153,7 @@ int main(int argc, char *argv[])
 
     view.engine()->setImportPathList(importPathList);
 
+    QStringList keyboardLayouts;
     // load the qml file
     if (qmlfile.isEmpty()) {
         QStringList paths = QStandardPaths::standardLocations(QStandardPaths::DataLocation);
@@ -146,10 +165,21 @@ int main(int argc, char *argv[])
             qDebug() << "Trying to load QML from:" << path + "/qml/ubuntu-terminal-app.qml";
             if (fi.exists()) {
                 qmlfile = path +  "/qml/ubuntu-terminal-app.qml";
+                keyboardLayouts << getProfileFromDir(path + "/qml/KeyboardRows/Layouts/");
                 break;
             }
         }
     }
+
+    QStringList configLocations = QStandardPaths::standardLocations(QStandardPaths::ConfigLocation);
+    foreach (const QString &path, configLocations) {
+        QString fullPath = path + "/com.ubuntu.terminal/Layouts/";
+        qDebug() << "Retrieving keyboard profiles from folder: " << fullPath;
+        keyboardLayouts << getProfileFromDir(fullPath);
+    }
+
+    view.engine()->rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
+
     qDebug() << "using main qml file from:" << qmlfile;
     view.setSource(QUrl::fromLocalFile(qmlfile));
     view.show();
