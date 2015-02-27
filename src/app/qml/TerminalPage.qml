@@ -62,6 +62,9 @@ Page {
         onTwoFingerSwipeDown: terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
         onTouchPressAndHold: alternateAction(x, y);
 
+        onSwipeLeftDetected: terminal.simulateKeyPress(Qt.Key_Left, Qt.NoModifier, true, 0, "");
+        onSwipeRightDetected: terminal.simulateKeyPress(Qt.Key_Right, Qt.NoModifier, true, 0, "");
+
         // Semantic actions
         onAlternateAction: {
             // Force the hiddenButton in the event position.

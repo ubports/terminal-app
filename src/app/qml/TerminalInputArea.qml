@@ -18,6 +18,8 @@ Item{
     signal touchRelease(int x, int y);
     signal swipeUpDetected();
     signal swipeDownDetected();
+    signal swipeLeftDetected();
+    signal swipeRightDetected();
     signal twoFingerSwipeUp();
     signal twoFingerSwipeDown();
 
@@ -39,7 +41,17 @@ Item{
     MultiPointTouchArea {
         property bool __moved: false
         property point __pressPosition: Qt.point(0, 0);
-        property real __prevDragSteps: 0
+        property real __prevDragStepsY: 0
+        property real __prevDragStepsX: 0
+
+        // This enum represent the status of the dragging.
+        // It is used to avoid simultaneously dragging along both axies
+        // as it's very error prone.
+
+        readonly property int noDragging: 0
+        readonly property int yDragging: 1
+        readonly property int xDragging: 2
+        property real __dragging: noDragging
 
         id: singleTouchTouchArea
 
@@ -61,7 +73,9 @@ Item{
         onPressed: {
             touchAreaPressed = true;
             __moved = false;
-            __prevDragSteps = 0.0;
+            __prevDragStepsY = 0.0;
+            __prevDragStepsX = 0.0;
+            __dragging = noDragging;
             __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
             pressAndHoldTimer.start();
 
@@ -69,18 +83,29 @@ Item{
         }
         onUpdated: {
             var dragValue = touchPoints[0].y - __pressPosition.y;
+            var dragValueX = touchPoints[0].x - __pressPosition.x;
             var dragSteps = dragValue / swipeDelta;
+            var dragStepsX = dragValueX / swipeDelta;
 
             if (!__moved && distance(touchPoints[0], __pressPosition) > swipeDelta)
                 __moved = true;
 
-            if (absFloor(dragSteps) < absFloor(__prevDragSteps)) {
+            if (__dragging !== xDragging && absFloor(dragSteps) < absFloor(__prevDragStepsY)) {
                 swipeUpDetected();
-            } else if (absFloor(dragSteps) > absFloor(__prevDragSteps)) {
+                __dragging = yDragging;
+            } else if (__dragging !== xDragging && absFloor(dragSteps) > absFloor(__prevDragStepsY)) {
                 swipeDownDetected();
+                __dragging = yDragging;
+            } else if (__dragging !== yDragging && absFloor(dragStepsX) < absFloor(__prevDragStepsX)) {
+                swipeLeftDetected();
+                __dragging = xDragging;
+            } else if (__dragging !== yDragging && absFloor(dragStepsX) > absFloor(__prevDragStepsX)) {
+                swipeRightDetected();
+                __dragging = xDragging;
             }
 
-            __prevDragSteps = dragSteps;
+            __prevDragStepsY = dragSteps;
+            __prevDragStepsX = dragStepsX;
         }
         onReleased: {
             var timerRunning = pressAndHoldTimer.running;
