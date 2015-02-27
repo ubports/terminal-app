@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-02-14 13:41+0100\n"
+"POT-Creation-Date: 2015-02-20 14:00+0100\n"
 "PO-Revision-Date: 2015-01-18 09:37+0000\n"
 "Last-Translator: Damir Jerovšek <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-26 06:07+0000\n"
+"X-Launchpad-Export-Date: 2015-02-27 05:57+0000\n"
 "X-Generator: Launchpad (build 17361)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
@@ -81,7 +81,7 @@ msgstr "Zavihki"
 msgid "New tab"
 msgstr "Nov zavihek"
 
-#: ../src/app/qml/TerminalPage.qml:108
+#: ../src/app/qml/TerminalPage.qml:111
 msgid "Selection Mode"
 msgstr "Način izbire"
 
@@ -150,15 +150,3 @@ msgstr "Barvne sheme ni mogoče naložiti: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
-
-#~ msgid "Control Keys"
-#~ msgstr "Nadzorne tipke"
-
-#~ msgid "Functions Keys"
-#~ msgstr "Funkcijske tipke"
-
-#~ msgid "Scroll Keys"
-#~ msgstr "Drsne tipke"
-
-#~ msgid "Command Keys"
-#~ msgstr "Ukazne tipke"
