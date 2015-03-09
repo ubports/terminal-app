@@ -1,4 +1,4 @@
-# Amharic translation for ubuntu-terminal-app
+# Greek translation for ubuntu-terminal-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-20 14:00+0100\n"
-"PO-Revision-Date: 2015-03-08 21:59+0000\n"
-"Last-Translator: samson <Unknown>\n"
-"Language-Team: Amharic <am@li.org>\n"
+"PO-Revision-Date: 2015-03-08 18:12+0000\n"
+"Last-Translator: Aggelos Arnaoutis <angelosarn@hotmail.com>\n"
+"Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,103 +19,103 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
-msgstr "ይምረጡ"
+msgstr "Επιλογή"
 
 #: ../src/app/qml/AlternateActionPopover.qml:26
 msgid "Copy"
-msgstr "ኮፒ"
+msgstr "Αντιγραφή"
 
 #: ../src/app/qml/AlternateActionPopover.qml:33
 msgid "Paste"
-msgstr "መለጠፊያ"
+msgstr "Επικόλληση"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "ማረጋገጫ ያስፈልጋል"
+msgstr "Απαιτείται πιστοποίηση"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr "የመግቢያ ቃል ያስገቡ:"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr "የመግቢያ ቃል"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "Ok"
-msgstr "እሺ"
+msgstr "Εντάξει"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
-msgstr "መሰረዣ"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
-msgstr "ማረጋገጫው ወድቋል"
+msgstr "Αποτυχία πιστοποίησης"
 
 #: ../src/app/qml/KeyboardBar.qml:157
 msgid "Change Keyboard"
-msgstr "የ ፊደል ገበታ መቀየሪያ"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "ማሰናጃ"
+msgstr "Ρυθμίσεις"
 
 #: ../src/app/qml/SettingsPage.qml:36
 msgid "Font Size:"
-msgstr "የ ፊደል መጠን:"
+msgstr "Μέγεθος γραμματοσειράς:"
 
 #: ../src/app/qml/SettingsPage.qml:59
 msgid "Show Keyboard Bar"
-msgstr "የ ፊደል ገበታ መደርደሪያ ማሳያ"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
-msgstr "የ ቀለም ገጽታ"
+msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
-msgstr "ንዑስ መስኮት"
+msgstr "Καρτέλες"
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr "አዲስ ንዑስ መስኮት"
+msgstr "Νέα καρτέλα"
 
 #: ../src/app/qml/TerminalPage.qml:111
 msgid "Selection Mode"
-msgstr "የ መምረጫ ዘዴ"
+msgstr "Λειτουργία επιλογής"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "ያል-ተሰየመ የ ቀለም ገጽታ"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "በቀላሉ የሚደረስበት የ ቀለም ገጽታ"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "አገናኝ መክፈቻ"
+msgstr "Άνοιγμα συνδέσμου"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "አገናኝ አድራሻዎችን ኮፒ ማድረጊያ"
+msgstr "Αντιγραφή διεύθυνσης συνδέσμου"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "ኢሜይል መላኪያ ወደ..."
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "የ ኢሜይል አድራሻን ኮፒ ማድረጊያ"
+msgstr ""
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -123,30 +123,28 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
-"ዝግጁ የ ፊደል ገበታ ተርጓሚ አልተገኘም: የሚፈለገው መረጃ ለመቀየር ቁልፍ መጫኛ ባህሪዎችን ወደ ተርሚናል መላኪያ "
-"አልተገኘም"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "ጉዳይ ማመሳሰያ"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "መደበኛ አገላለጽ"
+msgstr "Κανονική έκφραση"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "ተመሳሳዮችን በሙሉ ማድመቂያ"
+msgstr "Επισήμανση όλων των ταιριασμάτων"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "የ ቀለም ገጽታ ስህተት"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "የ ቀለም ገጽታ መጫን አልተቻለም: %1"
+msgstr ""
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr "ተርሚናል"
+msgstr "Τερματικό"
