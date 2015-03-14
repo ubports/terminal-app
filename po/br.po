@@ -1,21 +1,33 @@
 # Breton translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-26 08:27-0700\n"
-"PO-Revision-Date: 2014-10-03 06:40+0000\n"
+"POT-Creation-Date: 2015-02-20 14:00+0100\n"
+"PO-Revision-Date: 2015-03-13 08:58+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-04 06:25+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2015-03-14 05:37+0000\n"
+"X-Generator: Launchpad (build 17389)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:19
+msgid "Select"
+msgstr "Diuzañ"
+
+#: ../src/app/qml/AlternateActionPopover.qml:26
+msgid "Copy"
+msgstr "Eilañ"
+
+#: ../src/app/qml/AlternateActionPopover.qml:33
+msgid "Paste"
+msgstr "Pegañ"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -30,12 +42,10 @@ msgid "password"
 msgstr "ger-tremen"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-#: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
 msgstr "Mat eo"
 
-#: ../src/app/qml/AuthenticationDialog.qml:61
-#: ../src/app/qml/ColorDialog.qml:149
+#: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
 msgstr "Nullañ"
 
@@ -43,126 +53,72 @@ msgstr "Nullañ"
 msgid "Authentication failed"
 msgstr "C'hwitet eo an dilesadur"
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr "Dibab ul liv"
+#: ../src/app/qml/KeyboardBar.qml:157
+msgid "Change Keyboard"
+msgstr "Cheñch klavier"
 
-#: ../src/app/qml/ColorDialog.qml:129
-msgid "OK"
-msgstr "Mat eo"
-
-#: ../src/app/qml/Configs.qml:69
-msgid "Color scheme"
-msgstr "Livaoueg"
-
-#: ../src/app/qml/Configs.qml:85
-msgid "Font size"
-msgstr "Ment ar font"
-
-#: ../src/app/qml/Configs.qml:108
-msgid "Enable effects:"
-msgstr "Gweredekaat an efedoù :"
-
-#: ../src/app/qml/Configs.qml:126
-msgid "Screen color"
-msgstr "Liv ar skramm"
-
-#: ../src/app/qml/Configs.qml:139
-msgid "Color intensity"
-msgstr "Splannder al liv"
-
-#: ../src/app/qml/Configs.qml:167
-msgid "Bloom"
-msgstr "Bleuñv"
-
-#: ../src/app/qml/Configs.qml:195
-msgid "Curvature"
-msgstr "Krommadur"
-
-#: ../src/app/qml/Configs.qml:223
-msgid "Noise"
-msgstr "Trouz"
-
-#: ../src/app/qml/Configs.qml:251
-msgid "Jitter"
-msgstr "Distabilder"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
-msgid "PG_UP"
-msgstr "PAJ_LEIN"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
-msgid "TAB"
-msgstr "TAOLENN"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
-msgid "DEL"
-msgstr "DIL"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
-msgid "HOME"
-msgstr "DEROÙ"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
-msgid "PG_DN"
-msgstr "PAJ_TRAOÑ"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
-msgid "END"
-msgstr "DIB"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:32
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "Termenell"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:51
-#: ../src/app/qml/ubuntu-terminal-app.qml:88
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Arventennoù"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
-msgstr "Kuzhat an holl banelloù stokelloù"
+#: ../src/app/qml/SettingsPage.qml:36
+msgid "Font Size:"
+msgstr "Ment ar font :"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Stokelloù kontroll"
+#: ../src/app/qml/SettingsPage.qml:59
+msgid "Show Keyboard Bar"
+msgstr "Diskouez barrebb ar c'hlavier"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Stokelloù arc'hwel"
+#: ../src/app/qml/SettingsPage.qml:73
+msgid "Color Scheme"
+msgstr "Steuñv liv"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "Biroù ar c'hlavier"
+#: ../src/app/qml/TabsPage.qml:8
+msgid "Tabs"
+msgstr "Ivinelloù"
+
+#: ../src/app/qml/TabsPage.qml:14
+msgid "New tab"
+msgstr "Ivinell nevez"
+
+#: ../src/app/qml/TerminalPage.qml:111
+msgid "Selection Mode"
+msgstr "Mod diuzañ"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr "Patrom livioù dizanv"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr "Patrom livioù a c'haller kaout"
 
 #: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr "Digeriñ al liamm"
 
 #: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr "Eilañ chomlec'h al liamm"
 
 #: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr "Kas ur postel da..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr "Eilañ ar chomlec'h postel"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
@@ -170,3 +126,28 @@ msgstr ""
 "N'eus troer ebet da gaout evit ar c'hlavier. Mankout a ra an titouroù a zo "
 "ezhomm evit amdreiñ ar pouezañ war ar stokelloù en arouezennoù da gas d'an "
 "dermenell."
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr "Klotaat ar c'hef"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "Troienn reolataet"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "Uslinennañ an holl draoù a glot"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+msgid "Color Scheme Error"
+msgstr "Fazi steuñv liv"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "Ne c'haller ket kargañ ar steuñv liv : %1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Termenell"
