@@ -55,15 +55,68 @@ Page {
         onMouseWheelDetected: terminal.simulateWheel(x, y, buttons, modifiers, angleDelta);
 
         // Touch actions
-        onSwipeUpDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, -wheelValue));
-        onSwipeDownDetected: terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, wheelValue));
         onTouchClick: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
-        onTwoFingerSwipeUp: terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
-        onTwoFingerSwipeDown: terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
         onTouchPressAndHold: alternateAction(x, y);
 
-        onSwipeLeftDetected: terminal.simulateKeyPress(Qt.Key_Left, Qt.NoModifier, true, 0, "");
-        onSwipeRightDetected: terminal.simulateKeyPress(Qt.Key_Right, Qt.NoModifier, true, 0, "");
+        // Swipe actions
+        onSwipeYDetected: {
+            if (steps > 0) {
+                simulateSwipeDown(steps);
+            } else {
+                simulateSwipeUp(-steps);
+            }
+        }
+        onSwipeXDetected: {
+            if (steps > 0) {
+                simulateSwipeRight(steps);
+            } else {
+                simulateSwipeLeft(-steps);
+            }
+        }
+        onTwoFingerSwipeYDetected: {
+            if (steps > 0) {
+                simulateDualSwipeDown(steps);
+            } else {
+                simulateDualSwipeUp(-steps);
+            }
+        }
+
+        function simulateSwipeUp(steps) {
+            while(steps > 0) {
+                terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, -wheelValue));
+                steps--;
+            }
+        }
+        function simulateSwipeDown(steps) {
+            while(steps > 0) {
+                terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, wheelValue));
+                steps--;
+            }
+        }
+        function simulateSwipeLeft(steps) {
+            while(steps > 0) {
+                terminal.simulateKeyPress(Qt.Key_Left, Qt.NoModifier, true, 0, "");
+                steps--;
+            }
+        }
+        function simulateSwipeRight(steps) {
+            while(steps > 0) {
+                terminal.simulateKeyPress(Qt.Key_Right, Qt.NoModifier, true, 0, "");
+                steps--;
+            }
+        }
+        function simulateDualSwipeUp(steps) {
+            while(steps > 0) {
+                terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
+                steps--;
+            }
+        }
+        function simulateDualSwipeDown(steps) {
+            while(steps > 0) {
+                terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
+                steps--;
+            }
+        }
 
         // Semantic actions
         onAlternateAction: {
