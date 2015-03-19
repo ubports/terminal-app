@@ -16,12 +16,11 @@ Item{
     signal touchClick(int x, int y);
     signal touchPress(int x, int y);
     signal touchRelease(int x, int y);
-    signal swipeUpDetected();
-    signal swipeDownDetected();
-    signal swipeLeftDetected();
-    signal swipeRightDetected();
-    signal twoFingerSwipeUp();
-    signal twoFingerSwipeDown();
+
+    signal swipeYDetected(int steps);
+    signal swipeXDetected(int steps);
+    signal twoFingerSwipeYDetected(int steps);
+    signal twoFingerSwipeXDetected(int steps);
 
     // Semantic signals
     signal alternateAction(int x, int y);
@@ -87,25 +86,22 @@ Item{
             var dragSteps = dragValue / swipeDelta;
             var dragStepsX = dragValueX / swipeDelta;
 
+            var dragStepsFloorY = absFloor(dragSteps);
+            var dragStepsFloorX = absFloor(dragStepsX);
+
             if (!__moved && distance(touchPoints[0], __pressPosition) > swipeDelta)
                 __moved = true;
 
-            if (__dragging !== xDragging && absFloor(dragSteps) < absFloor(__prevDragStepsY)) {
-                swipeUpDetected();
+            if (__dragging !== xDragging && dragStepsFloorY !== __prevDragStepsY) {
+                swipeYDetected(dragStepsFloorY - __prevDragStepsY);
                 __dragging = yDragging;
-            } else if (__dragging !== xDragging && absFloor(dragSteps) > absFloor(__prevDragStepsY)) {
-                swipeDownDetected();
-                __dragging = yDragging;
-            } else if (__dragging !== yDragging && absFloor(dragStepsX) < absFloor(__prevDragStepsX)) {
-                swipeLeftDetected();
-                __dragging = xDragging;
-            } else if (__dragging !== yDragging && absFloor(dragStepsX) > absFloor(__prevDragStepsX)) {
-                swipeRightDetected();
+            } else if (__dragging !== yDragging && dragStepsFloorX !== __prevDragStepsX) {
+                swipeXDetected(dragStepsFloorX - __prevDragStepsX);
                 __dragging = xDragging;
             }
 
-            __prevDragStepsY = dragSteps;
-            __prevDragStepsX = dragStepsX;
+            __prevDragStepsY = dragStepsFloorY;
+            __prevDragStepsX = dragStepsFloorX;
         }
         onReleased: {
             var timerRunning = pressAndHoldTimer.running;
@@ -142,13 +138,13 @@ Item{
                 var dragValue = touchPoint.y - __pressPosition.y;
                 var dragSteps = dragValue / swipeDelta;
 
-                if (absFloor(dragSteps) < absFloor(__prevDragSteps)) {
-                    twoFingerSwipeUp();
-                } else if (absFloor(dragSteps) > absFloor(__prevDragSteps)) {
-                    twoFingerSwipeDown();
+                var dragStepsFloorY = absFloor(dragSteps);
+
+                if (dragStepsFloorY !== __prevDragSteps) {
+                    twoFingerSwipeYDetected(dragStepsFloorY - __prevDragSteps);
                 }
 
-                __prevDragSteps = dragSteps;
+                __prevDragSteps = dragStepsFloorY;
             }
 
             mouseEnabled: false
