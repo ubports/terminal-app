@@ -2,20 +2,21 @@
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-#
+# GunChleoc <fios@foramnagaidhlig.net>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-20 14:00+0100\n"
-"PO-Revision-Date: 2015-02-11 15:10+0000\n"
+"PO-Revision-Date: 2015-03-20 04:16+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
-"Language-Team: Gaelic; Scottish <gd@li.org>\n"
+"Language-Team: Fòram na Gàidhlig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-02-28 06:41+0000\n"
-"X-Generator: Launchpad (build 17361)\n"
+"X-Launchpad-Export-Date: 2015-03-20 05:24+0000\n"
+"X-Generator: Launchpad (build 17405)\n"
+"Language: gd\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
@@ -35,7 +36,7 @@ msgstr "Tha feum air dearbhadh"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr ""
+msgstr "Cuir a-steach facal-faire:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
@@ -55,7 +56,7 @@ msgstr "Dh'fhàillig an dearbhadh"
 
 #: ../src/app/qml/KeyboardBar.qml:157
 msgid "Change Keyboard"
-msgstr ""
+msgstr "Atharraich am meur-chlàr"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
@@ -63,11 +64,11 @@ msgstr "Roghainnean"
 
 #: ../src/app/qml/SettingsPage.qml:36
 msgid "Font Size:"
-msgstr ""
+msgstr "Meud a' chrutha-chlò:"
 
 #: ../src/app/qml/SettingsPage.qml:59
 msgid "Show Keyboard Bar"
-msgstr ""
+msgstr "Seall bàr a' mheur-chlàir"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Color Scheme"
@@ -83,39 +84,39 @@ msgstr "Taba ùr"
 
 #: ../src/app/qml/TerminalPage.qml:111
 msgid "Selection Mode"
-msgstr ""
+msgstr "Am modh taghaidh"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr ""
+msgstr "Sgeama dhathan gun ainm"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr ""
+msgstr "Sgeama dhathan so-ruigsinneach"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr ""
+msgstr "Fosgail an ceangal"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr ""
+msgstr "Dèan lethbhreac de sheòladh a' cheangail"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr ""
+msgstr "Cuir post-d gu..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr ""
+msgstr "Dèan lethbhreac de sheòladh a' phuist-d"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -123,27 +124,30 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
+"Chan eil inneal-tionndaidh a' mheur-chlàir ri fhaighinn. Tha am fiosrachadh "
+"riatanach a dhìth gus caractaran a dhèanamh de bhrùthadh iuchrach a thèid a "
+"chur dhan tèirmineil."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr ""
+msgstr "Aire do litrichean mòra 's beaga"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr ""
+msgstr "Eas-preisean riaghailteach"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr ""
+msgstr "Soillsich gach maidse"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr ""
+msgstr "Mearachd le sgeama dhathan"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr ""
+msgstr "Chan urrainn dhuinn an sgeama dhathan a luchdadh: %1"
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
