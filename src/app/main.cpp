@@ -31,6 +31,10 @@
 
 #include <QDebug>
 
+QString getNamedArgument(QStringList args, QString name, QString defaultName)
+{ int index = args.indexOf(name);
+    return (index != -1) ? args[index + 1] : QString(defaultName);
+    }
 QStringList getProfileFromDir(const QString &path) {
     QDir layoutDir(path);
     layoutDir.setNameFilters(QStringList("*.json"));
@@ -78,15 +82,19 @@ int main(int argc, char *argv[])
 
     QStringList args = a.arguments();
     if (args.contains("-h") || args.contains("--help")) {
-        qDebug() << "usage: " + args.at(0) + " [-p|--phone] [-t|--tablet] [-h|--help] [-I <path>]";
+        qDebug() << "usage: " + args.at(0) + " [-p|--phone] [--workdir <dir>] [-t|--tablet] [-h|--help] [-I <path>]";
         qDebug() << "    -p|--phone    If running on Desktop, start in a phone sized window.";
         qDebug() << "    -t|--tablet   If running on Desktop, start in a tablet sized window.";
         qDebug() << "    --forceAuth <true|false> Force authentication on or off.";
         qDebug() << "    -h|--help     Print this help.";
         qDebug() << "    -I <path>     Give a path for an additional QML import directory. May be used multiple times.";
         qDebug() << "    -q <qmlfile>  Give an alternative location for the main qml file.";
+        qDebug() << " --workdir <dir> Change working directory to 'dir'";
         return 0;
     }
+
+    //Dynamic folder home
+    view.engine()->rootContext()->setContextProperty("workdir", getNamedArgument(args, "--workdir", "$HOME"));
 
     // Desktop doesn't have yet Unity8 and so no unity greeter either. Consequently it doesn't
     // also have any "PIN code" or "Password" extra authentication. Don't require any extra
