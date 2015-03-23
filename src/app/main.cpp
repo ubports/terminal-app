@@ -32,9 +32,10 @@
 #include <QDebug>
 
 QString getNamedArgument(QStringList args, QString name, QString defaultName)
-{ int index = args.indexOf(name);
+{
+    int index = args.indexOf(name);
     return (index != -1) ? args[index + 1] : QString(defaultName);
-    }
+}
 QStringList getProfileFromDir(const QString &path) {
     QDir layoutDir(path);
     layoutDir.setNameFilters(QStringList("*.json"));
