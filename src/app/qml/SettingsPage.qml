@@ -50,6 +50,12 @@ Page {
             }
         }
 
+        ListItem.Standard {
+            text: i18n.tr("Layouts")
+            progression: true
+            onClicked: pageStack.push(layoutsPage);
+        }
+
         ListItem.ThinDivider { }
 
         ListItem.Empty {

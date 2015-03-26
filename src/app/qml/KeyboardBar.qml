@@ -97,13 +97,19 @@ Rectangle {
     }
 
     function loadProfiles() {
-        for (var i = 0; i < keyboardLayouts.length; i++) {
+        dropProfiles();
+
+        for (var i = 0; i < settings.profilesList.count; i++) {
+            var profile = settings.profilesList.get(i);
+            if (!profile.profileVisible)
+                continue;
+
             try {
-                console.log("Loading Layout:", Qt.resolvedUrl(keyboardLayouts[i]));
-                var layoutObject = createLayoutObject(Qt.resolvedUrl(keyboardLayouts[i]));
+                console.log("Loading Layout:", Qt.resolvedUrl(profile.file));
+                var layoutObject = createLayoutObject(Qt.resolvedUrl(profile.file));
                 layoutsList.append({layout: layoutObject});
             } catch (e) {
-                console.error("Error in profile " + keyboardLayouts[i]);
+                console.error("Error in profile " + profile.file);
                 console.error(e);
             }
         }
@@ -185,6 +191,11 @@ Rectangle {
                 color: "white"
             }
         }
+    }
+
+    Connections {
+        target: settings
+        onProfilesChanged: rootItem.loadProfiles();
     }
 
     Component.onDestruction: dropProfiles();
