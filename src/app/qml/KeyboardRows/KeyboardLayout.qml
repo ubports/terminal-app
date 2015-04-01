@@ -68,13 +68,13 @@ KeyboardRow {
         return objectString;
     }
 
-    function loadProfile(profileString) {
+    function loadProfile(profileObject) {
         dropProfile();
 
         var maxWidth = 0;
 
         // This function might raise exceptions which are handled in KeyboardBar.qml
-        var profile = profile = Parser.parseJson(profileString);
+        var profile = profileObject;
 
         name = profile.name;
         short_name = profile.short_name;

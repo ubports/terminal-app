@@ -1,6 +1,8 @@
 import QtQuick 2.0
 import Qt.labs.settings 1.0
 
+import "KeyboardRows/jsonParser.js" as Parser
+
 Item {
     id: rootItem
     property alias fontSize: innerSettings.fontSize
@@ -45,11 +47,17 @@ Item {
         for (var i = 0; i < keyboardLayouts.length; i++) {
             var filePath = keyboardLayouts[i];
             var isVisible = visibleProfiles && visibleProfiles[filePath];
-            var name = filePath.substring(filePath.lastIndexOf('/')+1);
 
-            profilesList.append({file: filePath, profileVisible: isVisible, name: name});
+            var profileObject = Parser.parseJson(fileIO.read(filePath));
+
+            profilesList.append(
+                {
+                    file: filePath,
+                    profileVisible: isVisible,
+                    object: profileObject,
+                    name: profileObject.name
+                });
         }
-
         profilesChanged();
     }
 }

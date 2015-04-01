@@ -40,9 +40,9 @@ Rectangle {
         }
     }
 
-    function createLayoutObject(profileUrl) {
+    function createLayoutObject(profileObject) {
         var object = layoutComponent.createObject(keyboardContainer);
-        object.loadProfile(fileIO.read(profileUrl));
+        object.loadProfile(profileObject);
         return object;
     }
 
@@ -106,7 +106,7 @@ Rectangle {
 
             try {
                 console.log("Loading Layout:", Qt.resolvedUrl(profile.file));
-                var layoutObject = createLayoutObject(Qt.resolvedUrl(profile.file));
+                var layoutObject = createLayoutObject(profile.object);
                 layoutsList.append({layout: layoutObject});
             } catch (e) {
                 console.error("Error in profile " + profile.file);

@@ -8,8 +8,7 @@ bool FileIO::write(const QString& sourceUrl, const QString& data) {
     if (sourceUrl.isEmpty())
         return false;
 
-    QUrl url(sourceUrl);
-    QFile file(url.toLocalFile());
+    QFile file(sourceUrl);
     if (!file.open(QFile::WriteOnly | QFile::Truncate))
         return false;
 
@@ -23,8 +22,7 @@ QString FileIO::read(const QString& sourceUrl) {
     if (sourceUrl.isEmpty())
         return "";
 
-    QUrl url(sourceUrl);
-    QFile file(url.toLocalFile());
+    QFile file(sourceUrl);
     if (!file.open(QFile::ReadOnly))
         return "";
 
