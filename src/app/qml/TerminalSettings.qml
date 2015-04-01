@@ -48,15 +48,20 @@ Item {
             var filePath = keyboardLayouts[i];
             var isVisible = visibleProfiles && visibleProfiles[filePath];
 
-            var profileObject = Parser.parseJson(fileIO.read(filePath));
+            try {
+                var profileObject = Parser.parseJson(fileIO.read(filePath));
 
-            profilesList.append(
-                {
-                    file: filePath,
-                    profileVisible: isVisible,
-                    object: profileObject,
-                    name: profileObject.name
-                });
+                profilesList.append(
+                        {
+                            file: filePath,
+                            profileVisible: isVisible,
+                            object: profileObject,
+                            name: profileObject.name
+                        });
+            } catch (e) {
+                console.error("Error in profile", filePath);
+                console.error(e);
+            }
         }
         profilesChanged();
     }
