@@ -30,25 +30,7 @@ Page {
         id: mainColumn
 
         spacing: units.gu(1)
-        anchors { margins: units.gu(2); fill: parent }
-
-        Label {
-            text: i18n.tr("Font Size:")
-        }
-
-        Slider {
-            id: slFont
-            objectName: "slFont"
-            anchors { left: parent.left; right: parent.right }
-            minimumValue: 8;
-            maximumValue: 32;
-            onValueChanged: {
-                settings.fontSize = value;
-            }
-            Component.onCompleted: {
-                value = settings.fontSize;
-            }
-        }
+        anchors.fill: parent
 
         ListItem.Standard {
             text: i18n.tr("Layouts")
@@ -56,30 +38,49 @@ Page {
             onClicked: pageStack.push(layoutsPage);
         }
 
-        ListItem.ThinDivider { }
-
-        ListItem.Empty {
-            showDivider: false
-            Label {
-                anchors { left: parent.left; verticalCenter: parent.verticalCenter }
-                text: i18n.tr("Show Keyboard Bar")
-            }
-            Switch {
-                anchors { right: parent.right; verticalCenter: parent.verticalCenter }
+        ListItem.Standard {
+            text: i18n.tr("Show Keyboard Bar")
+            control: Switch {
                 onCheckedChanged: settings.showKeyboardBar = checked;
                 Component.onCompleted: checked = settings.showKeyboardBar;
             }
         }
 
-        ListItem.ThinDivider { }
+        ListItem.Empty {
+            height: units.gu(10)
+            Label {
+                text: i18n.tr("Font Size:")
+                x: units.gu(2)
+            }
+            Slider {
+                id: slFont
+                objectName: "slFont"
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    bottom: parent.bottom
+                    margins: units.gu(2)
+                }
+                minimumValue: 8;
+                maximumValue: 32;
+                onValueChanged: {
+                    settings.fontSize = value;
+                }
+                Component.onCompleted: {
+                    value = settings.fontSize;
+                }
+            }
+        }
 
         OptionSelector {
             id: colorsSchemeSelector
             objectName: "colorsSchemeSelector"
             text: i18n.tr("Color Scheme")
+            width: parent.width - units.gu(4)
+            x: units.gu(2)
 
             // TODO Hackish, but works quite well.
-            containerHeight: parent.height - y - units.gu(4)
+            containerHeight: parent.height - y - units.gu(6)
 
             // TODO This is a workaround at the moment.
             // The application should get them from the c++.
