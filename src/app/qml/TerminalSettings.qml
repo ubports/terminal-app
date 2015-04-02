@@ -16,6 +16,19 @@ Item {
 
     signal profilesChanged();
 
+    onProfilesChanged: saveProfileVisibleStrings();
+
+    function saveProfileVisibleStrings() {
+        var result = {};
+
+        for (var i = 0; i < profilesList.count; i++) {
+            var profileObject = profilesList.get(i);
+            result[profileObject.file] = profileObject.profileVisible;
+        }
+
+        jsonVisibleProfiles = JSON.stringify(result);
+    }
+
     Settings {
         id: innerSettings
         property int fontSize: 14
@@ -23,18 +36,6 @@ Item {
         property string colorScheme: "Ubuntu"
         property bool showKeyboardBar: true
         property string jsonVisibleProfiles: "[]"
-
-        // Store the profile visibilities as a json string.
-        Component.onDestruction: {
-            var result = {};
-
-            for (var i = 0; i < profilesList.count; i++) {
-                var profileObject = profilesList.get(i);
-                result[profileObject.file] = profileObject.profileVisible;
-            }
-
-            jsonVisibleProfiles = JSON.stringify(result);
-        }
     }
 
     // Load the keyboard profiles.
@@ -44,9 +45,13 @@ Item {
             visibleProfiles = JSON.parse(innerSettings.jsonVisibleProfiles);
         } catch (e) {}
 
+        function isProfileVisible(profilePath) {
+            return !(visibleProfiles[profilePath] == false);
+        }
+
         for (var i = 0; i < keyboardLayouts.length; i++) {
             var filePath = keyboardLayouts[i];
-            var isVisible = visibleProfiles && visibleProfiles[filePath];
+            var isVisible = isProfileVisible(filePath);
 
             try {
                 var profileObject = Parser.parseJson(fileIO.read(filePath));
