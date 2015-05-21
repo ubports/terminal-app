@@ -135,9 +135,11 @@ Rectangle {
             }
         }
 
+        enabled: layoutsList.count != 0
+
         Rectangle {
             anchors.fill: parent
-            color: UbuntuColors.orange
+            color: parent.enabled ? UbuntuColors.orange : UbuntuColors.warmGrey
 
             Icon {
                 scale: 0.5
