@@ -15,7 +15,7 @@ Component {
 
         session: QMLTermSession {
             id: terminalSession
-            initialWorkingDirectory: "$HOME"
+            initialWorkingDirectory: workdir
         }
 
         QMLTermScrollbar {
