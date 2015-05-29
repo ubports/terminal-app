@@ -47,7 +47,7 @@ Dialog {
         id: okButton
         objectName: "okButton"
 
-        text: i18n.tr("Ok")
+        text: i18n.tr("OK")
         color: UbuntuColors.green
 
         onClicked: {
