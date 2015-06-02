@@ -47,6 +47,9 @@ Rectangle {
     }
 
     function disableLayout(index) {
+        if (!isIndexLayoutValid(index))
+            return;
+
         var layoutObject = layoutsList.get(index).layout;
         layoutObject.visible = false;
         layoutObject.enabled = false;
@@ -56,6 +59,9 @@ Rectangle {
     }
 
     function enableLayout(index) {
+        if (!isIndexLayoutValid(index))
+            return;
+
         var layoutObject = layoutsList.get(index).layout;
         layoutObject.visible = true;
         layoutObject.enabled = true;
@@ -64,10 +70,13 @@ Rectangle {
         layoutObject.simulateCommand.connect(simulateCommand);
     }
 
-    function selectLayout(index) {
-        if (index < 0 || index >= layoutsList.count)
-            return;
+    function isIndexLayoutValid(index) {
+        return (index >= 0 && index < layoutsList.count);
+    }
 
+    function selectLayout(index) {
+        if (!isIndexLayoutValid(index))
+            return;
         disableLayout(selectedLayoutIndex);
         enableLayout(index);
         selectedLayoutIndex = index;
