@@ -48,6 +48,13 @@
         {
             "main_action" : {
                 "type": "key",
+                "text" : "ENTER",
+                "key" : "Enter"
+            }
+        },
+        {
+            "main_action" : {
+                "type": "key",
                 "text" : "\u2191",
                 "key" : "Up"
             }
