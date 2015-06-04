@@ -106,6 +106,11 @@ MainView {
             id: settingsPage
             visible: false
         }
+
+        LayoutsPage {
+            id: layoutsPage
+            visible: false
+        }
     }
 
     Component.onCompleted: {

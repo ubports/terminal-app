@@ -8,7 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-21 13:11+0100\n"
+
+"POT-Creation-Date: 2015-04-02 14:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,23 +54,27 @@ msgstr ""
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/app/qml/KeyboardBar.qml:157
+#: ../src/app/qml/KeyboardBar.qml:163
 msgid "Change Keyboard"
+msgstr ""
+
+#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
+msgid "Layouts"
 msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:36
-msgid "Font Size:"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:59
+#: ../src/app/qml/SettingsPage.qml:42
 msgid "Show Keyboard Bar"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:73
+#: ../src/app/qml/SettingsPage.qml:52
+msgid "Font Size:"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:78
 msgid "Color Scheme"
 msgstr ""
 

@@ -40,13 +40,16 @@ Rectangle {
         }
     }
 
-    function createLayoutObject(profileUrl) {
+    function createLayoutObject(profileObject) {
         var object = layoutComponent.createObject(keyboardContainer);
-        object.loadProfile(fileIO.read(profileUrl));
+        object.loadProfile(profileObject);
         return object;
     }
 
     function disableLayout(index) {
+        if (!isIndexLayoutValid(index))
+            return;
+
         var layoutObject = layoutsList.get(index).layout;
         layoutObject.visible = false;
         layoutObject.enabled = false;
@@ -56,6 +59,9 @@ Rectangle {
     }
 
     function enableLayout(index) {
+        if (!isIndexLayoutValid(index))
+            return;
+
         var layoutObject = layoutsList.get(index).layout;
         layoutObject.visible = true;
         layoutObject.enabled = true;
@@ -64,10 +70,13 @@ Rectangle {
         layoutObject.simulateCommand.connect(simulateCommand);
     }
 
-    function selectLayout(index) {
-        if (index < 0 || index >= layoutsList.count)
-            return;
+    function isIndexLayoutValid(index) {
+        return (index >= 0 && index < layoutsList.count);
+    }
 
+    function selectLayout(index) {
+        if (!isIndexLayoutValid(index))
+            return;
         disableLayout(selectedLayoutIndex);
         enableLayout(index);
         selectedLayoutIndex = index;
@@ -97,13 +106,19 @@ Rectangle {
     }
 
     function loadProfiles() {
-        for (var i = 0; i < keyboardLayouts.length; i++) {
+        dropProfiles();
+
+        for (var i = 0; i < settings.profilesList.count; i++) {
+            var profile = settings.profilesList.get(i);
+            if (!profile.profileVisible)
+                continue;
+
             try {
-                console.log("Loading Layout:", Qt.resolvedUrl(keyboardLayouts[i]));
-                var layoutObject = createLayoutObject(Qt.resolvedUrl(keyboardLayouts[i]));
+                console.log("Loading Layout:", Qt.resolvedUrl(profile.file));
+                var layoutObject = createLayoutObject(profile.object);
                 layoutsList.append({layout: layoutObject});
             } catch (e) {
-                console.error("Error in profile " + keyboardLayouts[i]);
+                console.error("Error in profile " + profile.file);
                 console.error(e);
             }
         }
@@ -129,9 +144,11 @@ Rectangle {
             }
         }
 
+        enabled: layoutsList.count != 0
+
         Rectangle {
             anchors.fill: parent
-            color: UbuntuColors.orange
+            color: parent.enabled ? UbuntuColors.orange : UbuntuColors.warmGrey
 
             Icon {
                 scale: 0.5
@@ -185,6 +202,11 @@ Rectangle {
                 color: "white"
             }
         }
+    }
+
+    Connections {
+        target: settings
+        onProfilesChanged: rootItem.loadProfiles();
     }
 
     Component.onDestruction: dropProfiles();
