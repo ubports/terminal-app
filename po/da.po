@@ -1,4 +1,4 @@
-# Finnish translation for ubuntu-terminal-app
+# Danish translation for ubuntu-terminal-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-04-02 14:49+0200\n"
-"PO-Revision-Date: 2015-01-18 19:39+0000\n"
-"Last-Translator: Jiri Grönroos <Unknown>\n"
-"Language-Team: Finnish <fi@li.org>\n"
+"PO-Revision-Date: 2015-06-04 20:02+0000\n"
+"Last-Translator: Aputsiaĸ Niels Janussen <aj@isit.gl>\n"
+"Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,27 +19,27 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
-msgstr "Valitse"
+msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:26
 msgid "Copy"
-msgstr "Kopioi"
+msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:33
 msgid "Paste"
-msgstr "Liitä"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "Tunnistautuminen vaaditaan"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr "Anna salasana:"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr "salasana"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "Ok"
@@ -47,15 +47,15 @@ msgstr "OK"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
-msgstr "Peru"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
-msgstr "Tunnistautuminen epäonnistui"
+msgstr ""
 
 #: ../src/app/qml/KeyboardBar.qml:163
 msgid "Change Keyboard"
-msgstr "Vaihda näppäimistöä"
+msgstr ""
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
 msgid "Layouts"
@@ -63,63 +63,63 @@ msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Asetukset"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:42
 msgid "Show Keyboard Bar"
-msgstr "Näytä näppäimistöpalkki"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:52
 msgid "Font Size:"
-msgstr "Fontin koko:"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:78
 msgid "Color Scheme"
-msgstr "Väriteema"
+msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
-msgstr "Välilehdet"
+msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr "Uusi välilehti"
+msgstr ""
 
 #: ../src/app/qml/TerminalPage.qml:164
 msgid "Selection Mode"
-msgstr "Valintatila"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "Nimetön väriteema"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "Esteetön väriteema"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "Avaa linkki"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "Kopioi linkin osoite"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "Lähetä sähköposti osoitteeseen..."
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "Kopioi sähköpostiosoite"
+msgstr ""
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -127,30 +127,28 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
-"Näppäimistökääntäjää ei ole saatavilla. Näppäinpainalluksia ei voida muuttaa "
-"merkeiksi ja lähettää päätteelle."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "Huomioi kirjainkoko"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "Säännöllinen lauseke"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "Korosta kaikki osumat"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "Väriteeman virhe"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "Väriteeman lataaminen ei onnistu: %1"
+msgstr ""
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr "Pääte"
+msgstr "Terminal"
