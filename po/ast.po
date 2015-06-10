@@ -1,21 +1,33 @@
 # Asturian translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-26 08:27-0700\n"
-"PO-Revision-Date: 2014-10-12 16:26+0000\n"
-"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
+"POT-Creation-Date: 2015-04-02 14:49+0200\n"
+"PO-Revision-Date: 2015-06-09 15:34+0000\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-13 06:12+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2015-06-10 05:11+0000\n"
+"X-Generator: Launchpad (build 17549)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:19
+msgid "Select"
+msgstr "Esbillar"
+
+#: ../src/app/qml/AlternateActionPopover.qml:26
+msgid "Copy"
+msgstr "Copiar"
+
+#: ../src/app/qml/AlternateActionPopover.qml:33
+msgid "Paste"
+msgstr "Apegar"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -30,12 +42,10 @@ msgid "password"
 msgstr "contraseña"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-#: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
 msgstr "Aceutar"
 
-#: ../src/app/qml/AuthenticationDialog.qml:61
-#: ../src/app/qml/ColorDialog.qml:149
+#: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
 msgstr "Encaboxar"
 
@@ -43,129 +53,104 @@ msgstr "Encaboxar"
 msgid "Authentication failed"
 msgstr "Falló l'autenticación"
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr "Escueyi un color"
-
-#: ../src/app/qml/ColorDialog.qml:129
-msgid "OK"
-msgstr "Aceutar"
-
-#: ../src/app/qml/Configs.qml:69
-msgid "Color scheme"
-msgstr "Esquema de color"
-
-#: ../src/app/qml/Configs.qml:85
-msgid "Font size"
-msgstr "Tamañu de lletra"
-
-#: ../src/app/qml/Configs.qml:108
-msgid "Enable effects:"
-msgstr "Activar efeutos:"
-
-#: ../src/app/qml/Configs.qml:126
-msgid "Screen color"
-msgstr "Color de pantalla"
-
-#: ../src/app/qml/Configs.qml:139
-msgid "Color intensity"
-msgstr "Intensidá del color"
-
-#: ../src/app/qml/Configs.qml:167
-msgid "Bloom"
+#: ../src/app/qml/KeyboardBar.qml:163
+msgid "Change Keyboard"
 msgstr ""
 
-#: ../src/app/qml/Configs.qml:195
-msgid "Curvature"
-msgstr "Curvatura"
-
-#: ../src/app/qml/Configs.qml:223
-msgid "Noise"
-msgstr "Ruíu"
-
-#: ../src/app/qml/Configs.qml:251
-msgid "Jitter"
+#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
+msgid "Layouts"
 msgstr ""
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
-msgid "PG_UP"
-msgstr "Av_Pax"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
-msgid "TAB"
-msgstr "TAB"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
-msgid "DEL"
-msgstr "Supr"
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
-msgid "HOME"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
-msgid "PG_DN"
-msgstr ""
-
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
-msgid "END"
-msgstr ""
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:32
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "Terminal"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:51
-#: ../src/app/qml/ubuntu-terminal-app.qml:88
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Axustes"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
+#: ../src/app/qml/SettingsPage.qml:42
+msgid "Show Keyboard Bar"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Tecles de control"
+#: ../src/app/qml/SettingsPage.qml:52
+msgid "Font Size:"
+msgstr "Tamañu de fonte:"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Tecles de función"
+#: ../src/app/qml/SettingsPage.qml:78
+msgid "Color Scheme"
+msgstr "Esquema de color"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "Tecles de fleches"
+#: ../src/app/qml/TabsPage.qml:8
+msgid "Tabs"
+msgstr "Llingüetes"
+
+#: ../src/app/qml/TabsPage.qml:14
+msgid "New tab"
+msgstr "Llingüeta nueva"
+
+#: ../src/app/qml/TerminalPage.qml:164
+msgid "Selection Mode"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr "Esquema de color ensin nome"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr "Esquema de color accesible"
 
 #: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr "Abrir enllaz"
 
 #: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr "Copiar la direición del enllaz"
 
 #: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr "Unviar corréu a..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr "Copiar direición de corréu electrónicu"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
 "Nun hai conversor de tecláu disponible. Falta la información necesaria pa "
 "convertir les pulsaciones de tecles en carauteres a mandar al terminal."
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "Espresión regular"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+msgid "Color Scheme Error"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr ""
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Terminal"
