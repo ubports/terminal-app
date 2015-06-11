@@ -23,6 +23,27 @@ Component {
             onFinished: terminal.sessionFinished(terminalSession);
         }
 
+        Keys.onPressed: {
+            if ((event.modifiers & Qt.ShiftModifier) && (event.modifiers & Qt.ControlModifier)) {
+                event.accepted = true; //That way shortcuts will not be processed by the terminal widget
+
+                switch (event.key) {
+                case Qt.Key_T:
+                    tabsModel.addTab();
+                    tabsModel.selectTab(tabsModel.count - 1);
+                    break;
+                case Qt.Key_W:
+                    tabsModel.removeTabWithSession(terminalSession);
+                    break;
+                case Qt.Key_Q:
+                    for (var i = tabsModel.count - 1; i >= 0; i--) {
+                        tabsModel.removeTab(i); //This will also call Qt.quit()
+                    }
+                    break;
+                }
+            }
+        }
+
         QMLTermScrollbar {
             z: parent.z + 2
             terminal: parent
