@@ -4,6 +4,7 @@ import QMLTermWidget 1.0
 
 Component {
     id: terminalComponent
+
     QMLTermWidget {
         id: terminal
         width: parent.width
@@ -13,9 +14,13 @@ Component {
         font.family: settings.fontStyle
         font.pointSize: settings.fontSize
 
+        signal sessionFinished(var session);
+
         session: QMLTermSession {
             id: terminalSession
             initialWorkingDirectory: workdir
+
+            onFinished: terminal.sessionFinished(terminalSession);
         }
 
         QMLTermScrollbar {
