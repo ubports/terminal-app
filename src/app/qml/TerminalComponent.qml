@@ -20,7 +20,7 @@ Component {
             id: terminalSession
             initialWorkingDirectory: workdir
 
-            onFinished: terminal.sessionFinished(terminalSession);
+            onFinished: tabsModel.removeTabWithSession(terminalSession);
         }
 
         Keys.onPressed: {

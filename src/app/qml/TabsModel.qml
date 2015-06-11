@@ -11,7 +11,6 @@ ListModel {
             return;
 
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer);
-        termObject.onSessionFinished.connect(removeTabWithSession)
         tabsModel.append({terminal: termObject});
 
         termObject.visible = false;
