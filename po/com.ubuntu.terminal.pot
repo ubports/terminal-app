@@ -8,8 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-
-"POT-Creation-Date: 2015-04-02 14:49+0200\n"
+"POT-Creation-Date: 2015-06-11 23:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -43,7 +42,7 @@ msgid "password"
 msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-msgid "Ok"
+msgid "OK"
 msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
@@ -54,7 +53,7 @@ msgstr ""
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/app/qml/KeyboardBar.qml:163
+#: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
 msgstr ""
 

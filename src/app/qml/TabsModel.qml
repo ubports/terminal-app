@@ -36,10 +36,24 @@ ListModel {
         selectedIndex = index;
     }
 
+    function removeTabWithSession(session) {
+        for (var i = 0; i < count; i++) {
+            if (session === get(i).terminal.session) {
+                removeTab(i);
+                return;
+            }
+        }
+    }
+
     function removeTab(index) {
-        if (tabsModel.count <= 1)
+        if (count === 0 || index >= count)
             return;
+
         get(index).terminal.destroy();
+
+        if (count === 1) // The last tab was closed, probably by running the "exit" command (otherwise this is prevented by the UI)
+            Qt.quit();
+
         remove(index);
 
         // Decrease the selected index to keep the state consistent.
