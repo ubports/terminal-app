@@ -51,24 +51,26 @@ Component {
                         terminal.pasteClipboard();
                         break;
                     }
-                } else {
-                    // Do not automatically accept all keys here! Programs like nano may declare their own Ctrl-shortcuts.
+                }
 
-                    switch (event.key) {
-                    // Font size
-                    case Qt.Key_Plus: // Zoom in
-                        event.accepted = true;
-                        settings.fontSize = Math.min(settings.fontSize + 1, settings.maxFontSize);
-                        break;
-                    case Qt.Key_Minus: // Zoom out
-                        event.accepted = true;
-                        settings.fontSize = Math.max(settings.fontSize - 1, settings.minFontSize);
-                        break;
-                    case Qt.Key_0: // Normal size
-                        event.accepted = true;
-                        settings.fontSize = settings.defaultFontSize;
-                        break;
-                    }
+                // The following may not reside in an else to the above if, as some keyboard layouts require
+                // to press the shift key in order to type the plus character (and possibly others).
+                // Do not automatically accept all keys here! Programs like nano may declare their own Ctrl-shortcuts.
+
+                switch (event.key) {
+                // Font size
+                case Qt.Key_Plus: // Zoom in
+                    event.accepted = true;
+                    settings.fontSize = Math.min(settings.fontSize + 1, settings.maxFontSize);
+                    break;
+                case Qt.Key_Minus: // Zoom out
+                    event.accepted = true;
+                    settings.fontSize = Math.max(settings.fontSize - 1, settings.minFontSize);
+                    break;
+                case Qt.Key_0: // Normal size
+                    event.accepted = true;
+                    settings.fontSize = settings.defaultFontSize;
+                    break;
                 }
             }
         }
