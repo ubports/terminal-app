@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-04-02 14:49+0200\n"
+"POT-Creation-Date: 2015-06-11 23:33+0200\n"
 "PO-Revision-Date: 2015-01-23 11:42+0000\n"
 "Last-Translator: David Planella <david.planella@ubuntu.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-05 06:14+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-13 05:49+0000\n"
+"X-Generator: Launchpad (build 17557)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
@@ -42,7 +42,7 @@ msgid "password"
 msgstr "Contrasenya"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-msgid "Ok"
+msgid "OK"
 msgstr "D'acord"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
@@ -53,7 +53,7 @@ msgstr "Cancel·la"
 msgid "Authentication failed"
 msgstr "Ha fallat l'autenticació"
 
-#: ../src/app/qml/KeyboardBar.qml:163
+#: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
 msgstr "Canvia el teclat"
 
@@ -154,3 +154,6 @@ msgstr "No s'ha pogut carregar el tema de colors: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
+
+#~ msgid "Ok"
+#~ msgstr "D'acord"
