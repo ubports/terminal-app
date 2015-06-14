@@ -39,6 +39,7 @@ Item{
 
     MultiPointTouchArea {
         property bool __moved: false
+        property bool __multiTouch: false // Decide whether this is a single or multi touch gesture before handling it. Otherwise, we run into problems while switching between the two modes.
         property point __pressPosition: Qt.point(0, 0);
         property real __prevDragStepsY: 0
         property real __prevDragStepsX: 0
@@ -68,19 +69,30 @@ Item{
             }
         }
 
+        Timer {
+            id: multiTouchTimer
+            running: false
+            interval: 200
+        }
+
         maximumTouchPoints: 1
         onPressed: {
             touchAreaPressed = true;
             __moved = false;
+            __multiTouch = false;
             __prevDragStepsY = 0.0;
             __prevDragStepsX = 0.0;
             __dragging = noDragging;
             __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
             pressAndHoldTimer.start();
+            multiTouchTimer.start(); // Detect if this is going to be a multi touch swipe while the timer is running
 
             touchPress(touchPoints[0].x, touchPoints[0].y);
         }
         onUpdated: {
+            if (__multiTouch || multiTouchTimer.running) // Do not handle multi touch events here and detect multi touch swipes while the timer is running
+                return;
+
             var dragValue = touchPoints[0].y - __pressPosition.y;
             var dragValueX = touchPoints[0].x - __pressPosition.x;
             var dragSteps = dragValue / swipeDelta;
@@ -126,12 +138,21 @@ Item{
             maximumTouchPoints: 2
             minimumTouchPoints: 2
             onPressed: {
+                if (!multiTouchTimer.running) // Already recognized as single touch swipe
+                    return;
+
+                __pressPosition = avg(touchPoints[0], touchPoints[1]);
+                __prevDragSteps = 0;
+
                 singleTouchTouchArea.__moved = true;
-                __pressPosition = Qt.point(touchPoints[0].x, touchPoints[0].y);
+                singleTouchTouchArea.__multiTouch = true;
             }
             onUpdated: {
                 // WORKAROUND: filter bad events that somehow get here during release.
                 if (touchPoints.length !== 2)
+                    return;
+
+                if (!singleTouchTouchArea.__multiTouch)
                     return;
 
                 var touchPoint = avg(touchPoints[0], touchPoints[1]);
