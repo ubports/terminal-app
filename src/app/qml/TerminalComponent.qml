@@ -71,6 +71,16 @@ Component {
                     event.accepted = true;
                     settings.fontSize = settings.defaultFontSize;
                     break;
+
+                // Tab switching
+                case Qt.Key_PageUp: // Previous tab
+                    event.accepted = true;
+                    tabsModel.selectTab((tabsModel.selectedIndex - 1 + tabsModel.count) % tabsModel.count);
+                    break;
+                case Qt.Key_PageDown: // Next tab
+                    event.accepted = true;
+                    tabsModel.selectTab((tabsModel.selectedIndex + 1) % tabsModel.count);
+                    break;
                 }
             }
         }
