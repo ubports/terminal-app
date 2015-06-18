@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-04-02 14:49+0200\n"
+"POT-Creation-Date: 2015-06-14 17:32+0200\n"
 "PO-Revision-Date: 2015-01-21 00:32+0000\n"
 "Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-05 06:14+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-16 11:23+0000\n"
+"X-Generator: Launchpad (build 17557)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
@@ -42,7 +42,7 @@ msgid "password"
 msgstr "pasahitza"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-msgid "Ok"
+msgid "OK"
 msgstr "Ados"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
@@ -53,7 +53,7 @@ msgstr "Utzi"
 msgid "Authentication failed"
 msgstr "Autentifikazioak huts egin du"
 
-#: ../src/app/qml/KeyboardBar.qml:163
+#: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
 msgstr "Aldatu teklatua"
 
@@ -85,7 +85,7 @@ msgstr "Fitxak"
 msgid "New tab"
 msgstr "Fitxa berria"
 
-#: ../src/app/qml/TerminalPage.qml:164
+#: ../src/app/qml/TerminalPage.qml:166
 msgid "Selection Mode"
 msgstr "Hautapen modua"
 
@@ -154,3 +154,6 @@ msgstr "Ezin izan da kolore-eskema kargatu: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminala"
+
+#~ msgid "Ok"
+#~ msgstr "Ados"

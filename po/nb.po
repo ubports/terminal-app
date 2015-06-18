@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-04-02 14:49+0200\n"
+"POT-Creation-Date: 2015-06-14 17:32+0200\n"
 "PO-Revision-Date: 2015-01-18 20:07+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-06-05 06:14+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-16 11:23+0000\n"
+"X-Generator: Launchpad (build 17557)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:19
 msgid "Select"
@@ -42,8 +42,8 @@ msgid "password"
 msgstr "passord"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
-msgid "Ok"
-msgstr "OK"
+msgid "OK"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
@@ -53,7 +53,7 @@ msgstr "Avbryt"
 msgid "Authentication failed"
 msgstr "Autentisering mislyktes"
 
-#: ../src/app/qml/KeyboardBar.qml:163
+#: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
 msgstr "Endre tastatur"
 
@@ -85,7 +85,7 @@ msgstr "Faner"
 msgid "New tab"
 msgstr "Ny fane"
 
-#: ../src/app/qml/TerminalPage.qml:164
+#: ../src/app/qml/TerminalPage.qml:166
 msgid "Selection Mode"
 msgstr "Utvalgsmodus"
 
@@ -154,3 +154,6 @@ msgstr "Klarte ikke å laste inn fargeoppsett: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
+
+#~ msgid "Ok"
+#~ msgstr "OK"
