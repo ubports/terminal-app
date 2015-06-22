@@ -93,23 +93,25 @@ Item{
             if (__multiTouch || multiTouchTimer.running) // Do not handle multi touch events here and detect multi touch swipes while the timer is running
                 return;
 
-            var dragValue = touchPoints[0].y - __pressPosition.y;
+            var dragValueY = touchPoints[0].y - __pressPosition.y;
             var dragValueX = touchPoints[0].x - __pressPosition.x;
-            var dragSteps = dragValue / swipeDelta;
+            var dragStepsY = dragValueY / swipeDelta;
             var dragStepsX = dragValueX / swipeDelta;
 
-            var dragStepsFloorY = absFloor(dragSteps);
+            var dragStepsFloorY = absFloor(dragStepsY);
             var dragStepsFloorX = absFloor(dragStepsX);
 
-            if (!__moved && distance(touchPoints[0], __pressPosition) > swipeDelta)
+            if (!__moved && distance(touchPoints[0], __pressPosition) > swipeDelta) {
                 __moved = true;
+                __dragging = (Math.abs(dragValueY) >= Math.abs(dragValueX)) ? yDragging : xDragging;
+            } else if (!__moved) {
+                return;
+            }
 
-            if (__dragging !== xDragging && dragStepsFloorY !== __prevDragStepsY) {
+            if (__dragging === yDragging && dragStepsFloorY !== __prevDragStepsY) {
                 swipeYDetected(dragStepsFloorY - __prevDragStepsY);
-                __dragging = yDragging;
-            } else if (__dragging !== yDragging && dragStepsFloorX !== __prevDragStepsX) {
+            } else if (__dragging === xDragging && dragStepsFloorX !== __prevDragStepsX) {
                 swipeXDetected(dragStepsFloorX - __prevDragStepsX);
-                __dragging = xDragging;
             }
 
             __prevDragStepsY = dragStepsFloorY;
