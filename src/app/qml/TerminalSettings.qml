@@ -10,6 +10,10 @@ Item {
     property alias colorScheme: innerSettings.colorScheme
     property alias showKeyboardBar: innerSettings.showKeyboardBar
 
+    readonly property int defaultFontSize: 14
+    readonly property int minFontSize: 8
+    readonly property int maxFontSize: 32
+
     property alias jsonVisibleProfiles: innerSettings.jsonVisibleProfiles
 
     property ListModel profilesList: ListModel {}
@@ -31,7 +35,7 @@ Item {
 
     Settings {
         id: innerSettings
-        property int fontSize: 14
+        property int fontSize: defaultFontSize
         property string fontStyle: "Ubuntu Mono"
         property string colorScheme: "Ubuntu"
         property bool showKeyboardBar: true

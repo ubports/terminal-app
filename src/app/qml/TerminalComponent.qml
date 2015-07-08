@@ -23,6 +23,14 @@ Component {
             onFinished: tabsModel.removeTabWithSession(terminalSession);
         }
 
+        Keys.onPressed: {
+            keyboardShortcutHandler.handle(event)
+        }
+
+        TerminalKeyboardShortcutHandler {
+            id: keyboardShortcutHandler
+        }
+
         QMLTermScrollbar {
             z: parent.z + 2
             terminal: parent

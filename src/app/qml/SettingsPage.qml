@@ -61,13 +61,20 @@ Page {
                     bottom: parent.bottom
                     margins: units.gu(2)
                 }
-                minimumValue: 8;
-                maximumValue: 32;
+                minimumValue: settings.minFontSize;
+                maximumValue: settings.maxFontSize;
                 onValueChanged: {
                     settings.fontSize = value;
                 }
                 Component.onCompleted: {
                     value = settings.fontSize;
+                }
+
+                Connections {
+                    target: settings
+                    onFontSizeChanged: {
+                        slFont.value = settings.fontSize
+                    }
                 }
             }
         }
