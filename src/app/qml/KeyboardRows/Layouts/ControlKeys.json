@@ -1,12 +1,10 @@
 {
-    "name" : "Control Keys",
-    "short_name" : "CTRL",
+    "id" : "ctrl_keys",
 
     "buttons": [
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+R",
                 "key" : "R",
                 "mod" : "Control"
             }
@@ -14,7 +12,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+C",
                 "key" : "C",
                 "mod" : "Control"
             }
@@ -22,7 +19,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+A",
                 "key" : "A",
                 "mod" : "Control"
             }
@@ -30,7 +26,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+Z",
                 "key" : "Z",
                 "mod" : "Control"
             }
@@ -38,7 +33,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+D",
                 "key" : "D",
                 "mod" : "Control"
             }

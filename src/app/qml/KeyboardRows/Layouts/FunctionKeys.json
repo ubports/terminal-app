@@ -1,96 +1,83 @@
 {
-    "name" : "Function Keys",
-    "short_name" : "FNS",
+    "id" : "fn_keys",
 
     "buttons": [
         {
             "main_action" : {
                 "type": "key",
-                "text" : "ESC",
+                "id" : "esc_key",
                 "key" : "Escape"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F1",
                 "key" : "F1"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F2",
                 "key" : "F2"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F3",
                 "key" : "F3"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F4",
                 "key" : "F4"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F5",
                 "key" : "F5"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F6",
                 "key" : "F6"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F7",
                 "key" : "F7"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F8",
                 "key" : "F8"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F9",
                 "key" : "F9"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F10",
                 "key" : "F10"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F10",
                 "key" : "F10"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "F11",
                 "key" : "F11"
             }
         }

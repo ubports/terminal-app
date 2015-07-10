@@ -7,6 +7,8 @@ KeyboardRow {
     id: keyboardRow
     keyWidth: units.gu(5)
 
+    readonly property variant modifiers: ["Control", "Alt", "Shift"]
+
     // This label is used to compute the maximum width of all the controls.
     Label {
         id: hiddenLabel
@@ -23,7 +25,7 @@ KeyboardRow {
     function createActionString(action) {
         switch(action.type){
         case "key":
-            return createKeyActionString(action.key, action.mod, action.text);
+            return createKeyActionString(action.key, action.mod, action.text, action.id);
         case "string":
             return createStringActionString(action.string, action.text);
         }
@@ -42,12 +44,11 @@ KeyboardRow {
         return result + "]";
     }
 
-    function createKeyActionString(key, mod, text) {
-        if (["Control", "Alt", "Shift"].indexOf(mod) === -1)
+    function createKeyActionString(key, mod, text, id) {
+        if (modifiers.indexOf(mod) === -1)
             mod = "No";
 
-        var textString = text ? "text: \"" + text + "\";" : "";
-        return "Action { " + textString + " onTriggered: simulateKey(Qt.Key_"+ key + ", Qt." + mod + "Modifier); }";
+        return "Action { text: \"" + createKeyText(key, mod, text, id) + "\"; onTriggered: simulateKey(Qt.Key_"+ key + ", Qt." + mod + "Modifier); }";
     }
 
     function createStringActionString(string, text) {
@@ -68,6 +69,17 @@ KeyboardRow {
         return objectString;
     }
 
+    function createKeyText(key, mod, text, id) {
+        if (id) {
+            return translator.getTranslatedNameById(translator.key, id);
+        } else if (text) {
+            return text;
+        } else if (key) {
+            return ((mod && modifiers.indexOf(mod) !== -1) ? translator.getTranslatedNameById(translator.modifier, mod) + "+" : "") + key;
+        } else
+            return "";
+    }
+
     function loadProfile(profileObject) {
         dropProfile();
 
@@ -76,28 +88,38 @@ KeyboardRow {
         // This function might raise exceptions which are handled in KeyboardBar.qml
         var profile = profileObject;
 
-        name = profile.name;
-        short_name = profile.short_name;
+        var name = "";
+        var shortName = "";
+        if (profile.id) {
+            name = translator.getTranslatedNameById(translator.name, profile.id);
+            short_name = translator.getTranslatedNameById(translator.shortName, profile.id);
+        }
+        if (name === "")
+            name = profile.name;
+        if (short_name === "")
+            short_name = profile.short_name;
 
         var layoutModel = []
         for (var i = 0; i < profile.buttons.length; i++) {
             var button = profile.buttons[i];
+            var keyText = createKeyText(button.main_action.key, button.main_action.mod, button.main_action.text, button.main_action.id);
             var mainActionString = createActionString(button.main_action);
 
             var otherActionsString = button.other_actions
                                           ? createOtherActionsString(button.other_actions)
                                           : "[]";
 
-            var entryString = createEntryString(button.main_action.text, mainActionString, otherActionsString);
+            var entryString = createEntryString(keyText, mainActionString, otherActionsString);
 
             layoutModel.push(Qt.createQmlObject(entryString, keyboardRow));
 
-            hiddenLabel.text = button.main_action.text;
+            hiddenLabel.text = keyText;
             maxWidth = Math.max(hiddenLabel.width, maxWidth);
         }
 
         keyWidth = maxWidth + units.gu(3);
         model = layoutModel;
     }
+
     Component.onDestruction: dropProfile();
 }

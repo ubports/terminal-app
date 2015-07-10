@@ -46,7 +46,7 @@ Item {
         } catch (e) {}
 
         function isProfileVisible(profilePath) {
-            return !(visibleProfiles[profilePath] == false);
+            return !(visibleProfiles[profilePath] === false);
         }
 
         for (var i = 0; i < keyboardLayouts.length; i++) {
@@ -56,12 +56,18 @@ Item {
             try {
                 var profileObject = Parser.parseJson(fileIO.read(filePath));
 
+                var name = "";
+                if (profileObject.id)
+                    name = translator.getTranslatedNameById(translator.name, profileObject.id);
+                if (name === "")
+                    name = profileObject.name;
+
                 profilesList.append(
                         {
                             file: filePath,
                             profileVisible: isVisible,
                             object: profileObject,
-                            name: profileObject.name
+                            name: name
                         });
             } catch (e) {
                 console.error("Error in profile", filePath);

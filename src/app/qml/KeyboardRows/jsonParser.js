@@ -27,8 +27,8 @@ function validateAction(actionObject) {
         raiseException("type is missing in", actionObject);
     if (!isAllowed(actionObject.type, ["key", "string"]))
         raiseException("type must be either key or string in", actionObject);
-    if (!actionObject.text)
-        raiseException("text is missing in", actionObject);
+    if (actionObject.id && actionObject.text)
+        raiseException("Should not define id and text together in ", layoutObject);
 
     switch (actionObject.type) {
     case "key":
@@ -58,10 +58,18 @@ function validateButton(buttonObject) {
 }
 
 function validateLayout(layoutObject) {
-    if (!layoutObject.name)
-        raiseException("name is missing in ", layoutObject);
-    if (!layoutObject.short_name)
-        raiseException("short_name is missing in", layoutObject);
+    if (!layoutObject.id) {
+        if (!layoutObject.name)
+            raiseException("name or id is missing in ", layoutObject);
+        if (!layoutObject.short_name)
+            raiseException("short_name or id is missing in", layoutObject);
+    } else {
+        if (layoutObject.name)
+            raiseException("Should not define id and name together in ", layoutObject);
+        if (layoutObject.short_name)
+            raiseException("Should not define id and short_name together in ", layoutObject);
+    }
+
     if (!layoutObject.buttons)
         raiseException("buttons is missing in", layoutObject);
 
