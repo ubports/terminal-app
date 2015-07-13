@@ -1,5 +1,5 @@
-import QtQuick 2.0
-import Ubuntu.Components 1.1
+import QtQuick 2.4
+import Ubuntu.Components 1.2
 
 import "jsonParser.js" as Parser
 
@@ -57,8 +57,8 @@ KeyboardRow {
 
     function createEntryString(text, actionString, otherActionsString) {
         var objectString = "
-            import QtQuick 2.0
-            import Ubuntu.Components 1.1
+            import QtQuick 2.4
+            import Ubuntu.Components 1.2
 
             KeyModel {
                 text: \"" + text + "\"
