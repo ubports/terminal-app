@@ -27,8 +27,16 @@ function validateAction(actionObject) {
         raiseException("type is missing in", actionObject);
     if (!isAllowed(actionObject.type, ["key", "string"]))
         raiseException("type must be either key or string in", actionObject);
+    if (!(actionObject.type === "key" ? actionObject.key : actionObject.string))
+        raiseException(actionObject.type + " is missing in", actionObject);
     if (actionObject.id && actionObject.text)
-        raiseException("Should not define id and text together in ", layoutObject);
+        raiseException("Should not define id and text together in", actionObject);
+    if (!actionObject.id && !actionObject.text && !(actionObject.type === "key" && actionObject.key)) // We can also build the text from the key
+        raiseException("text or id is missing in", actionObject);
+
+
+    // No need to check for "if (!actionObject.id && !actionObject.text)" as we will
+    // build the displayed text from the keys in that case
 
     switch (actionObject.type) {
     case "key":
@@ -60,14 +68,14 @@ function validateButton(buttonObject) {
 function validateLayout(layoutObject) {
     if (!layoutObject.id) {
         if (!layoutObject.name)
-            raiseException("name or id is missing in ", layoutObject);
+            raiseException("name or id is missing in", layoutObject);
         if (!layoutObject.short_name)
             raiseException("short_name or id is missing in", layoutObject);
     } else {
         if (layoutObject.name)
-            raiseException("Should not define id and name together in ", layoutObject);
+            raiseException("Should not define id and name together in", layoutObject);
         if (layoutObject.short_name)
-            raiseException("Should not define id and short_name together in ", layoutObject);
+            raiseException("Should not define id and short_name together in", layoutObject);
     }
 
     if (!layoutObject.buttons)
