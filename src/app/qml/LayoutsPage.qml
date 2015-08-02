@@ -35,13 +35,17 @@ Page {
         anchors.fill: parent
         model: settings.profilesList
         delegate: ListItem.Standard {
+            text: name
+
             control: Switch {
+                id: layoutSwitch
                 checked: profileVisible
                 onCheckedChanged: {
                     settings.profilesList.setProperty(index, "profileVisible", checked);
                 }
             }
-            text: name
+
+            onTriggered: layoutSwitch.trigger()
         }
     }
 }
