@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-13 22:25+0200\n"
+"POT-Creation-Date: 2015-07-14 18:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/app/qml/AlternateActionPopover.qml:19
+#: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:26
+#: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:33
+#: ../src/app/qml/AlternateActionPopover.qml:21
 msgid "Paste"
 msgstr ""
 
@@ -57,7 +57,7 @@ msgstr ""
 msgid "Change Keyboard"
 msgstr ""
 
-#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
+#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:36
 msgid "Layouts"
 msgstr ""
 
