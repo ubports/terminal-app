@@ -104,7 +104,7 @@ Notes:
 
 1. Install phablet-tools: `sudo apt-get install phablet-tools`
 2. Run click-buddy in your source tree:
-   click-buddy --dir . --arch armhf --framework ubuntu-sdk-14.04
+   click-buddy --dir . --arch armhf --framework ubuntu-sdk-15.04
 3. Once finished, click-buddy will tell you the location of your source package
 
 ## Installing a click package

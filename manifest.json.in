@@ -1,6 +1,6 @@
 {
     "description": "Terminal application",
-    "framework": "ubuntu-sdk-14.10",
+    "framework": "ubuntu-sdk-15.04",
     "architecture": "@CLICK_ARCH@",
     "hooks": {
         "terminal": {

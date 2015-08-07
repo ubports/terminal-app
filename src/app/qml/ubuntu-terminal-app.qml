@@ -1,6 +1,6 @@
-import QtQuick 2.3
+import QtQuick 2.4
 import QtGraphicalEffects 1.0
-import Ubuntu.Components 1.1
+import Ubuntu.Components 1.2
 
 import QMLTermWidget 1.0
 
@@ -10,7 +10,6 @@ MainView {
     objectName: "terminal"
     applicationName: "com.ubuntu.terminal"
     automaticOrientation: true
-    useDeprecatedToolbar: false
 
     width: units.gu(50)
     height: units.gu(75)
