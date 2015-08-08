@@ -7,25 +7,25 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-06-14 17:32+0200\n"
+"POT-Creation-Date: 2015-08-02 15:04+0200\n"
 "PO-Revision-Date: 2015-06-17 14:19+0000\n"
 "Last-Translator: Gursharnjit_Singh <ubuntuser13@gmail.com>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-07-12 04:57+0000\n"
-"X-Generator: Launchpad (build 17620)\n"
+"X-Launchpad-Export-Date: 2015-08-08 06:23+0000\n"
+"X-Generator: Launchpad (build 17656)\n"
 
-#: ../src/app/qml/AlternateActionPopover.qml:19
+#: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
 msgstr "ਚੁਣੋ"
 
-#: ../src/app/qml/AlternateActionPopover.qml:26
+#: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
 msgstr "ਕਾਪੀ"
 
-#: ../src/app/qml/AlternateActionPopover.qml:33
+#: ../src/app/qml/AlternateActionPopover.qml:21
 msgid "Paste"
 msgstr "ਚੇਪੋ"
 
@@ -73,7 +73,7 @@ msgstr "ਕੀਬੋਰਡ ਪੱਟੀ ਵਿਖਾਓ"
 msgid "Font Size:"
 msgstr "ਫ਼ੌਂਟ ਅਕਾਰ:"
 
-#: ../src/app/qml/SettingsPage.qml:78
+#: ../src/app/qml/SettingsPage.qml:85
 msgid "Color Scheme"
 msgstr "ਰੰਗ ਸਕੀਮ"
 
@@ -85,7 +85,7 @@ msgstr "ਟੈਬਾਂ"
 msgid "New tab"
 msgstr "ਨਵੀਂ ਟੈਬ"
 
-#: ../src/app/qml/TerminalPage.qml:166
+#: ../src/app/qml/TerminalPage.qml:164
 msgid "Selection Mode"
 msgstr "ਚੋਣ ਢੰਗ"
 
