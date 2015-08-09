@@ -16,8 +16,8 @@
  * Authored by: Filippo Scognamiglio <flscogna@gmail.com>
  */
 
-import QtQuick 2.0
-import Ubuntu.Components 1.1
+import QtQuick 2.4
+import Ubuntu.Components 1.2
 import Ubuntu.Components.ListItems 1.0 as ListItem
 
 Page {
@@ -35,13 +35,17 @@ Page {
         anchors.fill: parent
         model: settings.profilesList
         delegate: ListItem.Standard {
+            text: name
+
             control: Switch {
+                id: layoutSwitch
                 checked: profileVisible
                 onCheckedChanged: {
                     settings.profilesList.setProperty(index, "profileVisible", checked);
                 }
             }
-            text: name
+
+            onTriggered: layoutSwitch.trigger()
         }
     }
 }

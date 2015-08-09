@@ -16,8 +16,8 @@
  * Authored by: Filippo Scognamiglio <flscogna@gmail.com>
  */
 
-import QtQuick 2.0
-import Ubuntu.Components 1.1
+import QtQuick 2.4
+import Ubuntu.Components 1.2
 import Ubuntu.Components.ListItems 1.0 as ListItem
 
 Page {
@@ -61,13 +61,20 @@ Page {
                     bottom: parent.bottom
                     margins: units.gu(2)
                 }
-                minimumValue: 8;
-                maximumValue: 32;
+                minimumValue: settings.minFontSize;
+                maximumValue: settings.maxFontSize;
                 onValueChanged: {
                     settings.fontSize = value;
                 }
                 Component.onCompleted: {
                     value = settings.fontSize;
+                }
+
+                Connections {
+                    target: settings
+                    onFontSizeChanged: {
+                        slFont.value = settings.fontSize
+                    }
                 }
             }
         }
