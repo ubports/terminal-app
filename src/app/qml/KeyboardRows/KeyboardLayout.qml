@@ -88,8 +88,8 @@ KeyboardRow {
         // This function might raise exceptions which are handled in KeyboardBar.qml
         var profile = profileObject;
 
-        var name = "";
-        var shortName = "";
+        name = "";
+        short_name = "";
         if (profile.id) {
             name = translator.getTranslatedNameById(translator.name, profile.id);
             short_name = translator.getTranslatedNameById(translator.shortName, profile.id);
