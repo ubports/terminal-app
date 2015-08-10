@@ -1,6 +1,5 @@
 {
-    "name" : "Commands Key",
-    "short_name" : "CMD",
+    "id" : "simple_cmds",
 
     "buttons": [
         {

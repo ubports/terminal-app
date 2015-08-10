@@ -6,7 +6,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+G",
                 "key" : "G",
                 "mod" : "Control"
             }
@@ -14,7 +13,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+O",
                 "key" : "O",
                 "mod" : "Control"
             }
@@ -22,7 +20,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+R",
                 "key" : "R",
                 "mod" : "Control"
             }
@@ -30,7 +27,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+Y",
                 "key" : "Y",
                 "mod" : "Control"
             }
@@ -38,7 +34,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+K",
                 "key" : "K",
                 "mod" : "Control"
             }
@@ -46,7 +41,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+C",
                 "key" : "C",
                 "mod" : "Control"
             }
@@ -55,7 +49,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+X",
                 "key" : "X",
                 "mod" : "Control"
             }
@@ -63,7 +56,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+J",
                 "key" : "J",
                 "mod" : "Control"
             }
@@ -71,7 +63,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+W",
                 "key" : "W",
                 "mod" : "Control"
             }
@@ -79,7 +70,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+V",
                 "key" : "V",
                 "mod" : "Control"
             }
@@ -87,7 +77,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+U",
                 "key" : "U",
                 "mod" : "Control"
             }
@@ -95,7 +84,6 @@
         {
             "main_action" : {
                 "type": "key",
-                "text" : "CTRL+T",
                 "key" : "T",
                 "mod" : "Control"
             }

@@ -1,6 +1,7 @@
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.2
+import "KeyboardRows"
 
 import QMLTermWidget 1.0
 
@@ -29,6 +30,10 @@ MainView {
     TabsModel {
         id: tabsModel
         Component.onCompleted: addTab();
+    }
+
+    JsonTranslator {
+        id: translator
     }
 
     PageStack {

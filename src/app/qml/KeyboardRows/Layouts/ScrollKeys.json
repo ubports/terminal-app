@@ -1,54 +1,53 @@
 {
-    "name" : "Scroll Keys",
-    "short_name" : "SCR",
+    "id" : "scroll_keys",
 
     "buttons": [
         {
             "main_action" : {
                 "type": "key",
-                "text" : "PG_UP",
+                "id" : "pg_up_key",
                 "key" : "PageUp"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "PG_DN",
+                "id" : "pg_dn_key",
                 "key" : "PageDown"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "DEL",
+                "id" : "del_key",
                 "key" : "Delete"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "HOME",
+                "id" : "home_key",
                 "key" : "Home"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "END",
+                "id" : "end_key",
                 "key" : "End"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "TAB",
+                "id" : "tab_key",
                 "key" : "Tab"
             }
         },
         {
             "main_action" : {
                 "type": "key",
-                "text" : "ENTER",
+                "id" : "enter_key",
                 "key" : "Enter"
             }
         },
