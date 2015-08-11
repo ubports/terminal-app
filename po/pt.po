@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-02 15:04+0200\n"
-"PO-Revision-Date: 2015-06-15 12:33+0000\n"
+"POT-Creation-Date: 2015-08-09 16:01+0200\n"
+"PO-Revision-Date: 2015-08-10 13:42+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-08 06:23+0000\n"
-"X-Generator: Launchpad (build 17656)\n"
+"X-Launchpad-Export-Date: 2015-08-11 06:09+0000\n"
+"X-Generator: Launchpad (build 17686)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -56,6 +56,98 @@ msgstr "Falha na autenticação"
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
 msgstr "Trocar teclado"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
+msgid "Control Keys"
+msgstr "Teclas de controlo"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
+msgid "Function Keys"
+msgstr "Teclas de função"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
+msgid "Scroll Keys"
+msgstr "Teclas de navegação"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
+msgid "Command Keys"
+msgstr "Teclas de comando"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
+msgid "CTRL"
+msgstr "CTRL"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
+msgid "FNS"
+msgstr "FNS"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
+msgid "SCR"
+msgstr "SCR"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
+msgid "CMD"
+msgstr "CMD"
+
+#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
+msgid "ALT"
+msgstr "ALT"
+
+#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
+msgid "SHIFT"
+msgstr "SHIFT"
+
+#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
+msgid "ESC"
+msgstr "ESC"
+
+#. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
+msgid "PG_UP"
+msgstr "PG_UP"
+
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
+msgid "PG_DN"
+msgstr "PG_DN"
+
+#. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
+msgid "DEL"
+msgstr "DEL"
+
+#. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
+msgid "HOME"
+msgstr "HOME"
+
+#. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
+msgid "END"
+msgstr "END"
+
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
+msgid "TAB"
+msgstr "TAB"
+
+#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
+msgid "ENTER"
+msgstr "ENTER"
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
 msgid "Layouts"
