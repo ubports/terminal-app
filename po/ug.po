@@ -8,26 +8,26 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-09 16:01+0200\n"
-"PO-Revision-Date: 2015-09-23 07:00+0000\n"
+"PO-Revision-Date: 2015-09-27 10:46+0000\n"
 "Last-Translator: eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-09-24 05:59+0000\n"
-"X-Generator: Launchpad (build 17749)\n"
+"X-Launchpad-Export-Date: 2015-09-28 06:25+0000\n"
+"X-Generator: Launchpad (build 17754)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr ""
+msgstr "تاللا"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr ""
+msgstr "كۆچۈر"
 
 #: ../src/app/qml/AlternateActionPopover.qml:21
 msgid "Paste"
-msgstr ""
+msgstr "چاپلا"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -60,7 +60,7 @@ msgstr "كىرگۈزگۈچنى ئۆزگەرت"
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
 msgid "Control Keys"
-msgstr ""
+msgstr "كونتىرول تاختىسى"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
@@ -112,7 +112,7 @@ msgstr ""
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
 msgid "ESC"
-msgstr ""
+msgstr "ESC"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
@@ -132,7 +132,7 @@ msgstr "DEL"
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr ""
+msgstr "ئۆي"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
@@ -151,11 +151,11 @@ msgstr ""
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
 msgid "Layouts"
-msgstr ""
+msgstr "جايلاشتۇرۇشلار"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr ""
+msgstr "تەڭشەكلەر"
 
 #: ../src/app/qml/SettingsPage.qml:42
 msgid "Show Keyboard Bar"
@@ -167,51 +167,51 @@ msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:85
 msgid "Color Scheme"
-msgstr ""
+msgstr "رەڭ لايىھىسى"
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
-msgstr ""
+msgstr "بەتكۈچلەر"
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr ""
+msgstr "يېڭى بەتكۈچ"
 
 #: ../src/app/qml/TerminalPage.qml:164
 msgid "Selection Mode"
-msgstr ""
+msgstr "تاللىغان شەكلى"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr ""
+msgstr "ئاتسىز رەڭ لايىھىسى"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr ""
+msgstr "قوشۇمچە رەڭ لايىھىسى"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr ""
+msgstr "ئۇلانما ئاچ"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr ""
+msgstr "ئۇلانما ئادرېسىنى كۆچۈر"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr ""
+msgstr "تور خەت ئەۋەت ..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr ""
+msgstr "تور خەت ئادىرېسىنى كۈچۈر"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -219,14 +219,16 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
+"ھەرپتاختا تەرجىمانى تېپىلمىدى. بېسىلغان كۇنۇپكىنى ھەرپكە ئايلاندۇرۇپ "
+"تېرمىنالغا يوللاپ بېرىدىغان چاغدىكى ئۇچۇرلار يوق."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr ""
+msgstr "چوڭ يېزىلىشى ماس كەلگەن"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr ""
+msgstr "مۇنتىزىم ئىپادە"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
@@ -243,7 +245,7 @@ msgstr ""
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr ""
+msgstr "تېرمىنال"
 
 #~ msgid "Ok"
 #~ msgstr "تامام"
