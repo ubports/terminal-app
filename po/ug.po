@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-09 16:01+0200\n"
-"PO-Revision-Date: 2015-10-18 03:38+0000\n"
+"PO-Revision-Date: 2015-10-25 04:06+0000\n"
 "Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-19 05:41+0000\n"
+"X-Launchpad-Export-Date: 2015-10-25 05:46+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -35,7 +35,7 @@ msgstr "كىملىك دەلىللەش زۆرۈر"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr ""
+msgstr "ئىم كىرگۈزۈڭ :"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
@@ -82,22 +82,22 @@ msgstr ""
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CTRL"
-msgstr ""
+msgstr "CTRL"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "FNS"
-msgstr ""
+msgstr "FNS"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
 msgid "SCR"
-msgstr ""
+msgstr "SCR"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
