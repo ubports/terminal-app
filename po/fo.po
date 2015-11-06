@@ -1,0 +1,246 @@
+# Faroese translation for ubuntu-terminal-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the ubuntu-terminal-app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ubuntu-terminal-app\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2015-08-09 16:01+0200\n"
+"PO-Revision-Date: 2015-11-05 20:34+0000\n"
+"Last-Translator: Angutivik Casper Rúnur Tausen Hansen <Unknown>\n"
+"Language-Team: Faroese <fo@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-11-06 05:40+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:13
+msgid "Select"
+msgstr "Vel"
+
+#: ../src/app/qml/AlternateActionPopover.qml:17
+msgid "Copy"
+msgstr "Avrita"
+
+#: ../src/app/qml/AlternateActionPopover.qml:21
+msgid "Paste"
+msgstr "Set inn"
+
+#: ../src/app/qml/AuthenticationDialog.qml:25
+msgid "Authentication required"
+msgstr "Samgildi er neyðugt"
+
+#: ../src/app/qml/AuthenticationDialog.qml:27
+msgid "Enter password:"
+msgstr "Skriva loyniorð:"
+
+#: ../src/app/qml/AuthenticationDialog.qml:40
+msgid "password"
+msgstr "loyniorð"
+
+#: ../src/app/qml/AuthenticationDialog.qml:50
+msgid "OK"
+msgstr "OK"
+
+#: ../src/app/qml/AuthenticationDialog.qml:62
+msgid "Cancel"
+msgstr "Angra"
+
+#: ../src/app/qml/AuthenticationService.qml:55
+msgid "Authentication failed"
+msgstr "Samgilding miseydnaðist"
+
+#: ../src/app/qml/KeyboardBar.qml:174
+msgid "Change Keyboard"
+msgstr "Skift knappaborð"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
+msgid "Control Keys"
+msgstr "Control-knappar"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
+msgid "Function Keys"
+msgstr "Funkuknappar"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
+msgid "Scroll Keys"
+msgstr "Rulluknappar"
+
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
+msgid "Command Keys"
+msgstr "Command-knappar"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
+msgid "CTRL"
+msgstr "CTRL"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
+msgid "FNS"
+msgstr "FNS"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
+msgid "SCR"
+msgstr "SCR"
+
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
+msgid "CMD"
+msgstr "CMD"
+
+#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
+msgid "ALT"
+msgstr "ALT"
+
+#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
+msgid "SHIFT"
+msgstr "SHIFT"
+
+#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
+msgid "ESC"
+msgstr "ESC"
+
+#. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
+msgid "PG_UP"
+msgstr "PG_UP"
+
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
+msgid "PG_DN"
+msgstr "PG_DN"
+
+#. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
+msgid "DEL"
+msgstr "DEL"
+
+#. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
+msgid "HOME"
+msgstr "HOME"
+
+#. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
+msgid "END"
+msgstr "END"
+
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
+msgid "TAB"
+msgstr "TAB"
+
+#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
+msgid "ENTER"
+msgstr "ENTER"
+
+#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
+msgid "Layouts"
+msgstr "Snið"
+
+#: ../src/app/qml/SettingsPage.qml:27
+msgid "Settings"
+msgstr "Stillingar"
+
+#: ../src/app/qml/SettingsPage.qml:42
+msgid "Show Keyboard Bar"
+msgstr "Vís knappaborðsteiðin"
+
+#: ../src/app/qml/SettingsPage.qml:52
+msgid "Font Size:"
+msgstr "Stødd á stavnsið:"
+
+#: ../src/app/qml/SettingsPage.qml:85
+msgid "Color Scheme"
+msgstr "Litaskipan"
+
+#: ../src/app/qml/TabsPage.qml:8
+msgid "Tabs"
+msgstr "Teiðar"
+
+#: ../src/app/qml/TabsPage.qml:14
+msgid "New tab"
+msgstr "Nýggjur teiður"
+
+#: ../src/app/qml/TerminalPage.qml:164
+msgid "Selection Mode"
+msgstr "Veljingarstøðu"
+
+#: ../src/plugin/konsole/ColorScheme.cpp:276
+#: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
+msgid "Un-named Color Scheme"
+msgstr "Ónvevnd litskipan"
+
+#: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
+msgid "Accessible Color Scheme"
+msgstr "Tøk litskipan"
+
+#: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
+msgid "Open Link"
+msgstr "Opna leinkju"
+
+#: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
+msgid "Copy Link Address"
+msgstr "Avrita leinkjuatsetur"
+
+#: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
+msgid "Send Email To..."
+msgstr "Send teldupost til..."
+
+#: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
+msgid "Copy Email Address"
+msgstr "Avrit teldupostaddressu"
+
+#: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
+msgid ""
+"No keyboard translator available.  The information needed to convert key "
+"presses into characters to send to the terminal is missing."
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "Regluligt orðafelli"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "Hálýs allar makar"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+msgid "Color Scheme Error"
+msgstr "Brek í litskipan"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "Kann ikki løða litskipanina: %1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Terminal"
