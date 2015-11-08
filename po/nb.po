@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-09 16:01+0200\n"
-"PO-Revision-Date: 2015-01-18 20:07+0000\n"
+"PO-Revision-Date: 2015-11-07 12:39+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-08-11 06:09+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2015-11-08 05:47+0000\n"
+"X-Generator: Launchpad (build 17838)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -35,7 +35,7 @@ msgstr "Autentisering kreves"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr "Skriv inn passord>"
+msgstr "Skriv inn passord:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
@@ -43,7 +43,7 @@ msgstr "passord"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
@@ -151,7 +151,7 @@ msgstr ""
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
 msgid "Layouts"
-msgstr ""
+msgstr "Utforminger"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
