@@ -10,8 +10,8 @@ Item {
     property alias colorScheme: innerSettings.colorScheme
     property alias showKeyboardBar: innerSettings.showKeyboardBar
 
-    readonly property int defaultFontSize: 14
-    readonly property int minFontSize: 8
+    readonly property int defaultFontSize: 5
+    readonly property int minFontSize: 2
     readonly property int maxFontSize: 32
 
     property alias jsonVisibleProfiles: innerSettings.jsonVisibleProfiles
