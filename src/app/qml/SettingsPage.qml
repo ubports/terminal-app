@@ -46,6 +46,14 @@ Page {
             }
         }
 
+        ListItem.Standard {
+            text: i18n.tr("Show Keyboard Button")
+            control: Switch {
+                onCheckedChanged: settings.showKeyboardButton = checked;
+                Component.onCompleted: checked = settings.showKeyboardButton;
+            }
+        }
+
         ListItem.Empty {
             height: units.gu(10)
             Label {
