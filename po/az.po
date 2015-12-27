@@ -1,4 +1,4 @@
-# Galician translation for ubuntu-terminal-app
+# Azerbaijani translation for ubuntu-terminal-app
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-08-09 16:01+0200\n"
-"PO-Revision-Date: 2015-12-26 23:03+0000\n"
-"Last-Translator: Marcos Lans <Unknown>\n"
-"Language-Team: Galician <gl@li.org>\n"
+"PO-Revision-Date: 2015-12-26 12:21+0000\n"
+"Last-Translator: Nicat Məmmədov <n1c4t97@gmail.com>\n"
+"Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,85 +19,85 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr "Seleccionar"
+msgstr "Seç"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr "Copiar"
+msgstr "Kopyala"
 
 #: ../src/app/qml/AlternateActionPopover.qml:21
 msgid "Paste"
-msgstr "Pegar"
+msgstr "Yapışdır"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "Requírese autenticación"
+msgstr "Təsdiqlənmə lazımdır"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter password:"
-msgstr "Introduza o contrasinal:"
+msgstr "Şifrəni daxil edin:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "password"
-msgstr "contrasinal"
+msgstr "şifrə"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
-msgstr "Aceptar"
+msgstr "OK"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "İmtina"
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
-msgstr "Fallou a autenticación"
+msgstr "Təsdiqlənmə uğursuz oldu"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
-msgstr "Cambiar o teclado"
+msgstr "Klaviaturanı Dəyiş"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
 msgid "Control Keys"
-msgstr "Teclas de control"
+msgstr "İdarə Düymələri (İDR)"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
 msgid "Function Keys"
-msgstr "Teclas de función"
+msgstr "Funksional Düymələr (FNKS)"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
 msgid "Scroll Keys"
-msgstr "Teclas de desprazamento"
+msgstr "Sürüşdürmə düymələri (SRŞ)"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
 msgid "Command Keys"
-msgstr "Teclas de ordes"
+msgstr "Komanda Düymələri (KMND)"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CTRL"
-msgstr "CTRL"
+msgstr "İDR"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "FNS"
-msgstr "FUNC"
+msgstr "FNKS"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
 msgid "SCR"
-msgstr "DESP"
+msgstr "SRŞ"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
 msgid "CMD"
-msgstr "ORD"
+msgstr "KMND"
 
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
@@ -107,111 +107,111 @@ msgstr "ALT"
 #. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
 msgid "SHIFT"
-msgstr "MAIÚS"
+msgstr "SHIFT"
 
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
 msgid "ESC"
-msgstr "ESC"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
 msgid "PG_UP"
-msgstr "AV_PÁX"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
 msgid "PG_DN"
-msgstr "RET_PÁX"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr "SUPR"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr "INICIO"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr "FIN"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr "TAB"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
 msgid "ENTER"
-msgstr "INTRO"
+msgstr ""
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
 msgid "Layouts"
-msgstr "Disposicións"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Axustes"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:42
 msgid "Show Keyboard Bar"
-msgstr "Mostrar a barra do teclado"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:52
 msgid "Font Size:"
-msgstr "Tamaño da letra:"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:85
 msgid "Color Scheme"
-msgstr "Esquema de cor"
+msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:8
 msgid "Tabs"
-msgstr "Lapelas"
+msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:14
 msgid "New tab"
-msgstr "Nova lapela"
+msgstr ""
 
 #: ../src/app/qml/TerminalPage.qml:164
 msgid "Selection Mode"
-msgstr "Modo de selección"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "Esquema de cores sen nome"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "Esquema accesíbel de cores"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "Abrir a ligazón"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "Copiar o enderezo da ligazón"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "Enviar un correo a..."
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "Copiar o enderezo do correo"
+msgstr ""
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -219,33 +219,28 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
-"Non hai ningún tradutor de teclado dispoñíbel. Falta a información precisa "
-"para converter as pulsacións en caracteres."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "Sensíbel a maiúsc. e minúsc."
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "Expresión regular"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "Resaltar resultados"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "Erro no esquema de cor"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "Non foi posíbel cargar o esquema de cor: %1"
+msgstr ""
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr "Terminal"
-
-#~ msgid "Ok"
-#~ msgstr "Aceptar"
+msgstr ""
