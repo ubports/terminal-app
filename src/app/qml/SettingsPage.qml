@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
 
 Page {
     id: settingsPage
@@ -32,26 +31,42 @@ Page {
         spacing: units.gu(1)
         anchors.fill: parent
 
-        ListItem.Standard {
-            text: i18n.tr("Layouts")
-            progression: true
+        ListItem {
+            ListItemLayout {
+                anchors.fill: parent
+                title.text: i18n.tr("Layouts")
+
+                Icon {
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    width: units.gu(2); height: width
+                    name: "go-next"
+                }
+            }
+
             onClicked: pageStack.push(layoutsPage);
         }
 
-        ListItem.Standard {
-            text: i18n.tr("Show Keyboard Bar")
-            control: Switch {
-                onCheckedChanged: settings.showKeyboardBar = checked;
-                Component.onCompleted: checked = settings.showKeyboardBar;
+        ListItem {
+            ListItemLayout {
+                anchors.fill: parent
+                title.text: i18n.tr("Show Keyboard Bar")
+
+                Switch {
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    onCheckedChanged: settings.showKeyboardBar = checked;
+                    Component.onCompleted: checked = settings.showKeyboardBar;
+                }
             }
         }
 
-        ListItem.Empty {
+        ListItem {
             height: units.gu(10)
+
             Label {
+                anchors { left: parent.left; margins: units.gu(2) }
                 text: i18n.tr("Font Size:")
-                x: units.gu(2)
             }
+
             Slider {
                 id: slFont
                 objectName: "slFont"

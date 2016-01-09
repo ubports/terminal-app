@@ -18,7 +18,6 @@
 
 import QtQuick 2.4
 import Ubuntu.Components 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
 
 Page {
     id: rootItem
@@ -34,18 +33,23 @@ Page {
     ListView {
         anchors.fill: parent
         model: settings.profilesList
-        delegate: ListItem.Standard {
-            text: name
+        delegate: ListItem {
+            ListItemLayout {
+                anchors.fill: parent
+                title.text: name
 
-            control: Switch {
-                id: layoutSwitch
-                checked: profileVisible
-                onCheckedChanged: {
-                    settings.profilesList.setProperty(index, "profileVisible", checked);
+                Switch {
+                    id: layoutSwitch
+                    SlotsLayout.position: SlotsLayout.Trailing
+
+                    checked: profileVisible
+                    onCheckedChanged: {
+                        settings.profilesList.setProperty(index, "profileVisible", checked);
+                    }
                 }
             }
 
-            onTriggered: layoutSwitch.trigger()
+            onClicked: layoutSwitch.trigger()
         }
     }
 }
