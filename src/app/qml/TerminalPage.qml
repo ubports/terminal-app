@@ -10,6 +10,11 @@ Page {
 
     anchors.fill: parent
 
+    head {
+        visible: false
+        locked: true
+    }
+
     AlternateActionPopover {
         id: alternateActionPopover
     }
