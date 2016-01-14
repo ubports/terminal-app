@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-08-09 16:01+0200\n"
+"POT-Creation-Date: 2015-12-19 00:08-0500\n"
 "PO-Revision-Date: 2015-08-14 22:07+0000\n"
 "Last-Translator: Marcus Gisslén <marcus.gisslen@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-18 05:53+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-14 06:13+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "Language: sv\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -162,11 +162,15 @@ msgstr "Inställningar"
 msgid "Show Keyboard Bar"
 msgstr "Visa kortkommandorad"
 
-#: ../src/app/qml/SettingsPage.qml:52
+#: ../src/app/qml/SettingsPage.qml:50
+msgid "Show Keyboard Button"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:60
 msgid "Font Size:"
 msgstr "Teckenstorlek:"
 
-#: ../src/app/qml/SettingsPage.qml:85
+#: ../src/app/qml/SettingsPage.qml:93
 msgid "Color Scheme"
 msgstr "Färgschema"
 
