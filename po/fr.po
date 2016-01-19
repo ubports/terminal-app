@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-19 00:08-0500\n"
-"PO-Revision-Date: 2015-09-13 09:26+0000\n"
-"Last-Translator: Francois Polito <Unknown>\n"
+"PO-Revision-Date: 2016-01-18 19:09+0000\n"
+"Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-14 06:13+0000\n"
+"X-Launchpad-Export-Date: 2016-01-19 05:53+0000\n"
 "X-Generator: Launchpad (build 17886)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -163,7 +163,7 @@ msgstr "Afficher la barre de clavier"
 
 #: ../src/app/qml/SettingsPage.qml:50
 msgid "Show Keyboard Button"
-msgstr ""
+msgstr "Afficher le bouton du clavier"
 
 #: ../src/app/qml/SettingsPage.qml:60
 msgid "Font Size:"
