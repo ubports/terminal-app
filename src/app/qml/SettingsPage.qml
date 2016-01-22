@@ -24,109 +24,116 @@ Page {
     objectName: "settingsPage"
 
     title: i18n.tr("Settings")
+    flickable: null
 
-    Column {
-        id: mainColumn
-
-        spacing: units.gu(1)
+    Flickable {
         anchors.fill: parent
+        interactive: contentHeight + units.gu(6) > height
+        contentHeight: mainColumn.height
 
-        ListItem {
-            ListItemLayout {
-                anchors.fill: parent
-                title.text: i18n.tr("Layouts")
+        Column {
+            id: mainColumn
+            anchors { left: parent.left; right: parent.right }
+            spacing: units.gu(1)
 
-                Icon {
-                    SlotsLayout.position: SlotsLayout.Trailing
-                    width: units.gu(2); height: width
-                    name: "go-next"
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Layouts")
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        width: units.gu(2); height: width
+                        name: "go-next"
+                    }
                 }
+
+                onClicked: pageStack.push(layoutsPage);
             }
 
-            onClicked: pageStack.push(layoutsPage);
-        }
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Show Keyboard Bar")
 
-        ListItem {
-            ListItemLayout {
-                anchors.fill: parent
-                title.text: i18n.tr("Show Keyboard Bar")
-
-                Switch {
-                    SlotsLayout.position: SlotsLayout.Trailing
-                    onCheckedChanged: settings.showKeyboardBar = checked;
-                    Component.onCompleted: checked = settings.showKeyboardBar;
-                }
-            }
-        }
-
-        ListItem {
-            ListItemLayout {
-                anchors.fill: parent
-                title.text: i18n.tr("Show Keyboard Button")
-
-                Switch {
-                    SlotsLayout.position: SlotsLayout.Trailing
-                    onCheckedChanged: settings.showKeyboardButton = checked;
-                    Component.onCompleted: checked = settings.showKeyboardButton;
-                }
-            }
-        }
-
-        ListItem {
-            height: units.gu(10)
-
-            Label {
-                anchors { left: parent.left; margins: units.gu(2) }
-                text: i18n.tr("Font Size:")
-            }
-
-            Slider {
-                id: slFont
-                objectName: "slFont"
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    bottom: parent.bottom
-                    margins: units.gu(2)
-                }
-                minimumValue: settings.minFontSize;
-                maximumValue: settings.maxFontSize;
-                onValueChanged: {
-                    settings.fontSize = value;
-                }
-                Component.onCompleted: {
-                    value = settings.fontSize;
-                }
-
-                Connections {
-                    target: settings
-                    onFontSizeChanged: {
-                        slFont.value = settings.fontSize
+                    Switch {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        onCheckedChanged: settings.showKeyboardBar = checked;
+                        Component.onCompleted: checked = settings.showKeyboardBar;
                     }
                 }
             }
-        }
 
-        OptionSelector {
-            id: colorsSchemeSelector
-            objectName: "colorsSchemeSelector"
-            text: i18n.tr("Color Scheme")
-            width: parent.width - units.gu(4)
-            x: units.gu(2)
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Show Keyboard Button")
 
-            // TODO Hackish, but works quite well.
-            containerHeight: parent.height - y - units.gu(6)
-
-            // TODO This is a workaround at the moment.
-            // The application should get them from the c++.
-            model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
-
-            onSelectedIndexChanged: {
-                settings.colorScheme = model[selectedIndex];
+                    Switch {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        onCheckedChanged: settings.showKeyboardButton = checked;
+                        Component.onCompleted: checked = settings.showKeyboardButton;
+                    }
+                }
             }
 
-            Component.onCompleted: {
-                selectedIndex = model.indexOf(settings.colorScheme);
+            ListItem {
+                height: units.gu(10)
+
+                Label {
+                    anchors { left: parent.left; margins: units.gu(2) }
+                    text: i18n.tr("Font Size:")
+                }
+
+                Slider {
+                    id: slFont
+                    objectName: "slFont"
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        margins: units.gu(2)
+                    }
+                    minimumValue: settings.minFontSize;
+                    maximumValue: settings.maxFontSize;
+                    onValueChanged: {
+                        settings.fontSize = value;
+                    }
+                    Component.onCompleted: {
+                        value = settings.fontSize;
+                    }
+
+                    Connections {
+                        target: settings
+                        onFontSizeChanged: {
+                            slFont.value = settings.fontSize
+                        }
+                    }
+                }
+            }
+
+            OptionSelector {
+                id: colorsSchemeSelector
+                objectName: "colorsSchemeSelector"
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    margins: units.gu(2)
+                }
+
+                text: i18n.tr("Color Scheme")
+
+                // TODO This is a workaround at the moment.
+                // The application should get them from the c++.
+                model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
+
+                onSelectedIndexChanged: {
+                    settings.colorScheme = model[selectedIndex];
+                }
+
+                Component.onCompleted: {
+                    selectedIndex = model.indexOf(settings.colorScheme);
+                }
             }
         }
     }
