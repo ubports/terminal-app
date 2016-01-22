@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-19 00:08-0500\n"
+"POT-Creation-Date: 2016-01-19 20:23-0500\n"
 "PO-Revision-Date: 2015-08-12 21:44+0000\n"
 "Last-Translator: Phillip Sz <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-14 06:13+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-01-22 06:00+0000\n"
+"X-Generator: Launchpad (build 17902)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -34,12 +34,12 @@ msgid "Authentication required"
 msgstr "Legitimierung erforderlich"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
-msgid "Enter password:"
-msgstr "Passwort eingeben:"
+msgid "Enter passcode or passphrase:"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
-msgid "password"
-msgstr "Passwort"
+msgid "passcode or passphrase"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
@@ -250,6 +250,12 @@ msgstr "Farbschema konnte nicht geladen werden: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Befehlsfenster"
+
+#~ msgid "Enter password:"
+#~ msgstr "Passwort eingeben:"
+
+#~ msgid "password"
+#~ msgstr "Passwort"
 
 #~ msgid "Ok"
 #~ msgstr "Ok"
