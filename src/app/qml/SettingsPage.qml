@@ -57,11 +57,14 @@ Page {
                     title.text: i18n.tr("Show Keyboard Bar")
 
                     Switch {
+                        id: keybBarSwitch
                         SlotsLayout.position: SlotsLayout.Trailing
                         onCheckedChanged: settings.showKeyboardBar = checked;
                         Component.onCompleted: checked = settings.showKeyboardBar;
                     }
                 }
+
+                onClicked: keybBarSwitch.trigger()
             }
 
             ListItem {
@@ -70,15 +73,18 @@ Page {
                     title.text: i18n.tr("Show Keyboard Button")
 
                     Switch {
+                        id: keybButtonSwitch
                         SlotsLayout.position: SlotsLayout.Trailing
                         onCheckedChanged: settings.showKeyboardButton = checked;
                         Component.onCompleted: checked = settings.showKeyboardButton;
                     }
                 }
+
+                onClicked: keybButtonSwitch.trigger()
             }
 
             ListItem {
-                height: units.gu(10)
+                height: units.gu(12)
 
                 Label {
                     anchors { left: parent.left; margins: units.gu(2) }
@@ -112,28 +118,24 @@ Page {
                 }
             }
 
-            OptionSelector {
-                id: colorsSchemeSelector
-                objectName: "colorsSchemeSelector"
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    margins: units.gu(2)
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Color Scheme")
+
+                    Label {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        text: settings.colorScheme
+                    }
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Last
+                        width: units.gu(2); height: width
+                        name: "go-next"
+                    }
                 }
 
-                text: i18n.tr("Color Scheme")
-
-                // TODO This is a workaround at the moment.
-                // The application should get them from the c++.
-                model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
-
-                onSelectedIndexChanged: {
-                    settings.colorScheme = model[selectedIndex];
-                }
-
-                Component.onCompleted: {
-                    selectedIndex = model.indexOf(settings.colorScheme);
-                }
+                onClicked: pageStack.push(colorSchemePage);
             }
         }
     }

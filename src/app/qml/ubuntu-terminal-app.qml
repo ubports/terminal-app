@@ -115,6 +115,15 @@ MainView {
             id: layoutsPage
             visible: false
         }
+
+        ColorSchemePage {
+            id: colorSchemePage
+            visible: false
+
+            // TODO This is a workaround at the moment.
+            // The application should get them from the c++.
+            model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
+        }
     }
 
     Component.onCompleted: {
