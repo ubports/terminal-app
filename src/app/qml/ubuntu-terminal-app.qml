@@ -1,6 +1,6 @@
 import QtQuick 2.4
 import QtGraphicalEffects 1.0
-import Ubuntu.Components 1.2
+import Ubuntu.Components 1.3
 import "KeyboardRows"
 
 import QMLTermWidget 1.0
@@ -114,6 +114,15 @@ MainView {
         LayoutsPage {
             id: layoutsPage
             visible: false
+        }
+
+        ColorSchemePage {
+            id: colorSchemePage
+            visible: false
+
+            // TODO This is a workaround at the moment.
+            // The application should get them from the c++.
+            model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
         }
     }
 

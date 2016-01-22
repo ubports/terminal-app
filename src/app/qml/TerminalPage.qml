@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.Popups 1.0
+import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import QMLTermWidget 1.0
 
 Page {
@@ -9,6 +9,12 @@ Page {
     property Item terminal
 
     anchors.fill: parent
+
+    header: PageHeader {
+        // WORKAROUND: This way we disable the 'hide' animation when
+        // closing the settings page.
+        visible: false
+    }
 
     AlternateActionPopover {
         id: alternateActionPopover

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013, 2014 Canonical Ltd
+ * Copyright (C) 2013, 2014, 2016 Canonical Ltd
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
@@ -21,35 +21,39 @@ import Ubuntu.Components 1.3
 
 Page {
     id: rootItem
-    objectName: "layoutsPage"
+    objectName: "colorSchemePage"
 
-    title: i18n.tr("Layouts")
-
-    onVisibleChanged: {
-        if (visible === false)
-            settings.profilesChanged();
-    }
+    title: i18n.tr("Color Scheme")
+    property alias model: listView.model
 
     ListView {
+        id: listView
         anchors.fill: parent
         model: settings.profilesList
         delegate: ListItem {
             ListItemLayout {
                 anchors.fill: parent
-                title.text: name
+                title.text: modelData
 
-                Switch {
-                    id: layoutSwitch
-                    SlotsLayout.position: SlotsLayout.Trailing
+                Icon {
+                    SlotsLayout.position: SlotsLayout.Last
+                    width: units.gu(2); height: units.gu(2)
+                    color: UbuntuColors.green
+                    name: "tick"
 
-                    checked: profileVisible
-                    onCheckedChanged: {
-                        settings.profilesList.setProperty(index, "profileVisible", checked);
-                    }
+                    visible: model.index == listView.currentIndex
                 }
             }
 
-            onClicked: layoutSwitch.trigger()
+            onClicked: listView.currentIndex = model.index
+        }
+
+        onCurrentIndexChanged: {
+            settings.colorScheme = model[currentIndex];
+        }
+
+        Component.onCompleted: {
+            currentIndex = model.indexOf(settings.colorScheme);
         }
     }
 }

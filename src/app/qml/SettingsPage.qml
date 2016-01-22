@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013, 2014 Canonical Ltd
+ * Copyright (C) 2013, 2014, 2016 Canonical Ltd
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
@@ -17,96 +17,125 @@
  */
 
 import QtQuick 2.4
-import Ubuntu.Components 1.2
-import Ubuntu.Components.ListItems 1.0 as ListItem
+import Ubuntu.Components 1.3
 
 Page {
     id: settingsPage
     objectName: "settingsPage"
 
     title: i18n.tr("Settings")
+    flickable: null
 
-    Column {
-        id: mainColumn
-
-        spacing: units.gu(1)
+    Flickable {
         anchors.fill: parent
+        interactive: contentHeight + units.gu(6) > height
+        contentHeight: mainColumn.height
 
-        ListItem.Standard {
-            text: i18n.tr("Layouts")
-            progression: true
-            onClicked: pageStack.push(layoutsPage);
-        }
+        Column {
+            id: mainColumn
+            anchors { left: parent.left; right: parent.right }
+            spacing: units.gu(1)
 
-        ListItem.Standard {
-            text: i18n.tr("Show Keyboard Bar")
-            control: Switch {
-                onCheckedChanged: settings.showKeyboardBar = checked;
-                Component.onCompleted: checked = settings.showKeyboardBar;
-            }
-        }
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Layouts")
 
-        ListItem.Standard {
-            text: i18n.tr("Show Keyboard Button")
-            control: Switch {
-                onCheckedChanged: settings.showKeyboardButton = checked;
-                Component.onCompleted: checked = settings.showKeyboardButton;
-            }
-        }
-
-        ListItem.Empty {
-            height: units.gu(10)
-            Label {
-                text: i18n.tr("Font Size:")
-                x: units.gu(2)
-            }
-            Slider {
-                id: slFont
-                objectName: "slFont"
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                    bottom: parent.bottom
-                    margins: units.gu(2)
-                }
-                minimumValue: settings.minFontSize;
-                maximumValue: settings.maxFontSize;
-                onValueChanged: {
-                    settings.fontSize = value;
-                }
-                Component.onCompleted: {
-                    value = settings.fontSize;
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        width: units.gu(2); height: width
+                        name: "go-next"
+                    }
                 }
 
-                Connections {
-                    target: settings
-                    onFontSizeChanged: {
-                        slFont.value = settings.fontSize
+                onClicked: pageStack.push(layoutsPage);
+            }
+
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Show Keyboard Bar")
+
+                    Switch {
+                        id: keybBarSwitch
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        onCheckedChanged: settings.showKeyboardBar = checked;
+                        Component.onCompleted: checked = settings.showKeyboardBar;
+                    }
+                }
+
+                onClicked: keybBarSwitch.trigger()
+            }
+
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Show Keyboard Button")
+
+                    Switch {
+                        id: keybButtonSwitch
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        onCheckedChanged: settings.showKeyboardButton = checked;
+                        Component.onCompleted: checked = settings.showKeyboardButton;
+                    }
+                }
+
+                onClicked: keybButtonSwitch.trigger()
+            }
+
+            ListItem {
+                height: units.gu(12)
+
+                Label {
+                    anchors { left: parent.left; margins: units.gu(2) }
+                    text: i18n.tr("Font Size:")
+                }
+
+                Slider {
+                    id: slFont
+                    objectName: "slFont"
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        margins: units.gu(2)
+                    }
+                    minimumValue: settings.minFontSize;
+                    maximumValue: settings.maxFontSize;
+                    onValueChanged: {
+                        settings.fontSize = value;
+                    }
+                    Component.onCompleted: {
+                        value = settings.fontSize;
+                    }
+
+                    Connections {
+                        target: settings
+                        onFontSizeChanged: {
+                            slFont.value = settings.fontSize
+                        }
                     }
                 }
             }
-        }
 
-        OptionSelector {
-            id: colorsSchemeSelector
-            objectName: "colorsSchemeSelector"
-            text: i18n.tr("Color Scheme")
-            width: parent.width - units.gu(4)
-            x: units.gu(2)
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Color Scheme")
 
-            // TODO Hackish, but works quite well.
-            containerHeight: parent.height - y - units.gu(6)
+                    Label {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        text: settings.colorScheme
+                    }
 
-            // TODO This is a workaround at the moment.
-            // The application should get them from the c++.
-            model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Last
+                        width: units.gu(2); height: width
+                        name: "go-next"
+                    }
+                }
 
-            onSelectedIndexChanged: {
-                settings.colorScheme = model[selectedIndex];
-            }
-
-            Component.onCompleted: {
-                selectedIndex = model.indexOf(settings.colorScheme);
+                onClicked: pageStack.push(colorSchemePage);
             }
         }
     }
