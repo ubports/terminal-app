@@ -60,6 +60,19 @@ Page {
         }
 
         ListItem {
+            ListItemLayout {
+                anchors.fill: parent
+                title.text: i18n.tr("Show Keyboard Button")
+
+                Switch {
+                    SlotsLayout.position: SlotsLayout.Trailing
+                    onCheckedChanged: settings.showKeyboardButton = checked;
+                    Component.onCompleted: checked = settings.showKeyboardButton;
+                }
+            }
+        }
+
+        ListItem {
             height: units.gu(10)
 
             Label {

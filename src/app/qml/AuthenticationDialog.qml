@@ -24,7 +24,7 @@ Dialog {
 
     title: i18n.tr("Authentication required")
 
-    text: i18n.tr("Enter password:")
+    text: i18n.tr("Enter passcode or passphrase:")
 
     signal passwordEntered(string password)
     signal dialogCanceled
@@ -37,7 +37,7 @@ Dialog {
         id: passwordField
         objectName: "inputField"
 
-        placeholderText: i18n.tr("password")
+        placeholderText: i18n.tr("passcode or passphrase")
         echoMode: TextInput.Password
 
         onAccepted: okButton.clicked(text)

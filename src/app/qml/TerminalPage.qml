@@ -215,20 +215,22 @@ Page {
         }
     }
 
-    CircularTransparentButton {
+    Loader {
         id: keyboardButton
-
+        active: settings.showKeyboardButton
         anchors {right: parent.right; margins: units.gu(1)}
 
         y: parent.height - height - units.gu(1) - keyboardBarLoader.height
 
-        innerOpacity: 0.6
-        border {color: UbuntuColors.orange; width: units.dp(2)}
-        action: Action {
-            iconName: "input-keyboard-symbolic"
-            onTriggered: {
-                Qt.inputMethod.show();
-                terminal.forceActiveFocus();
+        sourceComponent: CircularTransparentButton {
+            innerOpacity: 0.6
+            border {color: UbuntuColors.orange; width: units.dp(2)}
+            action: Action {
+                iconName: "input-keyboard-symbolic"
+                onTriggered: {
+                    Qt.inputMethod.show();
+                    terminal.forceActiveFocus();
+                }
             }
         }
     }
