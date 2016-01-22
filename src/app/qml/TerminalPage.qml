@@ -10,9 +10,10 @@ Page {
 
     anchors.fill: parent
 
-    head {
+    header: PageHeader {
+        // WORKAROUND: This way we disable the 'hide' animation when
+        // closing the settings page.
         visible: false
-        locked: true
     }
 
     AlternateActionPopover {
