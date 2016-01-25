@@ -40,7 +40,7 @@ QStringList getProfileFromDir(const QString &path) {
     QDir layoutDir(path);
     layoutDir.setNameFilters(QStringList("*.json"));
 
-    QStringList jsonFiles = layoutDir.entryList();
+    QStringList jsonFiles = layoutDir.entryList();   
 
     QStringList result;
     foreach (QString s, jsonFiles) {
@@ -174,12 +174,18 @@ int main(int argc, char *argv[])
             qDebug() << "Trying to load QML from:" << path + "/qml/ubuntu-terminal-app.qml";
             if (fi.exists()) {
                 qmlfile = path +  "/qml/ubuntu-terminal-app.qml";
-                keyboardLayouts << getProfileFromDir(path + "/qml/KeyboardRows/Layouts/");
                 break;
             }
         }
     }
 
+    // Look for default layouts
+    QDir keybLayoutDir = QFileInfo(qmlfile).dir();
+    if (keybLayoutDir.cd("KeyboardRows/Layouts")) {
+        keyboardLayouts << getProfileFromDir(keybLayoutDir.canonicalPath() + "/");
+    }
+
+    // Look for user-defined layouts
     QStringList configLocations = QStandardPaths::standardLocations(QStandardPaths::ConfigLocation);
     foreach (const QString &path, configLocations) {
         QString fullPath = path + "/com.ubuntu.terminal/Layouts/";
