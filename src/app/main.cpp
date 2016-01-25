@@ -182,7 +182,9 @@ int main(int argc, char *argv[])
     // Look for default layouts
     QDir keybLayoutDir = QFileInfo(qmlfile).dir();
     if (keybLayoutDir.cd("KeyboardRows/Layouts")) {
-        keyboardLayouts << getProfileFromDir(keybLayoutDir.canonicalPath() + "/");
+        QString keybLayoutPath = keybLayoutDir.canonicalPath() + "/";
+        qDebug() << "Retrieving default keyboard profiles from folder: " << keybLayoutPath;
+        keyboardLayouts << getProfileFromDir(keybLayoutPath);
     }
 
     // Look for user-defined layouts
