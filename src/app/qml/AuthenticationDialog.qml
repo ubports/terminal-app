@@ -36,7 +36,7 @@ Dialog {
     TextField {
         id: passwordField
         objectName: "inputField"
-
+        focus: true
         placeholderText: i18n.tr("passcode or passphrase")
         echoMode: TextInput.Password
 
