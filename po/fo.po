@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-01-19 20:23-0500\n"
-"PO-Revision-Date: 2015-11-05 20:34+0000\n"
+"PO-Revision-Date: 2016-01-28 20:36+0000\n"
 "Last-Translator: Angutivik Casper Rúnur Tausen Hansen <Unknown>\n"
 "Language-Team: Faroese <fo@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-22 06:00+0000\n"
+"X-Launchpad-Export-Date: 2016-01-29 05:43+0000\n"
 "X-Generator: Launchpad (build 17902)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -35,11 +35,11 @@ msgstr "Samgildi er neyðugt"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Skriva loyniorð:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "loyniorð"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
@@ -163,7 +163,7 @@ msgstr "Vís knappaborðsteiðin"
 
 #: ../src/app/qml/SettingsPage.qml:50
 msgid "Show Keyboard Button"
-msgstr ""
+msgstr "Vís knappaborðsknøttin"
 
 #: ../src/app/qml/SettingsPage.qml:60
 msgid "Font Size:"
@@ -223,10 +223,12 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
+"Eingin tøkur knappaborðsumsetari. Upplýsingar, ið eru neyðugar til at umseta "
+"knappatrýst til stavur fyri at senda til terminalin, mangla."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr ""
+msgstr "Makaføri"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
