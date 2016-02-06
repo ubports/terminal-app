@@ -34,16 +34,16 @@ Page {
         Column {
             id: mainColumn
             anchors { left: parent.left; right: parent.right }
-            spacing: units.gu(1)
 
             ListItem {
                 ListItemLayout {
-                    anchors.fill: parent
+                    anchors.verticalCenter: parent.verticalCenter
                     title.text: i18n.tr("Layouts")
 
                     Icon {
                         SlotsLayout.position: SlotsLayout.Trailing
-                        width: units.gu(2); height: width
+                        width: units.gu(2)
+                        height: width
                         name: "go-next"
                     }
                 }
@@ -84,10 +84,15 @@ Page {
             }
 
             ListItem {
-                height: units.gu(12)
+                height: units.gu(13)
 
                 Label {
-                    anchors { left: parent.left; margins: units.gu(2) }
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: parent.right
+                        margins: units.gu(2)
+                    }
                     text: i18n.tr("Font Size:")
                 }
 
