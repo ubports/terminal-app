@@ -32,7 +32,7 @@ Page {
         model: settings.profilesList
         delegate: ListItem {
             ListItemLayout {
-                anchors.fill: parent
+                anchors.verticalCenter: parent.verticalCenter
                 title.text: modelData
 
                 Icon {
