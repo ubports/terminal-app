@@ -30,6 +30,7 @@ Page {
         id: listView
         anchors.fill: parent
         model: settings.profilesList
+        currentIndex: model.indexOf(settings.colorScheme)
         delegate: ListItem {
             ListItemLayout {
                 anchors.verticalCenter: parent.verticalCenter
@@ -41,7 +42,7 @@ Page {
                     color: UbuntuColors.green
                     name: "tick"
 
-                    visible: model.index == listView.currentIndex
+                    visible: model.index === listView.currentIndex
                 }
             }
 
@@ -50,10 +51,6 @@ Page {
 
         onCurrentIndexChanged: {
             settings.colorScheme = model[currentIndex];
-        }
-
-        Component.onCompleted: {
-            currentIndex = model.indexOf(settings.colorScheme);
         }
     }
 }

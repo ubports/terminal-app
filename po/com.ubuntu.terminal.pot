@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Canonical Ltd.
-# This file is distributed under the same license as the  package.
+# This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-19 20:23-0500\n"
+"POT-Creation-Date: 2016-02-06 17:44+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -51,6 +51,10 @@ msgstr ""
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
+msgstr ""
+
+#: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:124
+msgid "Color Scheme"
 msgstr ""
 
 #: ../src/app/qml/KeyboardBar.qml:174
@@ -149,39 +153,35 @@ msgstr ""
 msgid "ENTER"
 msgstr ""
 
-#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
+#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:42
 msgid "Layouts"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:27
+#: ../src/app/qml/SettingsPage.qml:26
 msgid "Settings"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:42
+#: ../src/app/qml/SettingsPage.qml:57
 msgid "Show Keyboard Bar"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:50
+#: ../src/app/qml/SettingsPage.qml:73
 msgid "Show Keyboard Button"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:60
+#: ../src/app/qml/SettingsPage.qml:91
 msgid "Font Size:"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:93
-msgid "Color Scheme"
-msgstr ""
-
-#: ../src/app/qml/TabsPage.qml:8
+#: ../src/app/qml/TabsPage.qml:7
 msgid "Tabs"
 msgstr ""
 
-#: ../src/app/qml/TabsPage.qml:14
+#: ../src/app/qml/TabsPage.qml:13
 msgid "New tab"
 msgstr ""
 
-#: ../src/app/qml/TerminalPage.qml:164
+#: ../src/app/qml/TerminalPage.qml:170
 msgid "Selection Mode"
 msgstr ""
 
