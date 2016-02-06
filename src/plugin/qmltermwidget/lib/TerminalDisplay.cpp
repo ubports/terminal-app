@@ -2570,6 +2570,11 @@ void TerminalDisplay::pasteSelection()
   emitSelection(true,false);
 }
 
+bool TerminalDisplay::isClipboardEmpty()
+{
+    return QApplication::clipboard()->text().isEmpty();
+}
+
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /*                                Keyboard                                   */

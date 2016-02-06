@@ -20,6 +20,7 @@ Component {
             Action {
                 text: i18n.tr("Paste")
                 onTriggered: terminal.pasteClipboard();
+                enabled: !terminal.isClipboardEmpty();
             }
         }
     }

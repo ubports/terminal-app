@@ -482,6 +482,10 @@ public slots:
      */
     void pasteSelection();
 
+    /** Checks if the clipboard is empty
+     */
+    bool isClipboardEmpty();
+
     /** 
        * Changes whether the flow control warning box should be shown when the flow control
        * stop key (Ctrl+S) are pressed.
