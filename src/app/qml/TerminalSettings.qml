@@ -11,7 +11,7 @@ Item {
     property alias showKeyboardBar: innerSettings.showKeyboardBar
     property alias showKeyboardButton: innerSettings.showKeyboardButton
 
-    readonly property int defaultFontSize: 13
+    readonly property int defaultFontSize: 10
     readonly property int minFontSize: 4
     readonly property int maxFontSize: 50
 
