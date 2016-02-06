@@ -11,9 +11,9 @@ Item {
     property alias showKeyboardBar: innerSettings.showKeyboardBar
     property alias showKeyboardButton: innerSettings.showKeyboardButton
 
-    readonly property int defaultFontSize: units.gu(0.4)
-    readonly property int minFontSize: 2
-    readonly property int maxFontSize: 32
+    readonly property int defaultFontSize: 10
+    readonly property int minFontSize: 4
+    readonly property int maxFontSize: 50
 
     property alias jsonVisibleProfiles: innerSettings.jsonVisibleProfiles
 

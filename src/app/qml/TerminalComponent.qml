@@ -12,7 +12,7 @@ Component {
 
         colorScheme: settings.colorScheme
         font.family: settings.fontStyle
-        font.pointSize: settings.fontSize
+        font.pixelSize: FontUtils.sizeToPixels("medium") * settings.fontSize / 10
 
         signal sessionFinished(var session);
 
