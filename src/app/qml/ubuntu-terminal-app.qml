@@ -12,8 +12,8 @@ MainView {
     applicationName: "com.ubuntu.terminal"
     automaticOrientation: true
 
-    width: units.gu(90)
-    height: units.gu(55)
+    width: 40 * (FontUtils.sizeToPixels("medium") * settings.fontSize / 10)
+    height: 24 * (FontUtils.sizeToPixels("medium") * settings.fontSize / 10)
 
     AuthenticationService {
         onDenied: Qt.quit();
