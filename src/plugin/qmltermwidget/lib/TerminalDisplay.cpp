@@ -2570,9 +2570,16 @@ void TerminalDisplay::pasteSelection()
   emitSelection(true,false);
 }
 
+//TODO: These 2 functions are not in the upstream LxQt version
+//See https://code.launchpad.net/~mcintire-evan/ubuntu-terminal-app/disable-paste/+merge/283244/comments/725331
 bool TerminalDisplay::isClipboardEmpty()
 {
     return QApplication::clipboard()->text().isEmpty();
+}
+
+bool TerminalDisplay::isSelectionEmpty()
+{
+    return _screenWindow->selectedText(_preserveLineBreaks).isEmpty();
 }
 
 /* ------------------------------------------------------------------------- */
