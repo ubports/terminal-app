@@ -130,7 +130,7 @@ Page {
 
                     Label {
                         SlotsLayout.position: SlotsLayout.Trailing
-                        text: settings.colorScheme
+                        text: colorSchemePage.currentName
                     }
 
                     Icon {
