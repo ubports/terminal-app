@@ -24,7 +24,11 @@ Page {
     objectName: "colorSchemePage"
 
     title: i18n.tr("Color Scheme")
+
     property alias model: listView.model
+    property var namesModel
+
+    readonly property string currentName: namesModel[listView.currentIndex]
 
     ListView {
         id: listView
@@ -33,7 +37,7 @@ Page {
         delegate: ListItem {
             ListItemLayout {
                 anchors.fill: parent
-                title.text: modelData
+                title.text: namesModel[model.index]
 
                 Icon {
                     SlotsLayout.position: SlotsLayout.Last
