@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-01-19 20:23-0500\n"
+"POT-Creation-Date: 2016-02-06 17:44+0100\n"
 "PO-Revision-Date: 2015-09-18 08:37+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-22 06:01+0000\n"
-"X-Generator: Launchpad (build 17902)\n"
+"X-Launchpad-Export-Date: 2016-02-07 05:52+0000\n"
+"X-Generator: Launchpad (build 17908)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -52,6 +52,10 @@ msgstr "Annulla"
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
 msgstr "Autenticazione non riuscita"
+
+#: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:124
+msgid "Color Scheme"
+msgstr "Schema colore"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
@@ -149,39 +153,35 @@ msgstr "Tab"
 msgid "ENTER"
 msgstr "INVIO"
 
-#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:36
+#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:42
 msgid "Layouts"
 msgstr "Disposizioni"
 
-#: ../src/app/qml/SettingsPage.qml:27
+#: ../src/app/qml/SettingsPage.qml:26
 msgid "Settings"
 msgstr "Impostazioni"
 
-#: ../src/app/qml/SettingsPage.qml:42
+#: ../src/app/qml/SettingsPage.qml:57
 msgid "Show Keyboard Bar"
 msgstr "Mostra barra tastiera"
 
-#: ../src/app/qml/SettingsPage.qml:50
+#: ../src/app/qml/SettingsPage.qml:73
 msgid "Show Keyboard Button"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:60
+#: ../src/app/qml/SettingsPage.qml:91
 msgid "Font Size:"
 msgstr "Dimensione carattere:"
 
-#: ../src/app/qml/SettingsPage.qml:93
-msgid "Color Scheme"
-msgstr "Schema colore"
-
-#: ../src/app/qml/TabsPage.qml:8
+#: ../src/app/qml/TabsPage.qml:7
 msgid "Tabs"
 msgstr "Schede"
 
-#: ../src/app/qml/TabsPage.qml:14
+#: ../src/app/qml/TabsPage.qml:13
 msgid "New tab"
 msgstr "Nuova scheda"
 
-#: ../src/app/qml/TerminalPage.qml:164
+#: ../src/app/qml/TerminalPage.qml:170
 msgid "Selection Mode"
 msgstr "Modalità selezione"
 
