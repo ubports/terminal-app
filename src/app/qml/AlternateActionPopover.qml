@@ -15,12 +15,13 @@ Component {
             }
             Action {
                 text: i18n.tr("Copy")
+                enabled: !terminal.isSelectionEmpty()
                 onTriggered: terminal.copyClipboard();
             }
             Action {
                 text: i18n.tr("Paste")
+                enabled: !terminal.isClipboardEmpty()
                 onTriggered: terminal.pasteClipboard();
-                enabled: !terminal.isClipboardEmpty();
             }
         }
     }

@@ -482,9 +482,11 @@ public slots:
      */
     void pasteSelection();
 
-    /** Checks if the clipboard is empty
-     */
+    /** Checks if the clipboard is empty */
     bool isClipboardEmpty();
+
+    /** Checks if the selection is empty */
+    bool isSelectionEmpty();
 
     /** 
        * Changes whether the flow control warning box should be shown when the flow control
