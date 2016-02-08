@@ -11,17 +11,17 @@ Component {
         actions: ActionList {
             Action {
                 text: i18n.tr("Select")
-                onTriggered: terminalPage.state = "SELECTION";
+                onTriggered: terminalPage.state = "SELECTION"
             }
             Action {
                 text: i18n.tr("Copy")
-                onTriggered: terminal.copyClipboard();
-                enabled: !terminal.isSelectionEmpty();
+                onTriggered: terminal.copyClipboard()
+                enabled: !terminal.isSelectionEmpty()
             }
             Action {
                 text: i18n.tr("Paste")
-                onTriggered: terminal.pasteClipboard();
-                enabled: !terminal.isClipboardEmpty();
+                onTriggered: terminal.pasteClipboard()
+                enabled: !terminal.isClipboardEmpty()
             }
         }
     }
