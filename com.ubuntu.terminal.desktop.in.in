@@ -7,3 +7,6 @@ Icon=@ICON@
 _Name=Terminal
 X-Ubuntu-Touch=true
 X-Ubuntu-Default-Department-ID=accessories
+X-Ubuntu-Splash-Show-Header=true
+X-Ubuntu-Splash-Title=Terminal
+X-Ubuntu-Splash-Color=#111111
