@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2016-01-21 22:18+0000\n"
+"PO-Revision-Date: 2016-02-10 21:09+0000\n"
 "Last-Translator: Bojan Bogdanović <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-11 06:17+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -35,11 +35,11 @@ msgstr "Обавезна аутентификација"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Унесите код или фразу:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "код или фраза"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
@@ -188,39 +188,39 @@ msgstr "Режим избора"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Green on black"
-msgstr ""
+msgstr "Зелена на црној"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "White on black"
-msgstr ""
+msgstr "Бела на црној"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on white"
-msgstr ""
+msgstr "Црна на белој"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on random light"
-msgstr ""
+msgstr "Црна на насумичној светлој"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Linux"
-msgstr ""
+msgstr "Линукс"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Cool retro term"
-msgstr ""
+msgstr "Кул ретро терминал"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
+msgstr "Тамна пастелна / Убунту (стари)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Црна на светло жутој"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Ubuntu"
-msgstr ""
+msgstr "Убунту"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
@@ -293,3 +293,6 @@ msgstr "Терминал"
 
 #~ msgid "password"
 #~ msgstr "лозинка"
+
+#~ msgid "Ok"
+#~ msgstr "У реду"

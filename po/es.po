@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2015-07-01 15:47+0000\n"
-"Last-Translator: Luciano Barea <lubareac@hotmail.com>\n"
+"PO-Revision-Date: 2016-02-10 09:11+0000\n"
+"Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-11 06:17+0000\n"
+"X-Generator: Launchpad (build 17923)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -64,34 +64,34 @@ msgstr "Cambiar teclado"
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
 msgid "Control Keys"
-msgstr ""
+msgstr "Teclas de control"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
 msgid "Function Keys"
-msgstr ""
+msgstr "Teclas de función"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
 msgid "Scroll Keys"
-msgstr ""
+msgstr "Teclas de desplazamiento"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
 msgid "Command Keys"
-msgstr ""
+msgstr "Teclas de órdenes"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CTRL"
-msgstr ""
+msgstr "CTRL"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "FNS"
-msgstr ""
+msgstr "FNS"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
@@ -106,17 +106,17 @@ msgstr ""
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
 msgid "ALT"
-msgstr ""
+msgstr "ALT"
 
 #. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
 msgid "SHIFT"
-msgstr ""
+msgstr "MAYÚS"
 
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
 msgid "ESC"
-msgstr ""
+msgstr "ESC"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
@@ -151,7 +151,7 @@ msgstr "TAB"
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
 msgid "ENTER"
-msgstr ""
+msgstr "INTRO"
 
 #: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:41
 msgid "Layouts"
@@ -167,7 +167,7 @@ msgstr "Mostrar barra de teclado"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Show Keyboard Button"
-msgstr ""
+msgstr "Mostrar botón de teclado"
 
 #: ../src/app/qml/SettingsPage.qml:96
 msgid "Font Size:"
@@ -188,15 +188,15 @@ msgstr "Modo de selección"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Green on black"
-msgstr ""
+msgstr "Verde sobre negro"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "White on black"
-msgstr ""
+msgstr "Blanco sobre negro"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on white"
-msgstr ""
+msgstr "Negro sobre blanco"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on random light"
@@ -204,7 +204,7 @@ msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Cool retro term"
@@ -216,11 +216,11 @@ msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Negro sobre amarillo suave"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
