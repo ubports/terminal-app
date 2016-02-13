@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2015-09-07 13:48+0000\n"
+"PO-Revision-Date: 2016-02-12 12:18+0000\n"
 "Last-Translator: Andi Chandler <Unknown>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-13 05:39+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -35,11 +35,11 @@ msgstr "Authentication required"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Enter passcode or passphrase:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "passcode or passphrase"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
@@ -167,7 +167,7 @@ msgstr "Show Keyboard Bar"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Show Keyboard Button"
-msgstr ""
+msgstr "Show Keyboard Button"
 
 #: ../src/app/qml/SettingsPage.qml:96
 msgid "Font Size:"
@@ -188,39 +188,39 @@ msgstr "Selection Mode"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Green on black"
-msgstr ""
+msgstr "Green on black"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "White on black"
-msgstr ""
+msgstr "White on black"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on white"
-msgstr ""
+msgstr "Black on white"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on random light"
-msgstr ""
+msgstr "Black on random light"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Cool retro term"
-msgstr ""
+msgstr "Cool retro term"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
+msgstr "Dark pastels / Ubuntu (old)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Black on light yellow"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
