@@ -29,6 +29,15 @@ Dialog {
     signal passwordEntered(string password)
     signal dialogCanceled
 
+    // Due to several different things forcing focus
+    // on creation, we simply create this timer to
+    // work around that (see bugs #1488481 and #1499994)
+    Timer {
+        interval: 1
+        running: true
+        onTriggered: passwordField.forceActiveFocus()
+    }
+
     Component.onCompleted: {
         passwordField.forceActiveFocus();
     }
