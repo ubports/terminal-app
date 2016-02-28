@@ -23,7 +23,10 @@ Page {
     id: rootItem
     objectName: "layoutsPage"
 
-    title: i18n.tr("Layouts")
+    header: PageHeader {
+        title: i18n.tr("Layouts")
+        flickable: listView
+    }
 
     onVisibleChanged: {
         if (visible === false)
@@ -31,6 +34,7 @@ Page {
     }
 
     ListView {
+        id: listView
         anchors.fill: parent
         model: settings.profilesList
         delegate: ListItem {

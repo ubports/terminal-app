@@ -23,10 +23,13 @@ Page {
     id: settingsPage
     objectName: "settingsPage"
 
-    title: i18n.tr("Settings")
-    flickable: null
+    header: PageHeader {
+        title: i18n.tr("Settings")
+        flickable: flick
+    }
 
     Flickable {
+        id: flick
         anchors.fill: parent
         interactive: contentHeight + units.gu(6) > height
         contentHeight: mainColumn.height

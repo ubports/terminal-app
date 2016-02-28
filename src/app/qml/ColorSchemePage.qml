@@ -23,7 +23,10 @@ Page {
     id: rootItem
     objectName: "colorSchemePage"
 
-    title: i18n.tr("Color Scheme")
+    header: PageHeader {
+        title: i18n.tr("Color Scheme")
+        flickable: listView
+    }
 
     property alias model: listView.model
     property var namesModel
