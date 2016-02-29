@@ -132,4 +132,18 @@ MainView {
     Component.onCompleted: {
         tabsModel.selectTab(0);
     }
+
+    // WORKAROUND: Not yet implemented in the SDK
+    Binding {
+        target: QuickUtils
+        property: "mouseAttached"
+        value: InputDevice.mouseAttached
+    }
+
+    // WORKAROUND: Not yet implemented in the SDK
+    Binding {
+        target: QuickUtils
+        property: "keyboardAttached"
+        value: InputDevice.keyboardAttached
+    }
 }
