@@ -39,8 +39,6 @@ void InputDevice::checkDevicesCount()
     int touchPadCount = m_inputDevicesWatcher->count(QInputDevice::TouchPad);
     int keybCount = m_inputDevicesWatcher->count(QInputDevice::Keyboard);
 
-    qDebug() << mouseCount << touchPadCount << keybCount;
-
     setMouseAttached(mouseCount || touchPadCount);
     setKeyboardAttached(keybCount);
 }
