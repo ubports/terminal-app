@@ -218,7 +218,7 @@ Page {
 
     Loader {
         id: keyboardButton
-        active: settings.showKeyboardButton
+        active: !QuickUtils.keyboardAttached
         anchors {right: parent.right; margins: units.gu(1)}
 
         y: parent.height - height - units.gu(1) - keyboardBarLoader.height
