@@ -33,27 +33,30 @@ Page {
             settings.profilesChanged();
     }
 
-    ListView {
-        id: listView
+    ScrollView {
         anchors.fill: parent
-        model: settings.profilesList
-        delegate: ListItem {
-            ListItemLayout {
-                anchors.fill: parent
-                title.text: name
+        ListView {
+            id: listView
+            anchors.fill: parent
+            model: settings.profilesList
+            delegate: ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: name
 
-                Switch {
-                    id: layoutSwitch
-                    SlotsLayout.position: SlotsLayout.Trailing
+                    Switch {
+                        id: layoutSwitch
+                        SlotsLayout.position: SlotsLayout.Trailing
 
-                    checked: profileVisible
-                    onCheckedChanged: {
-                        settings.profilesList.setProperty(index, "profileVisible", checked);
+                        checked: profileVisible
+                        onCheckedChanged: {
+                            settings.profilesList.setProperty(index, "profileVisible", checked);
+                        }
                     }
                 }
-            }
 
-            onClicked: layoutSwitch.trigger()
+                onClicked: layoutSwitch.trigger()
+            }
         }
     }
 }

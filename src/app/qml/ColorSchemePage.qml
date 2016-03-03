@@ -33,31 +33,34 @@ Page {
 
     readonly property string currentName: namesModel[listView.currentIndex]
 
-    ListView {
-        id: listView
+    ScrollView {
         anchors.fill: parent
-        model: settings.profilesList
-        currentIndex: model.indexOf(settings.colorScheme)
-        delegate: ListItem {
-            ListItemLayout {
-                anchors.verticalCenter: parent.verticalCenter
-                title.text: namesModel[model.index]
+        ListView {
+            id: listView
+            anchors.fill: parent
+            model: settings.profilesList
+            currentIndex: model.indexOf(settings.colorScheme)
+            delegate: ListItem {
+                ListItemLayout {
+                    anchors.verticalCenter: parent.verticalCenter
+                    title.text: namesModel[model.index]
 
-                Icon {
-                    SlotsLayout.position: SlotsLayout.Last
-                    width: units.gu(2); height: units.gu(2)
-                    color: UbuntuColors.green
-                    name: "tick"
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Last
+                        width: units.gu(2); height: units.gu(2)
+                        color: UbuntuColors.green
+                        name: "tick"
 
-                    visible: model.index === listView.currentIndex
+                        visible: model.index === listView.currentIndex
+                    }
                 }
+
+                onClicked: listView.currentIndex = model.index
             }
 
-            onClicked: listView.currentIndex = model.index
-        }
-
-        onCurrentIndexChanged: {
-            settings.colorScheme = model[currentIndex];
+            onCurrentIndexChanged: {
+                settings.colorScheme = model[currentIndex];
+            }
         }
     }
 }
