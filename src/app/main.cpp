@@ -59,8 +59,8 @@ int main(int argc, char *argv[])
     FileIO fileIO;
     view.engine()->rootContext()->setContextProperty("fileIO", &fileIO);
 
-    InputDevice inputDevice;
-    view.engine()->rootContext()->setContextProperty("InputDevice", &inputDevice);
+    InputInfo inputInfo;
+    view.engine()->rootContext()->setContextProperty("InputInfo", &inputInfo);
 
     // Set up import paths
     QStringList importPathList = view.engine()->importPathList();

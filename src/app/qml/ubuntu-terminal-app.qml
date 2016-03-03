@@ -137,13 +137,13 @@ MainView {
     Binding {
         target: QuickUtils
         property: "mouseAttached"
-        value: InputDevice.mouseAttached
+        value: InputInfo.mouseAttached
     }
 
     // WORKAROUND: Not yet implemented in the SDK
     Binding {
         target: QuickUtils
         property: "keyboardAttached"
-        value: InputDevice.keyboardAttached
+        value: InputInfo.keyboardAttached
     }
 }

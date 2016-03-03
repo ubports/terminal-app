@@ -3,7 +3,7 @@
 #include <QtSystemInfo/QInputDevice>
 #include <QtSystemInfo/QInputInfoManager>
 
-InputDevice::InputDevice(QObject *parent) :
+InputInfo::InputInfo(QObject *parent) :
     QObject(parent),
     m_keyboardAttached(false),
     m_mouseAttached(false),
@@ -13,27 +13,27 @@ InputDevice::InputDevice(QObject *parent) :
     // QInputInfoManager() emits deviceAdded() signal multiple times during its
     // initializations.
     connect(m_inputDevicesWatcher, &QInputInfoManager::ready,
-            this, &InputDevice::init);
+            this, &InputInfo::init);
 }
 
-InputDevice::~InputDevice()
+InputInfo::~InputInfo()
 {
     delete m_inputDevicesWatcher;
 }
 
-void InputDevice::init()
+void InputInfo::init()
 {
     // Connect signals
     connect(m_inputDevicesWatcher, &QInputInfoManager::deviceAdded,
-            this, &InputDevice::checkDevicesCount);
+            this, &InputInfo::checkDevicesCount);
 
     connect(m_inputDevicesWatcher, &QInputInfoManager::deviceRemoved,
-            this, &InputDevice::checkDevicesCount);
+            this, &InputInfo::checkDevicesCount);
 
     checkDevicesCount();
 }
 
-void InputDevice::checkDevicesCount()
+void InputInfo::checkDevicesCount()
 {
     int mouseCount = m_inputDevicesWatcher->count(QInputDevice::Mouse);
     int touchPadCount = m_inputDevicesWatcher->count(QInputDevice::TouchPad);
@@ -43,7 +43,7 @@ void InputDevice::checkDevicesCount()
     setKeyboardAttached(keybCount);
 }
 
-void InputDevice::setKeyboardAttached(bool keyboardAttached)
+void InputInfo::setKeyboardAttached(bool keyboardAttached)
 {
     if (m_keyboardAttached == keyboardAttached)
         return;
@@ -54,7 +54,7 @@ void InputDevice::setKeyboardAttached(bool keyboardAttached)
     Q_EMIT keyboardAttachedChanged();
 }
 
-void InputDevice::setMouseAttached(bool mouseAttached)
+void InputInfo::setMouseAttached(bool mouseAttached)
 {
     if (m_mouseAttached == mouseAttached)
         return;

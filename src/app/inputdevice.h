@@ -1,19 +1,19 @@
-#ifndef INPUTDEVICE_H
-#define INPUTDEVICE_H
+#ifndef INPUTINFO_H
+#define INPUTINFO_H
 
 #include <QObject>
 
 class QInputInfoManager;
 
-class InputDevice : public QObject
+class InputInfo : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(bool mouseAttached READ mouseAttached NOTIFY mouseAttachedChanged)
     Q_PROPERTY(bool keyboardAttached READ keyboardAttached NOTIFY keyboardAttachedChanged)
 
 public:
-    InputDevice(QObject *parent = 0);
-    ~InputDevice();
+    InputInfo(QObject *parent = 0);
+    ~InputInfo();
 
     bool keyboardAttached() const { return m_keyboardAttached; }
     bool mouseAttached() const { return m_mouseAttached; }
@@ -37,4 +37,4 @@ private:
     void setMouseAttached(bool mouseAttached);
 };
 
-#endif // INPUTDEVICE_H
+#endif // INPUTINFO_H
