@@ -26,6 +26,9 @@ import com.ubuntu.PamAuthentication 0.1
 Item {
     id: authenticationService
 
+    property var __authDialog
+    readonly property bool isDialogVisible: __authDialog != null
+
     signal granted()
     signal denied()
 
@@ -63,6 +66,8 @@ Item {
 
         authentication_dialog.passwordEntered.connect( verify_password );
         authentication_dialog.dialogCanceled.connect( denied );
+
+        __authDialog = authentication_dialog
     }
 
     PamAuthentication {
