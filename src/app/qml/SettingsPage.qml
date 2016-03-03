@@ -25,128 +25,125 @@ Page {
 
     header: PageHeader {
         title: i18n.tr("Settings")
-        flickable: flick
+        flickable: scrollView.flickableItem
     }
 
     ScrollView {
+        id: scrollView
         anchors.fill: parent
-        Flickable {
-            id: flick
-            anchors.fill: parent
-            interactive: contentHeight + units.gu(6) > height
-            contentHeight: mainColumn.height
 
-            Column {
-                id: mainColumn
-                anchors { left: parent.left; right: parent.right }
+        Column {
+            // Column is not a child of ScrollView, but it's reparented to
+            // ScrollView.viewport. For that reason we can not use 'anchors'
+            // but we have to set the width instead.
+            width: scrollView.width
 
-                ListItem {
-                    ListItemLayout {
-                        anchors.verticalCenter: parent.verticalCenter
-                        title.text: i18n.tr("Layouts")
+            ListItem {
+                ListItemLayout {
+                    anchors.verticalCenter: parent.verticalCenter
+                    title.text: i18n.tr("Layouts")
 
-                        Icon {
-                            SlotsLayout.position: SlotsLayout.Trailing
-                            width: units.gu(2)
-                            height: width
-                            name: "go-next"
-                        }
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        width: units.gu(2)
+                        height: width
+                        name: "go-next"
                     }
-
-                    onClicked: pageStack.push(layoutsPage);
                 }
 
-                ListItem {
-                    ListItemLayout {
-                        anchors.fill: parent
-                        title.text: i18n.tr("Show Keyboard Bar")
+                onClicked: pageStack.push(layoutsPage);
+            }
 
-                        Switch {
-                            id: keybBarSwitch
-                            SlotsLayout.position: SlotsLayout.Trailing
-                            onCheckedChanged: settings.showKeyboardBar = checked;
-                            Component.onCompleted: checked = settings.showKeyboardBar;
-                        }
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Show Keyboard Bar")
+
+                    Switch {
+                        id: keybBarSwitch
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        onCheckedChanged: settings.showKeyboardBar = checked;
+                        Component.onCompleted: checked = settings.showKeyboardBar;
                     }
-
-                    onClicked: keybBarSwitch.trigger()
                 }
 
-                ListItem {
-                    ListItemLayout {
-                        anchors.fill: parent
-                        title.text: i18n.tr("Show Keyboard Button")
+                onClicked: keybBarSwitch.trigger()
+            }
 
-                        Switch {
-                            id: keybButtonSwitch
-                            SlotsLayout.position: SlotsLayout.Trailing
-                            onCheckedChanged: settings.showKeyboardButton = checked;
-                            Component.onCompleted: checked = settings.showKeyboardButton;
-                        }
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Show Keyboard Button")
+
+                    Switch {
+                        id: keybButtonSwitch
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        onCheckedChanged: settings.showKeyboardButton = checked;
+                        Component.onCompleted: checked = settings.showKeyboardButton;
                     }
-
-                    onClicked: keybButtonSwitch.trigger()
                 }
 
-                ListItem {
-                    height: units.gu(13)
+                onClicked: keybButtonSwitch.trigger()
+            }
+
+            ListItem {
+                height: units.gu(13)
+
+                Label {
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: parent.right
+                        margins: units.gu(2)
+                    }
+                    text: i18n.tr("Font Size:")
+                }
+
+                Slider {
+                    id: slFont
+                    objectName: "slFont"
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        margins: units.gu(2)
+                    }
+                    minimumValue: settings.minFontSize;
+                    maximumValue: settings.maxFontSize;
+                    onValueChanged: {
+                        settings.fontSize = value;
+                    }
+                    Component.onCompleted: {
+                        value = settings.fontSize;
+                    }
+
+                    Connections {
+                        target: settings
+                        onFontSizeChanged: {
+                            slFont.value = settings.fontSize
+                        }
+                    }
+                }
+            }
+
+            ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Color Scheme")
 
                     Label {
-                        anchors {
-                            top: parent.top
-                            left: parent.left
-                            right: parent.right
-                            margins: units.gu(2)
-                        }
-                        text: i18n.tr("Font Size:")
+                        SlotsLayout.position: SlotsLayout.Trailing
+                        text: colorSchemePage.currentName
                     }
 
-                    Slider {
-                        id: slFont
-                        objectName: "slFont"
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                            bottom: parent.bottom
-                            margins: units.gu(2)
-                        }
-                        minimumValue: settings.minFontSize;
-                        maximumValue: settings.maxFontSize;
-                        onValueChanged: {
-                            settings.fontSize = value;
-                        }
-                        Component.onCompleted: {
-                            value = settings.fontSize;
-                        }
-
-                        Connections {
-                            target: settings
-                            onFontSizeChanged: {
-                                slFont.value = settings.fontSize
-                            }
-                        }
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Last
+                        width: units.gu(2); height: width
+                        name: "go-next"
                     }
                 }
 
-                ListItem {
-                    ListItemLayout {
-                        anchors.fill: parent
-                        title.text: i18n.tr("Color Scheme")
-
-                        Label {
-                            SlotsLayout.position: SlotsLayout.Trailing
-                            text: colorSchemePage.currentName
-                        }
-
-                        Icon {
-                            SlotsLayout.position: SlotsLayout.Last
-                            width: units.gu(2); height: width
-                            name: "go-next"
-                        }
-                    }
-
-                    onClicked: pageStack.push(colorSchemePage);
-                }
+                onClicked: pageStack.push(colorSchemePage);
             }
         }
     }
