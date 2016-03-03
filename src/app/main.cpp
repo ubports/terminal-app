@@ -28,7 +28,7 @@
 #include <QDir>
 
 #include "fileio.h"
-#include "inputdevice.h"
+#include "inputinfo.h"
 
 #include <QDebug>
 

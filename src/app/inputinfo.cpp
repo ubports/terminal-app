@@ -1,4 +1,4 @@
-#include "inputdevice.h"
+#include "inputinfo.h"
 
 #include <QtSystemInfo/QInputDevice>
 #include <QtSystemInfo/QInputInfoManager>
