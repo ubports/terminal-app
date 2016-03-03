@@ -18,21 +18,6 @@ MainView {
     AuthenticationService {
         id: authService
         onDenied: Qt.quit();
-
-        states: State {
-            when: authService.isDialogVisible
-
-            // We use a PropertyChanges for hiding terminal data
-            // until the access is granted.
-            // When that happens, the visibility of the terminal is
-            // restore to the previous value thanks to the
-            // 'restoreEntryValues' property which is true by default.
-            // ref. http://doc.qt.io/qt-5/qml-qtquick-propertychanges.html#restoreEntryValues-prop
-            PropertyChanges {
-                target: terminalPage.terminalContainer
-                visible: false
-            }
-        }
     }
 
     TerminalSettings {
