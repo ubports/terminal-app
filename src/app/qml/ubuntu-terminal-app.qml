@@ -13,6 +13,7 @@ MainView {
     automaticOrientation: true
 
     AuthenticationService {
+        id: authService
         onDenied: Qt.quit();
     }
 
