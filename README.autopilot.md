@@ -21,7 +21,7 @@ Running tests on the desktop
 
 Using terminal:
 
-*  Branch the Music app code, for example,
+*  Branch the code
 
     $ bzr branch lp:ubuntu-terminal-app
 
