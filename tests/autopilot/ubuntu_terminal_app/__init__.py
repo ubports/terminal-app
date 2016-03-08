@@ -16,4 +16,26 @@
 
 """Terminal app autopilot helpers."""
 
-# TODO Insert new tests here
+import ubuntuuitoolkit
+
+
+class TerminalApp(object):
+
+    """Autopilot helper object for the terminal application."""
+
+    def __init__(self, app_proxy):
+        self.app = app_proxy
+        self.main_view = self.app.select_single(MainView)
+
+    @property
+    def pointing_device(self):
+        return self.app.pointing_device
+
+
+class MainView(ubuntuuitoolkit.MainView):
+
+    """Autopilot custom proxy object for the MainView."""
+
+    def __init__(self, *args):
+        super(MainView, self).__init__(*args)
+        self.visible.wait_for(True)
