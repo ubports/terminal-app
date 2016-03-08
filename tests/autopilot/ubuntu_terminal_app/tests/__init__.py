@@ -39,12 +39,17 @@ class TerminalTestCase(AutopilotTestCase):
 
     local_build_location_qml = os.path.join(
         local_build_location, 'src', 'app', 'qml', 'ubuntu-terminal-app.qml')
-    local_build_location_binary = os.path.join(local_build_location, 'src', 'app', 'terminal')
+    local_build_location_binary = os.path.join(local_build_location,
+                                               'src', 'app', 'terminal')
     sdk_build_location_qml = os.path.join(
         sdk_build_location, 'src', 'app', 'qml', 'ubuntu-terminal-app.qml')
-    sdk_build_location_binary = os.path.join(sdk_build_location, 'src', 'app', 'terminal')
-    installed_location_binary = '/usr/bin/ubuntu-terminal-app'
-    installed_location_qml = '/usr/share/ubuntu-terminal-app/qml/ubuntu-terminal-app.qml'
+    sdk_build_location_binary = os.path.join(sdk_build_location,
+                                             'src', 'app', 'terminal')
+    installed_location_binary = os.path.join('usr', 'bin',
+                                             'ubuntu-terminal-app')
+    installed_location_qml = os.path.join('usr', 'share',
+                                          'ubuntu-terminal-app', 'qml',
+                                          'ubuntu-terminal-app.qml')
 
     def setUp(self):
         super(TerminalTestCase, self).setUp()
@@ -68,9 +73,10 @@ class TerminalTestCase(AutopilotTestCase):
 
     @autopilot_logging.log_action(logger.info)
     def launch_test_local(self):
+        plugin_location = os.path.join(self.local_build_location,
+                                       'src', 'plugin')
         self.useFixture(fixtures.EnvironmentVariable(
-            'QML2_IMPORT_PATH', newvalue=os.path.join(self.local_build_location,
-                                                      'src', 'plugin')))
+            'QML2_IMPORT_PATH', newvalue=plugin_location))
         return self.launch_test_application(
             self.local_build_location_binary,
             app_type='qt',
@@ -78,14 +84,15 @@ class TerminalTestCase(AutopilotTestCase):
 
     @autopilot_logging.log_action(logger.info)
     def launch_test_sdk(self):
+        plugin_location = os.path.join(self.sdk_build_location,
+                                       'src', 'plugin')
         self.useFixture(fixtures.EnvironmentVariable(
-            'QML2_IMPORT_PATH', newvalue=os.path.join(self.sdk_build_location,
-                                                      'src', 'plugin')))
+            'QML2_IMPORT_PATH', newvalue=plugin_location))
+
         return self.launch_test_application(
             self.sdk_build_location_binary,
             app_type='qt',
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase)
-
 
     @autopilot_logging.log_action(logger.info)
     def launch_test_installed(self):

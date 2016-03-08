@@ -57,7 +57,7 @@ Running tests on device or emulator:
 
 Using autopkg:
 
-*  Branch the Music app code, for example,
+*  Branch the code, for example,
 
     $ bzr branch lp:ubuntu-terminal-app
 
