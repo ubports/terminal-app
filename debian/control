@@ -10,6 +10,8 @@ Build-Depends: cmake,
                qtbase5-dev,
                qtdeclarative5-dev,
                qt5-default,
+               libudev-dev,
+               libevdev-dev,
 Standards-Version: 3.9.6
 Section: misc
 Homepage: https://launchpad.net/ubuntu-terminal-app
