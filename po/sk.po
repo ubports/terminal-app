@@ -1,45 +1,45 @@
-# German translation for ubuntu-terminal-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Slovak translation for ubuntu-terminal-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2016-03-06 00:37+0000\n"
-"Last-Translator: Torsten Franz <Unknown>\n"
-"Language-Team: German <de@li.org>\n"
+"PO-Revision-Date: 2016-03-07 13:36+0000\n"
+"Last-Translator: P_E_T_O <Unknown>\n"
+"Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-07 06:00+0000\n"
+"X-Launchpad-Export-Date: 2016-03-08 05:56+0000\n"
 "X-Generator: Launchpad (build 17936)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr "Auswählen"
+msgstr "Vybrať"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr "Kopieren"
+msgstr "Kopírovať"
 
 #: ../src/app/qml/AlternateActionPopover.qml:21
 msgid "Paste"
-msgstr "Einfügen"
+msgstr "Vložiť"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "Legitimierung erforderlich"
+msgstr "Vyžaduje sa overenie totožnosti"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr "Bitte geben Sie Ihre PIN bzw. Ihr Passwort ein:"
+msgstr "Zadajte heslo alebo prístupovú frázu:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "passcode or passphrase"
-msgstr "PIN oder Passwort"
+msgstr "heslo alebo prístupová fráza"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
@@ -47,46 +47,46 @@ msgstr "OK"
 
 #: ../src/app/qml/AuthenticationDialog.qml:62
 msgid "Cancel"
-msgstr "Abbrechen"
+msgstr "Zrušiť"
 
 #: ../src/app/qml/AuthenticationService.qml:55
 msgid "Authentication failed"
-msgstr "Legitimierung fehlgeschlagen"
+msgstr "Autentifikácia neúspešná"
 
 #: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:129
 msgid "Color Scheme"
-msgstr "Farbschema"
+msgstr "Farebná schéma"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
-msgstr "Tastatur ändern"
+msgstr "Zmeniť klávesnicu"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
 msgid "Control Keys"
-msgstr "Kontroll-Tasten"
+msgstr "Control klávesy"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
 msgid "Function Keys"
-msgstr "Funktions-Tasten"
+msgstr "Function klávesy"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
 msgid "Scroll Keys"
-msgstr "Scroll-Tasten"
+msgstr "Scroll klávesy"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
 msgid "Command Keys"
-msgstr "Befehls-Tasten"
+msgstr "Command klávesy"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CTRL"
-msgstr "STRG"
+msgstr "CTRL"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
@@ -121,86 +121,86 @@ msgstr "ESC"
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
 msgid "PG_UP"
-msgstr "Bild_auf"
+msgstr "PG_UP"
 
 #. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
 msgid "PG_DN"
-msgstr "Bild_ab"
+msgstr "PG_DN"
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr "Entf"
+msgstr "DEL"
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr "Pos1"
+msgstr "HOME"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr "Ende"
+msgstr "END"
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr "Tab"
+msgstr "TAB"
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
 msgid "ENTER"
-msgstr "EINGABE"
+msgstr "ENTER"
 
 #: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:41
 msgid "Layouts"
-msgstr "Tastaturbelegungen"
+msgstr "Rozloženia"
 
 #: ../src/app/qml/SettingsPage.qml:26
 msgid "Settings"
-msgstr "Einstellungen"
+msgstr "Nastavenia"
 
 #: ../src/app/qml/SettingsPage.qml:57
 msgid "Show Keyboard Bar"
-msgstr "Bildschirmtastatur anzeigen"
+msgstr "Zobraziť panel klávesnice"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Show Keyboard Button"
-msgstr "Knopf für Tastatur anzeigen"
+msgstr "Zobraziť tlačidlo klávesnice"
 
 #: ../src/app/qml/SettingsPage.qml:96
 msgid "Font Size:"
-msgstr "Schriftgröße:"
+msgstr "Veľkosť písma:"
 
 #: ../src/app/qml/TabsPage.qml:7
 msgid "Tabs"
-msgstr "Reiter"
+msgstr "Karty"
 
 #: ../src/app/qml/TabsPage.qml:13
 msgid "New tab"
-msgstr "Neuer Reiter"
+msgstr "Nová karta"
 
 #: ../src/app/qml/TerminalPage.qml:170
 msgid "Selection Mode"
-msgstr "Auswahlmodus"
+msgstr "Režim výberu"
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Green on black"
-msgstr ""
+msgstr "Zelená na čiernom"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "White on black"
-msgstr ""
+msgstr "Biela na čiernom"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on white"
-msgstr ""
+msgstr "Čierna na bielom"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on random light"
-msgstr "Schwarz auf wahlloser heller Farbe"
+msgstr "Čierna na náhodne svetlej"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Linux"
@@ -208,15 +208,15 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Cool retro term"
-msgstr "Kühles Retro Thema"
+msgstr "Cool retro term"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Dark pastels / Ubuntu (old)"
-msgstr "Dunkle Pastelltöne / Ubuntu (alt)"
+msgstr "Tmavé pastely / Ubuntu (staré)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Čierna na svetložltom"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Ubuntu"
@@ -227,32 +227,32 @@ msgstr "Ubuntu"
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "Unbenanntes Farbschema"
+msgstr "Nepomenovaná farebná schéma"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "Farbschema für Sehbehinderung"
+msgstr "Prístupná farebná schéma"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "Verweis aufrufen"
+msgstr "Otvoriť odkaz"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "Verweisadresse kopieren"
+msgstr "Kopírovať adresu odkazu"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "E-Mail senden an …"
+msgstr "Odoslať email pre..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "E-Mail-Adresse kopieren"
+msgstr "Kopírovať emailovú adresu"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -260,39 +260,30 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
-"Kein Tastaturübersetzer verfügbar. Die Informationen, die benötigt werden, "
-"um den Tastendruck in Zeichen umwandeln und zum Terminal zu senden, fehlen."
+"Nie je dostupný prekladač klávesnice. Chýbajú informácie potrebné ku "
+"konvertovaniu stlačených kláves na znaky posielané terminálu."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "Groß-/Kleinschreibung berücksichtigen"
+msgstr "Rozlišovať veľké/malé"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "Regulärer Ausdruck"
+msgstr "Regulárny výraz"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "Alle Treffer hervorheben"
+msgstr "Zvýrazniť všetky shody"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "Farbschemafehler"
+msgstr "Chyba farebnej schémy"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "Farbschema konnte nicht geladen werden: %1"
+msgstr "Farebná schéma nemôže byť načítaná: %1"
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr "Befehlsfenster"
-
-#~ msgid "Enter password:"
-#~ msgstr "Passwort eingeben:"
-
-#~ msgid "password"
-#~ msgstr "Passwort"
-
-#~ msgid "Ok"
-#~ msgstr "Ok"
+msgstr "Terminál"

@@ -7,12 +7,11 @@
 
 """Terminal app autopilot tests."""
 
-from autopilot.testcase import AutopilotTestCase
-
-# TODO Insert new tests here.
+from ubuntu_terminal_app.tests import TerminalTestCase
 
 
-class DummyTest(AutopilotTestCase):
-    """This is just a placeholder test"""
-    def test_dummy_true(self):
-        self.assertTrue(True)
+class TestMainWindow(TerminalTestCase):
+    def test_example_test(self):
+        """Just launch app, assert on main view"""
+        main_view = self.app.main_view
+        self.assertTrue(main_view)

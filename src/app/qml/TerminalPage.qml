@@ -3,6 +3,9 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import QMLTermWidget 1.0
 
+// For FastBlur
+import QtGraphicalEffects 1.0
+
 Page {
     id: terminalPage
     property alias terminalContainer: terminalContainer
@@ -28,6 +31,12 @@ Page {
             top: parent.top;
             right: parent.right;
             bottom: keyboardBarLoader.top
+        }
+
+        // Hide terminal data when the access is still not granted
+        layer.enabled: authService.isDialogVisible
+        layer.effect: FastBlur {
+            radius: units.gu(6)
         }
     }
 

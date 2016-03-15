@@ -12,10 +12,8 @@ MainView {
     applicationName: "com.ubuntu.terminal"
     automaticOrientation: true
 
-    width: units.gu(90)
-    height: units.gu(55)
-
     AuthenticationService {
+        id: authService
         onDenied: Qt.quit();
     }
 
@@ -131,6 +129,11 @@ MainView {
 
     Component.onCompleted: {
         tabsModel.selectTab(0);
+
+        // The margins for the terminal canvas are 2px
+        // Hardcoded value from TerminalDisplay.h
+        width = 80 * terminalPage.terminal.fontMetrics.width + 2
+        height = 24 * terminalPage.terminal.fontMetrics.height + 2
     }
 
     // WORKAROUND: Not yet implemented in the SDK
