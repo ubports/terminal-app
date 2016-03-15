@@ -3,13 +3,12 @@ file(GLOB_RECURSE QML_SRCS *.qml *.js *.json)
 set(terminal_SRCS
     main.cpp
     fileio.cpp
-    inputinfo.cpp
     ${QML_SRCS}
 )
 
 add_executable(terminal ${terminal_SRCS})
 
-qt5_use_modules(terminal Gui Qml Quick Widgets SystemInfo)
+qt5_use_modules(terminal Gui Qml Quick Widgets)
 
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_target(terminal-qmlfiles ALL

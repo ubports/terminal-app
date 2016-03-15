@@ -28,7 +28,6 @@
 #include <QDir>
 
 #include "fileio.h"
-#include "inputinfo.h"
 
 #include <QDebug>
 
@@ -58,9 +57,6 @@ int main(int argc, char *argv[])
 
     FileIO fileIO;
     view.engine()->rootContext()->setContextProperty("fileIO", &fileIO);
-
-    InputInfo inputInfo;
-    view.engine()->rootContext()->setContextProperty("InputInfo", &inputInfo);
 
     // Set up import paths
     QStringList importPathList = view.engine()->importPathList();
