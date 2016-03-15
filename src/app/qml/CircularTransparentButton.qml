@@ -22,7 +22,7 @@ Rectangle {
         active: action.text
         z: parent.z + 0.1
         anchors.centerIn: parent
-        sourceComponent: Text {
+        sourceComponent: Label {
             opacity: innerOpacity
             text: action.text
             color: textColor

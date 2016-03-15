@@ -83,8 +83,8 @@ Page {
                         opacity: 0.5
                     }
 
-                    Text {
-                        anchors.fill: blackRect
+                    Label {
+                        anchors { fill: blackRect; margins: units.dp(2) }
                         text: tabsModel.get(index).terminal.session.title
                         wrapMode: Text.Wrap
                         color: "white"

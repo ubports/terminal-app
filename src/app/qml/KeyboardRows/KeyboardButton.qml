@@ -7,7 +7,7 @@ Rectangle {
 
     color: "black"
 
-    Text {
+    Label {
         id: mainLabel
         anchors.centerIn: parent
         color: "white"
