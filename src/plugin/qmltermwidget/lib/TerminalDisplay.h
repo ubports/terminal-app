@@ -197,9 +197,9 @@ public:
     void setBlinkingTextEnabled(bool blink);
 
     enum DragMode {
-        NoDrag,         // drag disabled
-        CtrlKeyDrag,    // require Ctrl key for drag
-        MouseDrag       // no additional key is required
+        NoDrag,             // drag disabled
+        CtrlModifierDrag,   // require Ctrl key for drag
+        NoModifierDrag      // no additional key is required
     };
 
     /** 
