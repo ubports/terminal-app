@@ -83,6 +83,7 @@ class ScreenWindow;
 class KONSOLEPRIVATE_EXPORT TerminalDisplay : public QQuickPaintedItem
 {
    Q_OBJECT
+   Q_ENUMS(DragMode)
    Q_PROPERTY(KSession* session         READ getSession      WRITE setSession     NOTIFY sessionChanged          )
    Q_PROPERTY(QFont font                READ getVTFont       WRITE setVTFont                                     )
    Q_PROPERTY(QString  colorScheme                           WRITE setColorScheme                                )
@@ -95,7 +96,8 @@ class KONSOLEPRIVATE_EXPORT TerminalDisplay : public QQuickPaintedItem
    Q_PROPERTY(int scrollbarMaximum      READ getScrollbarMaximum                  NOTIFY scrollbarParamsChanged  )
    Q_PROPERTY(int scrollbarMinimum      READ getScrollbarMinimum                  NOTIFY scrollbarParamsChanged  )
    Q_PROPERTY(QSize fontMetrics         READ getFontMetrics                       NOTIFY changedFontMetricSignal )
-   Q_PROPERTY(bool enableBold                                WRITE setBoldIntense)
+   Q_PROPERTY(bool enableBold                                WRITE setBoldIntense                                )
+   Q_PROPERTY(DragMode dragMode         MEMBER _dragMode                          NOTIFY dragModeChanged         )
 
 public:
     /** Constructs a new terminal display widget with the specified parent. */
@@ -194,8 +196,11 @@ public:
     /** Specifies whether or not text can blink. */
     void setBlinkingTextEnabled(bool blink);
 
-    void setCtrlDrag(bool enable) { _ctrlDrag=enable; }
-    bool ctrlDrag() { return _ctrlDrag; }
+    enum DragMode {
+        NoDrag,             // drag disabled
+        CtrlModifierDrag,   // require Ctrl key for drag
+        NoModifierDrag      // no additional key is required
+    };
 
     /** 
      *  This enum describes the methods for selecting text when
@@ -614,6 +619,7 @@ signals:
     void imagePainted();
     void scrollbarValueChanged();
     void scrollbarParamsChanged(int value);
+    void dragModeChanged();
 
 protected:
     virtual bool event( QEvent * );
@@ -821,7 +827,7 @@ private:
     bool _cursorBlinking;     // hide cursor in paintEvent
     bool _hasBlinkingCursor;  // has blinking cursor enabled
     bool _allowBlinkingText;  // allow text to blink
-    bool _ctrlDrag;           // require Ctrl key for drag
+    DragMode _dragMode;
     TripleClickMode _tripleClickMode;
     bool _isFixedSize; //Columns / lines are locked.
     QTimer* _blinkTimer;  // active when hasBlinker
