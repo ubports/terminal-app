@@ -1,6 +1,6 @@
 {
     "description": "Terminal application",
-    "framework": "ubuntu-sdk-15.04.3",
+    "framework": "ubuntu-sdk-15.04.4",
     "architecture": "@CLICK_ARCH@",
     "hooks": {
         "terminal": {
@@ -12,7 +12,7 @@
     "maintainer": "Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>",
     "name": "com.ubuntu.terminal",
     "title": "Terminal",
-    "version": "0.7.@BZR_REVNO@",
+    "version": "0.8.@BZR_REVNO@",
     "x-source": {
         "vcs-bzr": "@BZR_SOURCE@",
         "vcs-bzr-revno": "@BZR_REVNO@"
