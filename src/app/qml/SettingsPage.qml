@@ -55,22 +55,6 @@ Page {
             }
 
             ListItem {
-                ListItemLayout {
-                    anchors.fill: parent
-                    title.text: i18n.tr("Show Keyboard Bar")
-
-                    Switch {
-                        id: keybBarSwitch
-                        SlotsLayout.position: SlotsLayout.Trailing
-                        onCheckedChanged: settings.showKeyboardBar = checked;
-                        Component.onCompleted: checked = settings.showKeyboardBar;
-                    }
-                }
-
-                onClicked: keybBarSwitch.trigger()
-            }
-
-            ListItem {
                 height: units.gu(13)
 
                 Label {
