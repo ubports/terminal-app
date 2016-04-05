@@ -61,7 +61,7 @@ Item {
                 z: parent.z + 0.01
                 anchors.centerIn: parent
                 active: actions[index].text
-                sourceComponent: Text {
+                sourceComponent: Label {
                     color: textColor
                     text: actions[index].text
                 }

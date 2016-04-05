@@ -4,10 +4,12 @@ import Ubuntu.Components 1.3
 Page {
     id: tabsPage
     objectName: "tabsPage"
-    title: i18n.tr("Tabs")
 
-    head.actions: [
-        Action {
+    header: PageHeader {
+        title: i18n.tr("Tabs")
+        flickable: tabsGrid
+
+        trailingActionBar.actions: Action {
             objectName: "newTabAcion"
             iconName: "add"
             text: i18n.tr("New tab")
@@ -15,12 +17,10 @@ Page {
                 tabsModel.addTab();
             }
         }
-    ]
+    }
 
-    Item {
+    ScrollView {
         anchors.fill: parent
-        clip: true
-
         GridView {
             id: tabsGrid
             anchors.fill: parent
@@ -29,9 +29,9 @@ Page {
             cellWidth: (parent.width - units.gu(2)) * 0.5
             cellHeight: cellWidth * (terminalPage.terminalContainer.height / terminalPage.terminalContainer.width)
 
-//            add: Transition {
-//                NumberAnimation { properties: "x,y"; duration: 200 }
-//            }
+            //      add: Transition {
+            //          NumberAnimation { properties: "x,y"; duration: 200 }
+            //      }
 
             removeDisplaced: Transition {
                 NumberAnimation { properties: "x,y"; duration: 200 }
@@ -83,8 +83,8 @@ Page {
                         opacity: 0.5
                     }
 
-                    Text {
-                        anchors.fill: blackRect
+                    Label {
+                        anchors { fill: blackRect; margins: units.dp(2) }
                         text: tabsModel.get(index).terminal.session.title
                         wrapMode: Text.Wrap
                         color: "white"
@@ -110,69 +110,5 @@ Page {
                 }
             }
         }
-
-//        ListView {
-//            id: tabView
-//            anchors.fill: parent
-//            model: tabsModel
-
-//            delegate: ListItemWithActions{
-//                width: parent.width
-//                height: units.gu(25)
-
-//                onItemClicked: {
-//                    // If the currently active tab is pressed. Return to it.
-//                    if (tabsModel.selectedIndex == index) {
-//                        pageStack.pop();
-//                    } else {
-//                        tabsModel.selectTab(index);
-//                    }
-//                }
-
-//                contents: Row {
-//                    anchors.fill: parent
-//                    spacing: units.gu(4)
-
-//                    ShaderEffectSource {
-//                        id: thumb
-
-//                        width: height * (model.terminal.width / model.terminal.height)
-//                        height: parent.height
-
-//                        sourceItem: model.terminal
-//                    }
-
-//                    Label {
-//                        width: parent.width - (thumb.width + units.gu(6))
-
-//                        text: tabsModel.get(index).terminal.session.title
-//                        anchors.verticalCenter: parent.verticalCenter
-//                        wrapMode: Text.Wrap
-//                    }
-//                }
-
-//                Rectangle {
-//                    id: selectedTab
-//                    anchors.fill: parent
-//                    color: Theme.palette.selected.background
-//                    opacity: tabsModel.selectedIndex == index ? 1.0 : 0.0
-
-//                    Behavior on opacity {
-//                        NumberAnimation { duration: 200 }
-//                    }
-//                }
-
-//                leftSideAction: Action {
-//                    iconName: "delete"
-//                    text: i18n.tr("Delete")
-//                    enabled: tabsModel.count !== 1
-//                    onTriggered:  {
-//                        //Workaround since enabled is ignored
-//                        if (enabled)
-//                            tabsModel.removeTab(index);
-//                    }
-//                }
-//            }
-//        }
     }
 }

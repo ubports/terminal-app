@@ -173,7 +173,7 @@ Page {
             color: "black"
             opacity: 0.7
 
-            Text {
+            Label {
                 anchors.centerIn: parent
                 color: "white"
                 text: i18n.tr("Selection Mode")
