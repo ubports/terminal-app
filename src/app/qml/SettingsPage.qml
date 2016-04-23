@@ -52,38 +52,6 @@ Page {
             }
 
             ListItem {
-                ListItemLayout {
-                    anchors.fill: parent
-                    title.text: i18n.tr("Show Keyboard Bar")
-
-                    Switch {
-                        id: keybBarSwitch
-                        SlotsLayout.position: SlotsLayout.Trailing
-                        onCheckedChanged: settings.showKeyboardBar = checked;
-                        Component.onCompleted: checked = settings.showKeyboardBar;
-                    }
-                }
-
-                onClicked: keybBarSwitch.trigger()
-            }
-
-            ListItem {
-                ListItemLayout {
-                    anchors.fill: parent
-                    title.text: i18n.tr("Show Keyboard Button")
-
-                    Switch {
-                        id: keybButtonSwitch
-                        SlotsLayout.position: SlotsLayout.Trailing
-                        onCheckedChanged: settings.showKeyboardButton = checked;
-                        Component.onCompleted: checked = settings.showKeyboardButton;
-                    }
-                }
-
-                onClicked: keybButtonSwitch.trigger()
-            }
-
-            ListItem {
                 height: units.gu(13)
 
                 Label {

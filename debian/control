@@ -24,6 +24,7 @@ Depends: ${misc:Depends},
          qtdeclarative5-pamauthentication0.1,
          qtdeclarative5-qtquick2-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin,
+         qml-module-qtsysteminfo (>= 5.0~),
 Description: Terminal application
  Core Terminal application
 

@@ -146,7 +146,7 @@ Page {
         id: keyboardBarLoader
         height: active ? units.gu(5) : 0
         anchors {left: parent.left; right: parent.right}
-        active: settings.showKeyboardBar
+        active: !QuickUtils.keyboardAttached
 
         y: parent.height - height - Qt.inputMethod.keyboardRectangle.height
         z: parent.z + 0.1
@@ -227,7 +227,7 @@ Page {
 
     Loader {
         id: keyboardButton
-        active: settings.showKeyboardButton
+        active: !QuickUtils.keyboardAttached
         anchors {right: parent.right; margins: units.gu(1)}
 
         y: parent.height - height - units.gu(1) - keyboardBarLoader.height

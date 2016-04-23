@@ -5,6 +5,9 @@ import "KeyboardRows"
 
 import QMLTermWidget 1.0
 
+// Mouse/Touchpad and keyboard support
+import QtSystemInfo 5.5
+
 MainView {
     // objectName for functional testing purposes (autopilot-qt5)
     id: mview
@@ -134,5 +137,34 @@ MainView {
         // Hardcoded value from TerminalDisplay.h
         width = 80 * terminalPage.terminal.fontMetrics.width + 2
         height = 24 * terminalPage.terminal.fontMetrics.height + 2
+    }
+
+    InputDeviceManager {
+        id: keyboardsModel
+        filter: InputInfo.Keyboard
+    }
+
+    InputDeviceManager {
+        id: miceModel
+        filter: InputInfo.Mouse
+    }
+
+    InputDeviceManager {
+        id: touchpadsModel
+        filter: InputInfo.TouchPad
+    }
+
+    // WORKAROUND: Not yet implemented in the SDK
+    Binding {
+        target: QuickUtils
+        property: "mouseAttached"
+        value: miceModel.count > 0 || touchpadsModel.count > 0
+    }
+
+    // WORKAROUND: Not yet implemented in the SDK
+    Binding {
+        target: QuickUtils
+        property: "keyboardAttached"
+        value: keyboardsModel.count > 0
     }
 }

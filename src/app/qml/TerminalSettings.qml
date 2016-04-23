@@ -8,8 +8,6 @@ Item {
     property alias fontSize: innerSettings.fontSize
     property alias fontStyle: innerSettings.fontStyle
     property alias colorScheme: innerSettings.colorScheme
-    property alias showKeyboardBar: innerSettings.showKeyboardBar
-    property alias showKeyboardButton: innerSettings.showKeyboardButton
 
     readonly property int defaultFontSize: 10
     readonly property int minFontSize: 4
@@ -39,8 +37,6 @@ Item {
         property int fontSize: defaultFontSize
         property string fontStyle: "Ubuntu Mono"
         property string colorScheme: "Ubuntu"
-        property bool showKeyboardBar: true
-        property bool showKeyboardButton: true
         property string jsonVisibleProfiles: "[]"
     }
 
