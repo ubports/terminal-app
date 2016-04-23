@@ -329,7 +329,7 @@ TerminalDisplay::TerminalDisplay(QQuickItem *parent)
 ,_cursorBlinking(false)
 ,_hasBlinkingCursor(false)
 ,_allowBlinkingText(true)
-,_ctrlDrag(false)
+,_dragMode(CtrlModifierDrag)
 ,_tripleClickMode(SelectWholeLine)
 ,_isFixedSize(false)
 ,_possibleTripleClick(false)
@@ -1804,7 +1804,8 @@ void TerminalDisplay::mousePressEvent(QMouseEvent* ev)
     
     selected =  _screenWindow->isSelected(pos.x(),pos.y());
 
-    if ((!_ctrlDrag || ev->modifiers() & Qt::ControlModifier) && selected ) {
+    if (((_dragMode == DragMode::CtrlModifierDrag && ev->modifiers() & Qt::ControlModifier) ||
+         _dragMode == DragMode::NoModifierDrag) && selected ) {
       // The user clicked inside selected text
       dragInfo.state = diPending;
       dragInfo.start = ev->pos();
