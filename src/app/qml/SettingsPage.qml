@@ -23,17 +23,20 @@ Page {
     id: settingsPage
     objectName: "settingsPage"
 
-    title: i18n.tr("Settings")
-    flickable: null
+    header: PageHeader {
+        title: i18n.tr("Settings")
+        flickable: scrollView.flickableItem
+    }
 
-    Flickable {
+    ScrollView {
+        id: scrollView
         anchors.fill: parent
-        interactive: contentHeight + units.gu(6) > height
-        contentHeight: mainColumn.height
 
         Column {
-            id: mainColumn
-            anchors { left: parent.left; right: parent.right }
+            // Column is not a child of ScrollView, but it's reparented to
+            // ScrollView.viewport. For that reason we can not use 'anchors'
+            // but we have to set the width instead.
+            width: scrollView.width
 
             ListItem {
                 ListItemLayout {

@@ -18,7 +18,7 @@ Item {
         z: parent.z + 1
     }
 
-    Text {
+    Label {
         id: mainLabel
         anchors.centerIn: parent
         z: parent.z + 0.02

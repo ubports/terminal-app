@@ -23,33 +23,40 @@ Page {
     id: rootItem
     objectName: "layoutsPage"
 
-    title: i18n.tr("Layouts")
+    header: PageHeader {
+        title: i18n.tr("Layouts")
+        flickable: listView
+    }
 
     onVisibleChanged: {
         if (visible === false)
             settings.profilesChanged();
     }
 
-    ListView {
+    ScrollView {
         anchors.fill: parent
-        model: settings.profilesList
-        delegate: ListItem {
-            ListItemLayout {
-                anchors.fill: parent
-                title.text: name
+        ListView {
+            id: listView
+            anchors.fill: parent
+            model: settings.profilesList
+            delegate: ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: name
 
-                Switch {
-                    id: layoutSwitch
-                    SlotsLayout.position: SlotsLayout.Trailing
+                    Switch {
+                        id: layoutSwitch
+                        SlotsLayout.position: SlotsLayout.Trailing
 
-                    checked: profileVisible
-                    onCheckedChanged: {
-                        settings.profilesList.setProperty(index, "profileVisible", checked);
+                        checked: profileVisible
+                        onCheckedChanged: {
+                            settings.profilesList.setProperty(index, "profileVisible", checked);
+                        }
                     }
                 }
-            }
 
-            onClicked: layoutSwitch.trigger()
+                onClicked: layoutSwitch.trigger()
+            }
         }
     }
 }
