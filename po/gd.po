@@ -2,20 +2,20 @@
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
-# GunChleoc <fios@foramnagaidhlig.net>, 2015.
+# GunChleoc <fios@foramnagaidhlig.net>, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2016-01-26 22:27+0000\n"
-"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
+"PO-Revision-Date: 2016-04-27 01:37+0000\n"
+"Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-04-27 06:05+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 "Language: gd\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -189,39 +189,39 @@ msgstr "Am modh taghaidh"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Green on black"
-msgstr ""
+msgstr "Uaine air dubh"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "White on black"
-msgstr ""
+msgstr "Geal air dubh"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on white"
-msgstr ""
+msgstr "Dubh air geal"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on random light"
-msgstr ""
+msgstr "Dubh air soilleir tuaireamach"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Cool retro term"
-msgstr ""
+msgstr "Tèirmineal retro smodaig"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
+msgstr "Pastail dorcha / Ubuntu (sean)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Dubh air soilleir-bhuidhe"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
