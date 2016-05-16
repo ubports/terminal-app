@@ -65,7 +65,7 @@ Page {
                             NumberAnimation { duration: 200 }
                         }
 
-                        anchors {top: parent.top; right: parent.right; margins: units.gu(1)}
+                        anchors {top: parent.top; left: parent.left; margins: units.gu(1)}
 
                         innerOpacity: 0.6
                         border {color: UbuntuColors.orange; width: units.dp(1)}
