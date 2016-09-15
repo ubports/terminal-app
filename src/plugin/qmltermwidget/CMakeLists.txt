@@ -70,6 +70,7 @@ qt5_use_modules(qmltermwidget Gui Qml Quick Widgets)
 
 # Copy the plugin, the qmldir file and other assets to the build dir for running in QtCreator
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
+    file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR})
     add_custom_target(qmltermwidget-qmldir ALL
         COMMAND cp ${CMAKE_CURRENT_SOURCE_DIR}/src/qmldir ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
         DEPENDS ${QMLFILES}
@@ -80,7 +81,6 @@ if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
         DEPENDS ${QMLFILES}
     )
     add_custom_command(TARGET qmltermwidget POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
         COMMENT "Creating plugin directory layout in the build dir"
         COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:qmltermwidget> ${CMAKE_CURRENT_BINARY_DIR}/../${PLUGIN_DIR}
         COMMENT "Copying to output directory"
