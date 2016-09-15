@@ -10,7 +10,7 @@ Build-Depends: cmake,
                qtbase5-dev,
                qtdeclarative5-dev,
                qt5-default,
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Section: misc
 Homepage: https://launchpad.net/ubuntu-terminal-app
 Vcs-Bzr: https://code.launchpad.net/~ubuntu-terminal-dev/ubuntu-terminal-app/trunk
