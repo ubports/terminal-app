@@ -3,13 +3,10 @@ version: 0.7.207
 summary: Ubuntu Terminal app
 description: The terminal app for all Ubuntu devices.
 
-confinement: strict
+confinement: devmode
 
 apps:
   ubuntu-terminal-app:
-    # If CLICK_MODE=off
-    #command: desktop-launch $SNAP/usr/lib/*/qt5/bin/qmlscene $SNAP/usr/share/terminal/qml/ubuntu-terminal-app.qml
-    # If CLICK_MODE=on
     command: desktop-launch $SNAP/usr/lib/*/qt5/bin/qmlscene $SNAP/qml/ubuntu-terminal-app.qml
     plugs: [unity7, opengl, network, network-bind, home]
 
