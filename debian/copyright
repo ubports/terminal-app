@@ -37,6 +37,7 @@ Copyright: 2000 Stephan Kulow <coolo@kde.org>
            2007 Robert Knight <robertknight@gmail.com>
            2006-2007 Robert Knight <robertknight@gmail.com>
            2006-2008 Robert Knight <robertknight@gmail.com>
+License: GPL-2+
 
 Files: src/app/plugin/konsole/konsole_wcwidth.*
        src/plugin/qmltermwidget/lib/konsole_wcwidth.*
