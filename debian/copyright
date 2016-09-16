@@ -2,6 +2,15 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: ubuntu-terminal-app
 Source: https://launchpad.net/ubuntu-terminal-app
 
+Files: *
+Copyright: 2013 Canonical Ltd.
+           2013 Dmitry Zagnoyko <hiroshidi@gmail.com>
+           2013 Omer Akram <om26er@ubuntu.com>
+           2013 Paolo Rotolo <paolorotolo@ubuntu.com>
+           2013 Riccardo Padovani <rpadovani@ubuntu-it.org>
+           2013 Sam Hewitt <snwh@ubuntu.com>
+License: GPL-3
+
 Files: src/app/*
 Copyright: 2013-2014 Canonical Ltd.
 License: GPL-3+
