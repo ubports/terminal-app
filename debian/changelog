@@ -3,6 +3,7 @@ ubuntu-terminal-app (0.7.207) UNRELEASED; urgency=medium
   * Update changelog version
   * Update standards version
   * Fix up build dependency formatting
+  * Added manpage
 
  -- Luke Yelavich <themuso@ubuntu.com>  Fri, 16 Sep 2016 09:04:28 +1000
 

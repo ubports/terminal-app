@@ -1,0 +1,56 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" First parameter, NAME, should be all caps
+.\" Second parameter, SECTION, should be 1-8, maybe w/ subsection
+.\" other parameters are allowed: see man(7), man(1)
+.TH TERMINAL 1 "September 16, 2016"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+terminal \- is a terminal emulation application.
+.SH SYNOPSIS
+.sp
+.nf
+\fIterminal\fR [\-p|\-\-phone] [\-\-workdir <dir>]
+    [\-\-forceAuth <true/false>] [\-t|\-\-tablet] [\-h|\-\-help] [\-I <path>]
+.nf
+.sp
+.SH DESCRIPTION
+.B terminal
+is a terminal emulation application that you can use to access a unix shell.
+.SH OPTIONS
+.TP
+.B \-h, \-\-help
+Show summary of options.
+.TP
+.B \-p, \-\-phone
+If running on Desktop, start in a phone sized window.
+.TP
+.B \-t, \-\-tablet
+If running on Desktop, start in a tablet sized window.
+.TP
+.B \-\-forceAuth <true/false>
+Force authentication on or off.
+.TP
+.B \-I <path>
+Give a path for an additional QML import directory. May be used multiple times.
+.TP
+.B \-q <qmlfile>
+Give an alternative location for the main qml file.
+.TP
+.B \-\-workdir <dir>
+Change working directory to 'dir'
+.SH AUTHOR
+Terminal was written by Filippo Scognamiglio <flscogna@gmail.com>. The webpage for this package can be found at
+http://launchpad.net/ubuntu-terminal-app
+.PP
+This manual page was written by Luke Yelavich <themuso@ubuntu.com>, for the Ubuntu project (but may be used by others).
