@@ -1,6 +1,6 @@
 ubuntu-terminal-app (0.7.207) UNRELEASED; urgency=medium
 
-  * Update changelog version
+  * Get packaging ready for inclusion in yakkety (LP: #1623845)
   * Update standards version
   * Fix up build dependency formatting
   * Added manpage
