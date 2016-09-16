@@ -9,7 +9,7 @@ Build-Depends: cmake,
                libpam0g-dev,
                qtbase5-dev,
                qtdeclarative5-dev,
-               qt5-default,
+               qt5-default
 Standards-Version: 3.9.8
 Section: misc
 Homepage: https://launchpad.net/ubuntu-terminal-app
