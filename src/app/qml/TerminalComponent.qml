@@ -14,10 +14,6 @@ Component {
         font.family: settings.fontStyle
         font.pixelSize: FontUtils.sizeToPixels("medium") * settings.fontSize / 10
 
-        // WORKAROUND: Mir/QtMir does not support drag&drop yet, therefore we need
-        // to disable this functionality (see lp:1488588).
-        dragMode: QMLTermWidget.NoDrag
-
         signal sessionFinished(var session);
 
         session: QMLTermSession {

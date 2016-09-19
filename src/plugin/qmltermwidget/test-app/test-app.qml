@@ -16,15 +16,26 @@ Rectangle {
         shortcut: "Ctrl+Shift+V"
     }
 
+    Action{
+        onTriggered: searchButton.visible = !searchButton.visible
+        shortcut: "Ctrl+F"
+    }
+
     QMLTermWidget {
         id: terminal
         anchors.fill: parent
         font.family: "Monospace"
-        font.pointSize: 12 
+        font.pointSize: 12
         colorScheme: "cool-retro-term"
         session: QMLTermSession{
-	    id: mainsession
+            id: mainsession
             initialWorkingDirectory: "$HOME"
+            onMatchFound: {
+                console.log("found at: %1 %2 %3 %4".arg(startColumn).arg(startLine).arg(endColumn).arg(endLine));
+            }
+            onNoMatchFound: {
+                console.log("not found");
+            }
         }
         onTerminalUsesMouseChanged: console.log(terminalUsesMouse);
         onTerminalSizeChanged: console.log(terminalSize);
@@ -40,6 +51,16 @@ Rectangle {
                 anchors.fill: parent
             }
         }
+
+    }
+
+    Button {
+        id: searchButton
+        text: "Find version"
+        anchors.bottom: parent.bottom
+        anchors.right: parent.right
+        visible: false
+        onClicked: mainsession.search("version");
     }
     Component.onCompleted: terminal.forceActiveFocus();
 }

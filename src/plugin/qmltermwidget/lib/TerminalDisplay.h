@@ -83,12 +83,11 @@ class ScreenWindow;
 class KONSOLEPRIVATE_EXPORT TerminalDisplay : public QQuickPaintedItem
 {
    Q_OBJECT
-   Q_ENUMS(DragMode)
    Q_PROPERTY(KSession* session         READ getSession      WRITE setSession     NOTIFY sessionChanged          )
-   Q_PROPERTY(QFont font                READ getVTFont       WRITE setVTFont                                     )
-   Q_PROPERTY(QString  colorScheme                           WRITE setColorScheme                                )
+   Q_PROPERTY(QFont font                READ getVTFont       WRITE setVTFont      NOTIFY vtFontChanged           )
+   Q_PROPERTY(QString colorScheme       READ colorScheme     WRITE setColorScheme NOTIFY colorSchemeChanged      )
    Q_PROPERTY(QSize terminalSize        READ getTerminalSize                      NOTIFY changedContentSizeSignal)
-   Q_PROPERTY(int lineSpacing                                WRITE setLineSpacing                                )
+   Q_PROPERTY(int lineSpacing           READ lineSpacing     WRITE setLineSpacing NOTIFY lineSpacingChanged      )
    Q_PROPERTY(bool terminalUsesMouse    READ getUsesMouse                         NOTIFY usesMouseChanged        )
    Q_PROPERTY(int lines                 READ lines                                NOTIFY changedContentSizeSignal)
    Q_PROPERTY(int columns               READ columns                              NOTIFY changedContentSizeSignal)
@@ -96,8 +95,11 @@ class KONSOLEPRIVATE_EXPORT TerminalDisplay : public QQuickPaintedItem
    Q_PROPERTY(int scrollbarMaximum      READ getScrollbarMaximum                  NOTIFY scrollbarParamsChanged  )
    Q_PROPERTY(int scrollbarMinimum      READ getScrollbarMinimum                  NOTIFY scrollbarParamsChanged  )
    Q_PROPERTY(QSize fontMetrics         READ getFontMetrics                       NOTIFY changedFontMetricSignal )
-   Q_PROPERTY(bool enableBold                                WRITE setBoldIntense                                )
-   Q_PROPERTY(DragMode dragMode         MEMBER _dragMode                          NOTIFY dragModeChanged         )
+
+   Q_PROPERTY(bool enableBold           READ getBoldIntense   WRITE setBoldIntense NOTIFY boldIntenseChanged )
+   Q_PROPERTY(bool fullCursorHeight     READ fullCursorHeight WRITE setFullCursorHeight NOTIFY fullCursorHeightChanged)
+   Q_PROPERTY(bool antialiasText        READ antialias       WRITE setAntialias)
+   Q_PROPERTY(QStringList availableColorSchemes READ availableColorSchemes NOTIFY availableColorSchemesChanged)
 
 public:
     /** Constructs a new terminal display widget with the specified parent. */
@@ -121,6 +123,7 @@ public:
 
     /** Sets the opacity of the terminal display. */
     void setOpacity(qreal opacity);
+
 
     /** 
      * This enum describes the location where the scroll bar is positioned in the display widget.
@@ -196,11 +199,8 @@ public:
     /** Specifies whether or not text can blink. */
     void setBlinkingTextEnabled(bool blink);
 
-    enum DragMode {
-        NoDrag,             // drag disabled
-        CtrlModifierDrag,   // require Ctrl key for drag
-        NoModifierDrag      // no additional key is required
-    };
+    void setCtrlDrag(bool enable) { _ctrlDrag=enable; }
+    bool ctrlDrag() { return _ctrlDrag; }
 
     /** 
      *  This enum describes the methods for selecting text when
@@ -399,7 +399,7 @@ public:
      * Specifies whether characters with intense colors should be rendered
      * as bold. Defaults to true.
      */
-    void setBoldIntense(bool value) { _boldIntense = value; }
+    void setBoldIntense(bool value);
     /**
      * Returns true if characters with intense colors are rendered in bold.
      */
@@ -487,12 +487,6 @@ public slots:
      */
     void pasteSelection();
 
-    /** Checks if the clipboard is empty */
-    bool isClipboardEmpty();
-
-    /** Checks if the selection is empty */
-    bool isSelectionEmpty();
-
     /** 
        * Changes whether the flow control warning box should be shown when the flow control
        * stop key (Ctrl+S) are pressed.
@@ -556,9 +550,10 @@ public slots:
 
     // QMLTermWidget
     void setColorScheme(const QString &name);
+    QString colorScheme() const;
     QStringList availableColorSchemes();
 
-    void simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, QString text);
+    void simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, const QString &text);
     void simulateWheel(int x, int y, int buttons, int modifiers, QPointF angleDelta);
     void simulateMouseMove(int x, int y, int button, int buttons, int modifiers);
     void simulateMousePress(int x, int y, int button, int buttons, int modifiers);
@@ -602,15 +597,15 @@ signals:
      */
     void overrideShortcutCheck(QKeyEvent* keyEvent,bool& override);
 
-   void isBusySelecting(bool);
+   void isBusySelecting(bool busy);
    void sendStringToEmu(const char*);
    
    // qtermwidget signals
-	void copyAvailable(bool);
+    void copyAvailable(bool available);
 	void termGetFocus();
 	void termLostFocus();
 
-    void notifyBell(const QString&);
+    void notifyBell(const QString& bell);
 
     // QMLTermWidget
     void sessionChanged();
@@ -619,7 +614,12 @@ signals:
     void imagePainted();
     void scrollbarValueChanged();
     void scrollbarParamsChanged(int value);
-    void dragModeChanged();
+    void vtFontChanged();
+    void lineSpacingChanged();
+    void availableColorSchemesChanged();
+    void colorSchemeChanged();
+    void fullCursorHeightChanged();
+    void boldIntenseChanged();
 
 protected:
     virtual bool event( QEvent * );
@@ -827,7 +827,7 @@ private:
     bool _cursorBlinking;     // hide cursor in paintEvent
     bool _hasBlinkingCursor;  // has blinking cursor enabled
     bool _allowBlinkingText;  // allow text to blink
-    DragMode _dragMode;
+    bool _ctrlDrag;           // require Ctrl key for drag
     TripleClickMode _tripleClickMode;
     bool _isFixedSize; //Columns / lines are locked.
     QTimer* _blinkTimer;  // active when hasBlinker
@@ -851,7 +851,7 @@ private:
     QLabel* _outputSuspendedLabel; 
         
     uint _lineSpacing;
-
+    QString _colorScheme;
     bool _colorsInverted; // true during visual bell
 
     QSize _size;
@@ -891,6 +891,7 @@ private:
     QPalette m_palette;
     QPalette::ColorRole m_color_role;
     KSession *m_session;
+    bool m_full_cursor_height;
 
     QFont font() const { return m_font; }
 
@@ -919,11 +920,14 @@ private:
 
     QSize getFontMetrics();
 
+    void setFullCursorHeight(bool val);
+
 public:
     static void setTransparencyEnabled(bool enable)
     {
         HAVE_TRANSPARENCY = enable;
     }
+    bool fullCursorHeight() const;
 };
 
 class AutoScrollHandler : public QObject
