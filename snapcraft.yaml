@@ -1,0 +1,37 @@
+name: ubuntu-terminal-app
+version: 0.7.207
+summary: Ubuntu Terminal app
+description: The terminal app for all Ubuntu devices.
+
+confinement: devmode
+
+apps:
+  ubuntu-terminal-app:
+    command: desktop-launch $SNAP/usr/lib/*/qt5/bin/qmlscene $SNAP/qml/ubuntu-terminal-app.qml
+    plugs: [unity7, opengl, network, network-bind, home]
+
+parts:
+  terminal:
+    plugin: cmake
+    configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DCLICK_MODE=on]
+    source: .
+    build-packages:
+      - build-essential
+      - cmake
+      - gettext
+      - intltool
+      - python3
+      - qtbase5-dev
+      - qtdeclarative5-dev
+      - libqtermwidget5-0-dev
+      - libpam0g-dev
+    stage-packages:
+      - ubuntu-sdk-libs
+      - qtubuntu-desktop
+      - libqtermwidget5-0
+      - libqt5systeminfo5
+      - qml-module-qtsysteminfo
+    snap:
+      - -usr/share/doc
+      - -usr/include
+    after: [desktop-qt5]

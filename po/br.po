@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2015-08-25 13:43+0000\n"
+"PO-Revision-Date: 2016-08-29 06:25+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-08-31 06:40+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -35,11 +35,11 @@ msgstr "Dilesadur rekis"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Ebarzhit ar c'hod ar ger-tremen :"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "kod pe ger-tremen"
 
 #: ../src/app/qml/AuthenticationDialog.qml:50
 msgid "OK"
@@ -167,7 +167,7 @@ msgstr "Diskouez barrebb ar c'hlavier"
 
 #: ../src/app/qml/SettingsPage.qml:73
 msgid "Show Keyboard Button"
-msgstr ""
+msgstr "Diskouez bouton ar c'hlavier"
 
 #: ../src/app/qml/SettingsPage.qml:96
 msgid "Font Size:"
@@ -188,39 +188,39 @@ msgstr "Mod diuzañ"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Green on black"
-msgstr ""
+msgstr "Gwer war du"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "White on black"
-msgstr ""
+msgstr "Gwenn war du"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on white"
-msgstr ""
+msgstr "Du war gwenn"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on random light"
-msgstr ""
+msgstr "Du war ul liv sklaer bennak"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Cool retro term"
-msgstr ""
+msgstr "Termenell mod-kozh hag a-vod"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
+msgstr "Pasteloù teñval / Ubuntu (kozh)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Du war melen sklaer"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:128
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
