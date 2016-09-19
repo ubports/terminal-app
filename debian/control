@@ -13,7 +13,7 @@ Build-Depends: cmake,
 Standards-Version: 3.9.8
 Section: misc
 Homepage: https://launchpad.net/ubuntu-terminal-app
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-terminal-dev/ubuntu-terminal-app/trunk
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-terminal-dev/ubuntu-terminal-app/reboot
 
 Package: ubuntu-terminal-app
 Section: misc
