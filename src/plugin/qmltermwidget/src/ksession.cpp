@@ -28,10 +28,12 @@
 
 // Konsole
 #include "KeyboardTranslator.h"
+#include "HistorySearch.h"
 
 KSession::KSession(QObject *parent) :
     QObject(parent), m_session(createSession(""))
 {
+    connect(m_session, SIGNAL(started()), this, SIGNAL(started()));
     connect(m_session, SIGNAL(finished()), this, SLOT(sessionFinished()));
     connect(m_session, SIGNAL(titleChanged()), this, SIGNAL(titleChanged()));
 }
@@ -129,6 +131,15 @@ void KSession::startShellProgram()
     m_session->run();
 }
 
+bool KSession::sendSignal(int signal)
+{
+    if ( !m_session->isRunning() ) {
+        return false;
+    }
+
+    return m_session->sendSignal(signal);
+}
+
 int KSession::getShellPID()
 {
     return m_session->processId();
@@ -166,16 +177,18 @@ void KSession::setShellProgram(const QString &progname)
 
 void KSession::setInitialWorkingDirectory(const QString &dir)
 {
-    _initialWorkingDirectory = dir;
-    m_session->setInitialWorkingDirectory(dir);
-}
+    if ( _initialWorkingDirectory != dir ) {
+        _initialWorkingDirectory = dir;
+        m_session->setInitialWorkingDirectory(dir);
+        emit initialWorkingDirectoryChanged();
+}   }
 
 QString KSession::getInitialWorkingDirectory()
 {
     return _initialWorkingDirectory;
 }
 
-void KSession::setArgs(QStringList &args)
+void KSession::setArgs(const QStringList &args)
 {
     m_session->setArguments(args);
 }
@@ -187,10 +200,35 @@ void KSession::setTextCodec(QTextCodec *codec)
 
 void KSession::setHistorySize(int lines)
 {
-    if (lines < 0)
-        m_session->setHistoryType(HistoryTypeFile());
-    else
-        m_session->setHistoryType(HistoryTypeBuffer(lines));
+    if ( historySize() != lines ) {
+        if (lines < 0)
+            m_session->setHistoryType(HistoryTypeFile());
+        else
+            m_session->setHistoryType(HistoryTypeBuffer(lines));
+        emit historySizeChanged();
+    }
+}
+
+int KSession::historySize() const
+{
+    if ( m_session->historyType().isUnlimited() ) {
+        return -1;
+    } else {
+        return m_session->historyType().maximumLineCount();
+    }
+}
+
+QString KSession::getHistory() const
+{
+    QString history;
+    QTextStream historyStream(&history);
+    PlainTextDecoder historyDecoder;
+
+    historyDecoder.begin(&historyStream);
+    m_session->emulation()->writeToStream(&historyDecoder);
+    historyDecoder.end();
+
+    return history;
 }
 
 void KSession::sendText(QString text)
@@ -208,7 +246,20 @@ void KSession::sendKey(int rep, int key, int mod) const
 //    while (rep > 0){
 //        m_session->sendKey(&qkey);
 //        --rep;
-//    }
+    //    }
+}
+
+void KSession::clearScreen()
+{
+    m_session->emulation()->clearEntireScreen();
+}
+
+void KSession::search(const QString &regexp, int startLine, int startColumn, bool forwards)
+{
+    HistorySearch *history = new HistorySearch( QPointer<Emulation>(m_session->emulation()), QRegExp(regexp), forwards, startColumn, startLine, this);
+    connect( history, SIGNAL(matchFound(int,int,int,int)), this, SIGNAL(matchFound(int,int,int,int)));
+    connect( history, SIGNAL(noMatchFound()), this, SIGNAL(noMatchFound()));
+    history->search();
 }
 
 void KSession::setFlowControlEnabled(bool enabled)
@@ -245,4 +296,14 @@ QString KSession::keyBindings()
 QString KSession::getTitle()
 {
     return m_session->userTitle();
+}
+
+bool KSession::hasActiveProcess() const
+{
+    return m_session->processId() != m_session->foregroundProcessId();
+}
+
+QString KSession::foregroundProcessName()
+{
+    return m_session->foregroundProcessName();
 }

@@ -280,13 +280,22 @@ void TerminalDisplay::setVTFont(const QFont& f)
 
     m_font = font;
     fontChange(font);
+    emit vtFontChanged();
   //}
+}
+
+void TerminalDisplay::setBoldIntense(bool value)
+{
+    if ( _boldIntense != value ) {
+        _boldIntense = value;
+        emit boldIntenseChanged();
+    }
 }
 
 void TerminalDisplay::setFont(const QFont &f)
 {
-  Q_UNUSED(f);
-  // ignore font change request if not coming from konsole itself
+    Q_UNUSED(f);
+    // ignore font change request if not coming from konsole itself
 }
 
 /* ------------------------------------------------------------------------- */
@@ -329,7 +338,7 @@ TerminalDisplay::TerminalDisplay(QQuickItem *parent)
 ,_cursorBlinking(false)
 ,_hasBlinkingCursor(false)
 ,_allowBlinkingText(true)
-,_dragMode(CtrlModifierDrag)
+,_ctrlDrag(false)
 ,_tripleClickMode(SelectWholeLine)
 ,_isFixedSize(false)
 ,_possibleTripleClick(false)
@@ -345,6 +354,7 @@ TerminalDisplay::TerminalDisplay(QQuickItem *parent)
 ,mMotionAfterPasting(NoMoveScreenWindow)
 ,m_font("Monospace", 12)
 ,m_color_role(QPalette::Background)
+,m_full_cursor_height(false)
 {
   // terminal applications are not designed with Right-To-Left in mind,
   // so the layout is forced to Left-To-Right
@@ -656,7 +666,7 @@ void TerminalDisplay::drawCursor(QPainter& painter,
                                  bool& invertCharacterColor)
 {
     QRect cursorRect = rect;
-    cursorRect.setHeight(_fontHeight - _lineSpacing - 1);
+    cursorRect.setHeight(_fontHeight - ((m_full_cursor_height) ? 0 : _lineSpacing) - 1);
     
     if (!_cursorBlinking)
     {
@@ -1270,8 +1280,6 @@ void TerminalDisplay::paint(QPainter *painter)
     //drawBackground(*painter, rect, m_palette.background().color(), false /* use opacity setting */);
     drawContents(*painter, dirtyRect);
 
-    emit imagePainted();
-
     //drawInputMethodPreeditString(*painter, preeditRect());
     //paintFilters(painter);
 }
@@ -1804,8 +1812,7 @@ void TerminalDisplay::mousePressEvent(QMouseEvent* ev)
     
     selected =  _screenWindow->isSelected(pos.x(),pos.y());
 
-    if (((_dragMode == DragMode::CtrlModifierDrag && ev->modifiers() & Qt::ControlModifier) ||
-         _dragMode == DragMode::NoModifierDrag) && selected ) {
+    if ((!_ctrlDrag || ev->modifiers() & Qt::ControlModifier) && selected ) {
       // The user clicked inside selected text
       dragInfo.state = diPending;
       dragInfo.start = ev->pos();
@@ -2571,18 +2578,6 @@ void TerminalDisplay::pasteSelection()
   emitSelection(true,false);
 }
 
-// TODO: These 2 functions are not in the upstream LxQt version
-// See https://code.launchpad.net/~mcintire-evan/ubuntu-terminal-app/disable-paste/+merge/283244/comments/725331
-bool TerminalDisplay::isClipboardEmpty()
-{
-    return QApplication::clipboard()->text().isEmpty();
-}
-
-bool TerminalDisplay::isSelectionEmpty()
-{
-    return _screenWindow->selectedText(_preserveLineBreaks).isEmpty();
-}
-
 /* ------------------------------------------------------------------------- */
 /*                                                                           */
 /*                                Keyboard                                   */
@@ -2998,7 +2993,7 @@ void TerminalDisplay::dragEnterEvent(QDragEnterEvent* event)
 {
   if (event->mimeData()->hasFormat("text/plain"))
       event->acceptProposedAction();
-  if (event->mimeData()->urls().count());
+  if (event->mimeData()->urls().count())
       event->acceptProposedAction();
 }
 
@@ -3100,8 +3095,11 @@ uint TerminalDisplay::lineSpacing() const
 
 void TerminalDisplay::setLineSpacing(uint i)
 {
-  _lineSpacing = i;
-  setVTFont(font()); // Trigger an update.
+    if ( i != _lineSpacing ) {
+      _lineSpacing = i;
+      setVTFont(font()); // Trigger an update.
+      emit lineSpacingChanged();
+    }
 }
 
 AutoScrollHandler::AutoScrollHandler(QWidget* parent)
@@ -3182,6 +3180,7 @@ void TerminalDisplay::update(const QRegion &region)
 //            QQuickPaintedItem::update(rect.adjusted(-1, -1, +1, +1));
 //        }
     QQuickPaintedItem::update(region.boundingRect().adjusted(-1, -1, +1, +1));
+    emit imagePainted();
 }
 
 void TerminalDisplay::update()
@@ -3241,37 +3240,38 @@ QStringList TerminalDisplay::availableColorSchemes()
 
 void TerminalDisplay::setColorScheme(const QString &name)
 {
-    const ColorScheme *cs;
-    // avoid legacy (int) solution
-    if (!availableColorSchemes().contains(name))
-        cs = ColorSchemeManager::instance()->defaultColorScheme();
-    else
-        cs = ColorSchemeManager::instance()->findColorScheme(name);
+    if ( name != _colorScheme ) {
+        const ColorScheme *cs;
+        // avoid legacy (int) solution
+        if (!availableColorSchemes().contains(name))
+            cs = ColorSchemeManager::instance()->defaultColorScheme();
+        else
+            cs = ColorSchemeManager::instance()->findColorScheme(name);
 
-    if (! cs)
-    {
-        qDebug() << "Cannot load color scheme: " << name;
-        return;
+        if (! cs)
+        {
+            qDebug() << "Cannot load color scheme: " << name;
+            return;
+        }
+
+        ColorEntry table[TABLE_COLORS];
+        cs->getColorTable(table);
+        setColorTable(table);
+
+        setFillColor(cs->backgroundColor());
+        _colorScheme = name;
+        emit colorSchemeChanged();
     }
-
-    ColorEntry table[TABLE_COLORS];
-    cs->getColorTable(table);
-    setColorTable(table);
-
-    setFillColor(cs->backgroundColor());
 }
 
-void TerminalDisplay::simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, QString text)
+QString TerminalDisplay::colorScheme() const
+{
+    return _colorScheme;
+}
+
+void TerminalDisplay::simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, const QString &text)
 {
     Q_UNUSED(nativeScanCode);
-
-    // TODO WORKAROUND: If text is not given we try to guess it from the unicode value.
-    // This solution is probably not complete on the domain, but works for the most common cases.
-    if (text.isEmpty()) {
-        bool shiftMod = modifiers & Qt::ShiftModifier;
-        text = QString(shiftMod ? QChar(key) : QChar(key).toLower());
-    }
-
     QEvent::Type type = pressed ? QEvent::KeyPress : QEvent::KeyRelease;
     QKeyEvent event = QKeyEvent(type, key, (Qt::KeyboardModifier) modifiers, text);
     keyPressedSignal(&event);
@@ -3330,6 +3330,19 @@ int TerminalDisplay::getScrollbarMinimum()
 QSize TerminalDisplay::getFontMetrics()
 {
     return QSize(_fontWidth, _fontHeight);
+}
+
+void TerminalDisplay::setFullCursorHeight(bool val)
+{
+    if ( m_full_cursor_height != val ) {
+        m_full_cursor_height = val;
+        emit fullCursorHeightChanged();
+    }
+}
+
+bool TerminalDisplay::fullCursorHeight() const
+{
+    return m_full_cursor_height;
 }
 
 void TerminalDisplay::itemChange(ItemChange change, const ItemChangeData & value)

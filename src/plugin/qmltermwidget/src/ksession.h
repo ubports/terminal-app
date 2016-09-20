@@ -35,14 +35,18 @@ class KSession : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString  kbScheme  READ  getKeyBindings WRITE setKeyBindings NOTIFY changedKeyBindings)
-    Q_PROPERTY(QString  initialWorkingDirectory READ getInitialWorkingDirectory WRITE setInitialWorkingDirectory)
-    Q_PROPERTY(QString  title READ getTitle NOTIFY titleChanged)
+    Q_PROPERTY(QString  initialWorkingDirectory READ getInitialWorkingDirectory WRITE setInitialWorkingDirectory NOTIFY initialWorkingDirectoryChanged)
+    Q_PROPERTY(QString  title READ getTitle WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString  shellProgram WRITE setShellProgram)
+    Q_PROPERTY(QStringList  shellProgramArgs WRITE setArgs)
+    Q_PROPERTY(QString  history READ getHistory)
+    Q_PROPERTY(bool hasActiveProcess READ hasActiveProcess)
+    Q_PROPERTY(QString foregroundProcessName READ foregroundProcessName)
 
 public:
     KSession(QObject *parent = 0);
     ~KSession();
-    
+
 public:
     //bool setup();
     void addView(TerminalDisplay *display);
@@ -60,14 +64,14 @@ public:
     void setInitialWorkingDirectory(const QString & dir);
     QString getInitialWorkingDirectory();
 
-    // Shell program args, default is none
-    void setArgs(QStringList & args);
-
     //Text codec, default is UTF-8
     void setTextCodec(QTextCodec * codec);
 
     // History size for scrolling
     void setHistorySize(int lines); //infinite if lines < 0
+    int historySize() const;
+
+    QString getHistory() const;
 
     // Sets whether flow control is enabled
     void setFlowControlEnabled(bool enabled);
@@ -90,7 +94,19 @@ public:
 
     QString getTitle();
 
+    /**
+     * Returns \c true if the session has an active subprocess running in it
+     * spawned from the initial shell.
+     */
+    bool hasActiveProcess() const;
+
+    /**
+     * Returns the name of the terminal's foreground process.
+     */
+    QString foregroundProcessName();
+
 signals:
+    void started();
     void finished();
     void copyAvailable(bool);
 
@@ -103,6 +119,12 @@ signals:
 
     void titleChanged();
 
+    void historySizeChanged();
+
+    void initialWorkingDirectoryChanged();
+
+    void matchFound(int startColumn, int startLine, int endColumn, int endLine);
+    void noMatchFound();
 
 public slots:
     /*! Set named key binding for given widget
@@ -112,8 +134,13 @@ public slots:
 
     void startShellProgram();
 
+    bool sendSignal(int signal);
+
     //  Shell program, default is /bin/bash
     void setShellProgram(const QString & progname);
+
+    // Shell program args, default is none
+    void setArgs(const QStringList &args);
 
     int getShellPID();
     void changeDir(const QString & dir);
@@ -123,6 +150,10 @@ public slots:
     // Send some text to terminal
     void sendKey(int rep, int key, int mod) const;
 
+    void clearScreen();
+
+    // Search history
+    void search(const QString &regexp, int startLine = 0, int startColumn = 0, bool forwards = true );
 
 protected slots:
     void sessionFinished();
