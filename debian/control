@@ -3,6 +3,7 @@ Priority: extra
 Maintainer: Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>
 Build-Depends: cmake,
                debhelper (>= 9),
+               dh-python,
                python3-all,
                gettext,
                intltool,
@@ -51,6 +52,7 @@ Description: PAM authentication QML plugin
 Package: ubuntu-terminal-app-autopilot
 Architecture: all
 Depends: ${misc:Depends},
+         ${python3:Depends},
          libautopilot-qt,
          libqt5test5,
          python3-autopilot,
