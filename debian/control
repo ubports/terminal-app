@@ -25,6 +25,7 @@ Depends: ${misc:Depends},
          qml-module-pamauthentication0.1,
          qml-module-qtquick2,
          qml-module-ubuntu-components,
+         qml-module-qt-labs-settings,
          qml-module-qtsysteminfo (>= 5.0~),
 Description: Terminal application
  Core Terminal application
