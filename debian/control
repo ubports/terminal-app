@@ -20,15 +20,15 @@ Section: misc
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         qtdeclarative5-qmltermwidget1.0,
-         qtdeclarative5-pamauthentication0.1,
-         qtdeclarative5-qtquick2-plugin,
-         qtdeclarative5-ubuntu-ui-toolkit-plugin,
+         qml-module-qmltermwidget1.0,
+         qml-module-pamauthentication0.1,
+         qml-module-qtquick2,
+         qml-module-ubuntu-components,
          qml-module-qtsysteminfo (>= 5.0~),
 Description: Terminal application
  Core Terminal application
 
-Package: qtdeclarative5-qmltermwidget1.0
+Package: qml-module-qmltermwidget1.0
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends},
@@ -38,7 +38,7 @@ Description: QMLTermWidget QML plugin.
  This package contains the QMLTermWidget terminal emulator plugin
  for Qt Qml.
 
-Package: qtdeclarative5-pamauthentication0.1
+Package: qml-module-pamauthentication0.1
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends},
