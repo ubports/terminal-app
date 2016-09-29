@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2015-12-26 12:21+0000\n"
-"Last-Translator: Nicat Məmmədov <n1c4t97@gmail.com>\n"
+"PO-Revision-Date: 2016-09-28 11:55+0000\n"
+"Last-Translator: Ziyaddin Sadigov <ziyaddinsadigov@gmail.com>\n"
 "Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-09-23 06:45+0000\n"
+"X-Launchpad-Export-Date: 2016-09-29 07:03+0000\n"
 "X-Generator: Launchpad (build 18204)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -131,22 +131,22 @@ msgstr ""
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr ""
+msgstr "DEL"
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr ""
+msgstr "HOME"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr ""
+msgstr "END"
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr ""
+msgstr "TAB"
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
