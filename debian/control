@@ -30,15 +30,45 @@ Depends: ${misc:Depends},
 Description: Terminal application
  Core Terminal application
 
+Package: qtdeclarative5-qmltermwidget1.0
+Architecture: any
+Multi-Arch: same
+Depends: qml-module-qmltermwidget1.0,
+         ${misc:Depends},
+         ${shlibs:Depends},
+         ${misc:Pre-Depends},
+Description: Transitional dummy package for QMLTermWidget QML plugin.
+ This package contains the QMLTermWidget terminal emulator plugin
+ for Qt Qml.
+ .
+ This is a transitional dummy package for qml-module-qmltermwidget1.0
+ which can be safely removed.
+
 Package: qml-module-qmltermwidget1.0
 Architecture: any
 Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${misc:Pre-Depends},
+Breaks: qtdeclarative5-qmltermwidget1.0 (<< 0.7~)
+Replaces: qtdeclarative5-qmltermwidget1.0 (<< 0.7~)
 Description: QMLTermWidget QML plugin.
  This package contains the QMLTermWidget terminal emulator plugin
  for Qt Qml.
+
+Package: qtdeclarative5-pamauthentication0.1
+Architecture: any
+Multi-Arch: same
+Depends: qml-module-qmltermwidget1.0,
+         ${misc:Depends},
+         ${shlibs:Depends},
+         ${misc:Pre-Depends},
+Description: Transitional dummy package for PAM authentication QML plugin
+ This package contains a plugin that enables QML apps to do
+ password authentication via the PAM API.
+ .
+ This is a transitional dummy package for qml-module-pamauthentication0.1
+ which can be safely removed.
 
 Package: qml-module-pamauthentication0.1
 Architecture: any
@@ -46,6 +76,8 @@ Multi-Arch: same
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          ${misc:Pre-Depends},
+Breaks: qtdeclarative5-pamauthentication0.1 (<< 0.7~)
+Replaces: qtdeclarative5-pamauthentication0.1 (<< 0.7~)
 Description: PAM authentication QML plugin
  This package contains a plugin that enables QML apps to do
  password authentication via the PAM API.
