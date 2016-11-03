@@ -31,6 +31,9 @@ MainView {
     objectName: "terminal"
     applicationName: "com.ubuntu.terminal"
     automaticOrientation: true
+    backgroundColor: terminalPage.terminal ? terminalPage.terminal.backgroundColor : ""
+
+    property bool narrowLayout: mview.width <= units.gu(50)
 
     AuthenticationService {
         id: authService
@@ -48,6 +51,12 @@ MainView {
     TabsModel {
         id: tabsModel
         Component.onCompleted: addTab();
+    }
+
+    Binding {
+        target: QQuickView
+        property: "title"
+        value: tabsModel.selectedTerminal.session.title
     }
 
     JsonTranslator {
@@ -83,6 +92,8 @@ MainView {
 
         TerminalPage {
             id: terminalPage
+            tabsModel: tabsModel
+            narrowLayout: mview.narrowLayout
 
             // TODO: decide between the expandable button or the two buttons.
 //            ExpandableButton {

@@ -207,6 +207,7 @@ int main(int argc, char *argv[])
     }
 
     view.engine()->rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
+    view.engine()->rootContext()->setContextProperty("QQuickView", &view);
 
     qDebug() << "using main qml file from:" << qmlfile;
     view.setSource(QUrl::fromLocalFile(qmlfile));

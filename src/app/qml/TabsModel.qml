@@ -18,8 +18,9 @@
 import QtQuick 2.4
 
 ListModel {
-    property int selectedIndex: 0
+    property int selectedIndex: -1
     property int maxTabs: 8
+    property var selectedTerminal
 
     id: tabsModel
 
@@ -29,6 +30,9 @@ ListModel {
 
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer);
         tabsModel.append({terminal: termObject});
+        if (selectedIndex == -1) {
+            selectedIndex = 0;
+        }
 
         termObject.visible = false;
     }
@@ -49,7 +53,8 @@ ListModel {
 
     function selectTab(index) {
         __disableTerminal(get(selectedIndex).terminal);
-        __enableTerminal(get(index).terminal);
+        selectedTerminal = get(index).terminal;
+        __enableTerminal(selectedTerminal);
         selectedIndex = index;
     }
 

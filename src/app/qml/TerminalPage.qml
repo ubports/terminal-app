@@ -19,6 +19,7 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import QMLTermWidget 1.0
+import "Tabs"
 
 // For FastBlur
 import QtGraphicalEffects 1.0
@@ -27,6 +28,8 @@ Page {
     id: terminalPage
     property alias terminalContainer: terminalContainer
     property Item terminal
+    property var tabsModel
+    property bool narrowLayout
 
     anchors.fill: parent
 
@@ -40,14 +43,48 @@ Page {
         id: alternateActionPopover
     }
 
+    TabsBar {
+        id: tabsBar
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
+        }
+        property bool isDarkBackground: ColorUtils.luminance(backgroundColor) <= 0.85
+        actionColor: isDarkBackground ? "white" : "black"
+        backgroundColor: terminalPage.terminal ? terminalPage.terminal.backgroundColor : ""
+        foregroundColor: terminalPage.terminal ? terminalPage.terminal.foregroundColor : ""
+        contourColor: isDarkBackground ? Qt.rgba(1.0, 1.0, 1.0, 0.4) : Qt.rgba(0.0, 0.0, 0.0, 0.2)
+        color: isDarkBackground ? Qt.tint(backgroundColor, "#0DFFFFFF") : Qt.tint(backgroundColor, "#0D000000")
+        model: terminalPage.tabsModel
+        function titleFromModelItem(modelItem) {
+            return modelItem.session.title;
+        }
+
+        actions: [
+            Action {
+                // FIXME: icon from theme is fuzzy at many GUs
+                iconSource: "tab_add.png"
+    //            iconName: "add"
+                onTriggered: terminalPage.tabsModel.addTab()
+            },
+            Action {
+                iconName: "settings"
+                onTriggered: pageStack.push(settingsPage)
+            }
+        ]
+        visible: !terminalPage.narrowLayout
+    }
+
     Item {
         id: terminalContainer
 
         anchors {
             left: parent.left;
-            top: parent.top;
+            top: terminalPage.narrowLayout ? parent.top : tabsBar.bottom;
             right: parent.right;
             bottom: keyboardBarLoader.top
+            margins: units.gu(1)
         }
 
         // Hide terminal data when the access is still not granted
@@ -70,14 +107,19 @@ Page {
 
     TerminalInputArea{
         id: inputArea
-        anchors.fill: parent
+        anchors {
+            left: parent.left
+            top: tabsBar.bottom
+            right: parent.right
+            bottom: parent.bottom
+        }
         enabled: terminal
 
         // This is the minimum wheel event registered by the plugin (with the current settings).
         property real wheelValue: 40
 
         // This is needed to fake a "flickable" scrolling.
-        swipeDelta: terminal.fontMetrics.height
+        swipeDelta: terminal ? terminal.fontMetrics.height : 0
 
         // Mouse actions
         onMouseMoveDetected: terminal.simulateMouseMove(x, y, button, buttons, modifiers);
@@ -227,6 +269,7 @@ Page {
             iconName: "settings"
             onTriggered: pageStack.push(settingsPage);
         }
+        visible: terminalPage.narrowLayout
     }
 
     CircularTransparentButton {
@@ -240,6 +283,7 @@ Page {
             iconName: "browser-tabs"
             onTriggered: pageStack.push(tabsPage);
         }
+        visible: terminalPage.narrowLayout
     }
 
     Loader {
