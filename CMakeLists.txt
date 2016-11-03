@@ -87,6 +87,11 @@ file(GLOB SRC_FILES
 install(FILES ${SRC_FILES}
     DESTINATION ${DATA_DIR})
 
+# Make non compiled files visible in qtcreator
+file(GLOB_RECURSE NON_COMPILED_FILES *.qml *.js *.py *.svg *.png *.in *.json *.desktop *.pot *.apparmor qmldir)
+add_custom_target(NON_COMPILED_TARGET ALL SOURCES ${NON_COMPILED_FILES})
+
+
 configure_file(${DESKTOP_FILE}.in.in ${DESKTOP_FILE}.in)
 
 add_custom_target(${DESKTOP_FILE} ALL
