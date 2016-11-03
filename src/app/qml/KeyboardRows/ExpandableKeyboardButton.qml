@@ -21,11 +21,14 @@ import Ubuntu.Components 1.3
 import ".."
 
 Item {
+    id: expandableKeyboardButton
     property alias text: mainLabel.text
     property alias mainAction: expandableButton.mainAction
     property alias actions: expandableButton.actions
     property alias expandable: expandableButton.expandable
     property alias expandRight: expandableButton.expandRight
+    property color backgroundColor
+    property color textColor
 
     Rectangle {
         width: parent.width
@@ -45,8 +48,10 @@ Item {
     ExpandableButton {
         id: expandableButton
         anchors.fill: parent
+        backgroundColor: expandableKeyboardButton.backgroundColor
+        textColor: expandableKeyboardButton.textColor
         parentComponent: Rectangle {
-            color: "black"
+            color: expandableKeyboardButton.backgroundColor
         }
 
         z: parent.z + 0.01

@@ -30,6 +30,7 @@ Item {
 
     property real animationTime: 200
     property color textColor: "white"
+    property color backgroundColor: "black"
 
     property bool expandable: true
 
@@ -145,7 +146,7 @@ Item {
         height: container.height * container._rows
         width: container.width * container._columns
 
-        color: "black"
+        color: container.backgroundColor
 
         opacity: expanded ? 1.0 : 0.0
 

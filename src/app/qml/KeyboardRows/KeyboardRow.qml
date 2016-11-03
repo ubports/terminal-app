@@ -38,6 +38,7 @@ Rectangle {
     property int _avgIndex: (_lastVisibleIndex + _firstVisibleIndex) / 2
 
     color: "black"
+    property color textColor
 
     GridView {
         id: gridView
@@ -51,27 +52,20 @@ Rectangle {
     }
 
     Rectangle {
-        id: topBar
-        anchors.top: parent.top
-        height: units.dp(2)
-        color: UbuntuColors.orange;
-
-        width: parent.width
-    }
-
-    Rectangle {
         id: scrollBar
         anchors.bottom: parent.bottom
         height: units.dp(2)
+        // FIXME
         color: UbuntuColors.orange;
 
         width: gridView.visibleArea.widthRatio * gridView.width
         x: gridView.visibleArea.xPosition * gridView.width
+        visible: gridView.visibleArea.widthRatio != 1.0
     }
 
     Component {
         id: keyDelegate
-        Rectangle {
+        Item {
             id: delegateContainer
             property int modelIndex: index
             property string modelText: container.model[index].text
@@ -90,6 +84,7 @@ Rectangle {
                     anchors.fill: parent
                     text: delegateContainer.modelText
                     mainAction: delegateContainer.modelMainAction
+                    textColor: container.textColor
                 }
             }
             Component {
@@ -101,6 +96,8 @@ Rectangle {
                     actions: delegateContainer.modelActions
                     expandable: !gridView.movingHorizontally
                     expandRight: delegateContainer.modelIndex <= container._avgIndex
+                    backgroundColor: container.color
+                    textColor: container.textColor
                 }
             }
         }

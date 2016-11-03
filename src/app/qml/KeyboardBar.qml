@@ -21,11 +21,12 @@ import "KeyboardRows"
 
 import "KeyboardRows/jsonParser.js" as Parser
 
-Rectangle {
+Item {
     id: rootItem
-    color: "black"
 
     property int selectedLayoutIndex: 0
+    property color backgroundColor: "black"
+    property color foregroundColor: "white"
 
     signal simulateCommand(string command);
     signal simulateKey(int key, int mod);
@@ -48,6 +49,8 @@ Rectangle {
             anchors.fill: keyboardContainer
             enabled: false
             visible: false
+            color: rootItem.backgroundColor
+            textColor: rootItem.foregroundColor
         }
     }
 
@@ -151,28 +154,30 @@ Rectangle {
     ExpandableButton {
         id: keyboardSelector
         height: parent.height
-        width: parent.height
+        width: units.gu(4)
 
         z: parent.z + 0.01
 
+        backgroundColor: rootItem.backgroundColor
+        textColor: rootItem.foregroundColor
         childComponent: Component {
             Rectangle {
-                color: "black"
+                color: rootItem.backgroundColor
             }
         }
 
         enabled: layoutsList.count != 0
 
-        Rectangle {
-            anchors.fill: parent
-            color: parent.enabled ? UbuntuColors.orange : UbuntuColors.warmGrey
-
-            Icon {
-                scale: 0.5
-                anchors.fill: parent
-                name: "keypad"
-                color: "black"
+        Icon {
+            anchors {
+                fill: parent
+                leftMargin: units.gu(0.5)
+                rightMargin: units.gu(0.5)
+                topMargin: units.gu(1)
+                bottomMargin: units.gu(1)
             }
+            name: "contextual-menu"
+            color: rootItem.foregroundColor
         }
     }
 

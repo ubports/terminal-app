@@ -212,6 +212,8 @@ Page {
 
         sourceComponent: KeyboardBar {
             height: units.gu(5)
+            backgroundColor: tabsBar.color
+            foregroundColor: tabsBar.foregroundColor
             onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
             onSimulateCommand: terminal.session.sendText(command);
         }
@@ -246,9 +248,9 @@ Page {
 
         anchors {top: parent.top; right: parent.right; margins: units.gu(1)}
 
+        backgroundColor: tabsBar.color
+        iconColor: tabsBar.actionColor
         visible: false
-        innerOpacity: 0.6
-        border {color: UbuntuColors.orange; width: units.dp(2)}
         action: Action {
             iconName: "close"
             onTriggered: {
@@ -263,8 +265,8 @@ Page {
 
         anchors {top: parent.top; right: parent.right; margins: units.gu(1)}
 
-        innerOpacity: 0.6
-        border {color: UbuntuColors.orange; width: units.dp(2)}
+        backgroundColor: tabsBar.color
+        iconColor: tabsBar.actionColor
         action: Action {
             iconName: "settings"
             onTriggered: pageStack.push(settingsPage);
@@ -277,8 +279,8 @@ Page {
 
         anchors {top: settingsButton.bottom; right: parent.right; margins: units.gu(1)}
 
-        innerOpacity: 0.6
-        border {color: UbuntuColors.orange; width: units.dp(2)}
+        backgroundColor: tabsBar.color
+        iconColor: tabsBar.actionColor
         action: Action {
             iconName: "browser-tabs"
             onTriggered: pageStack.push(tabsPage);
@@ -294,8 +296,8 @@ Page {
         y: parent.height - height - units.gu(1) - keyboardBarLoader.height
 
         sourceComponent: CircularTransparentButton {
-            innerOpacity: 0.6
-            border {color: UbuntuColors.orange; width: units.dp(2)}
+            backgroundColor: tabsBar.color
+            iconColor: tabsBar.actionColor
             action: Action {
                 iconName: "input-keyboard-symbolic"
                 onTriggered: {
