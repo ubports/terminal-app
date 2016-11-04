@@ -28,7 +28,6 @@ Item {
                 // Window/tab handling
                 case Qt.Key_T: // Open tab
                     tabsModel.addTab();
-                    tabsModel.selectTab(tabsModel.count - 1);
                     break;
                 case Qt.Key_W: //Close tab
                     tabsModel.removeTabWithSession(terminalSession);

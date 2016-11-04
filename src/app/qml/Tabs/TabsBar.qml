@@ -33,6 +33,7 @@ Rectangle {
          property int selectedIndex
          function selectTab(int index)
          function removeTab(int index)
+         function moveTab(int from, int to)
     */
     property var model
     property list<Action> actions
@@ -51,31 +52,107 @@ Rectangle {
             leftMargin: units.gu(1)
         }
         width: tabsBar.width - (actions.width + actions.anchors.leftMargin + actions.anchors.rightMargin)
+        move: Transition {
+            UbuntuNumberAnimation { property: "x" }
+        }
 
         Repeater {
             id: tabsRepeater
             model: tabsBar.model
 
-            LocalTabs.Tab {
-                id: tab
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                implicitWidth: Math.min(tabs.width / tabsRepeater.count, units.gu(27))
+            MouseArea {
+                id: tabMouseArea
 
-                isFocused: tabsBar.model.selectedIndex == index
-                isBeforeFocusedTab: index == tabsBar.model.selectedIndex - 1
-                title: tabsBar.titleFromModelItem(modelData)
-                backgroundColor: tabsBar.backgroundColor
-                foregroundColor: tabsBar.foregroundColor
-                contourColor: tabsBar.contourColor
-                actionColor: tabsBar.actionColor
-                onClose: tabsBar.model.removeTab(index)
-                onClicked: tabsBar.model.selectTab(index)
+                width: tab.width
+                height: tab.height
+                drag {
+                    target: tabsRepeater.count > 1 && tab.isFocused ? tab : null
+                    axis: Drag.XAxis
+                    minimumX: -tabMouseArea.x + tabs.anchors.leftMargin
+                    maximumX: tabs.width - tabMouseArea.width + tabs.anchors.leftMargin
+                }
+                z: tab.isFocused ? 1 : 0
+                Binding {
+                    target: tabsBar
+                    property: "selectedTabX"
+                    value: tab.parent == tabsBar ? tab.x : tabs.x + tabMouseArea.x + tab.x
+                    when: tab.isFocused
+                }
+                Binding {
+                    target: tabsBar
+                    property: "selectedTabWidth"
+                    value: tabMouseArea.width
+                    when: tab.isFocused
+                }
+
+                onPressed: tabsBar.model.selectTab(index)
+
+                LocalTabs.Tab {
+                    id: tab
+
+                    anchors.left: tabMouseArea.left
+                    width: Math.min(tabs.width / tabsRepeater.count, implicitWidth)
+                    height: tabs.height
+
+                    states: State {
+                        name: "dragging"
+                        when: tabMouseArea.drag.active
+                        ParentChange { target: tab; parent: tabsBar }
+                        AnchorChanges { target: tab; anchors.left: undefined }
+                    }
+                    transitions: Transition {
+                        from: "dragging"
+                        ParentAnimation {
+                            NumberAnimation {
+                                property: "x"
+                                duration: UbuntuAnimation.FastDuration
+                                easing: UbuntuAnimation.StandardEasing
+                            }
+                        }
+                        AnchorAnimation {
+                            duration: UbuntuAnimation.FastDuration
+                            easing: UbuntuAnimation.StandardEasing
+                        }
+                    }
+
+                    isFocused: tabsBar.model.selectedIndex == index
+                    isBeforeFocusedTab: index == tabsBar.model.selectedIndex - 1
+                    title: tabsBar.titleFromModelItem(modelData)
+                    backgroundColor: tabsBar.backgroundColor
+                    foregroundColor: tabsBar.foregroundColor
+                    contourColor: tabsBar.contourColor
+                    actionColor: tabsBar.actionColor
+                    onClose: tabsBar.model.removeTab(index)
+
+                    property real originalX
+                    property bool isDragged: tabMouseArea.drag.active
+                    onIsDraggedChanged: {
+                        if (tab.isDragged) {
+                            tab.originalX = tabMouseArea.x;
+                        }
+                    }
+
+                    onXChanged: {
+                        if (tab.isDragged) {
+                            var middle = tab.x + tab.width / 2;
+                            if (middle <= tab.originalX) {
+                                if (tabsBar.model.moveTab(index, index - 1)) {
+                                    tab.originalX = tab.originalX - tab.width;
+                                }
+                            } else if (middle >= tab.originalX + tab.width) {
+                                if (tabsBar.model.moveTab(index, index + 1)) {
+                                    tab.originalX = tab.originalX + tab.width;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
+
+    property real selectedTabX
+    property real selectedTabWidth
 
     Rectangle {
         id: bottomContourLeft
@@ -83,8 +160,7 @@ Rectangle {
             left: parent.left
             bottom: parent.bottom
         }
-        width: tabs.anchors.leftMargin
-
+        width: selectedTabX
         height: units.dp(1)
         color: tabsBar.contourColor
     }
@@ -95,7 +171,7 @@ Rectangle {
             right: parent.right
             bottom: parent.bottom
         }
-        width: parent.width - tabs.childrenRect.width - bottomContourLeft.width
+        width: parent.width - selectedTabX - selectedTabWidth
         height: units.dp(1)
         color: tabsBar.contourColor
     }

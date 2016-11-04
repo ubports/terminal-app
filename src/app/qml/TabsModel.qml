@@ -35,6 +35,7 @@ ListModel {
         }
 
         termObject.visible = false;
+        tabsModel.selectTab(tabsModel.count - 1);
     }
 
     function __disableTerminal(term) {
@@ -82,5 +83,19 @@ ListModel {
         if (index <= selectedIndex)
             selectedIndex = Math.max(selectedIndex - 1, 0);
         selectTab(selectedIndex);
+    }
+
+    function moveTab(from, to) {
+        if (from == to
+            || from < 0 || from >= tabsModel.count
+            || to < 0 || to >= tabsModel.count) {
+            return false;
+        }
+
+        tabsModel.move(from, to, 1);
+        if (selectedIndex == from) {
+            selectedIndex = to;
+        }
+        return true;
     }
 }

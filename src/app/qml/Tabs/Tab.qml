@@ -29,28 +29,17 @@ Item {
     property bool isFocused
     property bool isBeforeFocusedTab
     signal close
-    signal clicked
-    
+
+    implicitHeight: units.gu(3)
+    implicitWidth: units.gu(27)
+
     TabContour {
         anchors.fill: parent
         visible: tab.isFocused
         backgroundColor: tab.backgroundColor
         contourColor: tab.contourColor
     }
-    
-    Rectangle {
-        id: tabBottomContour
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-        visible: !tab.isFocused
-        
-        height: units.dp(1)
-        color: tab.contourColor
-    }
-    
+
     Rectangle {
         id: tabSeparator
         anchors {
@@ -63,12 +52,7 @@ Item {
         color: tab.contourColor
         visible: !tab.isFocused && !isBeforeFocusedTab
     }
-    
-    MouseArea {
-        anchors.fill: parent
-        onClicked: tab.clicked()
-    }
-    
+
     TabButton {
         id: tabCloseButton
         anchors.left: parent.left
