@@ -34,6 +34,17 @@ MouseArea {
     }
     width: units.gu(3) + leftMargin + rightMargin
 
+    Rectangle {
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            horizontalCenter: icon.horizontalCenter
+        }
+        width: icon.width + Math.max(leftMargin, rightMargin) * 2.0
+        color: tabsBar.highlightColor
+        visible: tabButton.pressed
+    }
+
     Icon {
         id: icon
         width: tabButton.iconSize

@@ -25,13 +25,25 @@ Item {
     property color foregroundColor: "black"
     property color contourColor
     property color actionColor
+    property color highlightColor
     property string title
     property bool isFocused
     property bool isBeforeFocusedTab
+    property bool isHovered: false
     signal close
 
     implicitHeight: units.gu(3)
     implicitWidth: units.gu(27)
+
+    Rectangle {
+        id: hoverFeedback
+        anchors {
+            fill: parent
+            leftMargin: -tabSeparator.width
+        }
+        color: tab.highlightColor
+        visible: tab.isHovered && !tab.isFocused
+    }
 
     TabContour {
         anchors.fill: parent
@@ -50,16 +62,39 @@ Item {
         width: units.dp(1)
         height: units.gu(2)
         color: tab.contourColor
-        visible: !tab.isFocused && !isBeforeFocusedTab
+        visible: !tab.isFocused && !tab.isBeforeFocusedTab
     }
 
-    TabButton {
+    MouseArea {
         id: tabCloseButton
-        anchors.left: parent.left
-        iconName: "close"
+
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            left: parent.left
+        }
+        width: units.gu(3)
+        hoverEnabled: true
         onClicked: tab.close()
-        iconColor: tab.actionColor
-        iconSize: units.gu(1)
+
+        Rectangle {
+            anchors.centerIn: parent
+            property real size: units.gu(2)
+            width: size
+            height: size
+            radius: size
+            color: tab.highlightColor
+            visible: tabCloseButton.containsMouse || tabCloseButton.pressed
+        }
+
+        Icon {
+            width: units.gu(1)
+            height: width
+            anchors.centerIn: parent
+            asynchronous: true
+            name: "close"
+            color: tab.actionColor
+        }
     }
 
     Label {

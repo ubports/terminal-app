@@ -29,6 +29,7 @@ Rectangle {
     property color foregroundColor: "black"
     property color contourColor: Qt.rgba(0.0, 0.0, 0.0, 0.2)
     property color actionColor: "black"
+    property color highlightColor: Qt.rgba(actionColor.r, actionColor.g, actionColor.b, 0.1)
     /* 'model' needs to have the following members:
          property int selectedIndex
          function selectTab(int index)
@@ -82,11 +83,12 @@ Rectangle {
                 Binding {
                     target: tabsBar
                     property: "selectedTabWidth"
-                    value: tabMouseArea.width
+                    value: tab.width
                     when: tab.isFocused
                 }
 
                 onPressed: tabsBar.model.selectTab(index)
+                hoverEnabled: true
 
                 LocalTabs.Tab {
                     id: tab
@@ -116,6 +118,7 @@ Rectangle {
                         }
                     }
 
+                    isHovered: tabMouseArea.containsMouse
                     isFocused: tabsBar.model.selectedIndex == index
                     isBeforeFocusedTab: index == tabsBar.model.selectedIndex - 1
                     title: tabsBar.titleFromModelItem(modelData)
@@ -123,6 +126,7 @@ Rectangle {
                     foregroundColor: tabsBar.foregroundColor
                     contourColor: tabsBar.contourColor
                     actionColor: tabsBar.actionColor
+                    highlightColor: tabsBar.highlightColor
                     onClose: tabsBar.model.removeTab(index)
 
                     property real originalX
