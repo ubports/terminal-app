@@ -47,7 +47,6 @@ Rectangle {
         id: tabs
         anchors {
             top: parent.top
-            topMargin: units.dp(3)
             bottom: parent.bottom
             left: parent.left
             leftMargin: units.gu(1)

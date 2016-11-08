@@ -46,7 +46,10 @@ Item {
     }
 
     TabContour {
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: units.dp(2)
+        }
         visible: tab.isFocused
         backgroundColor: tab.backgroundColor
         contourColor: tab.contourColor
