@@ -25,18 +25,23 @@ MouseArea {
     property alias iconSource: icon.source
     property alias iconColor: icon.color
     property real iconSize: units.gu(2)
+    property real leftMargin: 0
+    property real rightMargin: 0
 
     anchors {
         top: parent.top
         bottom: parent.bottom
     }
-    width: units.gu(3)
+    width: units.gu(3) + leftMargin + rightMargin
 
     Icon {
         id: icon
         width: tabButton.iconSize
         height: tabButton.iconSize
-        anchors.centerIn: parent
+        anchors {
+            centerIn: parent
+            horizontalCenterOffset: (leftMargin - rightMargin) / 2.0
+        }
         asynchronous: true
     }
 }

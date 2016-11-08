@@ -61,7 +61,7 @@ Item {
         iconColor: tab.actionColor
         iconSize: units.gu(1)
     }
-    
+
     Label {
         textSize: Label.Small
         anchors {

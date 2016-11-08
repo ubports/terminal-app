@@ -51,7 +51,8 @@ Rectangle {
             left: parent.left
             leftMargin: units.gu(1)
         }
-        width: tabsBar.width - (actions.width + actions.anchors.leftMargin + actions.anchors.rightMargin)
+        width: tabsBar.width - (actions.width
+                                + tabs.anchors.leftMargin + tabs.anchors.rightMargin)
         move: Transition {
             UbuntuNumberAnimation { property: "x" }
         }
@@ -178,22 +179,26 @@ Rectangle {
 
     Row {
         id: actions
-        spacing: units.gu(1)
 
         anchors {
             top: parent.top
             bottom: parent.bottom
             left: tabs.right
-            leftMargin: units.gu(1)
-            rightMargin: units.gu(1)
         }
 
+        property real actionsSpacing: units.gu(1)
+        property real sideMargins: units.gu(1)
+
         Repeater {
+            id: actionsRepeater
             model: tabsBar.actions
+
             LocalTabs.TabButton {
                 iconColor: tabsBar.actionColor
                 iconSource: modelData.iconSource
                 onClicked: modelData.trigger()
+                leftMargin: index == 0 ? actions.sideMargins : actions.actionsSpacing / 2.0
+                rightMargin: index == actionsRepeater.count - 1 ? actions.sideMargins : actions.actionsSpacing / 2.0
             }
         }
     }
