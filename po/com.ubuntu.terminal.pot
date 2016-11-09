@@ -1,6 +1,6 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR Canonical Ltd.
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the  package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-07 19:27+0100\n"
+"POT-Creation-Date: 2016-11-09 14:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/app/qml/AlternateActionPopover.qml:13
+#: ../src/app/qml/AlternateActionPopover.qml:30
 msgid "Select"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:17
+#: ../src/app/qml/AlternateActionPopover.qml:34
 msgid "Copy"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:21
+#: ../src/app/qml/AlternateActionPopover.qml:39
 msgid "Paste"
 msgstr ""
 
@@ -37,228 +37,210 @@ msgstr ""
 msgid "Enter passcode or passphrase:"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:40
+#: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:50
+#: ../src/app/qml/AuthenticationDialog.qml:58
 msgid "OK"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:62
+#: ../src/app/qml/AuthenticationDialog.qml:70
 msgid "Cancel"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationService.qml:55
+#: ../src/app/qml/AuthenticationService.qml:58
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:129
+#: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
 msgstr ""
 
-#: ../src/app/qml/KeyboardBar.qml:174
+#: ../src/app/qml/KeyboardBar.qml:196
 msgid "Change Keyboard"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 msgid "Control Keys"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "Function Keys"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
 msgid "Scroll Keys"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
 msgid "Command Keys"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:52
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:78
 msgid "CTRL"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:55
 msgid "FNS"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:58
 msgid "SCR"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CMD"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:81
 msgid "ALT"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:84
 msgid "SHIFT"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:97
 msgid "ESC"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
 msgid "PG_DN"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
 msgid "DEL"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:109
 msgid "HOME"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
 msgid "TAB"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:118
 msgid "ENTER"
 msgstr ""
 
-#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:41
+#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:26
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:57
-msgid "Show Keyboard Bar"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:73
-msgid "Show Keyboard Button"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:96
+#: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
 msgstr ""
 
-#: ../src/app/qml/TabsPage.qml:7
+#: ../src/app/qml/TabsPage.qml:26
 msgid "Tabs"
 msgstr ""
 
-#: ../src/app/qml/TabsPage.qml:13
+#: ../src/app/qml/TabsPage.qml:32
 msgid "New tab"
 msgstr ""
 
-#: ../src/app/qml/TerminalPage.qml:170
+#: ../src/app/qml/TerminalPage.qml:240
 msgid "Selection Mode"
 msgstr ""
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Green on black"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "White on black"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Black on white"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Black on random light"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Linux"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Cool retro term"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Dark pastels / Ubuntu (old)"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Black on light yellow"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:157
 msgid "Ubuntu"
 msgstr ""
 
-#: ../src/plugin/konsole/ColorScheme.cpp:276
-#: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr ""
 
-#: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr ""
 
-#: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr ""
 
-#: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr ""
 
-#: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr ""
 
-#: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr ""
-
-#: ../src/plugin/konsole/Vt102Emulation.cpp:961
-#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
-msgid ""
-"No keyboard translator available.  The information needed to convert key "
-"presses into characters to send to the terminal is missing."
 msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
@@ -271,6 +253,12 @@ msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
+msgstr ""
+
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
+msgid ""
+"No keyboard translator available.  The information needed to convert key "
+"presses into characters to send to the terminal is missing."
 msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
