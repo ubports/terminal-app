@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=ubuntu-terminal-app %u
+Icon=${SNAP}/meta/gui/terminal64.png
+_Name=Terminal
+X-Ubuntu-Touch=true
+X-Ubuntu-Default-Department-ID=accessories
+X-Ubuntu-Splash-Color=#111111
