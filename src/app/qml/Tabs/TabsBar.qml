@@ -16,6 +16,7 @@
  * Authored-by: Florian Boucault <florian.boucault@canonical.com>
  */
 import QtQuick 2.4
+import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
 import "." as LocalTabs
 
@@ -204,5 +205,12 @@ Rectangle {
                 rightMargin: index == actionsRepeater.count - 1 ? actions.sideMargins : actions.actionsSpacing / 2.0
             }
         }
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        color: backgroundColor
+        opacity: 0.4
+        visible: !Window.active
     }
 }
