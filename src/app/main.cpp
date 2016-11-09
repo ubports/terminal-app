@@ -56,7 +56,7 @@ int main(int argc, char *argv[])
     view.setResizeMode(QQuickView::SizeRootObjectToView);
 
     FileIO fileIO;
-    view.engine()->rootContext()->setContextProperty("fileIO", &fileIO);
+    view.rootContext()->setContextProperty("fileIO", &fileIO);
 
     // Set up import paths
     QStringList importPathList = view.engine()->importPathList();
@@ -95,16 +95,16 @@ int main(int argc, char *argv[])
     }
 
     //Dynamic folder home
-    view.engine()->rootContext()->setContextProperty("workdir", getNamedArgument(args, "--workdir", "$HOME"));
+    view.rootContext()->setContextProperty("workdir", getNamedArgument(args, "--workdir", "$HOME"));
 
     // Desktop doesn't have yet Unity8 and so no unity greeter either. Consequently it doesn't
     // also have any "PIN code" or "Password" extra authentication. Don't require any extra
     // authentication there by default
     if (qgetenv("QT_QPA_PLATFORM") != "ubuntumirclient") {
         qDebug() << Q_FUNC_INFO << "Running on non-MIR desktop, not requiring authentication by default";
-        view.engine()->rootContext()->setContextProperty("noAuthentication", QVariant(true));
+        view.rootContext()->setContextProperty("noAuthentication", QVariant(true));
     } else {
-        view.engine()->rootContext()->setContextProperty("noAuthentication", QVariant(false));
+        view.rootContext()->setContextProperty("noAuthentication", QVariant(false));
     }
 
     QString qmlfile;
@@ -122,10 +122,10 @@ int main(int argc, char *argv[])
             QString value = args.at(i+1);
             if (value == "true") {
                 qDebug() << Q_FUNC_INFO << "Forcing authentication on";
-                view.engine()->rootContext()->setContextProperty("noAuthentication", QVariant(false));
+                view.rootContext()->setContextProperty("noAuthentication", QVariant(false));
             } else if (value == "false") {
                 qDebug() << Q_FUNC_INFO << "Forcing authentication off";
-                view.engine()->rootContext()->setContextProperty("noAuthentication", QVariant(true));
+                view.rootContext()->setContextProperty("noAuthentication", QVariant(true));
             } else {
                 qWarning() << Q_FUNC_INFO << "Invalid forceAuth option '" << value << "', keeping default";
             }
@@ -147,17 +147,17 @@ int main(int argc, char *argv[])
         }
     }
 
-    view.engine()->rootContext()->setContextProperty("tablet", QVariant(false));
-    view.engine()->rootContext()->setContextProperty("phone", QVariant(false));
+    view.rootContext()->setContextProperty("tablet", QVariant(false));
+    view.rootContext()->setContextProperty("phone", QVariant(false));
     if (args.contains("-t") || args.contains("--tablet")) {
         qDebug() << "running in tablet mode";
-        view.engine()->rootContext()->setContextProperty("tablet", QVariant(true));
+        view.rootContext()->setContextProperty("tablet", QVariant(true));
     } else if (args.contains("-p") || args.contains("--phone")){
         qDebug() << "running in phone mode";
-        view.engine()->rootContext()->setContextProperty("phone", QVariant(true));
+        view.rootContext()->setContextProperty("phone", QVariant(true));
     } else if (qgetenv("QT_QPA_PLATFORM") != "ubuntumirclient") {
         // Default to tablet size on X11
-        view.engine()->rootContext()->setContextProperty("tablet", QVariant(true));
+        view.rootContext()->setContextProperty("tablet", QVariant(true));
     }
 
     view.engine()->setImportPathList(importPathList);
@@ -206,8 +206,8 @@ int main(int argc, char *argv[])
         keyboardLayouts << getProfileFromDir(fullPath);
     }
 
-    view.engine()->rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
-    view.engine()->rootContext()->setContextProperty("QQuickView", &view);
+    view.rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
+    view.rootContext()->setContextProperty("QQuickView", &view);
 
     qDebug() << "using main qml file from:" << qmlfile;
     view.setSource(QUrl::fromLocalFile(qmlfile));
