@@ -43,6 +43,10 @@ MouseArea {
         width: icon.width + Math.max(leftMargin, rightMargin) * 2.0
         color: tabsBar.highlightColor
         visible: tabButton.pressed
+        opacity: visible ? 1.0 : 0.0
+        Behavior on opacity {
+            UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration }
+        }
     }
 
     Icon {

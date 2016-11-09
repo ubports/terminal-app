@@ -43,6 +43,10 @@ Item {
         }
         color: tab.highlightColor
         visible: tab.isHovered && !tab.isFocused
+        opacity: visible ? 1.0 : 0.0
+        Behavior on opacity {
+            UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration }
+        }
     }
 
     TabContour {
@@ -61,7 +65,7 @@ Item {
             right: parent.right
             verticalCenter: parent.verticalCenter
         }
-        
+
         width: units.dp(1)
         height: units.gu(2)
         color: tab.contourColor
@@ -88,6 +92,10 @@ Item {
             radius: size
             color: tab.highlightColor
             visible: tabCloseButton.containsMouse || tabCloseButton.pressed
+            opacity: visible ? 1.0 : 0.0
+            Behavior on opacity {
+                UbuntuNumberAnimation { duration: UbuntuAnimation.FastDuration }
+            }
         }
 
         Icon {
