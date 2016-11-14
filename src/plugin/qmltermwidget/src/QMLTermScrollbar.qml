@@ -4,6 +4,7 @@ import QMLTermWidget 1.0
 
 Item {
     property QMLTermWidget terminal
+    onTerminalChanged: terminalProxyFlickable.updateFromTerminal()
 
     Flickable {
         id: terminalProxyFlickable
@@ -13,6 +14,7 @@ Item {
         property bool updating: false
 
         function updateTerminal() {
+            if (!terminal) return;
             if (updating) return;
             updating = true;
             terminal.scrollbarCurrentValue = contentY * terminal.scrollbarMaximum / (contentHeight - height);
@@ -20,6 +22,7 @@ Item {
         }
 
         function updateFromTerminal() {
+            if (!terminal) return;
             if (updating) return;
             updating = true;
             contentHeight = height * terminal.totalLines / terminal.lines;
