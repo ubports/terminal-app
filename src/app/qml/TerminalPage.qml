@@ -94,6 +94,17 @@ Page {
         }
     }
 
+    QMLTermScrollbar {
+        anchors {
+            top: terminalContainer.anchors.top
+            bottom: terminalContainer.anchors.bottom
+            left: terminalContainer.anchors.left
+            right: terminalContainer.anchors.right
+        }
+
+        terminal: terminalPage.terminal
+        z: inputArea.z + 1
+    }
 
     // TODO: This invisible button is used to position the popover where the
     // alternate action was called. Terrible terrible workaround!

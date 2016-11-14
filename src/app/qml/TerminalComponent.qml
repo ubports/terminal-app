@@ -48,15 +48,7 @@ Component {
             id: keyboardShortcutHandler
         }
 
-        QMLTermScrollbar {
-            z: parent.z + 2
-            terminal: parent
-            width: units.dp(2)
-            Rectangle {
-                anchors.fill: parent
-                color: UbuntuColors.orange
-            }
-        }
+        property int totalLines: terminal.scrollbarMaximum - terminal.scrollbarMinimum + terminal.lines
 
         Component.onCompleted: {
             terminalSession.startShellProgram();

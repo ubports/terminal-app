@@ -1,38 +1,48 @@
 import QtQuick 2.0
+import Ubuntu.Components 1.3
 import QMLTermWidget 1.0
 
 Item {
     property QMLTermWidget terminal
 
-    property int value: terminal.scrollbarCurrentValue
-    property int minimum: terminal.scrollbarMinimum
-    property int maximum: terminal.scrollbarMaximum
-    property int lines: terminal.lines
-    property int totalLines: lines + maximum
+    Flickable {
+        id: terminalProxyFlickable
+        anchors.fill: parent
+        enabled: false
 
-    anchors.right: terminal.right
+        property bool updating: false
 
-    opacity: 0.0
+        function updateTerminal() {
+            if (updating) return;
+            updating = true;
+            terminal.scrollbarCurrentValue = contentY * terminal.scrollbarMaximum / (contentHeight - height);
+            updating = false;
+        }
 
-    height: terminal.height * (lines / (totalLines - minimum))
-    y: (terminal.height / (totalLines)) * (value - minimum)
+        function updateFromTerminal() {
+            if (updating) return;
+            updating = true;
+            contentHeight = height * terminal.totalLines / terminal.lines;
+            contentY = (contentHeight - height) * terminal.scrollbarCurrentValue / terminal.scrollbarMaximum;
+            // pretend to flick so that the scrollbar appears
+            flick(0.0, 0.0);
+            cancelFlick();
+            updating = false;
+        }
 
-    Behavior on opacity {
-        NumberAnimation { duration: 300; easing.type: Easing.OutCubic }
+        onContentYChanged: terminalProxyFlickable.updateTerminal()
+
+        Connections {
+            target: terminal
+            onScrollbarMaximumChanged: terminalProxyFlickable.updateFromTerminal()
+            onScrollbarCurrentValueChanged: terminalProxyFlickable.updateFromTerminal()
+            onTotalLinesChanged: terminalProxyFlickable.updateFromTerminal()
+            onLinesChanged: terminalProxyFlickable.updateFromTerminal()
+        }
     }
 
-    function showScrollbar() {
-        opacity = 1.0;
-        hideTimer.restart();
-    }
-
-    Connections {
-        target: terminal
-        onScrollbarValueChanged: showScrollbar();
-    }
-
-    Timer {
-        id: hideTimer
-        onTriggered: parent.opacity = 0;
+    Scrollbar {
+        flickableItem: terminalProxyFlickable
+        align: Qt.AlignTrailing
     }
 }
