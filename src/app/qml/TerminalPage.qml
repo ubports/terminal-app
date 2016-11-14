@@ -119,10 +119,11 @@ Page {
     TerminalInputArea{
         id: inputArea
         anchors {
-            left: parent.left
-            top: tabsBar.bottom
-            right: parent.right
+            left: terminalContainer.anchors.left
+            top: terminalContainer.anchors.top
+            right: terminalContainer.anchors.right
             bottom: parent.bottom
+            margins: terminalContainer.anchors.margins
         }
         enabled: terminal
 
