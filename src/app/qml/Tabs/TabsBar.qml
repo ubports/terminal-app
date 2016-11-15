@@ -44,7 +44,7 @@ Rectangle {
         return modelItem.title;
     }
 
-    Row {
+    ListView {
         id: tabs
         anchors {
             top: parent.top
@@ -54,100 +54,99 @@ Rectangle {
         }
         width: tabsBar.width - (actions.width
                                 + tabs.anchors.leftMargin + tabs.anchors.rightMargin)
-        move: Transition {
+        interactive: false
+        orientation: ListView.Horizontal
+
+        displaced: Transition {
             UbuntuNumberAnimation { property: "x" }
         }
 
-        Repeater {
-            id: tabsRepeater
-            model: tabsBar.model
+        model: tabsBar.model
+        delegate: MouseArea {
+            id: tabMouseArea
 
-            MouseArea {
-                id: tabMouseArea
+            width: tab.width
+            height: tab.height
+            drag {
+                target: tabs.count > 1 && tab.isFocused ? tab : null
+                axis: Drag.XAxis
+                minimumX: -tabMouseArea.x + tabs.anchors.leftMargin
+                maximumX: tabs.width - tabMouseArea.width + tabs.anchors.leftMargin
+            }
+            z: tab.isFocused ? 1 : 0
+            Binding {
+                target: tabsBar
+                property: "selectedTabX"
+                value: tab.parent == tabsBar ? tab.x : tabs.x + tabMouseArea.x + tab.x
+                when: tab.isFocused
+            }
+            Binding {
+                target: tabsBar
+                property: "selectedTabWidth"
+                value: tab.width
+                when: tab.isFocused
+            }
 
-                width: tab.width
-                height: tab.height
-                drag {
-                    target: tabsRepeater.count > 1 && tab.isFocused ? tab : null
-                    axis: Drag.XAxis
-                    minimumX: -tabMouseArea.x + tabs.anchors.leftMargin
-                    maximumX: tabs.width - tabMouseArea.width + tabs.anchors.leftMargin
+            onPressed: tabsBar.model.selectTab(index)
+            hoverEnabled: true
+
+            LocalTabs.Tab {
+                id: tab
+
+                anchors.left: tabMouseArea.left
+                width: Math.min(tabs.width / tabs.count, implicitWidth)
+                height: tabs.height
+
+                states: State {
+                    name: "dragging"
+                    when: tabMouseArea.drag.active
+                    ParentChange { target: tab; parent: tabsBar }
+                    AnchorChanges { target: tab; anchors.left: undefined }
                 }
-                z: tab.isFocused ? 1 : 0
-                Binding {
-                    target: tabsBar
-                    property: "selectedTabX"
-                    value: tab.parent == tabsBar ? tab.x : tabs.x + tabMouseArea.x + tab.x
-                    when: tab.isFocused
-                }
-                Binding {
-                    target: tabsBar
-                    property: "selectedTabWidth"
-                    value: tab.width
-                    when: tab.isFocused
-                }
-
-                onPressed: tabsBar.model.selectTab(index)
-                hoverEnabled: true
-
-                LocalTabs.Tab {
-                    id: tab
-
-                    anchors.left: tabMouseArea.left
-                    width: Math.min(tabs.width / tabsRepeater.count, implicitWidth)
-                    height: tabs.height
-
-                    states: State {
-                        name: "dragging"
-                        when: tabMouseArea.drag.active
-                        ParentChange { target: tab; parent: tabsBar }
-                        AnchorChanges { target: tab; anchors.left: undefined }
-                    }
-                    transitions: Transition {
-                        from: "dragging"
-                        ParentAnimation {
-                            NumberAnimation {
-                                property: "x"
-                                duration: UbuntuAnimation.FastDuration
-                                easing: UbuntuAnimation.StandardEasing
-                            }
-                        }
-                        AnchorAnimation {
+                transitions: Transition {
+                    from: "dragging"
+                    ParentAnimation {
+                        NumberAnimation {
+                            property: "x"
                             duration: UbuntuAnimation.FastDuration
                             easing: UbuntuAnimation.StandardEasing
                         }
                     }
-
-                    isHovered: tabMouseArea.containsMouse
-                    isFocused: tabsBar.model.selectedIndex == index
-                    isBeforeFocusedTab: index == tabsBar.model.selectedIndex - 1
-                    title: tabsBar.titleFromModelItem(modelData)
-                    backgroundColor: tabsBar.backgroundColor
-                    foregroundColor: tabsBar.foregroundColor
-                    contourColor: tabsBar.contourColor
-                    actionColor: tabsBar.actionColor
-                    highlightColor: tabsBar.highlightColor
-                    onClose: tabsBar.model.removeTab(index)
-
-                    property real originalX
-                    property bool isDragged: tabMouseArea.drag.active
-                    onIsDraggedChanged: {
-                        if (tab.isDragged) {
-                            tab.originalX = tabMouseArea.x;
-                        }
+                    AnchorAnimation {
+                        duration: UbuntuAnimation.FastDuration
+                        easing: UbuntuAnimation.StandardEasing
                     }
+                }
 
-                    onXChanged: {
-                        if (tab.isDragged) {
-                            var middle = tab.x + tab.width / 2;
-                            if (middle <= tab.originalX) {
-                                if (tabsBar.model.moveTab(index, index - 1)) {
-                                    tab.originalX = tab.originalX - tab.width;
-                                }
-                            } else if (middle >= tab.originalX + tab.width) {
-                                if (tabsBar.model.moveTab(index, index + 1)) {
-                                    tab.originalX = tab.originalX + tab.width;
-                                }
+                isHovered: tabMouseArea.containsMouse
+                isFocused: tabsBar.model.selectedIndex == index
+                isBeforeFocusedTab: index == tabsBar.model.selectedIndex - 1
+                title: tabsBar.titleFromModelItem(modelData)
+                backgroundColor: tabsBar.backgroundColor
+                foregroundColor: tabsBar.foregroundColor
+                contourColor: tabsBar.contourColor
+                actionColor: tabsBar.actionColor
+                highlightColor: tabsBar.highlightColor
+                onClose: tabsBar.model.removeTab(index)
+
+                property real originalX
+                property bool isDragged: tabMouseArea.drag.active
+                onIsDraggedChanged: {
+                    if (tab.isDragged) {
+                        tab.originalX = tabMouseArea.x;
+                    }
+                }
+
+                onXChanged: {
+                    if (tab.isDragged) {
+                        var middle = tab.x + tab.width / 2;
+                        if (middle <= tab.originalX) {
+                            if (tabsBar.model.moveTab(index, index - 1)) {
+                                tab.originalX = tab.originalX - tab.width;
+                            }
+                        } else if (middle >= tab.originalX + tab.width) {
+                            if (tabsBar.model.moveTab(index, index + 1)) {
+                                tab.originalX = tab.originalX + tab.width;
                             }
                         }
                     }
