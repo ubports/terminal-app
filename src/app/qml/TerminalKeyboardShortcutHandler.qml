@@ -77,6 +77,13 @@ Item {
                 tabsModel.selectTab((tabsModel.selectedIndex + 1) % tabsModel.count);
                 break;
             }
+        } else {
+            switch (event.key) {
+            case Qt.Key_F11: // Fullscreen
+                event.accepted = true;
+                mview.toggleFullscreen();
+                break;
+            }
         }
     }
 }

@@ -16,6 +16,7 @@
  * Authored-by: Filippo Scognamiglio <flscogna@gmail.com>
  */
 import QtQuick 2.4
+import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.3
 import "KeyboardRows"
@@ -34,6 +35,16 @@ MainView {
     backgroundColor: terminalPage.terminal ? terminalPage.terminal.backgroundColor : ""
 
     property bool narrowLayout: mview.width <= units.gu(50)
+
+    property int visibilityBeforeFullscreen
+    function toggleFullscreen() {
+        if (QQuickView.visibility != Window.FullScreen) {
+            visibilityBeforeFullscreen = QQuickView.visibility;
+            QQuickView.visibility = Window.FullScreen;
+        } else {
+            QQuickView.visibility = visibilityBeforeFullscreen;
+        }
+    }
 
     AuthenticationService {
         id: authService
