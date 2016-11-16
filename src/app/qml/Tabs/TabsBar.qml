@@ -150,6 +150,14 @@ Rectangle {
             }
 
             onPressed: tabsBar.model.selectTab(index)
+            onWheel: {
+                if (wheel.angleDelta.y >= 0) {
+                    tabsBar.model.selectTab(tabsBar.model.selectedIndex - 1);
+                } else {
+                    tabsBar.model.selectTab(tabsBar.model.selectedIndex + 1);
+                }
+            }
+
             hoverEnabled: true
 
             LocalTabs.Tab {
