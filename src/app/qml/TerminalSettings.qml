@@ -26,7 +26,7 @@ Item {
     property alias fontStyle: innerSettings.fontStyle
     property alias colorScheme: innerSettings.colorScheme
 
-    readonly property int defaultFontSize: 10
+    readonly property int defaultFontSize: 12
     readonly property int minFontSize: 4
     readonly property int maxFontSize: 50
 
