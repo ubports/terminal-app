@@ -19,15 +19,11 @@ import QtQuick 2.4
 
 ListModel {
     property int selectedIndex: -1
-    property int maxTabs: 8
     property var selectedTerminal
 
     id: tabsModel
 
     function addTab() {
-        if (count >= 8)
-            return;
-
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer);
         tabsModel.append({terminal: termObject});
         if (selectedIndex == -1) {
