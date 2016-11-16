@@ -163,8 +163,8 @@ MainView {
 
         // The margins for the terminal canvas are 2px
         // Hardcoded value from TerminalDisplay.h
-        width = 80 * terminalPage.terminal.fontMetrics.width + 2
-        height = 24 * terminalPage.terminal.fontMetrics.height + 2
+        width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
+        height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
     }
 
     InputDeviceManager {
