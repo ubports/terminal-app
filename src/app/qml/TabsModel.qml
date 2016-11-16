@@ -49,6 +49,8 @@ ListModel {
     }
 
     function selectTab(index) {
+        if (index < 0 || index >= tabsModel.count) return;
+
         __disableTerminal(get(selectedIndex).terminal);
         selectedTerminal = get(index).terminal;
         __enableTerminal(selectedTerminal);

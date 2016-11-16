@@ -102,7 +102,8 @@ Page {
 
                     Label {
                         anchors { fill: blackRect; margins: units.dp(2) }
-                        text: tabsModel.get(index).terminal.session.title
+                        property var tab: tabsModel.get(index)
+                        text: tab ? tab.terminal.session.title : ""
                         wrapMode: Text.Wrap
                         color: "white"
                     }

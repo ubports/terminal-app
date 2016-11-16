@@ -56,7 +56,7 @@ MainView {
     Binding {
         target: QQuickView
         property: "title"
-        value: tabsModel.selectedTerminal.session.title
+        value: tabsModel.selectedTerminal ? tabsModel.selectedTerminal.session.title : ""
     }
 
     JsonTranslator {
