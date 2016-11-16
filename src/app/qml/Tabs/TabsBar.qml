@@ -156,6 +156,7 @@ Rectangle {
                 id: tab
 
                 anchors.left: tabMouseArea.left
+                implicitWidth: tabs.availableWidth / 2
                 width: tabs.overflow ? tabs.availableWidth / tabs.maximumTabsCount : Math.min(tabs.maximumTabWidth, implicitWidth)
                 height: tabs.height
 
