@@ -198,6 +198,7 @@ Item{
         anchors.fill: parent
         enabled: !parent.touchAreaPressed
         acceptedButtons: Qt.AllButtons
+        cursorShape: Qt.IBeamCursor
 
         z: parent.z
 
