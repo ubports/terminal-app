@@ -86,12 +86,12 @@ Page {
             bottom: keyboardBarLoader.top
             margins: units.gu(1)
         }
+    }
 
-        // Hide terminal data when the access is still not granted
-        layer.enabled: authService.isDialogVisible
-        layer.effect: FastBlur {
-            radius: units.gu(6)
-        }
+    // Hide terminal data when the access is still not granted
+    layer.enabled: authService.isDialogVisible
+    layer.effect: FastBlur {
+        radius: units.gu(6)
     }
 
     QMLTermScrollbar {
