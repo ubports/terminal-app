@@ -26,6 +26,7 @@
 #include <QtQml/QtQml>
 #include <QLibrary>
 #include <QDir>
+#include <QProcess>
 
 #include "fileio.h"
 
@@ -47,6 +48,15 @@ QStringList getProfileFromDir(const QString &path) {
         result.append(s.prepend(path));
     }
     return result;
+}
+
+bool sshdRunning() {
+    QProcess process;
+    QString pgm("pgrep");
+    QStringList args = QStringList() << "sshd";
+    process.start(pgm, args);
+    process.waitForReadyRead();
+    return !process.readAllStandardOutput().isEmpty();
 }
 
 int main(int argc, char *argv[])
@@ -90,6 +100,7 @@ int main(int argc, char *argv[])
         qDebug() << "    -h|--help     Print this help.";
         qDebug() << "    -I <path>     Give a path for an additional QML import directory. May be used multiple times.";
         qDebug() << "    -q <qmlfile>  Give an alternative location for the main qml file.";
+        qDebug() << "    --ssh     Run a ssh session on local host instead of default bash.";
         qDebug() << " --workdir <dir> Change working directory to 'dir'";
         return 0;
     }
@@ -158,6 +169,20 @@ int main(int argc, char *argv[])
     } else if (qgetenv("QT_QPA_PLATFORM") != "ubuntumirclient") {
         // Default to tablet size on X11
         view.rootContext()->setContextProperty("tablet", QVariant(true));
+    }
+
+    if (args.contains("--ssh")) {
+        bool sshIsAvailable = sshdRunning();
+        view.engine()->rootContext()->setContextProperty("sshRequired", QVariant(true));
+        view.engine()->rootContext()->setContextProperty("sshIsAvailable", sshIsAvailable);
+        if (sshIsAvailable) {
+            view.engine()->rootContext()->setContextProperty("noAuthentication", QVariant(false));
+            view.engine()->rootContext()->setContextProperty("sshUser", qgetenv("USER"));
+        }
+    } else {
+        view.engine()->rootContext()->setContextProperty("sshRequired", QVariant(false));
+        view.engine()->rootContext()->setContextProperty("sshIsAvailable", QVariant(false));
+        view.engine()->rootContext()->setContextProperty("sshUser", "");
     }
 
     view.engine()->setImportPathList(importPathList);

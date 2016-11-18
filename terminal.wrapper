@@ -4,4 +4,4 @@
 export LD_LIBRARY_PATH=/var/lib/snapd/hostfs/usr/lib/nvidia-367/:$LD_LIBRARY_PATH
 
 export HOME=/home/$USER
-exec $SNAP/usr/bin/terminal --desktop_file_hint=unity8 "$@"
+exec $SNAP/usr/bin/terminal --ssh --desktop_file_hint=unity8 "$@"

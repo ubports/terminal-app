@@ -19,6 +19,7 @@ import QtQuick 2.4
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.2
 import "KeyboardRows"
 
 import QMLTermWidget 1.0
@@ -29,6 +30,10 @@ import QtSystemInfo 5.5
 MainView {
     // objectName for functional testing purposes (autopilot-qt5)
     id: mview
+
+    property string userPassword: ""
+    readonly property bool sshMode: sshIsAvailable && sshRequired && (userPassword != "")
+
     objectName: "terminal"
     applicationName: "com.ubuntu.terminal"
     automaticOrientation: true
@@ -49,6 +54,13 @@ MainView {
     AuthenticationService {
         id: authService
         onDenied: Qt.quit();
+        onGranted: {
+            if (sshUser != "") {
+                userPassword = password
+                tabsModel.addTab()
+                tabsModel.removeTab(0)
+            }
+        }
     }
 
     TerminalSettings {
@@ -176,6 +188,20 @@ MainView {
         // Hardcoded value from TerminalDisplay.h
         width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
         height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
+
+        if (sshRequired && !sshIsAvailable) {
+            console.debug("Ask for confirmation")
+            var proceed_dialog =
+                PopupUtils.open( Qt.resolvedUrl( "ConfirmationDialog.qml" ),
+                                terminalPage,
+                                 {'title': i18n.tr("No SSH server running."),
+                                  'text': i18n.tr("SSH server not found. Do you want to proceed in confined mode?")});
+
+            proceed_dialog.dialogCanceled.connect( Qt.quit );
+            proceed_dialog.dialogAccepted.connect( function() {
+                PopupUtils.close(proceed_dialog)
+            })
+        }
     }
 
     InputDeviceManager {

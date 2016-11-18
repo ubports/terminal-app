@@ -36,7 +36,15 @@ Component {
         session: QMLTermSession {
             id: terminalSession
             initialWorkingDirectory: workdir
-
+            shellProgram: (mview.sshMode ? "sshpass" : "bash")
+            shellProgramArgs: (mview.sshMode ? 
+                ["-p", mview.userPassword,
+                 "ssh", "-t",
+                 "-o", "UserKnownHostsFile=/dev/null",
+                 "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
+                 "-o", "LogLevel=Error",
+                 "cd %1; bash".arg(workdir)]
+                : [])
             onFinished: tabsModel.removeTabWithSession(terminalSession);
         }
 

@@ -29,11 +29,11 @@ Item {
     property var __authDialog
     readonly property bool isDialogVisible: __authDialog != null
 
-    signal granted()
+    signal granted(string password)
     signal denied()
 
     Component.onCompleted: {
-        if ( systemAuthentication.requireAuthentication() && !noAuthentication) {
+        if ( (sshIsAvailable && sshRequired) || (systemAuthentication.requireAuthentication() && !noAuthentication)) {
             displayLoginDialog();
         }
     }
@@ -50,7 +50,7 @@ Item {
 
         var verify_password = function( password ) {
             if ( systemAuthentication.validatePasswordToken( password ) ) {
-                granted();
+                granted(password);
                 PopupUtils.close( authentication_dialog );
             }
             else {
