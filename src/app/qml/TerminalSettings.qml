@@ -20,8 +20,7 @@ import Qt.labs.settings 1.0
 
 import "KeyboardRows/jsonParser.js" as Parser
 
-Item {
-    id: rootItem
+QtObject {
     property alias fontSize: innerSettings.fontSize
     property alias fontStyle: innerSettings.fontStyle
     property alias colorScheme: innerSettings.colorScheme
@@ -49,7 +48,7 @@ Item {
         jsonVisibleProfiles = JSON.stringify(result);
     }
 
-    Settings {
+    property Settings innerSettings: Settings {
         id: innerSettings
         property int fontSize: defaultFontSize
         property string fontStyle: "Ubuntu Mono"

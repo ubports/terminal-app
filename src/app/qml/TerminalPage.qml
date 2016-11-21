@@ -88,12 +88,6 @@ Page {
         }
     }
 
-    // Hide terminal data when the access is still not granted
-    layer.enabled: authService.isDialogVisible
-    layer.effect: FastBlur {
-        radius: units.gu(6)
-    }
-
     QMLTermScrollbar {
         anchors {
             top: terminalContainer.anchors.top

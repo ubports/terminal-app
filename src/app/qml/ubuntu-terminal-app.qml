@@ -27,27 +27,29 @@ import QMLTermWidget 1.0
 // Mouse/Touchpad and keyboard support
 import QtSystemInfo 5.5
 
-MainView {
-    // objectName for functional testing purposes (autopilot-qt5)
-    id: mview
+Window {
+    id: window
 
     property string userPassword: ""
     readonly property bool sshMode: sshIsAvailable && sshRequired && (userPassword != "")
 
     objectName: "terminal"
-    applicationName: "com.ubuntu.terminal"
-    automaticOrientation: true
-    backgroundColor: terminalPage.terminal ? terminalPage.terminal.backgroundColor : ""
+    title: tabsModel.selectedTerminal ? tabsModel.selectedTerminal.session.title : ""
+    color: terminalPage.active && terminalPage.terminal ? terminalPage.terminal.backgroundColor : theme.palette.normal.background
+    contentOrientation: Screen.orientation
 
-    property bool narrowLayout: mview.width <= units.gu(50)
+    minimumWidth: units.gu(20)
+    minimumHeight: units.gu(20)
+
+    property bool narrowLayout: window.width <= units.gu(50)
 
     property int visibilityBeforeFullscreen
     function toggleFullscreen() {
-        if (QQuickView.visibility != Window.FullScreen) {
-            visibilityBeforeFullscreen = QQuickView.visibility;
-            QQuickView.visibility = Window.FullScreen;
+        if (window.visibility != Window.FullScreen) {
+            visibilityBeforeFullscreen = window.visibility;
+            window.visibility = Window.FullScreen;
         } else {
-            QQuickView.visibility = visibilityBeforeFullscreen;
+            window.visibility = visibilityBeforeFullscreen;
         }
     }
 
@@ -73,13 +75,6 @@ MainView {
 
     TabsModel {
         id: tabsModel
-        Component.onCompleted: addTab();
-    }
-
-    Binding {
-        target: QQuickView
-        property: "title"
-        value: tabsModel.selectedTerminal ? tabsModel.selectedTerminal.session.title : ""
     }
 
     JsonTranslator {
@@ -116,7 +111,12 @@ MainView {
         TerminalPage {
             id: terminalPage
             tabsModel: tabsModel
-            narrowLayout: mview.narrowLayout
+            narrowLayout: window.narrowLayout
+            // Hide terminal data when the access is still not granted
+            layer.enabled: authService.isDialogVisible
+            layer.effect: FastBlur {
+                radius: units.gu(6)
+            }
 
             // TODO: decide between the expandable button or the two buttons.
 //            ExpandableButton {
@@ -182,18 +182,20 @@ MainView {
     }
 
     Component.onCompleted: {
+        i18n.domain = Qt.application.name;
+        tabsModel.addTab();
         tabsModel.selectTab(0);
 
         // The margins for the terminal canvas are 2px
         // Hardcoded value from TerminalDisplay.h
-        width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
-        height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
+        window.width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
+        window.height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
 
         if (sshRequired && !sshIsAvailable) {
             console.debug("Ask for confirmation")
             var proceed_dialog =
                 PopupUtils.open( Qt.resolvedUrl( "ConfirmationDialog.qml" ),
-                                terminalPage,
+                                 null,
                                  {'title': i18n.tr("No SSH server running."),
                                   'text': i18n.tr("SSH server not found. Do you want to proceed in confined mode?")});
 
@@ -202,6 +204,7 @@ MainView {
                 PopupUtils.close(proceed_dialog)
             })
         }
+        window.show()
     }
 
     InputDeviceManager {

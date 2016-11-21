@@ -36,9 +36,9 @@ Component {
         session: QMLTermSession {
             id: terminalSession
             initialWorkingDirectory: workdir
-            shellProgram: (mview.sshMode ? "sshpass" : "bash")
-            shellProgramArgs: (mview.sshMode ? 
-                ["-p", mview.userPassword,
+            shellProgram: (window.sshMode ? "sshpass" : "bash")
+            shellProgramArgs: (window.sshMode ?
+                ["-p", window.userPassword,
                  "ssh", "-t",
                  "-o", "UserKnownHostsFile=/dev/null",
                  "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),

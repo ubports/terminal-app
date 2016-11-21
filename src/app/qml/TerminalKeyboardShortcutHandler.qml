@@ -81,7 +81,7 @@ Item {
             switch (event.key) {
             case Qt.Key_F11: // Fullscreen
                 event.accepted = true;
-                mview.toggleFullscreen();
+                window.toggleFullscreen();
                 break;
             }
         }

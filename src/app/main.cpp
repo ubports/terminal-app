@@ -22,7 +22,7 @@
  */
 
 #include <QApplication>
-#include <QtQuick/QQuickView>
+#include <QtQml/QQmlApplicationEngine>
 #include <QtQml/QtQml>
 #include <QLibrary>
 #include <QDir>
@@ -62,14 +62,18 @@ bool sshdRunning() {
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QQuickView view;
-    view.setResizeMode(QQuickView::SizeRootObjectToView);
+    QCoreApplication::setApplicationName("com.ubuntu.terminal");
+    // Unset organization to skip an extra folder component
+    QCoreApplication::setOrganizationName(QString());
+    // Get Qtlabs.settings to use a sane path
+    QCoreApplication::setOrganizationDomain(QCoreApplication::applicationName());
+    QQmlApplicationEngine engine;
 
     FileIO fileIO;
-    view.rootContext()->setContextProperty("fileIO", &fileIO);
+    engine.rootContext()->setContextProperty("fileIO", &fileIO);
 
     // Set up import paths
-    QStringList importPathList = view.engine()->importPathList();
+    QStringList importPathList = engine.importPathList();
     // Prepend the location of the plugin in the build dir,
     // so that Qt Creator finds it there, thus overriding the one installed
     // in the sistem if there is one
@@ -106,16 +110,16 @@ int main(int argc, char *argv[])
     }
 
     //Dynamic folder home
-    view.rootContext()->setContextProperty("workdir", getNamedArgument(args, "--workdir", "$HOME"));
+    engine.rootContext()->setContextProperty("workdir", getNamedArgument(args, "--workdir", "$HOME"));
 
     // Desktop doesn't have yet Unity8 and so no unity greeter either. Consequently it doesn't
     // also have any "PIN code" or "Password" extra authentication. Don't require any extra
     // authentication there by default
     if (qgetenv("QT_QPA_PLATFORM") != "ubuntumirclient") {
         qDebug() << Q_FUNC_INFO << "Running on non-MIR desktop, not requiring authentication by default";
-        view.rootContext()->setContextProperty("noAuthentication", QVariant(true));
+        engine.rootContext()->setContextProperty("noAuthentication", QVariant(true));
     } else {
-        view.rootContext()->setContextProperty("noAuthentication", QVariant(false));
+        engine.rootContext()->setContextProperty("noAuthentication", QVariant(false));
     }
 
     QString qmlfile;
@@ -133,10 +137,10 @@ int main(int argc, char *argv[])
             QString value = args.at(i+1);
             if (value == "true") {
                 qDebug() << Q_FUNC_INFO << "Forcing authentication on";
-                view.rootContext()->setContextProperty("noAuthentication", QVariant(false));
+                engine.rootContext()->setContextProperty("noAuthentication", QVariant(false));
             } else if (value == "false") {
                 qDebug() << Q_FUNC_INFO << "Forcing authentication off";
-                view.rootContext()->setContextProperty("noAuthentication", QVariant(true));
+                engine.rootContext()->setContextProperty("noAuthentication", QVariant(true));
             } else {
                 qWarning() << Q_FUNC_INFO << "Invalid forceAuth option '" << value << "', keeping default";
             }
@@ -158,34 +162,34 @@ int main(int argc, char *argv[])
         }
     }
 
-    view.rootContext()->setContextProperty("tablet", QVariant(false));
-    view.rootContext()->setContextProperty("phone", QVariant(false));
+    engine.rootContext()->setContextProperty("tablet", QVariant(false));
+    engine.rootContext()->setContextProperty("phone", QVariant(false));
     if (args.contains("-t") || args.contains("--tablet")) {
         qDebug() << "running in tablet mode";
-        view.rootContext()->setContextProperty("tablet", QVariant(true));
+        engine.rootContext()->setContextProperty("tablet", QVariant(true));
     } else if (args.contains("-p") || args.contains("--phone")){
         qDebug() << "running in phone mode";
-        view.rootContext()->setContextProperty("phone", QVariant(true));
+        engine.rootContext()->setContextProperty("phone", QVariant(true));
     } else if (qgetenv("QT_QPA_PLATFORM") != "ubuntumirclient") {
         // Default to tablet size on X11
-        view.rootContext()->setContextProperty("tablet", QVariant(true));
+        engine.rootContext()->setContextProperty("tablet", QVariant(true));
     }
 
     if (args.contains("--ssh")) {
         bool sshIsAvailable = sshdRunning();
-        view.engine()->rootContext()->setContextProperty("sshRequired", QVariant(true));
-        view.engine()->rootContext()->setContextProperty("sshIsAvailable", sshIsAvailable);
+        engine.rootContext()->setContextProperty("sshRequired", QVariant(true));
+        engine.rootContext()->setContextProperty("sshIsAvailable", sshIsAvailable);
         if (sshIsAvailable) {
-            view.engine()->rootContext()->setContextProperty("noAuthentication", QVariant(false));
-            view.engine()->rootContext()->setContextProperty("sshUser", qgetenv("USER"));
+            engine.rootContext()->setContextProperty("noAuthentication", QVariant(false));
+            engine.rootContext()->setContextProperty("sshUser", qgetenv("USER"));
         }
     } else {
-        view.engine()->rootContext()->setContextProperty("sshRequired", QVariant(false));
-        view.engine()->rootContext()->setContextProperty("sshIsAvailable", QVariant(false));
-        view.engine()->rootContext()->setContextProperty("sshUser", "");
+        engine.rootContext()->setContextProperty("sshRequired", QVariant(false));
+        engine.rootContext()->setContextProperty("sshIsAvailable", QVariant(false));
+        engine.rootContext()->setContextProperty("sshUser", "");
     }
 
-    view.engine()->setImportPathList(importPathList);
+    engine.setImportPathList(importPathList);
 
     QStringList keyboardLayouts;
     // load the qml file
@@ -231,15 +235,13 @@ int main(int argc, char *argv[])
         keyboardLayouts << getProfileFromDir(fullPath);
     }
 
-    view.rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
-    view.rootContext()->setContextProperty("QQuickView", &view);
+    engine.rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
 
     qDebug() << "using main qml file from:" << qmlfile;
-    view.setSource(QUrl::fromLocalFile(qmlfile));
-    view.show();
+    engine.load(QUrl::fromLocalFile(qmlfile));
 
     // Connect the quit signal
-    QObject::connect((QObject*) view.engine(), SIGNAL(quit()), (QObject*) &a, SLOT(quit()));
+    QObject::connect((QObject*) &engine, SIGNAL(quit()), (QObject*) &a, SLOT(quit()));
 
     return a.exec();
 }

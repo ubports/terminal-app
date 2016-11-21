@@ -23,7 +23,7 @@ import com.ubuntu.PamAuthentication 0.1
  Displays login dialog and fires signals
  on access approval or denial.
  */
-Item {
+QtObject {
     id: authenticationService
 
     property var __authDialog
@@ -45,8 +45,7 @@ Item {
      */
     function displayLoginDialog() {
         var authentication_dialog =
-            PopupUtils.open( Qt.resolvedUrl( "AuthenticationDialog.qml" ),
-                             authenticationService );
+            PopupUtils.open( Qt.resolvedUrl( "AuthenticationDialog.qml" ) );
 
         var verify_password = function( password ) {
             if ( systemAuthentication.validatePasswordToken( password ) ) {
@@ -59,7 +58,7 @@ Item {
                 };
 
                 PopupUtils.open( Qt.resolvedUrl( "NotifyDialog.qml" ),
-                                 authenticationService,
+                                 null,
                                  dialog_options );
             }
         };
@@ -70,8 +69,7 @@ Item {
         __authDialog = authentication_dialog
     }
 
-    PamAuthentication {
-        id: systemAuthentication
+    property var systemAuthentication: PamAuthentication {
         serviceName: "terminal"
     }
 }
