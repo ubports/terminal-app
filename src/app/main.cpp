@@ -62,11 +62,6 @@ bool sshdRunning() {
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QCoreApplication::setApplicationName("com.ubuntu.terminal");
-    // Unset organization to skip an extra folder component
-    QCoreApplication::setOrganizationName(QString());
-    // Get Qtlabs.settings to use a sane path
-    QCoreApplication::setOrganizationDomain(QCoreApplication::applicationName());
     QQmlApplicationEngine engine;
 
     FileIO fileIO;
@@ -236,6 +231,12 @@ int main(int argc, char *argv[])
     }
 
     engine.rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
+
+    QCoreApplication::setApplicationName("com.ubuntu.terminal");
+    // Unset organization to skip an extra folder component
+    QCoreApplication::setOrganizationName(QString());
+    // Get Qtlabs.settings to use a sane path
+    QCoreApplication::setOrganizationDomain(QCoreApplication::applicationName());
 
     qDebug() << "using main qml file from:" << qmlfile;
     engine.load(QUrl::fromLocalFile(qmlfile));
