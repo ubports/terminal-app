@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-22 14:26+0100\n"
+"POT-Creation-Date: 2016-11-22 17:23+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,959 +17,284 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:138
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:138
-msgid "About Application"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:139
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:139
-msgid ""
-"The <b>Application</b> example demonstrates how to write modern GUI "
-"applications using Qt, with a menu bar, toolbars, and a status bar."
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:157
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:157
-msgid "&New"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:159
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:159
-msgid "Create a new file"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:163
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:163
-msgid "&Open..."
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:165
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:165
-msgid "Open an existing file"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:169
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:169
-msgid "&Save"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:171
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:171
-msgid "Save the document to disk"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:174
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:174
-msgid "Save &As..."
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:176
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:176
-msgid "Save the document under a new name"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:180
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:180
-msgid "E&xit"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:183
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:183
-msgid "Exit the application"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:187
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:187
-msgid "Cu&t"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:190
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:190
-msgid "Cut the current selection's contents to the clipboard"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:194
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:194
-msgid "&Copy"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:196
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:196
-msgid "Copy the current selection's contents to the clipboard"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:200
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:200
-msgid "&Paste"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:202
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:202
-msgid "Paste the clipboard's contents into the current selection"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:206
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:206
-msgid "&About"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:207
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:207
-msgid "Show the application's About box"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:211
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:211
-msgid "About &Qt"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:212
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:212
-msgid "Show the Qt library's About box"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:231
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:231
-msgid "&File"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:242
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:242
-msgid "&Edit"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:249
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:249
-msgid "&Help"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:258
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:258
-msgid "File"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:265
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:265
-msgid "Edit"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:276
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:276
-msgid "Ready"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:308
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:327
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:354
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:308
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:327
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:354
-msgid "Application"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:309
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:309
-msgid ""
-"The document has been modified.\n"
-"Do you want to save your changes?"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:328
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:328
-#, qt-format
-msgid ""
-"Cannot read file %1:\n"
-"%2."
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:344
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:344
-msgid "File loaded"
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:355
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:355
-#, qt-format
-msgid ""
-"Cannot write file %1:\n"
-"%2."
-msgstr ""
-
-#: ../parts/desktop-ubuntu-app-platform/build/demos/qt5/src/mainwindow.cpp:371
-#: ../parts/desktop-ubuntu-app-platform/src/demos/qt5/src/mainwindow.cpp:371
-msgid "File saved"
-msgstr ""
-
-#: ../parts/terminal/build/po/com.ubuntu.terminal.desktop.in.in.h:1
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr ""
-
-#: ../parts/terminal/build/src/app/qml/AlternateActionPopover.qml:30
-#: ../parts/terminal/install/usr/share/terminal/qml/AlternateActionPopover.qml:30
-#: ../parts/terminal/src/src/app/qml/AlternateActionPopover.qml:30
-#: ../parts/wrapper/build/src/app/qml/AlternateActionPopover.qml:30
-#: ../parts/wrapper/install/src/app/qml/AlternateActionPopover.qml:30
-#: ../parts/wrapper/src/src/app/qml/AlternateActionPopover.qml:30
-#: ../prime/usr/share/terminal/qml/AlternateActionPopover.qml:30
 #: ../src/app/qml/AlternateActionPopover.qml:30
-#: ../stage/usr/share/terminal/qml/AlternateActionPopover.qml:30
 msgid "Select"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AlternateActionPopover.qml:34
-#: ../parts/terminal/install/usr/share/terminal/qml/AlternateActionPopover.qml:34
-#: ../parts/terminal/src/src/app/qml/AlternateActionPopover.qml:34
-#: ../parts/wrapper/build/src/app/qml/AlternateActionPopover.qml:34
-#: ../parts/wrapper/install/src/app/qml/AlternateActionPopover.qml:34
-#: ../parts/wrapper/src/src/app/qml/AlternateActionPopover.qml:34
-#: ../prime/usr/share/terminal/qml/AlternateActionPopover.qml:34
 #: ../src/app/qml/AlternateActionPopover.qml:34
-#: ../stage/usr/share/terminal/qml/AlternateActionPopover.qml:34
 msgid "Copy"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AlternateActionPopover.qml:39
-#: ../parts/terminal/install/usr/share/terminal/qml/AlternateActionPopover.qml:39
-#: ../parts/terminal/src/src/app/qml/AlternateActionPopover.qml:39
-#: ../parts/wrapper/build/src/app/qml/AlternateActionPopover.qml:39
-#: ../parts/wrapper/install/src/app/qml/AlternateActionPopover.qml:39
-#: ../parts/wrapper/src/src/app/qml/AlternateActionPopover.qml:39
-#: ../prime/usr/share/terminal/qml/AlternateActionPopover.qml:39
 #: ../src/app/qml/AlternateActionPopover.qml:39
-#: ../stage/usr/share/terminal/qml/AlternateActionPopover.qml:39
 msgid "Paste"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AuthenticationDialog.qml:25
-#: ../parts/terminal/install/usr/share/terminal/qml/AuthenticationDialog.qml:25
-#: ../parts/terminal/src/src/app/qml/AuthenticationDialog.qml:25
-#: ../parts/wrapper/build/src/app/qml/AuthenticationDialog.qml:25
-#: ../parts/wrapper/install/src/app/qml/AuthenticationDialog.qml:25
-#: ../parts/wrapper/src/src/app/qml/AuthenticationDialog.qml:25
-#: ../prime/usr/share/terminal/qml/AuthenticationDialog.qml:25
 #: ../src/app/qml/AuthenticationDialog.qml:25
-#: ../stage/usr/share/terminal/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AuthenticationDialog.qml:27
-#: ../parts/terminal/install/usr/share/terminal/qml/AuthenticationDialog.qml:27
-#: ../parts/terminal/src/src/app/qml/AuthenticationDialog.qml:27
-#: ../parts/wrapper/build/src/app/qml/AuthenticationDialog.qml:27
-#: ../parts/wrapper/install/src/app/qml/AuthenticationDialog.qml:27
-#: ../parts/wrapper/src/src/app/qml/AuthenticationDialog.qml:27
-#: ../prime/usr/share/terminal/qml/AuthenticationDialog.qml:27
 #: ../src/app/qml/AuthenticationDialog.qml:27
-#: ../stage/usr/share/terminal/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AuthenticationDialog.qml:48
-#: ../parts/terminal/install/usr/share/terminal/qml/AuthenticationDialog.qml:48
-#: ../parts/terminal/src/src/app/qml/AuthenticationDialog.qml:48
-#: ../parts/wrapper/build/src/app/qml/AuthenticationDialog.qml:48
-#: ../parts/wrapper/install/src/app/qml/AuthenticationDialog.qml:48
-#: ../parts/wrapper/src/src/app/qml/AuthenticationDialog.qml:48
-#: ../prime/usr/share/terminal/qml/AuthenticationDialog.qml:48
 #: ../src/app/qml/AuthenticationDialog.qml:48
-#: ../stage/usr/share/terminal/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AuthenticationDialog.qml:58
-#: ../parts/terminal/install/usr/share/terminal/qml/AuthenticationDialog.qml:58
-#: ../parts/terminal/src/src/app/qml/AuthenticationDialog.qml:58
-#: ../parts/wrapper/build/src/app/qml/AuthenticationDialog.qml:58
-#: ../parts/wrapper/install/src/app/qml/AuthenticationDialog.qml:58
-#: ../parts/wrapper/src/src/app/qml/AuthenticationDialog.qml:58
-#: ../prime/usr/share/terminal/qml/AuthenticationDialog.qml:58
 #: ../src/app/qml/AuthenticationDialog.qml:58
-#: ../stage/usr/share/terminal/qml/AuthenticationDialog.qml:58
 msgid "OK"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AuthenticationDialog.qml:70
-#: ../parts/terminal/build/src/app/qml/ConfirmationDialog.qml:47
-#: ../parts/terminal/install/usr/share/terminal/qml/AuthenticationDialog.qml:70
-#: ../parts/terminal/install/usr/share/terminal/qml/ConfirmationDialog.qml:47
-#: ../parts/terminal/src/src/app/qml/AuthenticationDialog.qml:70
-#: ../parts/terminal/src/src/app/qml/ConfirmationDialog.qml:47
-#: ../parts/wrapper/build/src/app/qml/AuthenticationDialog.qml:70
-#: ../parts/wrapper/build/src/app/qml/ConfirmationDialog.qml:47
-#: ../parts/wrapper/install/src/app/qml/AuthenticationDialog.qml:70
-#: ../parts/wrapper/install/src/app/qml/ConfirmationDialog.qml:47
-#: ../parts/wrapper/src/src/app/qml/AuthenticationDialog.qml:70
-#: ../parts/wrapper/src/src/app/qml/ConfirmationDialog.qml:47
-#: ../prime/usr/share/terminal/qml/AuthenticationDialog.qml:70
-#: ../prime/usr/share/terminal/qml/ConfirmationDialog.qml:47
 #: ../src/app/qml/AuthenticationDialog.qml:70
 #: ../src/app/qml/ConfirmationDialog.qml:47
-#: ../stage/usr/share/terminal/qml/AuthenticationDialog.qml:70
-#: ../stage/usr/share/terminal/qml/ConfirmationDialog.qml:47
 msgid "Cancel"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/AuthenticationService.qml:58
-#: ../parts/terminal/install/usr/share/terminal/qml/AuthenticationService.qml:58
-#: ../parts/terminal/src/src/app/qml/AuthenticationService.qml:58
-#: ../parts/wrapper/build/src/app/qml/AuthenticationService.qml:58
-#: ../parts/wrapper/install/src/app/qml/AuthenticationService.qml:58
-#: ../parts/wrapper/src/src/app/qml/AuthenticationService.qml:58
-#: ../prime/usr/share/terminal/qml/AuthenticationService.qml:58
 #: ../src/app/qml/AuthenticationService.qml:57
-#: ../stage/usr/share/terminal/qml/AuthenticationService.qml:58
 msgid "Authentication failed"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ColorSchemePage.qml:27
-#: ../parts/terminal/build/src/app/qml/SettingsPage.qml:100
-#: ../parts/terminal/install/usr/share/terminal/qml/ColorSchemePage.qml:27
-#: ../parts/terminal/install/usr/share/terminal/qml/SettingsPage.qml:100
-#: ../parts/terminal/src/src/app/qml/ColorSchemePage.qml:27
-#: ../parts/terminal/src/src/app/qml/SettingsPage.qml:100
-#: ../parts/wrapper/build/src/app/qml/ColorSchemePage.qml:27
-#: ../parts/wrapper/build/src/app/qml/SettingsPage.qml:100
-#: ../parts/wrapper/install/src/app/qml/ColorSchemePage.qml:27
-#: ../parts/wrapper/install/src/app/qml/SettingsPage.qml:100
-#: ../parts/wrapper/src/src/app/qml/ColorSchemePage.qml:27
-#: ../parts/wrapper/src/src/app/qml/SettingsPage.qml:100
-#: ../prime/usr/share/terminal/qml/ColorSchemePage.qml:27
-#: ../prime/usr/share/terminal/qml/SettingsPage.qml:100
-#: ../stage/usr/share/terminal/qml/ColorSchemePage.qml:27
-#: ../stage/usr/share/terminal/qml/SettingsPage.qml:100
-msgid "Color Scheme"
-msgstr ""
-
-#: ../parts/terminal/build/src/app/qml/ConfirmationDialog.qml:37
-#: ../parts/terminal/install/usr/share/terminal/qml/ConfirmationDialog.qml:37
-#: ../parts/terminal/src/src/app/qml/ConfirmationDialog.qml:37
-#: ../parts/wrapper/build/src/app/qml/ConfirmationDialog.qml:37
-#: ../parts/wrapper/install/src/app/qml/ConfirmationDialog.qml:37
-#: ../parts/wrapper/src/src/app/qml/ConfirmationDialog.qml:37
-#: ../prime/usr/share/terminal/qml/ConfirmationDialog.qml:37
 #: ../src/app/qml/ConfirmationDialog.qml:37
-#: ../stage/usr/share/terminal/qml/ConfirmationDialog.qml:37
 msgid "Continue"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/KeyboardBar.qml:196
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardBar.qml:196
-#: ../parts/terminal/src/src/app/qml/KeyboardBar.qml:196
-#: ../parts/wrapper/build/src/app/qml/KeyboardBar.qml:196
-#: ../parts/wrapper/install/src/app/qml/KeyboardBar.qml:196
-#: ../parts/wrapper/src/src/app/qml/KeyboardBar.qml:196
-#: ../prime/usr/share/terminal/qml/KeyboardBar.qml:196
 #: ../src/app/qml/KeyboardBar.qml:196
-#: ../stage/usr/share/terminal/qml/KeyboardBar.qml:196
 msgid "Change Keyboard"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:35
 msgid "Control Keys"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:38
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "Function Keys"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:41
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:41
 msgid "Scroll Keys"
 msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:44
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:44
 msgid "Command Keys"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:78
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:52
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:78
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:78
 msgid "CTRL"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:55
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:55
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:55
 msgid "FNS"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:58
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:58
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:58
 msgid "SCR"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:61
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CMD"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:81
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:81
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:81
 msgid "ALT"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:84
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:84
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:84
 msgid "SHIFT"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:97
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:97
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:97
 msgid "ESC"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:100
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:103
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:103
 msgid "PG_DN"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:106
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:106
 msgid "DEL"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:109
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:109
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:109
 msgid "HOME"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:112
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:115
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:115
 msgid "TAB"
 msgstr ""
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
-#: ../parts/terminal/build/src/app/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../parts/terminal/install/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../parts/terminal/src/src/app/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../parts/wrapper/build/src/app/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../parts/wrapper/install/src/app/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../parts/wrapper/src/src/app/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../prime/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:118
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:118
-#: ../stage/usr/share/terminal/qml/KeyboardRows/JsonTranslator.qml:118
 msgid "ENTER"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/LayoutsPage.qml:27
-#: ../parts/terminal/build/src/app/qml/SettingsPage.qml:44
-#: ../parts/terminal/install/usr/share/terminal/qml/LayoutsPage.qml:27
-#: ../parts/terminal/install/usr/share/terminal/qml/SettingsPage.qml:44
-#: ../parts/terminal/src/src/app/qml/LayoutsPage.qml:27
-#: ../parts/terminal/src/src/app/qml/SettingsPage.qml:44
-#: ../parts/wrapper/build/src/app/qml/LayoutsPage.qml:27
-#: ../parts/wrapper/build/src/app/qml/SettingsPage.qml:44
-#: ../parts/wrapper/install/src/app/qml/LayoutsPage.qml:27
-#: ../parts/wrapper/install/src/app/qml/SettingsPage.qml:44
-#: ../parts/wrapper/src/src/app/qml/LayoutsPage.qml:27
-#: ../parts/wrapper/src/src/app/qml/SettingsPage.qml:44
-#: ../prime/usr/share/terminal/qml/LayoutsPage.qml:27
-#: ../prime/usr/share/terminal/qml/SettingsPage.qml:44
-#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:170
-#: ../stage/usr/share/terminal/qml/LayoutsPage.qml:27
-#: ../stage/usr/share/terminal/qml/SettingsPage.qml:44
+#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:173
 msgid "Layouts"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/NotifyDialog.qml:25
-#: ../parts/terminal/install/usr/share/terminal/qml/NotifyDialog.qml:25
-#: ../parts/terminal/src/src/app/qml/NotifyDialog.qml:25
-#: ../parts/wrapper/build/src/app/qml/NotifyDialog.qml:25
-#: ../parts/wrapper/install/src/app/qml/NotifyDialog.qml:25
-#: ../parts/wrapper/src/src/app/qml/NotifyDialog.qml:25
-#: ../prime/usr/share/terminal/qml/NotifyDialog.qml:25
 #: ../src/app/qml/NotifyDialog.qml:25
-#: ../stage/usr/share/terminal/qml/NotifyDialog.qml:25
 msgid "Ok"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/SettingsPage.qml:27
-#: ../parts/terminal/install/usr/share/terminal/qml/SettingsPage.qml:27
-#: ../parts/terminal/src/src/app/qml/SettingsPage.qml:27
-#: ../parts/wrapper/build/src/app/qml/SettingsPage.qml:27
-#: ../parts/wrapper/install/src/app/qml/SettingsPage.qml:27
-#: ../parts/wrapper/src/src/app/qml/SettingsPage.qml:27
-#: ../prime/usr/share/terminal/qml/SettingsPage.qml:27
-#: ../stage/usr/share/terminal/qml/SettingsPage.qml:27
-msgid "Settings"
+#: ../src/app/qml/SettingsPage.qml:31
+msgid "Preferences"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/SettingsPage.qml:67
-#: ../parts/terminal/install/usr/share/terminal/qml/SettingsPage.qml:67
-#: ../parts/terminal/src/src/app/qml/SettingsPage.qml:67
-#: ../parts/wrapper/build/src/app/qml/SettingsPage.qml:67
-#: ../parts/wrapper/install/src/app/qml/SettingsPage.qml:67
-#: ../parts/wrapper/src/src/app/qml/SettingsPage.qml:67
-#: ../prime/usr/share/terminal/qml/SettingsPage.qml:67
-#: ../src/app/qml/SettingsPage.qml:104
-#: ../stage/usr/share/terminal/qml/SettingsPage.qml:67
+#: ../src/app/qml/SettingsPage.qml:66
+msgid "Text"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:77
+msgid "Font:"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:107
 msgid "Font Size:"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/TabsPage.qml:26
-#: ../parts/terminal/install/usr/share/terminal/qml/TabsPage.qml:26
-#: ../parts/terminal/src/src/app/qml/TabsPage.qml:26
-#: ../parts/wrapper/build/src/app/qml/TabsPage.qml:26
-#: ../parts/wrapper/install/src/app/qml/TabsPage.qml:26
-#: ../parts/wrapper/src/src/app/qml/TabsPage.qml:26
-#: ../prime/usr/share/terminal/qml/TabsPage.qml:26
-#: ../src/app/qml/TabsPage.qml:26
-#: ../stage/usr/share/terminal/qml/TabsPage.qml:26
-msgid "Tabs"
-msgstr ""
-
-#: ../parts/terminal/build/src/app/qml/TabsPage.qml:32
-#: ../parts/terminal/install/usr/share/terminal/qml/TabsPage.qml:32
-#: ../parts/terminal/src/src/app/qml/TabsPage.qml:32
-#: ../parts/wrapper/build/src/app/qml/TabsPage.qml:32
-#: ../parts/wrapper/install/src/app/qml/TabsPage.qml:32
-#: ../parts/wrapper/src/src/app/qml/TabsPage.qml:32
-#: ../prime/usr/share/terminal/qml/TabsPage.qml:32
-#: ../src/app/qml/TabsPage.qml:32
-#: ../stage/usr/share/terminal/qml/TabsPage.qml:32
-msgid "New tab"
-msgstr ""
-
-#: ../parts/terminal/build/src/app/qml/TerminalPage.qml:252
-#: ../parts/terminal/install/usr/share/terminal/qml/TerminalPage.qml:252
-#: ../parts/terminal/src/src/app/qml/TerminalPage.qml:252
-#: ../parts/wrapper/build/src/app/qml/TerminalPage.qml:252
-#: ../parts/wrapper/install/src/app/qml/TerminalPage.qml:252
-#: ../parts/wrapper/src/src/app/qml/TerminalPage.qml:252
-#: ../prime/usr/share/terminal/qml/TerminalPage.qml:252
-#: ../src/app/qml/TerminalPage.qml:246
-#: ../stage/usr/share/terminal/qml/TerminalPage.qml:252
-msgid "Selection Mode"
+#: ../src/app/qml/SettingsPage.qml:140
+msgid "ANSI Colors"
 msgstr ""
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Green on black"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "White on black"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Black on white"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Black on random light"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Linux"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Cool retro term"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Dark pastels / Ubuntu (old)"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Black on light yellow"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:180
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
-#: ../src/app/qml/SettingsPage.qml:143
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:180
+#: ../src/app/qml/SettingsPage.qml:146
 msgid "Ubuntu"
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:197
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:197
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:197
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:197
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:197
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:197
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:197
-#: ../src/app/qml/ubuntu-terminal-app.qml:188
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:197
+#: ../src/app/qml/SettingsPage.qml:150
+msgid "Preset:"
+msgstr ""
+
+#: ../src/app/qml/TabsPage.qml:26
+msgid "Tabs"
+msgstr ""
+
+#: ../src/app/qml/TabsPage.qml:32
+msgid "New tab"
+msgstr ""
+
+#: ../src/app/qml/TerminalPage.qml:246
+msgid "Selection Mode"
+msgstr ""
+
+#: ../src/app/qml/ubuntu-terminal-app.qml:164
 msgid "No SSH server running."
 msgstr ""
 
-#: ../parts/terminal/build/src/app/qml/ubuntu-terminal-app.qml:198
-#: ../parts/terminal/install/usr/share/terminal/qml/ubuntu-terminal-app.qml:198
-#: ../parts/terminal/src/src/app/qml/ubuntu-terminal-app.qml:198
-#: ../parts/wrapper/build/src/app/qml/ubuntu-terminal-app.qml:198
-#: ../parts/wrapper/install/src/app/qml/ubuntu-terminal-app.qml:198
-#: ../parts/wrapper/src/src/app/qml/ubuntu-terminal-app.qml:198
-#: ../prime/usr/share/terminal/qml/ubuntu-terminal-app.qml:198
-#: ../src/app/qml/ubuntu-terminal-app.qml:189
-#: ../stage/usr/share/terminal/qml/ubuntu-terminal-app.qml:198
+#: ../src/app/qml/ubuntu-terminal-app.qml:165
 msgid "SSH server not found. Do you want to proceed in confined mode?"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/Filter.cpp:533
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/Filter.cpp:533
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/Filter.cpp:533
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/Filter.cpp:533
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/Filter.cpp:534
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/Filter.cpp:534
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/Filter.cpp:534
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/Filter.cpp:534
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/Filter.cpp:538
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/Filter.cpp:538
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/Filter.cpp:538
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/Filter.cpp:538
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/Filter.cpp:539
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/Filter.cpp:539
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/Filter.cpp:539
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/Filter.cpp:539
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/SearchBar.cpp:39
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/SearchBar.cpp:39
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/SearchBar.cpp:39
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/SearchBar.cpp:45
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/SearchBar.cpp:45
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/SearchBar.cpp:45
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/SearchBar.cpp:49
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/SearchBar.cpp:49
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/SearchBar.cpp:49
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
 msgstr ""
 
-#: ../parts/terminal/src/src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
-#: ../parts/wrapper/build/src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
-#: ../parts/wrapper/install/src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
-#: ../parts/wrapper/src/src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:28
-msgid "Preferences"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:63
-msgid "Text"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:74
-msgid "Font:"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "ANSI Colors"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:147
-msgid "Preset:"
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
 msgstr ""

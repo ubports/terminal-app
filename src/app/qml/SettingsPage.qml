@@ -24,6 +24,9 @@ Page {
     id: settingsPage
     objectName: "settingsPage"
 
+    implicitWidth: units.gu(60)
+    implicitHeight: units.gu(80)
+
     header: PageHeader {
         title: i18n.tr("Preferences")
         flickable: scrollView.flickableItem

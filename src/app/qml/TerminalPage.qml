@@ -70,7 +70,7 @@ Page {
             },
             Action {
                 iconName: "settings"
-                onTriggered: pageStack.push(settingsPage)
+                onTriggered: window.openSettingsPage()
             }
         ]
         visible: !terminalPage.narrowLayout
@@ -275,7 +275,7 @@ Page {
         iconColor: tabsBar.actionColor
         action: Action {
             iconName: "settings"
-            onTriggered: pageStack.push(settingsPage);
+            onTriggered: window.openSettingsPage()
         }
         visible: terminalPage.narrowLayout
     }

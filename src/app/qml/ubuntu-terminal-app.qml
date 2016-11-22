@@ -53,6 +53,10 @@ Window {
         }
     }
 
+    function openSettingsPage() {
+        settingsLoader.active = true;
+    }
+
     AuthenticationService {
         id: authService
         onDenied: Qt.quit();
@@ -117,40 +121,6 @@ Window {
             layer.effect: FastBlur {
                 radius: units.gu(6)
             }
-
-            // TODO: decide between the expandable button or the two buttons.
-//            ExpandableButton {
-//                size: units.gu(6)
-//                anchors {right: parent.right; top: parent.top; margins: units.gu(1);}
-//                rotation: 1
-//                childComponent: Component {
-//                    Rectangle {
-//                        color: "#99000000" // Transparent black
-//                        radius: width * 0.5
-//                        border.color: UbuntuColors.orange;
-//                        border.width: units.dp(3)
-//                    }
-//                }
-
-//                Icon {
-//                    width: units.gu(3)
-//                    height: width
-//                    anchors.centerIn: parent
-//                    name: "settings"
-//                    color: "Grey"
-//                }
-
-//                actions: [
-//                    Action {
-//                        iconName: "settings"
-//                        onTriggered: pageStack.push(settingsPage)
-//                    },
-//                    Action {
-//                        iconName: "browser-tabs"
-//                        onTriggered: pageStack.push(tabsPage)
-//                    }
-//                ]
-//            }
         }
 
         TabsPage {
@@ -158,9 +128,16 @@ Window {
             visible: false
         }
 
-        SettingsPage {
-            id: settingsPage
-            visible: false
+        Loader {
+            id: settingsLoader
+            source: Qt.resolvedUrl("SettingsWindow.qml")
+            active: false
+            asynchronous: true
+
+            Connections {
+                target: settingsLoader.item
+                onClosing: settingsLoader.active = false
+            }
         }
 
         LayoutsPage {
