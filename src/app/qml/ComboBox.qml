@@ -27,7 +27,7 @@ MouseArea {
     readonly property string currentText: model.get ? model.get(currentIndex)
                                                     : model[currentIndex]
 
-    implicitWidth: units.gu(27)
+    implicitWidth: units.gu(21)
     implicitHeight: units.gu(4)
 
     Rectangle {
