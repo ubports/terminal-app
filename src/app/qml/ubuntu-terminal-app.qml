@@ -35,7 +35,7 @@ Window {
 
     objectName: "terminal"
     title: tabsModel.selectedTerminal ? tabsModel.selectedTerminal.session.title : ""
-    color: terminalPage.active && terminalPage.terminal ? terminalPage.terminal.backgroundColor : theme.palette.normal.background
+    color: terminalPage.active && terminalPage.terminal ? terminalPage.terminal.backgroundColor : theme.palette.selected.overlay
     contentOrientation: Screen.orientation
 
     minimumWidth: units.gu(20)
@@ -166,18 +166,6 @@ Window {
         LayoutsPage {
             id: layoutsPage
             visible: false
-        }
-
-        ColorSchemePage {
-            id: colorSchemePage
-            visible: false
-
-            // TODO This is a workaround at the moment.
-            // The application should get them from the c++.
-            model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
-
-            // TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-            namesModel: [i18n.tr("Green on black"),i18n.tr("White on black"),i18n.tr("Black on white"),i18n.tr("Black on random light"),i18n.tr("Linux"),i18n.tr("Cool retro term"),i18n.tr("Dark pastels / Ubuntu (old)"),i18n.tr("Black on light yellow"),i18n.tr("Ubuntu")]
         }
     }
 

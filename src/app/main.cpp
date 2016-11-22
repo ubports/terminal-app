@@ -41,7 +41,7 @@ QStringList getProfileFromDir(const QString &path) {
     QDir layoutDir(path);
     layoutDir.setNameFilters(QStringList("*.json"));
 
-    QStringList jsonFiles = layoutDir.entryList();   
+    QStringList jsonFiles = layoutDir.entryList();
 
     QStringList result;
     foreach (QString s, jsonFiles) {
