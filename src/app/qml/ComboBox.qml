@@ -113,7 +113,7 @@ MouseArea {
         }
     }
 
-    onClicked: {
+    onPressed: {
         var properties = {
             "model": comboBox.model,
             "itemHeight": comboBox.height,
