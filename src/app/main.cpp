@@ -96,18 +96,14 @@ int main(int argc, char *argv[])
 
     QStringList args = a.arguments();
     if (args.contains("-h") || args.contains("--help")) {
-        qDebug() << "usage: " + args.at(0) + " [--workdir <dir>] [-h|--help] [-I <path>]";
+        qDebug() << "usage: " + args.at(0) + " [-h|--help] [-I <path>]";
         qDebug() << "    --forceAuth <true|false> Force authentication on or off.";
         qDebug() << "    -h|--help     Print this help.";
         qDebug() << "    -I <path>     Give a path for an additional QML import directory. May be used multiple times.";
         qDebug() << "    -q <qmlfile>  Give an alternative location for the main qml file.";
         qDebug() << "    --ssh     Run a ssh session on local host instead of default bash.";
-        qDebug() << " --workdir <dir> Change working directory to 'dir'";
         return 0;
     }
-
-    //Dynamic folder home
-    engine.rootContext()->setContextProperty("workdir", getNamedArgument(args, "--workdir", "$HOME"));
 
     // Desktop doesn't have yet Unity8 and so no unity greeter either. Consequently it doesn't
     // also have any "PIN code" or "Password" extra authentication. Don't require any extra

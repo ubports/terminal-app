@@ -26,7 +26,15 @@ ListModel {
     property Component terminalComponent: TerminalComponent {}
 
     function addTab() {
-        var termObject = terminalComponent.createObject(terminalPage.terminalContainer);
+        var initialWorkingDirectory;
+        if (selectedTerminal) {
+            initialWorkingDirectory = selectedTerminal.session.workingDirectory;
+        } else {
+            initialWorkingDirectory = "$HOME";
+        }
+
+        var termObject = terminalComponent.createObject(terminalPage.terminalContainer,
+                                                        {"initialWorkingDirectory": initialWorkingDirectory});
         tabsModel.append({terminal: termObject});
         if (selectedIndex == -1) {
             selectedIndex = 0;

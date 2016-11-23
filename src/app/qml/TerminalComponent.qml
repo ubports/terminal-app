@@ -28,11 +28,12 @@ QMLTermWidget {
     font.family: settings.fontStyle
     font.pixelSize: FontUtils.sizeToPixels("medium") * settings.fontSize / 10
 
+    property string initialWorkingDirectory
     signal sessionFinished(var session);
 
     session: QMLTermSession {
         id: terminalSession
-        initialWorkingDirectory: workdir
+        initialWorkingDirectory: terminal.initialWorkingDirectory
         shellProgram: (terminalAppRoot.sshMode ? "sshpass" : "bash")
         shellProgramArgs: (terminalAppRoot.sshMode ?
             ["-p", terminalAppRoot.userPassword,
@@ -40,7 +41,7 @@ QMLTermWidget {
              "-o", "UserKnownHostsFile=/dev/null",
              "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
              "-o", "LogLevel=Error",
-             "cd %1; bash".arg(workdir)]
+             "cd %1; bash".arg(initialWorkingDirectory)]
             : [])
         onFinished: tabsModel.removeTabWithSession(terminalSession);
     }

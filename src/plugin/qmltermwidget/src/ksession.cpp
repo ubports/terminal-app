@@ -188,6 +188,11 @@ QString KSession::getInitialWorkingDirectory()
     return _initialWorkingDirectory;
 }
 
+QString KSession::workingDirectory()
+{
+    return m_session->workingDirectory();
+}
+
 void KSession::setArgs(const QStringList &args)
 {
     m_session->setArguments(args);

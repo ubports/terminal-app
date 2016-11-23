@@ -169,6 +169,22 @@ void Session::setInitialWorkingDirectory(const QString & dir)
 {
     _initialWorkingDir = ShellCommand::expand(dir);
 }
+
+QString workingDirectoryForPid(qint64 pid) {
+    QString symlink = QString("/proc/%1/cwd").arg(pid);
+    QByteArray workingDirectory;
+    workingDirectory.reserve(PATH_MAX);
+    ssize_t length = readlink(symlink.toLocal8Bit().constData(),
+                              workingDirectory.data(), PATH_MAX);
+    workingDirectory.resize(length);
+    return QString::fromLocal8Bit(workingDirectory);
+}
+
+QString Session::workingDirectory()
+{
+    return workingDirectoryForPid(_shellProcess->processId());
+}
+
 void Session::setArguments(const QStringList & arguments)
 {
     _arguments = ShellCommand::expand(arguments);
