@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.4
+import QtQuick.Layouts 1.3
 import Ubuntu.Components 1.3
 
 Page {
@@ -157,24 +158,34 @@ Page {
                 visible: !QuickUtils.keyboardAttached
                 title: i18n.tr("Layouts")
 
-                MouseArea {
-                    parent: layoutsCard
-                    anchors.fill: parent
-                    onClicked: pageStack.push(layoutsPage)
-                }
+                Column {
+                    width: Math.min(parent.width, units.gu(32))
 
-                Icon {
-                    parent: layoutsCard
-                    anchors {
-                        right: parent.right
-                        rightMargin: layoutsCard.margins
-                        verticalCenter: parent.verticalCenter
+                    Repeater {
+                        model: settings.profilesList
+                        delegate: RowLayout {
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                            }
+                            height: units.gu(5)
+
+                            Label {
+                                text: name
+                                Layout.fillWidth: true
+                            }
+
+                            Switch {
+                                checked: profileVisible
+                                property bool completed: false
+                                onCheckedChanged: {
+                                    settings.profilesList.setProperty(index, "profileVisible", checked);
+                                    if (completed) settings.profilesChanged();
+                                }
+                                Component.onCompleted: completed = true
+                            }
+                        }
                     }
-
-                    width: units.gu(2)
-                    height: units.gu(4)
-                    name: "go-next"
-                    asynchronous: true
                 }
             }
         }

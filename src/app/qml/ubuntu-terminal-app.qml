@@ -139,11 +139,6 @@ Window {
                 onClosing: settingsLoader.active = false
             }
         }
-
-        LayoutsPage {
-            id: layoutsPage
-            visible: false
-        }
     }
 
     Component.onCompleted: {
