@@ -96,9 +96,7 @@ int main(int argc, char *argv[])
 
     QStringList args = a.arguments();
     if (args.contains("-h") || args.contains("--help")) {
-        qDebug() << "usage: " + args.at(0) + " [-p|--phone] [--workdir <dir>] [-t|--tablet] [-h|--help] [-I <path>]";
-        qDebug() << "    -p|--phone    If running on Desktop, start in a phone sized window.";
-        qDebug() << "    -t|--tablet   If running on Desktop, start in a tablet sized window.";
+        qDebug() << "usage: " + args.at(0) + " [--workdir <dir>] [-h|--help] [-I <path>]";
         qDebug() << "    --forceAuth <true|false> Force authentication on or off.";
         qDebug() << "    -h|--help     Print this help.";
         qDebug() << "    -I <path>     Give a path for an additional QML import directory. May be used multiple times.";
@@ -159,19 +157,6 @@ int main(int argc, char *argv[])
         } else {
             qCritical("Library qttestability load failed!");
         }
-    }
-
-    engine.rootContext()->setContextProperty("tablet", QVariant(false));
-    engine.rootContext()->setContextProperty("phone", QVariant(false));
-    if (args.contains("-t") || args.contains("--tablet")) {
-        qDebug() << "running in tablet mode";
-        engine.rootContext()->setContextProperty("tablet", QVariant(true));
-    } else if (args.contains("-p") || args.contains("--phone")){
-        qDebug() << "running in phone mode";
-        engine.rootContext()->setContextProperty("phone", QVariant(true));
-    } else if (qgetenv("QT_QPA_PLATFORM") != "ubuntumirclient") {
-        // Default to tablet size on X11
-        engine.rootContext()->setContextProperty("tablet", QVariant(true));
     }
 
     if (args.contains("--ssh")) {
