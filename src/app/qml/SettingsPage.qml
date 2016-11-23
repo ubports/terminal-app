@@ -87,7 +87,7 @@ Page {
                             function fontFamilyFromModel(model) {
                                 return model;
                             }
-                            model: Qt.fontFamilies()
+                            model: Fonts.monospaceFamilies
                             currentIndex: model.indexOf(settings.fontStyle)
 
                             Binding {

@@ -3,6 +3,7 @@ file(GLOB_RECURSE QML_SRCS *.qml *.js *.json)
 set(terminal_SRCS
     main.cpp
     fileio.cpp
+    fonts.cpp
     ${QML_SRCS}
 )
 

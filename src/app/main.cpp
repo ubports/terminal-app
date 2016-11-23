@@ -19,6 +19,7 @@
  * Authors: Michael Zanetti <michael.zanetti@canonical.com>
  *          Riccardo Padovani <rpadovani@ubuntu.com>
  *          David Planella <david.planella@ubuntu.com>
+ *          Florian Boucault <florian.boucault@canonical.com>
  */
 
 #include <QApplication>
@@ -29,6 +30,7 @@
 #include <QProcess>
 
 #include "fileio.h"
+#include "fonts.h"
 
 #include <QDebug>
 
@@ -66,6 +68,8 @@ int main(int argc, char *argv[])
 
     FileIO fileIO;
     engine.rootContext()->setContextProperty("fileIO", &fileIO);
+    Fonts fonts;
+    engine.rootContext()->setContextProperty("Fonts", &fonts);
 
     // Set up import paths
     QStringList importPathList = engine.importPathList();
