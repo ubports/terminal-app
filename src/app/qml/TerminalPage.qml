@@ -30,6 +30,10 @@ Page {
     property Item terminal
     property var tabsModel
     property bool narrowLayout
+    theme: ThemeSettings {
+        name: tabsBar.isDarkBackground ? "Ubuntu.Components.Themes.SuruDark"
+                                       : "Ubuntu.Components.Themes.Ambiance"
+    }
 
     anchors.fill: parent
 
