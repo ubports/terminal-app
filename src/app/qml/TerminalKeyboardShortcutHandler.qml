@@ -18,7 +18,6 @@
 import QtQuick 2.4
 
 Item {
-
     function handle(event) {
         if (event.modifiers & Qt.ControlModifier) {
             if (event.modifiers & Qt.ShiftModifier) {
@@ -26,6 +25,9 @@ Item {
 
                 switch (event.key) {
                 // Window/tab handling
+                case Qt.Key_N: // Open new window
+                    terminalAppRoot.createTerminalWindow();
+                    break;
                 case Qt.Key_T: // Open tab
                     tabsModel.addTab();
                     break;
@@ -34,7 +36,7 @@ Item {
                     break;
                 case Qt.Key_Q: //Close window
                     for (var i = tabsModel.count - 1; i >= 0; i--) {
-                        tabsModel.removeTab(i); // This will also call Qt.quit()
+                        tabsModel.removeTab(i);
                     }
                     break;
 
@@ -81,7 +83,7 @@ Item {
             switch (event.key) {
             case Qt.Key_F11: // Fullscreen
                 event.accepted = true;
-                window.toggleFullscreen();
+                terminalWindow.toggleFullscreen();
                 break;
             }
         }

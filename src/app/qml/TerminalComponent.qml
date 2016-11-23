@@ -19,48 +19,44 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QMLTermWidget 1.0
 
-Component {
-    id: terminalComponent
+QMLTermWidget {
+    id: terminal
+    width: parent.width
+    height: parent.height
 
-    QMLTermWidget {
-        id: terminal
-        width: parent.width
-        height: parent.height
+    colorScheme: settings.colorScheme
+    font.family: settings.fontStyle
+    font.pixelSize: FontUtils.sizeToPixels("medium") * settings.fontSize / 10
 
-        colorScheme: settings.colorScheme
-        font.family: settings.fontStyle
-        font.pixelSize: FontUtils.sizeToPixels("medium") * settings.fontSize / 10
+    signal sessionFinished(var session);
 
-        signal sessionFinished(var session);
+    session: QMLTermSession {
+        id: terminalSession
+        initialWorkingDirectory: workdir
+        shellProgram: (terminalAppRoot.sshMode ? "sshpass" : "bash")
+        shellProgramArgs: (terminalAppRoot.sshMode ?
+            ["-p", terminalAppRoot.userPassword,
+             "ssh", "-t",
+             "-o", "UserKnownHostsFile=/dev/null",
+             "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
+             "-o", "LogLevel=Error",
+             "cd %1; bash".arg(workdir)]
+            : [])
+        onFinished: tabsModel.removeTabWithSession(terminalSession);
+    }
 
-        session: QMLTermSession {
-            id: terminalSession
-            initialWorkingDirectory: workdir
-            shellProgram: (window.sshMode ? "sshpass" : "bash")
-            shellProgramArgs: (window.sshMode ?
-                ["-p", window.userPassword,
-                 "ssh", "-t",
-                 "-o", "UserKnownHostsFile=/dev/null",
-                 "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
-                 "-o", "LogLevel=Error",
-                 "cd %1; bash".arg(workdir)]
-                : [])
-            onFinished: tabsModel.removeTabWithSession(terminalSession);
-        }
+    Keys.onPressed: {
+        keyboardShortcutHandler.handle(event)
+    }
 
-        Keys.onPressed: {
-            keyboardShortcutHandler.handle(event)
-        }
+    TerminalKeyboardShortcutHandler {
+        id: keyboardShortcutHandler
+    }
 
-        TerminalKeyboardShortcutHandler {
-            id: keyboardShortcutHandler
-        }
+    property int totalLines: terminal.scrollbarMaximum - terminal.scrollbarMinimum + terminal.lines
 
-        property int totalLines: terminal.scrollbarMaximum - terminal.scrollbarMinimum + terminal.lines
-
-        Component.onCompleted: {
-            terminalSession.startShellProgram();
-            forceActiveFocus();
-        }
+    Component.onCompleted: {
+        terminalSession.startShellProgram();
+        forceActiveFocus();
     }
 }

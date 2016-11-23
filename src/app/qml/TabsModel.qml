@@ -23,6 +23,8 @@ ListModel {
 
     id: tabsModel
 
+    property Component terminalComponent: TerminalComponent {}
+
     function addTab() {
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer);
         tabsModel.append({terminal: termObject});
@@ -71,10 +73,6 @@ ListModel {
             return;
 
         get(index).terminal.destroy();
-
-        if (count === 1) // The last tab was closed, probably by running the "exit" command (otherwise this is prevented by the UI)
-            Qt.quit();
-
         remove(index);
 
         // Decrease the selected index to keep the state consistent.

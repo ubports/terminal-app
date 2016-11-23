@@ -28,13 +28,16 @@ QtObject {
 
     property var __authDialog
     readonly property bool isDialogVisible: __authDialog != null
+    property bool alreadyGranted: false
 
     signal granted(string password)
     signal denied()
 
     Component.onCompleted: {
         if ( (sshIsAvailable && sshRequired) || (systemAuthentication.requireAuthentication() && !noAuthentication)) {
-            displayLoginDialog();
+            if (!alreadyGranted) {
+                displayLoginDialog();
+            }
         }
     }
 
@@ -49,6 +52,7 @@ QtObject {
 
         var verify_password = function( password ) {
             if ( systemAuthentication.validatePasswordToken( password ) ) {
+                alreadyGranted = true;
                 granted(password);
                 PopupUtils.close( authentication_dialog );
             }

@@ -74,7 +74,7 @@ Page {
             },
             Action {
                 iconName: "settings"
-                onTriggered: window.openSettingsPage()
+                onTriggered: terminalAppRoot.openSettingsPage()
             }
         ]
         visible: !terminalPage.narrowLayout
@@ -279,7 +279,7 @@ Page {
         iconColor: tabsBar.actionColor
         action: Action {
             iconName: "settings"
-            onTriggered: window.openSettingsPage()
+            onTriggered: terminalAppRoot.openSettingsPage()
         }
         visible: terminalPage.narrowLayout
     }
