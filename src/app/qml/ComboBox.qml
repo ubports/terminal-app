@@ -113,6 +113,7 @@ MouseArea {
         }
     }
 
+    preventStealing: true
     onPressed: {
         var properties = {
             "model": comboBox.model,
