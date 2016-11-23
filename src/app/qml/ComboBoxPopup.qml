@@ -29,6 +29,7 @@ Popover {
     property var model
     property real itemHeight
     property real itemMargins
+    property string textRole
     property ComboBox comboBox
 
     property bool square: true
@@ -86,7 +87,7 @@ Popover {
                         leftMargin: comboBoxPopup.itemMargins
                         rightMargin: comboBoxPopup.itemMargins
                     }
-                    text: modelData
+                    text: textRole != "" ? model[textRole] : modelData
                     elide: Text.ElideRight
                     verticalAlignment: Text.AlignVCenter
                     color: index == currentIndex ?
@@ -96,7 +97,7 @@ Popover {
                     Binding {
                         target: label
                         property: "font.family"
-                        value: comboBox.fontFamilyFromModel ? comboBox.fontFamilyFromModel(modelData) : undefined
+                        value: comboBox.fontFamilyFromModel ? comboBox.fontFamilyFromModel(label.text) : undefined
                         when: typeof comboBox.fontFamilyFromModel !== "undefined"
                     }
                 }

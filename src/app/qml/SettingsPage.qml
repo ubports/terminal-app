@@ -129,12 +129,20 @@ Page {
                 id: colorsCard
 
                 title: i18n.tr("ANSI Colors")
+
                 // TODO This is a workaround at the moment.
                 // The application should get them from the c++.
-                property var model: ["GreenOnBlack","WhiteOnBlack","BlackOnWhite","BlackOnRandomLight","Linux","cool-retro-term","DarkPastels","BlackOnLightYellow", "Ubuntu"]
-
-                // TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-                property var namesModel: [i18n.tr("Green on black"),i18n.tr("White on black"),i18n.tr("Black on white"),i18n.tr("Black on random light"),i18n.tr("Linux"),i18n.tr("Cool retro term"),i18n.tr("Dark pastels / Ubuntu (old)"),i18n.tr("Black on light yellow"),i18n.tr("Ubuntu")]
+                property ListModel model: ListModel {
+                    ListElement { name: "Ubuntu"; value: "Ubuntu" }
+                    ListElement { name: "Green on black"; value: "GreenOnBlack" }
+                    ListElement { name: "White on black"; value: "WhiteOnBlack" }
+                    ListElement { name: "Black on white"; value: "BlackOnWhite" }
+                    ListElement { name: "Black on random light"; value: "BlackOnRandomLight" }
+                    ListElement { name: "Linux"; value: "Linux" }
+                    ListElement { name: "Cool retro term"; value: "cool-retro-term" }
+                    ListElement { name: "Dark pastels"; value: "DarkPastels" }
+                    ListElement { name: "Black on light yellow"; value: "BlackOnLightYellow" }
+                }
 
                 Label {
                     id: ansiColorPresetLabel
@@ -147,9 +155,11 @@ Page {
                         top: ansiColorPresetLabel.bottom
                         topMargin: units.gu(1)
                     }
-                    model: colorsCard.namesModel
+                    model: colorsCard.model
                     bindingTarget: settings
                     bindingProperty: "colorScheme"
+                    textRole: "name"
+                    valueRole: "value"
                 }
             }
 

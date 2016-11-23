@@ -26,8 +26,11 @@ MouseArea {
     property int currentIndex: 0
     property var bindingTarget
     property string bindingProperty
-    readonly property string currentText: model.get ? model.get(currentIndex)
-                                                    : model[currentIndex]
+    readonly property var currentItem: model.get ? model.get(currentIndex)
+                                                 : model[currentIndex]
+    readonly property string currentText: textRole ? currentItem[textRole] : currentItem
+    property string textRole
+    property string valueRole
 
     implicitWidth: units.gu(21)
     implicitHeight: units.gu(4)
@@ -37,11 +40,22 @@ MouseArea {
         sourceProperty: bindingProperty
         target: comboBox
         targetProperty: "currentIndex"
+
+        function listModelIndexOf(listModel, value, role) {
+            for (var i = 0; i < listModel.count; i++) {
+                if (listModel.get(i)[role] === value) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         function sourceToTarget(sourceValue) {
-            return comboBox.model.indexOf(sourceValue);
+            return comboBox.model.indexOf ? comboBox.model.indexOf(sourceValue) :
+                                            listModelIndexOf(comboBox.model, sourceValue, comboBox.valueRole);
         }
         function targetToSource(currentIndex) {
-            return comboBox.currentText;
+            return comboBox.valueRole ? comboBox.currentItem[comboBox.valueRole] : comboBox.currentItem;
         }
     }
 
@@ -120,7 +134,8 @@ MouseArea {
             "itemHeight": comboBox.height,
             "itemMargins": currentLabel.anchors.leftMargin,
             "contentWidth": comboBox.width,
-            "comboBox": comboBox
+            "comboBox": comboBox,
+            "textRole": comboBox.textRole
         }
 
         PopupUtils.open(Qt.resolvedUrl("ComboBoxPopup.qml"), comboBox, properties);
