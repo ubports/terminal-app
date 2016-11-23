@@ -31,7 +31,7 @@ Window {
     minimumWidth: units.gu(20)
     minimumHeight: units.gu(20)
 
-    property bool narrowLayout: terminalWindow.width <= units.gu(50)
+    property bool narrowLayout
 
     property int visibilityBeforeFullscreen
     function toggleFullscreen() {
@@ -115,6 +115,7 @@ Window {
         // Hardcoded value from TerminalDisplay.h
         terminalWindow.width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
         terminalWindow.height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
+        terminalWindow.narrowLayout = Qt.binding(function () {return terminalWindow.width <= units.gu(50)});
 
         if (sshRequired && !sshIsAvailable) {
             console.debug("Ask for confirmation")
