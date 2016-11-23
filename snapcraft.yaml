@@ -47,6 +47,8 @@ parts:
       - libpam0g-dev
     stage-packages:
       - sshpass
+      - fonts-inconsolata
+      - fonts-roboto
     snap:
       - -usr/share/doc
       - -usr/include
