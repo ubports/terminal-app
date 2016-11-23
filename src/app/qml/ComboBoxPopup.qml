@@ -46,6 +46,7 @@ Popover {
             clip: true
             currentIndex: comboBoxPopup.comboBox.currentIndex
             delegate: MouseArea {
+                id: mouseArea
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -56,8 +57,10 @@ Popover {
                     PopupUtils.close(comboBoxPopup);
                 }
 
+                hoverEnabled: true
+
                 Rectangle {
-                    visible: index == currentIndex
+                    visible: mouseArea.containsMouse
                     anchors.fill: parent
                     color: theme.palette.selected.overlay
                     border.width: units.dp(1)
