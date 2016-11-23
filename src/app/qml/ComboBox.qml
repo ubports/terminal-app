@@ -24,11 +24,26 @@ MouseArea {
 
     property var model
     property int currentIndex: 0
+    property var bindingTarget
+    property string bindingProperty
     readonly property string currentText: model.get ? model.get(currentIndex)
                                                     : model[currentIndex]
 
     implicitWidth: units.gu(21)
     implicitHeight: units.gu(4)
+
+    DoubleBinding {
+        source: bindingTarget
+        sourceProperty: bindingProperty
+        target: comboBox
+        targetProperty: "currentIndex"
+        function sourceToTarget(sourceValue) {
+            return comboBox.model.indexOf(sourceValue);
+        }
+        function targetToSource(currentIndex) {
+            return comboBox.currentText;
+        }
+    }
 
     Rectangle {
         anchors.fill: parent

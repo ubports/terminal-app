@@ -88,13 +88,8 @@ Page {
                                 return model;
                             }
                             model: Fonts.monospaceFamilies
-                            currentIndex: model.indexOf(settings.fontStyle)
-
-                            Binding {
-                                target: settings
-                                property: "fontStyle"
-                                value: fontStyleCombo.model[fontStyleCombo.currentIndex]
-                            }
+                            bindingTarget: settings
+                            bindingProperty: "fontStyle"
                         }
                     }
 
@@ -122,13 +117,8 @@ Page {
                                 return list;
                             }
                             model: arrayOfNumbers(settings.minFontSize, settings.maxFontSize)
-                            currentIndex: model.indexOf(settings.fontSize)
-
-                            Binding {
-                                target: settings
-                                property: "fontSize"
-                                value: fontSizeCombo.model[fontSizeCombo.currentIndex]
-                            }
+                            bindingTarget: settings
+                            bindingProperty: "fontSize"
                         }
                     }
                 }
@@ -157,13 +147,8 @@ Page {
                         topMargin: units.gu(1)
                     }
                     model: colorsCard.namesModel
-                    currentIndex: colorsCard.model.indexOf(settings.colorScheme)
-
-                    Binding {
-                        target: settings
-                        property: "colorScheme"
-                        value: colorsCard.model[ansiColorPresetCombo.currentIndex]
-                    }
+                    bindingTarget: settings
+                    bindingProperty: "colorScheme"
                 }
             }
 
