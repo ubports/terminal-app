@@ -312,3 +312,8 @@ QString KSession::foregroundProcessName()
 {
     return m_session->foregroundProcessName();
 }
+
+int KSession::sessionId()
+{
+    return m_session->sessionId();
+}

@@ -28,7 +28,7 @@ ListModel {
     function addTab() {
         var initialWorkingDirectory;
         if (selectedTerminal) {
-            initialWorkingDirectory = selectedTerminal.session.workingDirectory;
+            initialWorkingDirectory = selectedTerminal.session.getWorkingDirectory();
         } else {
             initialWorkingDirectory = "$HOME";
         }

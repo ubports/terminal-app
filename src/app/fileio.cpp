@@ -54,3 +54,11 @@ QString FileIO::read(const QString& sourceUrl) {
 
     return result;
 }
+
+bool FileIO::remove(const QString& fileName) {
+    return QFile::remove(fileName);
+}
+
+QString FileIO::symLinkTarget(const QString& fileName) {
+    return QFile::symLinkTarget(fileName);
+}

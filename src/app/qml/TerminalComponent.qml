@@ -34,6 +34,28 @@ QMLTermWidget {
     session: QMLTermSession {
         id: terminalSession
         initialWorkingDirectory: terminal.initialWorkingDirectory
+
+        /* FIXME: this is a workaround to retrieve the current working directory
+           of the shell executed by ssh.
+           When opening an ssh session we write the PID of the shell process
+           in a temporary file (sshShellPidFile) which is then used when needed
+           to query its current working directory.
+         */
+        property string sshShellPidFile: "/tmp/sshpid_session_%1".arg(sessionId)
+        Component.onDestruction: fileIO.remove(sshShellPidFile);
+
+        function getWorkingDirectory() {
+            if (terminalAppRoot.sshMode) {
+                var pid = fileIO.read(sshShellPidFile);
+                // actual shell process is the first of the children of the process
+                // executed by ssh
+                pid = fileIO.read("/proc/%1/task/%1/children".arg(pid)).split(' ')[0];
+                return fileIO.symLinkTarget("/proc/%1/cwd".arg(pid));
+            } else {
+                return workingDirectory;
+            }
+        }
+
         shellProgram: (terminalAppRoot.sshMode ? "sshpass" : "bash")
         shellProgramArgs: (terminalAppRoot.sshMode ?
             ["-p", terminalAppRoot.userPassword,
@@ -41,7 +63,7 @@ QMLTermWidget {
              "-o", "UserKnownHostsFile=/dev/null",
              "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
              "-o", "LogLevel=Error",
-             "cd %1; bash".arg(initialWorkingDirectory)]
+             "echo -n $$ > %1; cd %2; bash".arg(sshShellPidFile).arg(initialWorkingDirectory)]
             : [])
         onFinished: tabsModel.removeTabWithSession(terminalSession);
     }
