@@ -34,8 +34,12 @@ QtObject {
         createTerminalWindow();
     }
 
+    property var focusedTerminal
     function createTerminalWindow() {
-        Helpers.createComponentInstance(terminalWindowComponent, terminalAppRoot, {});
+        var workingDirectory = focusedTerminal ? focusedTerminal.session.getWorkingDirectory()
+                                               : "$HOME";
+        Helpers.createComponentInstance(terminalWindowComponent, terminalAppRoot,
+                                        {"initialWorkingDirectory": workingDirectory});
     }
 
     property Component terminalWindowComponent: TerminalWindow {

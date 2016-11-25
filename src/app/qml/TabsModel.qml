@@ -25,12 +25,9 @@ ListModel {
 
     property Component terminalComponent: TerminalComponent {}
 
-    function addTab() {
-        var initialWorkingDirectory;
+    function addTab(initialWorkingDirectory) {
         if (selectedTerminal) {
             initialWorkingDirectory = selectedTerminal.session.getWorkingDirectory();
-        } else {
-            initialWorkingDirectory = "$HOME";
         }
 
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer,

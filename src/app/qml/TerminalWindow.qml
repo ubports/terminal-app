@@ -31,6 +31,13 @@ Window {
     minimumWidth: units.gu(20)
     minimumHeight: units.gu(20)
 
+    Binding {
+        target: terminalAppRoot
+        property: "focusedTerminal"
+        value: tabsModel.selectedTerminal
+        when: terminalWindow.active
+    }
+
     property bool narrowLayout
 
     property int visibilityBeforeFullscreen
@@ -107,8 +114,10 @@ Window {
         }
     }
 
+    property string initialWorkingDirectory
+
     Component.onCompleted: {
-        tabsModel.addTab();
+        tabsModel.addTab(initialWorkingDirectory);
         tabsModel.selectTab(0);
 
         // The margins for the terminal canvas are 2px
