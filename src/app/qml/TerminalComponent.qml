@@ -41,7 +41,10 @@ QMLTermWidget {
            in a temporary file (sshShellPidFile) which is then used when needed
            to query its current working directory.
          */
-        property string sshShellPidFile: "/tmp/sshpid_session_%1".arg(sessionId)
+        property string sshShellPidFile: "/home/%1/.local/share/%2/%3_sshpid_%4".arg(sshUser)
+                                                                                .arg(Qt.application.name)
+                                                                                .arg(applicationPid)
+                                                                                .arg(sessionId)
         Component.onDestruction: fileIO.remove(sshShellPidFile);
 
         function getWorkingDirectory() {
@@ -63,7 +66,7 @@ QMLTermWidget {
              "-o", "UserKnownHostsFile=/dev/null",
              "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
              "-o", "LogLevel=Error",
-             "echo -n $$ > %1; cd %2; bash".arg(sshShellPidFile).arg(initialWorkingDirectory)]
+             "mkdir -p `dirname %1`; echo -n $$ > %1; cd %2; bash".arg(sshShellPidFile).arg(initialWorkingDirectory)]
             : [])
         onFinished: tabsModel.removeTabWithSession(terminalSession);
     }

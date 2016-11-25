@@ -162,11 +162,13 @@ int main(int argc, char *argv[])
         if (sshIsAvailable) {
             engine.rootContext()->setContextProperty("noAuthentication", QVariant(false));
             engine.rootContext()->setContextProperty("sshUser", qgetenv("USER"));
+            engine.rootContext()->setContextProperty("applicationPid", QCoreApplication::applicationPid());
         }
     } else {
         engine.rootContext()->setContextProperty("sshRequired", QVariant(false));
         engine.rootContext()->setContextProperty("sshIsAvailable", QVariant(false));
         engine.rootContext()->setContextProperty("sshUser", "");
+        engine.rootContext()->setContextProperty("applicationPid", "");
     }
 
     engine.setImportPathList(importPathList);
