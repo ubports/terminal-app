@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-23 16:52+0100\n"
+"POT-Creation-Date: 2016-11-25 17:20+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,7 +50,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationService.qml:57
+#: ../src/app/qml/AuthenticationService.qml:61
 msgid "Authentication failed"
 msgstr ""
 
@@ -154,10 +154,6 @@ msgstr ""
 msgid "ENTER"
 msgstr ""
 
-#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:159
-msgid "Layouts"
-msgstr ""
-
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
 msgstr ""
@@ -182,45 +178,12 @@ msgstr ""
 msgid "ANSI Colors"
 msgstr ""
 
-#. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Green on black"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "White on black"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Black on white"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Black on random light"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Linux"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Cool retro term"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Black on light yellow"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:137
-msgid "Ubuntu"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:141
+#: ../src/app/qml/SettingsPage.qml:149
 msgid "Preset:"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:169
+msgid "Layouts"
 msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:26
@@ -235,13 +198,11 @@ msgstr ""
 msgid "Selection Mode"
 msgstr ""
 
-#: ../src/app/qml/TerminalWindow.qml:135
-#: ../src/app/qml/ubuntu-terminal-app.qml:159
+#: ../src/app/qml/TerminalWindow.qml:133
 msgid "No SSH server running."
 msgstr ""
 
-#: ../src/app/qml/TerminalWindow.qml:136
-#: ../src/app/qml/ubuntu-terminal-app.qml:160
+#: ../src/app/qml/TerminalWindow.qml:134
 msgid "SSH server not found. Do you want to proceed in confined mode?"
 msgstr ""
 
