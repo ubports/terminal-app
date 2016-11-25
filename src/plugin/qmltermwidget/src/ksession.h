@@ -43,7 +43,7 @@ class KSession : public QObject
     Q_PROPERTY(bool hasActiveProcess READ hasActiveProcess)
     Q_PROPERTY(QString foregroundProcessName READ foregroundProcessName)
     Q_PROPERTY(QString workingDirectory READ workingDirectory)
-    Q_PROPERTY(int sessionId READ sessionId)
+    Q_PROPERTY(int sessionId READ sessionId CONSTANT)
 
 public:
     KSession(QObject *parent = 0);
