@@ -56,7 +56,7 @@ QMLTermWidget {
             }
         }
 
-        shellProgram: (terminalAppRoot.sshMode ? "sshpass" : "bash")
+        shellProgram: (terminalAppRoot.sshMode ? "sshpass" : "$SHELL")
         shellProgramArgs: (terminalAppRoot.sshMode ?
             ["-p", terminalAppRoot.userPassword,
              "ssh", "-t",
