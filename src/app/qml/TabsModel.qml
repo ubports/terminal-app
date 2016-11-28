@@ -64,6 +64,14 @@ ListModel {
         selectedIndex = index;
     }
 
+    function selectNextTab() {
+        selectTab((tabsModel.selectedIndex + 1) % tabsModel.count);
+    }
+
+    function selectPreviousTab() {
+        selectTab((tabsModel.selectedIndex - 1 + tabsModel.count) % tabsModel.count);
+    }
+
     function removeTabWithSession(session) {
         for (var i = 0; i < count; i++) {
             if (session === get(i).terminal.session) {
@@ -84,6 +92,12 @@ ListModel {
         if (index <= selectedIndex)
             selectedIndex = Math.max(selectedIndex - 1, 0);
         selectTab(selectedIndex);
+    }
+
+    function removeAllTabs() {
+        for (var i = tabsModel.count - 1; i >= 0; i--) {
+            tabsModel.removeTab(i);
+        }
     }
 
     function moveTab(from, to) {

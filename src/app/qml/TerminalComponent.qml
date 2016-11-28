@@ -71,14 +71,6 @@ QMLTermWidget {
         onFinished: tabsModel.removeTabWithSession(terminalSession);
     }
 
-    Keys.onPressed: {
-        keyboardShortcutHandler.handle(event)
-    }
-
-    TerminalKeyboardShortcutHandler {
-        id: keyboardShortcutHandler
-    }
-
     property int totalLines: terminal.scrollbarMaximum - terminal.scrollbarMinimum + terminal.lines
 
     Component.onCompleted: {

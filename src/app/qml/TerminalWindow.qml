@@ -16,7 +16,7 @@
  * Authored-by: Filippo Scognamiglio <flscogna@gmail.com>
  *              Florian Boucault <florian.boucault@canonical.com>
  */
-import QtQuick 2.4
+import QtQuick 2.5
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.3
@@ -68,6 +68,46 @@ Window {
         onCountChanged: if (count == 0) {
                             terminalWindow.close();
                         }
+    }
+
+    Shortcut {
+        sequence: settings.shortcutNewTab
+        onActivated: tabsModel.addTab()
+    }
+
+    Shortcut {
+        sequence: settings.shortcutCloseTab
+        onActivated: tabsModel.removeTabWithSession(tabsModel.selectedTerminal.session)
+    }
+
+    Shortcut {
+        sequence: settings.shortcutCloseAllTabs
+        onActivated: tabsModel.removeAllTabs()
+    }
+
+    Shortcut {
+        sequence: settings.shortcutPreviousTab
+        onActivated: tabsModel.selectPreviousTab()
+    }
+
+    Shortcut {
+        sequence: settings.shortcutNextTab
+        onActivated: tabsModel.selectNextTab()
+    }
+
+    Shortcut {
+        sequence: settings.shortcutCopy
+        onActivated: tabsModel.selectedTerminal.copyClipboard()
+    }
+
+    Shortcut {
+        sequence: settings.shortcutPaste
+        onActivated: tabsModel.selectedTerminal.pasteClipboard()
+    }
+
+    Shortcut {
+        sequence: settings.shortcutFullscreen
+        onActivated: terminalWindow.toggleFullscreen()
     }
 
     PageStack {

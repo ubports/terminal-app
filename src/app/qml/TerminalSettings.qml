@@ -24,6 +24,15 @@ QtObject {
     property alias fontSize: innerSettings.fontSize
     property alias fontStyle: innerSettings.fontStyle
     property alias colorScheme: innerSettings.colorScheme
+    property alias shortcutNewWindow: innerSettings.shortcutNewWindow
+    property alias shortcutNewTab: innerSettings.shortcutNewTab
+    property alias shortcutCloseTab: innerSettings.shortcutCloseTab
+    property alias shortcutCloseAllTabs: innerSettings.shortcutCloseAllTabs
+    property alias shortcutPreviousTab: innerSettings.shortcutPreviousTab
+    property alias shortcutNextTab: innerSettings.shortcutNextTab
+    property alias shortcutCopy: innerSettings.shortcutCopy
+    property alias shortcutPaste: innerSettings.shortcutPaste
+    property alias shortcutFullscreen: innerSettings.shortcutFullscreen
 
     readonly property int defaultFontSize: 12
     readonly property int minFontSize: 4
@@ -54,6 +63,15 @@ QtObject {
         property string fontStyle: "Ubuntu Mono"
         property string colorScheme: "Ubuntu"
         property string jsonVisibleProfiles: "[]"
+        property string shortcutNewWindow: "Ctrl+Shift+N"
+        property string shortcutNewTab: "Ctrl+Shift+T"
+        property string shortcutCloseTab: "Ctrl+Shift+W"
+        property string shortcutCloseAllTabs: "Ctrl+Shift+Q"
+        property string shortcutPreviousTab: "Ctrl+PgUp"
+        property string shortcutNextTab: "Ctrl+PgDown"
+        property string shortcutCopy: "Ctrl+Shift+C"
+        property string shortcutPaste: "Ctrl+Shift+V"
+        property string shortcutFullscreen: "F11"
     }
 
     // Load the keyboard profiles.

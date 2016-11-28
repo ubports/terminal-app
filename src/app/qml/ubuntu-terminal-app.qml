@@ -16,7 +16,7 @@
  * Authored-by: Filippo Scognamiglio <flscogna@gmail.com>
  *              Florian Boucault <florian.boucault@canonical.com>
  */
-import QtQuick 2.4
+import QtQuick 2.5
 import QtSystemInfo 5.5
 import "helpers.js" as Helpers
 import "KeyboardRows"
@@ -95,4 +95,27 @@ QtObject {
         property: "keyboardAttached"
         value: keyboardsModel.count > 0
     }
+
+    property list<Shortcut> applicationShortcuts: [
+        Shortcut {
+            sequence: settings.shortcutNewWindow
+            context: Qt.ApplicationShortcut
+            onActivated: terminalAppRoot.createTerminalWindow();
+        },
+        Shortcut {
+            sequence: StandardKey.ZoomIn
+            context: Qt.ApplicationShortcut
+            onActivated: settings.fontSize = Math.min(settings.fontSize + 1, settings.maxFontSize)
+        },
+        Shortcut {
+            sequence: StandardKey.ZoomOut
+            context: Qt.ApplicationShortcut
+            onActivated: settings.fontSize = Math.max(settings.fontSize - 1, settings.minFontSize)
+        },
+        Shortcut {
+            sequence: "Ctrl+0"
+            context: Qt.ApplicationShortcut
+            onActivated: settings.fontSize = settings.defaultFontSize
+        }
+    ]
 }
