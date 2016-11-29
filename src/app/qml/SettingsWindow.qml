@@ -24,7 +24,7 @@ Window {
 
     visible: true
     title: "Terminal"
-    color: theme.palette.selected.overlay
+    color: settingsPage.windowColor
     contentOrientation: Screen.orientation
 
     width: settingsPage.implicitWidth
@@ -35,6 +35,5 @@ Window {
     SettingsPage {
         id: settingsPage
         anchors.fill: parent
-
     }
 }

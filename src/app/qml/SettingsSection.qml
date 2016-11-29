@@ -22,6 +22,7 @@ import Ubuntu.Components 1.3
 ScrollView {
     id: scrollView
     property real margins: units.gu(2)
+    property color windowColor: theme.palette.normal.overlay
     default property alias contents: contentsItem.children
 
     Item {

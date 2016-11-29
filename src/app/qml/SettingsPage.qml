@@ -25,10 +25,12 @@ Page {
 
     implicitWidth: units.gu(60)
     implicitHeight: units.gu(80)
+    property color windowColor: currentSection.windowColor
+
 
     header: PageHeader {
         title: i18n.tr("Preferences")
-        flickable: sectionLoader.item && sectionLoader.item.flickableItem ?
+        flickable: currentSection && currentSection.flickableItem ?
                        sectionLoader.item.flickableItem : null
         StyleHints {
             backgroundColor: theme.palette.normal.overlay
@@ -45,6 +47,7 @@ Page {
         }
     }
 
+    property SettingsSection currentSection: sectionLoader.item ? sectionLoader.item : null
     Loader {
         id: sectionLoader
         anchors.fill: parent

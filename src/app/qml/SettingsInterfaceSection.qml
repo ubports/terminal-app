@@ -22,6 +22,9 @@ import Ubuntu.Components 1.3
 
 SettingsSection {
     id: section
+
+    windowColor: theme.palette.selected.overlay
+
     Column {
         anchors {
             right: parent.right
