@@ -31,7 +31,7 @@ Page {
     header: PageHeader {
         title: i18n.tr("Preferences")
         flickable: currentSection && currentSection.flickableItem ?
-                       sectionLoader.item.flickableItem : null
+                       currentSection.flickableItem : null
         StyleHints {
             backgroundColor: theme.palette.normal.overlay
         }
@@ -50,7 +50,13 @@ Page {
     property SettingsSection currentSection: sectionLoader.item ? sectionLoader.item : null
     Loader {
         id: sectionLoader
-        anchors.fill: parent
+        anchors {
+            top: currentSection.flickableItem ? parent.top : settingsPage.header.bottom
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
         source: settingsPage.header.selectedAction.source
+        focus: true
     }
 }
