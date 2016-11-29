@@ -31,6 +31,7 @@
 
 #include "fileio.h"
 #include "fonts.h"
+#include "shortcuts.h"
 
 #include <QDebug>
 
@@ -70,6 +71,8 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("fileIO", &fileIO);
     Fonts fonts;
     engine.rootContext()->setContextProperty("Fonts", &fonts);
+    Shortcuts shortcuts;
+    engine.rootContext()->setContextProperty("Shortcuts", &shortcuts);
 
     // Set up import paths
     QStringList importPathList = engine.importPathList();

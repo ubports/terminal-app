@@ -42,6 +42,10 @@ Page {
                 Action {
                     text: i18n.tr("Interface")
                     property string source: Qt.resolvedUrl("SettingsInterfaceSection.qml")
+                },
+                Action {
+                    text: i18n.tr("Shortcuts")
+                    property string source: Qt.resolvedUrl("SettingsShortcutsSection.qml")
                 }
             ]
         }
