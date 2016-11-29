@@ -54,7 +54,7 @@ QtObject {
     }
 
     property Loader settingsLoader: Loader {
-        source: Qt.resolvedUrl("SettingsWindow.qml")
+        source: Qt.resolvedUrl("Settings/SettingsWindow.qml")
         active: false
         asynchronous: true
 

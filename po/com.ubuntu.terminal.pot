@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-25 17:20+0100\n"
+"POT-Creation-Date: 2016-11-29 12:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,32 +158,53 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:32
-msgid "Preferences"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:67
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:53
 msgid "Text"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:78
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:64
 msgid "Font:"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:103
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:89
 msgid "Font Size:"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:131
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:117
 msgid "ANSI Colors"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:149
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:135
 msgid "Preset:"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:169
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:155
 msgid "Layouts"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:32
+msgid "Preferences"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:43
+msgid "Interface"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:47
+msgid "Shortcuts"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsShortcutsSection.qml:71
+#, qt-format
+msgid "Showing %1 of %2"
+msgstr ""
+
+#: ../src/app/qml/Settings/ShortcutRow.qml:78
+msgid "Enter shortcut..."
+msgstr ""
+
+#: ../src/app/qml/Settings/ShortcutRow.qml:80
+msgid "Disabled"
 msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:26
@@ -198,11 +219,11 @@ msgstr ""
 msgid "Selection Mode"
 msgstr ""
 
-#: ../src/app/qml/TerminalWindow.qml:133
+#: ../src/app/qml/TerminalWindow.qml:174
 msgid "No SSH server running."
 msgstr ""
 
-#: ../src/app/qml/TerminalWindow.qml:134
+#: ../src/app/qml/TerminalWindow.qml:175
 msgid "SSH server not found. Do you want to proceed in confined mode?"
 msgstr ""
 
