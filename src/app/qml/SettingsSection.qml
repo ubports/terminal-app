@@ -19,18 +19,9 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 
-ScrollView {
-    id: scrollView
+Item {
+    id: settingsSection
     property real margins: units.gu(2)
     property color windowColor: theme.palette.normal.overlay
-    default property alias contents: contentsItem.children
-
-    Item {
-        id: contentsItem
-        // not a child of ScrollView, but it's reparented to
-        // ScrollView.viewport. For that reason we can not use 'anchors'
-        // but we have to set the width instead.
-        width: scrollView.width
-        height: childrenRect.height + 2 * scrollView.margins
-    }
+    property Flickable flickableItem: null
 }

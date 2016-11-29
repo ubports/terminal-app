@@ -24,149 +24,163 @@ SettingsSection {
     id: section
 
     windowColor: theme.palette.selected.overlay
+    flickableItem: scrollView.flickableItem
 
-    Column {
-        anchors {
-            right: parent.right
-            left: parent.left
-            top: parent.top
-            margins: section.margins
-        }
+    ScrollView {
+        id: scrollView
+        anchors.fill: parent
 
-        spacing: units.gu(1)
-
-        SettingsCard {
-            id: textCard
-
-            title: i18n.tr("Text")
-
-            Row {
-                spacing: units.gu(2)
-
-                Item {
-                    width: childrenRect.width
-                    height: childrenRect.height
-
-                    Label {
-                        id: fontStyleLabel
-                        text: i18n.tr("Font:")
-                    }
-
-                    ComboBox {
-                        id: fontStyleCombo
-                        anchors {
-                            top: fontStyleLabel.bottom
-                            topMargin: units.gu(1)
-                        }
-
-                        function fontFamilyFromModel(model) {
-                            return model;
-                        }
-                        model: Fonts.monospaceFamilies
-                        bindingTarget: settings
-                        bindingProperty: "fontStyle"
-                    }
-                }
-
-                Item {
-                    width: childrenRect.width
-                    height: childrenRect.height
-
-                    Label {
-                        id: fontSizeLabel
-                        text: i18n.tr("Font Size:")
-                    }
-
-                    ComboBox {
-                        id: fontSizeCombo
-                        anchors {
-                            top: fontSizeLabel.bottom
-                            topMargin: units.gu(1)
-                        }
-                        width: units.gu(9)
-                        function arrayOfNumbers(min, max) {
-                            var list = [];
-                            for (var i = min; i <= max; i++) {
-                                list.push(i);
-                            }
-                            return list;
-                        }
-                        model: arrayOfNumbers(settings.minFontSize, settings.maxFontSize)
-                        bindingTarget: settings
-                        bindingProperty: "fontSize"
-                    }
-                }
-            }
-        }
-
-        SettingsCard {
-            id: colorsCard
-
-            title: i18n.tr("ANSI Colors")
-
-            // TODO This is a workaround at the moment.
-            // The application should get them from the c++.
-            property ListModel model: ListModel {
-                ListElement { name: "Ubuntu"; value: "Ubuntu" }
-                ListElement { name: "Green on black"; value: "GreenOnBlack" }
-                ListElement { name: "White on black"; value: "WhiteOnBlack" }
-                ListElement { name: "Black on white"; value: "BlackOnWhite" }
-                ListElement { name: "Black on random light"; value: "BlackOnRandomLight" }
-                ListElement { name: "Linux"; value: "Linux" }
-                ListElement { name: "Cool retro term"; value: "cool-retro-term" }
-                ListElement { name: "Dark pastels"; value: "DarkPastels" }
-                ListElement { name: "Black on light yellow"; value: "BlackOnLightYellow" }
-            }
-
-            Label {
-                id: ansiColorPresetLabel
-                text: i18n.tr("Preset:")
-            }
-
-            ComboBox {
-                id: ansiColorPresetCombo
-                anchors {
-                    top: ansiColorPresetLabel.bottom
-                    topMargin: units.gu(1)
-                }
-                model: colorsCard.model
-                bindingTarget: settings
-                bindingProperty: "colorScheme"
-                textRole: "name"
-                valueRole: "value"
-            }
-        }
-
-        SettingsCard {
-            id: layoutsCard
-            visible: !QuickUtils.keyboardAttached
-            title: i18n.tr("Layouts")
+        Item {
+            // not a child of ScrollView, but it's reparented to
+            // ScrollView.viewport. For that reason we can not use 'anchors'
+            // but we have to set the width instead.
+            width: section.width
+            height: childrenRect.height + 2 * section.margins
 
             Column {
-                width: Math.min(parent.width, units.gu(32))
+                anchors {
+                    right: parent.right
+                    left: parent.left
+                    top: parent.top
+                    margins: section.margins
+                }
 
-                Repeater {
-                    model: settings.profilesList
-                    delegate: RowLayout {
-                        anchors {
-                            left: parent.left
-                            right: parent.right
-                        }
-                        height: units.gu(5)
+                spacing: units.gu(1)
 
-                        Label {
-                            text: name
-                            Layout.fillWidth: true
-                        }
+                SettingsCard {
+                    id: textCard
 
-                        Switch {
-                            checked: profileVisible
-                            property bool completed: false
-                            onCheckedChanged: {
-                                settings.profilesList.setProperty(index, "profileVisible", checked);
-                                if (completed) settings.profilesChanged();
+                    title: i18n.tr("Text")
+
+                    Row {
+                        spacing: units.gu(2)
+
+                        Item {
+                            width: childrenRect.width
+                            height: childrenRect.height
+
+                            Label {
+                                id: fontStyleLabel
+                                text: i18n.tr("Font:")
                             }
-                            Component.onCompleted: completed = true
+
+                            ComboBox {
+                                id: fontStyleCombo
+                                anchors {
+                                    top: fontStyleLabel.bottom
+                                    topMargin: units.gu(1)
+                                }
+
+                                function fontFamilyFromModel(model) {
+                                    return model;
+                                }
+                                model: Fonts.monospaceFamilies
+                                bindingTarget: settings
+                                bindingProperty: "fontStyle"
+                            }
+                        }
+
+                        Item {
+                            width: childrenRect.width
+                            height: childrenRect.height
+
+                            Label {
+                                id: fontSizeLabel
+                                text: i18n.tr("Font Size:")
+                            }
+
+                            ComboBox {
+                                id: fontSizeCombo
+                                anchors {
+                                    top: fontSizeLabel.bottom
+                                    topMargin: units.gu(1)
+                                }
+                                width: units.gu(9)
+                                function arrayOfNumbers(min, max) {
+                                    var list = [];
+                                    for (var i = min; i <= max; i++) {
+                                        list.push(i);
+                                    }
+                                    return list;
+                                }
+                                model: arrayOfNumbers(settings.minFontSize, settings.maxFontSize)
+                                bindingTarget: settings
+                                bindingProperty: "fontSize"
+                            }
+                        }
+                    }
+                }
+
+                SettingsCard {
+                    id: colorsCard
+
+                    title: i18n.tr("ANSI Colors")
+
+                    // TODO This is a workaround at the moment.
+                    // The application should get them from the c++.
+                    property ListModel model: ListModel {
+                        ListElement { name: "Ubuntu"; value: "Ubuntu" }
+                        ListElement { name: "Green on black"; value: "GreenOnBlack" }
+                        ListElement { name: "White on black"; value: "WhiteOnBlack" }
+                        ListElement { name: "Black on white"; value: "BlackOnWhite" }
+                        ListElement { name: "Black on random light"; value: "BlackOnRandomLight" }
+                        ListElement { name: "Linux"; value: "Linux" }
+                        ListElement { name: "Cool retro term"; value: "cool-retro-term" }
+                        ListElement { name: "Dark pastels"; value: "DarkPastels" }
+                        ListElement { name: "Black on light yellow"; value: "BlackOnLightYellow" }
+                    }
+
+                    Label {
+                        id: ansiColorPresetLabel
+                        text: i18n.tr("Preset:")
+                    }
+
+                    ComboBox {
+                        id: ansiColorPresetCombo
+                        anchors {
+                            top: ansiColorPresetLabel.bottom
+                            topMargin: units.gu(1)
+                        }
+                        model: colorsCard.model
+                        bindingTarget: settings
+                        bindingProperty: "colorScheme"
+                        textRole: "name"
+                        valueRole: "value"
+                    }
+                }
+
+                SettingsCard {
+                    id: layoutsCard
+                    visible: !QuickUtils.keyboardAttached
+                    title: i18n.tr("Layouts")
+
+                    Column {
+                        width: Math.min(parent.width, units.gu(32))
+
+                        Repeater {
+                            model: settings.profilesList
+                            delegate: RowLayout {
+                                anchors {
+                                    left: parent.left
+                                    right: parent.right
+                                }
+                                height: units.gu(5)
+
+                                Label {
+                                    text: name
+                                    Layout.fillWidth: true
+                                }
+
+                                Switch {
+                                    checked: profileVisible
+                                    property bool completed: false
+                                    onCheckedChanged: {
+                                        settings.profilesList.setProperty(index, "profileVisible", checked);
+                                        if (completed) settings.profilesChanged();
+                                    }
+                                    Component.onCompleted: completed = true
+                                }
+                            }
                         }
                     }
                 }
