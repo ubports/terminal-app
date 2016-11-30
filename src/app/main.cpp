@@ -62,17 +62,41 @@ bool sshdRunning() {
     return !process.readAllStandardOutput().isEmpty();
 }
 
+static QObject *fileio_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    FileIO *fileIO = new FileIO();
+    return fileIO;
+}
+
+static QObject *fonts_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    Fonts *fonts = new Fonts();
+    return fonts;
+}
+
+static QObject *shortcuts_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    Shortcuts *shortcuts = new Shortcuts();
+    return shortcuts;
+}
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QQmlApplicationEngine engine;
 
-    FileIO fileIO;
-    engine.rootContext()->setContextProperty("fileIO", &fileIO);
-    Fonts fonts;
-    engine.rootContext()->setContextProperty("Fonts", &fonts);
-    Shortcuts shortcuts;
-    engine.rootContext()->setContextProperty("Shortcuts", &shortcuts);
+    qmlRegisterSingletonType<FileIO>("Terminal", 0, 1, "FileIO", fileio_provider);
+    qmlRegisterSingletonType<Fonts>("Terminal", 0, 1, "Fonts", fonts_provider);
+    qmlRegisterSingletonType<Shortcuts>("Terminal", 0, 1, "Shortcuts", shortcuts_provider);
 
     // Set up import paths
     QStringList importPathList = engine.importPathList();

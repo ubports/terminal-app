@@ -17,6 +17,7 @@
  */
 import QtQuick 2.4
 import Qt.labs.settings 1.0
+import Terminal 0.1
 
 import "KeyboardRows/jsonParser.js" as Parser
 
@@ -90,7 +91,7 @@ QtObject {
             var isVisible = isProfileVisible(filePath);
 
             try {
-                var profileObject = Parser.parseJson(fileIO.read(filePath));
+                var profileObject = Parser.parseJson(FileIO.read(filePath));
 
                 var name = "";
                 if (profileObject.id)

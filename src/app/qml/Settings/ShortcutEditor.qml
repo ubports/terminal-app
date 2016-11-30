@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.6
+import Terminal 0.1
 
 Item {
     id: shortcutEditor

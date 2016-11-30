@@ -18,6 +18,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import QMLTermWidget 1.0
+import Terminal 0.1
 
 QMLTermWidget {
     id: terminal
@@ -45,15 +46,15 @@ QMLTermWidget {
                                                                                 .arg(Qt.application.name)
                                                                                 .arg(applicationPid)
                                                                                 .arg(sessionId)
-        Component.onDestruction: fileIO.remove(sshShellPidFile);
+        Component.onDestruction: FileIO.remove(sshShellPidFile);
 
         function getWorkingDirectory() {
             if (terminalAppRoot.sshMode) {
-                var pid = fileIO.read(sshShellPidFile);
+                var pid = FileIO.read(sshShellPidFile);
                 // actual shell process is the first of the children of the process
                 // executed by ssh
-                pid = fileIO.read("/proc/%1/task/%1/children".arg(pid)).split(' ')[0];
-                return fileIO.symLinkTarget("/proc/%1/cwd".arg(pid));
+                pid = FileIO.read("/proc/%1/task/%1/children".arg(pid)).split(' ')[0];
+                return FileIO.symLinkTarget("/proc/%1/cwd".arg(pid));
             } else {
                 return workingDirectory;
             }

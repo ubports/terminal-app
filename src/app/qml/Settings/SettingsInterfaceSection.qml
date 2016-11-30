@@ -19,6 +19,7 @@
 import QtQuick 2.4
 import QtQuick.Layouts 1.3
 import Ubuntu.Components 1.3
+import Terminal 0.1
 
 SettingsSection {
     id: section
