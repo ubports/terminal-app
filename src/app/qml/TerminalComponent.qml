@@ -42,10 +42,9 @@ QMLTermWidget {
            in a temporary file (sshShellPidFile) which is then used when needed
            to query its current working directory.
          */
-        property string sshShellPidFile: "/home/%1/.local/share/%2/%3_sshpid_%4".arg(sshUser)
-                                                                                .arg(Qt.application.name)
-                                                                                .arg(applicationPid)
-                                                                                .arg(sessionId)
+        property string sshShellPidFile: "%1/%2_sshpid_%3".arg(StandardPaths.writableLocation(StandardPaths.AppDataLocation))
+                                                          .arg(applicationPid)
+                                                          .arg(sessionId)
         Component.onDestruction: FileIO.remove(sshShellPidFile);
 
         function getWorkingDirectory() {

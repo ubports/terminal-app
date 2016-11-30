@@ -32,6 +32,7 @@
 #include "fileio.h"
 #include "fonts.h"
 #include "shortcuts.h"
+#include "standardpaths.h"
 
 #include <QDebug>
 
@@ -89,6 +90,15 @@ static QObject *shortcuts_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
     return shortcuts;
 }
 
+static QObject *standardpaths_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(scriptEngine)
+
+    StandardPaths *standardPaths = new StandardPaths();
+    return standardPaths;
+}
+
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
@@ -97,6 +107,7 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<FileIO>("Terminal", 0, 1, "FileIO", fileio_provider);
     qmlRegisterSingletonType<Fonts>("Terminal", 0, 1, "Fonts", fonts_provider);
     qmlRegisterSingletonType<Shortcuts>("Terminal", 0, 1, "Shortcuts", shortcuts_provider);
+    qmlRegisterSingletonType<StandardPaths>("Terminal", 0, 1, "StandardPaths", standardpaths_provider);
 
     // Set up import paths
     QStringList importPathList = engine.importPathList();

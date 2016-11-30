@@ -5,6 +5,7 @@ set(terminal_SRCS
     fileio.cpp
     fonts.cpp
     shortcuts.cpp
+    standardpaths.cpp
     ${QML_SRCS}
 )
 
