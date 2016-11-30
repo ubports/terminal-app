@@ -20,7 +20,6 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.3
 import QtQml.Models 2.2
 import Ubuntu.Components 1.3
-import Ubuntu.Components.Themes.Ambiance 1.3
 
 SettingsSection {
     id: section
@@ -44,7 +43,7 @@ SettingsSection {
             }
             spacing: units.gu(2)
 
-            TextField {
+            TextFieldStyled {
                 id: searchField
                 primaryItem: Icon {
                     height: parent.height / 2
@@ -52,16 +51,6 @@ SettingsSection {
                     name: "find"
                     asynchronous: true
                     color: theme.palette.normal.baseText
-                }
-                style: TextFieldStyle {
-                    background: Rectangle {
-                        visible: !styledItem.readOnly
-                        anchors.fill: parent
-                        border.color: borderColor
-                        border.width: units.dp(1)
-                        radius: units.dp(3)
-                        color: backgroundColor
-                    }
                 }
             }
 
