@@ -119,17 +119,17 @@ SettingsSection {
 
                     // TODO This is a workaround at the moment.
                     // The application should get them from the c++.
-                    property ListModel model: ListModel {
-                        ListElement { name: "Ubuntu"; value: "Ubuntu" }
-                        ListElement { name: "Green on black"; value: "GreenOnBlack" }
-                        ListElement { name: "White on black"; value: "WhiteOnBlack" }
-                        ListElement { name: "Black on white"; value: "BlackOnWhite" }
-                        ListElement { name: "Black on random light"; value: "BlackOnRandomLight" }
-                        ListElement { name: "Linux"; value: "Linux" }
-                        ListElement { name: "Cool retro term"; value: "cool-retro-term" }
-                        ListElement { name: "Dark pastels"; value: "DarkPastels" }
-                        ListElement { name: "Black on light yellow"; value: "BlackOnLightYellow" }
-                    }
+                    property var model: [
+                        {"name": i18n.tr("Ubuntu"),                "value": "Ubuntu"},
+                        {"name": i18n.tr("Green on black"),        "value": "GreenOnBlack"},
+                        {"name": i18n.tr("White on black"),        "value": "WhiteOnBlack"},
+                        {"name": i18n.tr("Black on white"),        "value": "BlackOnWhite"},
+                        {"name": i18n.tr("Black on random light"), "value": "BlackOnRandomLight"},
+                        {"name": i18n.tr("Linux"),                 "value": "Linux"},
+                        {"name": i18n.tr("Cool retro term"),       "value": "cool-retro-term"},
+                        {"name": i18n.tr("Dark pastels"),          "value": "DarkPastels"},
+                        {"name": i18n.tr("Black on light yellow"), "value": "BlackOnLightYellow"},
+                    ]
 
                     Label {
                         id: ansiColorPresetLabel
