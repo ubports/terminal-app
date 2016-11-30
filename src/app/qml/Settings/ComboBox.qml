@@ -50,9 +50,22 @@ MouseArea {
             return -1;
         }
 
+        function jsListIndexOf(listModel, value, role) {
+            if (role == "") {
+                return listModel.indexOf(value);
+            }
+
+            for (var i = 0; i < listModel.length; i++) {
+                if (listModel[i][role] === value) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         function sourceToTarget(sourceValue) {
-            return comboBox.model.indexOf ? comboBox.model.indexOf(sourceValue) :
-                                            listModelIndexOf(comboBox.model, sourceValue, comboBox.valueRole);
+            return comboBox.model.get ? listModelIndexOf(comboBox.model, sourceValue, comboBox.valueRole)
+                                      : jsListIndexOf(comboBox.model, sourceValue, comboBox.valueRole);
         }
         function targetToSource(currentIndex) {
             return comboBox.valueRole ? comboBox.currentItem[comboBox.valueRole] : comboBox.currentItem;

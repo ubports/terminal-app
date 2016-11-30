@@ -87,7 +87,7 @@ Popover {
                         leftMargin: comboBoxPopup.itemMargins
                         rightMargin: comboBoxPopup.itemMargins
                     }
-                    text: textRole != "" ? model[textRole] : modelData
+                    text: textRole != "" ? (model[textRole] ? model[textRole] : modelData[textRole]) : modelData
                     elide: Text.ElideRight
                     verticalAlignment: Text.AlignVCenter
                     color: index == currentIndex ?
