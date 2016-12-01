@@ -24,6 +24,7 @@ Popover {
     id: colorPickerPopup
 
     contentWidth: units.gu(38)
+    grabDismissAreaEvents: false
 
     property color originalColor
     property var setColor
