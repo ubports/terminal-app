@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013, 2014, 2016 Canonical Ltd
+ * Copyright (C) 2016 Canonical Ltd
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 3 as
@@ -36,23 +36,37 @@ QtObject {
 
     Component.onCompleted: {
         if (source && target && sourceProperty && targetProperty) {
-            target[targetProperty] = sourceToTarget(source[sourceProperty]);
-            targetBinding.when = true;
-            sourceBinding.when = true;
+            updateTarget();
+            connectSourceChanges();
         }
     }
 
-    property var targetBinding: Binding {
-        target: doubleBinding.target
-        property: doubleBinding.targetProperty
-        value: doubleBinding.sourceToTarget(doubleBinding.source[doubleBinding.sourceProperty])
-        when: false
+    function connectTargetChanges() {
+        target[targetProperty+"Changed"].connect(updateSource);
     }
 
-    property var sourceBinding: Binding {
-        target: doubleBinding.source
-        property: doubleBinding.sourceProperty
-        value: doubleBinding.targetToSource(doubleBinding.target[doubleBinding.targetProperty])
-        when: false
+    function disconnectTargetChanges() {
+        target[targetProperty+"Changed"].disconnect(updateSource);
+    }
+
+    function connectSourceChanges() {
+        source[sourceProperty+"Changed"].connect(updateTarget);
+    }
+
+    function disconnectSourceChanges() {
+        source[sourceProperty+"Changed"].disconnect(updateTarget);
+    }
+
+    function updateTarget() {
+        disconnectTargetChanges();
+        target[targetProperty] = sourceToTarget(source[sourceProperty]);
+        connectTargetChanges();
+
+    }
+
+    function updateSource() {
+        disconnectSourceChanges();
+        source[sourceProperty] = targetToSource(target[targetProperty]);
+        connectSourceChanges();
     }
 }
