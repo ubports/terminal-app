@@ -39,6 +39,7 @@ public slots:
     QString read(const QString& sourceUrl);
     bool remove(const QString& fileName);
     QString symLinkTarget(const QString& fileName);
+    bool exists(const QString & fileName);
 };
 
 #endif // FILEIO_H

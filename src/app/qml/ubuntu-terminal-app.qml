@@ -18,6 +18,8 @@
  */
 import QtQuick 2.5
 import QtSystemInfo 5.5
+import QMLTermWidget 1.0
+import Terminal 0.1
 import "helpers.js" as Helpers
 import "KeyboardRows"
 
@@ -27,10 +29,30 @@ QtObject {
     property string userPassword: ""
     readonly property bool sshMode: sshIsAvailable && sshRequired && (userPassword != "")
 
+    property string customizedSchemeFile: StandardPaths.writableLocation(StandardPaths.AppConfigLocation)
+                                            + "/customized.colorscheme"
+    property string customizedSchemeName: "customized"
+
+    function saveCustomizedTheme(scheme) {
+        scheme.setName(customizedSchemeName);
+        scheme.write(customizedSchemeFile);
+        ColorSchemeManager.loadCustomColorScheme(customizedSchemeFile);
+    }
+
+    function loadCustomizedTheme() {
+        if (!FileIO.exists(customizedSchemeFile)) {
+            var currentScheme = ColorSchemeManager.copyColorScheme(settings.colorScheme);
+            saveCustomizedTheme(currentScheme);
+        } else {
+            ColorSchemeManager.loadCustomColorScheme(customizedSchemeFile);
+        }
+    }
+
     Component.onCompleted: initialize()
 
     function initialize() {
         i18n.domain = Qt.application.name;
+        loadCustomizedTheme();
         createTerminalWindow();
     }
 

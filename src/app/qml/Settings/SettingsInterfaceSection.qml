@@ -20,6 +20,7 @@ import QtQuick 2.4
 import QtQuick.Layouts 1.3
 import Ubuntu.Components 1.3
 import Terminal 0.1
+import QMLTermWidget 1.0
 
 SettingsSection {
     id: section
@@ -115,7 +116,7 @@ SettingsSection {
                 SettingsCard {
                     id: colorsCard
 
-                    title: i18n.tr("ANSI Colors")
+                    title: i18n.tr("Colors")
 
                     // TODO This is a workaround at the moment.
                     // The application should get them from the c++.
@@ -129,24 +130,76 @@ SettingsSection {
                         {"name": i18n.tr("Cool retro term"),       "value": "cool-retro-term"},
                         {"name": i18n.tr("Dark pastels"),          "value": "DarkPastels"},
                         {"name": i18n.tr("Black on light yellow"), "value": "BlackOnLightYellow"},
+                        {"name": i18n.tr("Customized"),            "value": terminalAppRoot.customizedSchemeName},
                     ]
 
-                    Label {
-                        id: ansiColorPresetLabel
-                        text: i18n.tr("Preset:")
+                    property var currentScheme: ColorSchemeManager.copyColorScheme(settings.colorScheme)
+
+                    function getColor(baseIndex, index) {
+                        return currentScheme.getColor(baseIndex+index);
                     }
 
-                    ComboBox {
-                        id: ansiColorPresetCombo
-                        anchors {
-                            top: ansiColorPresetLabel.bottom
-                            topMargin: units.gu(1)
+                    function setColor(baseIndex, index, color) {
+                        currentScheme.setColor(baseIndex+index, color);
+
+                        // FIXME: Write to disk when the pop-up is dismissed only
+                        terminalAppRoot.saveCustomizedTheme(currentScheme);
+
+                        // FIXME: ugly hack to enforce reloading
+                        settings.colorScheme = "Ubuntu";
+                        settings.colorScheme = terminalAppRoot.customizedSchemeName;
+                    }
+
+
+                    Column {
+                        spacing: units.gu(2)
+
+                        Row {
+                            ColorRow {
+                                width: units.gu(16)
+                                title: i18n.tr("Background:")
+                                model: 1
+                                function getColor(index) { return colorsCard.getColor(1, index); }
+                                function setColor(index, color) { colorsCard.setColor(1, index, color); }
+                            }
+
+                            ColorRow {
+                                width: units.gu(16)
+                                title: i18n.tr("Text:")
+                                model: 1
+                                function getColor(index) { return colorsCard.getColor(0, index); }
+                                function setColor(index, color) { colorsCard.setColor(0, index, color); }
+                            }
                         }
-                        model: colorsCard.model
-                        bindingTarget: settings
-                        bindingProperty: "colorScheme"
-                        textRole: "name"
-                        valueRole: "value"
+
+                        ColorRow {
+                            title: i18n.tr("Normal palette:")
+                            model: 8
+                            function getColor(index) { return colorsCard.getColor(2, index); }
+                            function setColor(index, color) { colorsCard.setColor(2, index, color); }
+                        }
+
+                        ColorRow {
+                            title: i18n.tr("Bright palette:")
+                            model: 8
+                            function getColor(index) { return colorsCard.getColor(12, index); }
+                            function setColor(index, color) { colorsCard.setColor(12, index, color); }
+                        }
+
+                        Column {
+                            spacing: units.gu(1)
+                            Label {
+                                text: i18n.tr("Preset:")
+                            }
+
+                            ComboBox {
+                                model: colorsCard.model
+                                bindingTarget: settings
+                                bindingProperty: "colorScheme"
+                                textRole: "name"
+                                valueRole: "value"
+                            }
+                        }
                     }
                 }
 

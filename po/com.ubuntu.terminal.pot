@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-29 12:53+0100\n"
+"POT-Creation-Date: 2016-12-01 10:04+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,27 +158,99 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:53
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:78
+msgid "R:"
+msgstr ""
+
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:86
+msgid "G:"
+msgstr ""
+
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:94
+msgid "B:"
+msgstr ""
+
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:98
+msgid "Undo"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:55
 msgid "Text"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:64
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:66
 msgid "Font:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:89
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
 msgid "Font Size:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:117
-msgid "ANSI Colors"
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:119
+msgid "Colors"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:135
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:124
+msgid "Ubuntu"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:125
+msgid "Green on black"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:126
+msgid "White on black"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:127
+msgid "Black on white"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:128
+msgid "Black on random light"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:129
+msgid "Linux"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:130
+msgid "Cool retro term"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:131
+msgid "Dark pastels"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:132
+msgid "Black on light yellow"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:133
+msgid "Customized"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
+msgid "Background:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:168
+msgid "Text:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
+msgid "Normal palette:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:183
+msgid "Bright palette:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:192
 msgid "Preset:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:155
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:209
 msgid "Layouts"
 msgstr ""
 
@@ -194,7 +266,7 @@ msgstr ""
 msgid "Shortcuts"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsShortcutsSection.qml:71
+#: ../src/app/qml/Settings/SettingsShortcutsSection.qml:60
 #, qt-format
 msgid "Showing %1 of %2"
 msgstr ""
@@ -227,12 +299,12 @@ msgstr ""
 msgid "SSH server not found. Do you want to proceed in confined mode?"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:287
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:316
 msgid "Un-named Color Scheme"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:464
 msgid "Accessible Color Scheme"
 msgstr ""
 

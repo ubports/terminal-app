@@ -62,3 +62,7 @@ bool FileIO::remove(const QString& fileName) {
 QString FileIO::symLinkTarget(const QString& fileName) {
     return QFile::symLinkTarget(fileName);
 }
+
+bool FileIO::exists(const QString & fileName) {
+    return QFile::exists(fileName);
+}

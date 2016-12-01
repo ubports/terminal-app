@@ -119,7 +119,7 @@ const char* const ColorScheme::translatedColorNames[TABLE_COLORS] =
     tr_NOOP("Color 8 (Intense)")
 };
 
-ColorScheme::ColorScheme()
+ColorScheme::ColorScheme(QObject *parent) : QObject(parent)
 {
     _table = 0;
     _randomTable = 0;
@@ -205,6 +205,16 @@ ColorEntry ColorScheme::colorEntry(int index , uint randomSeed) const
 
     return entry;
 }
+QColor ColorScheme::getColor(int index) const
+{
+    return colorEntry(index).color;
+}
+void ColorScheme::setColor(int index, QColor color)
+{
+    ColorEntry colorEntry = ColorScheme::colorEntry(index);
+    colorEntry.color = color;
+    setColorTableEntry(index, colorEntry);
+}
 void ColorScheme::getColorTable(ColorEntry* table , uint randomSeed) const
 {
     for ( int i = 0 ; i < TABLE_COLORS ; i++ )
@@ -281,6 +291,20 @@ void ColorScheme::read(const QString & fileName)
     for (int i=0 ; i < TABLE_COLORS ; i++)
     {
         readColorEntry(&s, i);
+    }
+}
+void ColorScheme::write(const QString & fileName) const
+{
+    QSettings s(fileName, QSettings::IniFormat);
+    s.beginGroup("General");
+
+    s.setValue("Description", _description);
+    s.setValue("Opacity", _opacity);
+    s.endGroup();
+
+    for (int i=0 ; i < TABLE_COLORS ; i++)
+    {
+        writeColorEntry(&s, i, colorTable()[i]);
     }
 }
 #if 0
@@ -364,6 +388,19 @@ void ColorScheme::readColorEntry(QSettings * s , int index)
     if ( hue != 0 || value != 0 || saturation != 0 )
        setRandomizationRange( index , hue , saturation , value ); 
 
+    s->endGroup();
+}
+void ColorScheme::writeColorEntry(QSettings * s, int index, const ColorEntry& entry) const
+{
+    s->beginGroup(colorNameForIndex(index));
+    QStringList colorList;
+    colorList << QString::number(entry.color.red()) << QString::number(entry.color.green()) << QString::number(entry.color.blue());
+    s->setValue("Color", colorList);
+    s->setValue("Transparency", (bool)entry.transparent);
+    if (entry.fontWeight != ColorEntry::UseCurrentFormat)
+    {
+        s->setValue("Bold", entry.fontWeight == ColorEntry::Bold);
+    }
     s->endGroup();
 }
 #if 0
@@ -670,17 +707,7 @@ bool ColorSchemeManager::loadColorScheme(const QString& filePath)
         return false;
     }    
 
-    if ( !_colorSchemes.contains(schemeName) )
-    {
-        _colorSchemes.insert(schemeName,scheme);
-    }
-    else
-    {
-        qDebug() << "color scheme with name" << schemeName << "has already been" <<
-            "found, ignoring.";
-        
-        delete scheme;
-    }
+    _colorSchemes.insert(schemeName,scheme);
 
     return true; 
 }
@@ -775,6 +802,16 @@ const ColorScheme* ColorSchemeManager::findColorScheme(const QString& name)
         qDebug() << "Could not find color scheme - " << name;
 
         return 0; 
+    }
+}
+
+Konsole::ColorScheme* ColorSchemeManager::copyColorScheme(const QString& name)
+{
+    const ColorScheme* scheme = findColorScheme(name);
+    if (scheme) {
+        return new ColorScheme(*scheme);
+    } else {
+        return 0;
     }
 }
 
