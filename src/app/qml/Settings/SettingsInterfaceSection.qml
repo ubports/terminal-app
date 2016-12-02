@@ -133,23 +133,7 @@ SettingsSection {
                         {"name": i18n.tr("Customized"),            "value": terminalAppRoot.customizedSchemeName},
                     ]
 
-                    property var currentScheme: ColorSchemeManager.copyColorScheme(settings.colorScheme)
-
-                    function getColor(baseIndex, index) {
-                        return currentScheme.getColor(baseIndex+index);
-                    }
-
-                    function setColor(baseIndex, index, color) {
-                        currentScheme.setColor(baseIndex+index, color);
-
-                        // FIXME: Write to disk when the pop-up is dismissed only
-                        terminalAppRoot.saveCustomizedTheme(currentScheme);
-
-                        // FIXME: ugly hack to enforce reloading
-                        settings.colorScheme = "Ubuntu";
-                        settings.colorScheme = terminalAppRoot.customizedSchemeName;
-                    }
-
+                    property var currentScheme: ColorSchemeManager.findColorScheme(settings.colorScheme)
 
                     Column {
                         spacing: units.gu(2)
@@ -158,32 +142,32 @@ SettingsSection {
                             ColorRow {
                                 width: units.gu(16)
                                 title: i18n.tr("Background:")
-                                model: 1
-                                function getColor(index) { return colorsCard.getColor(1, index); }
-                                function setColor(index, color) { colorsCard.setColor(1, index, color); }
+                                colorScheme: colorsCard.currentScheme
+                                start: 1
+                                count: 1
                             }
 
                             ColorRow {
                                 width: units.gu(16)
                                 title: i18n.tr("Text:")
-                                model: 1
-                                function getColor(index) { return colorsCard.getColor(0, index); }
-                                function setColor(index, color) { colorsCard.setColor(0, index, color); }
+                                colorScheme: colorsCard.currentScheme
+                                start: 0
+                                count: 1
                             }
                         }
 
                         ColorRow {
                             title: i18n.tr("Normal palette:")
-                            model: 8
-                            function getColor(index) { return colorsCard.getColor(2, index); }
-                            function setColor(index, color) { colorsCard.setColor(2, index, color); }
+                            colorScheme: colorsCard.currentScheme
+                            start: 2
+                            count: 8
                         }
 
                         ColorRow {
                             title: i18n.tr("Bright palette:")
-                            model: 8
-                            function getColor(index) { return colorsCard.getColor(12, index); }
-                            function setColor(index, color) { colorsCard.setColor(12, index, color); }
+                            colorScheme: colorsCard.currentScheme
+                            start: 12
+                            count: 8
                         }
 
                         Column {

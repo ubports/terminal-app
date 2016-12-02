@@ -64,7 +64,7 @@ public:
     QString description() const;
 
     /** Sets the name of the color scheme */
-    Q_INVOKABLE void setName(const QString& name);
+    void setName(const QString& name);
     /** Returns the name of the color scheme */
     QString name() const;
 
@@ -101,6 +101,7 @@ public:
 
     Q_INVOKABLE QColor getColor(int index) const;
     Q_INVOKABLE void setColor(int index, QColor color);
+    Q_SIGNAL void colorChanged(int index);
 
     /** 
      * Convenience method.  Returns the 
@@ -285,7 +286,7 @@ public:
     /**
      * Returns the default color scheme for Konsole
      */
-    const ColorScheme* defaultColorScheme() const;
+    ColorScheme* defaultColorScheme() const;
  
     /**
      * Returns the color scheme with the given name or 0 if no
@@ -295,9 +296,7 @@ public:
      * The first time that a color scheme with a particular name is
      * requested, the configuration information is loaded from disk.
      */
-    const ColorScheme* findColorScheme(const QString& name);
-
-    Q_INVOKABLE Konsole::ColorScheme* copyColorScheme(const QString& name);
+    Q_INVOKABLE Konsole::ColorScheme* findColorScheme(const QString& name);
 
 #if 0
     /**
@@ -320,7 +319,7 @@ public:
      *
      * Subsequent calls will be inexpensive. 
      */
-    QList<const ColorScheme*> allColorSchemes();    
+    QList<ColorScheme*> allColorSchemes();
 
     /** Returns the global color scheme manager instance. */
     static ColorSchemeManager* instance();
@@ -353,12 +352,12 @@ private:
     // finds the path of a color scheme
     QString findColorSchemePath(const QString& name) const;
 
-    QHash<QString,const ColorScheme*> _colorSchemes;
+    QHash<QString,ColorScheme*> _colorSchemes;
     QSet<ColorScheme*> _modifiedSchemes;
 
     bool _haveLoadedAll;
 
-    static const ColorScheme _defaultColorScheme;
+    static ColorScheme _defaultColorScheme;
 
     static ColorSchemeManager * theColorSchemeManager;
 };

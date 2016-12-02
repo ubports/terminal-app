@@ -33,19 +33,12 @@ QtObject {
                                             + "/customized.colorscheme"
     property string customizedSchemeName: "customized"
 
-    function saveCustomizedTheme(scheme) {
-        scheme.setName(customizedSchemeName);
-        scheme.write(customizedSchemeFile);
-        ColorSchemeManager.loadCustomColorScheme(customizedSchemeFile);
-    }
-
     function loadCustomizedTheme() {
         if (!FileIO.exists(customizedSchemeFile)) {
-            var currentScheme = ColorSchemeManager.copyColorScheme(settings.colorScheme);
-            saveCustomizedTheme(currentScheme);
-        } else {
-            ColorSchemeManager.loadCustomColorScheme(customizedSchemeFile);
+            var currentScheme = ColorSchemeManager.findColorScheme(settings.colorScheme);
+            currentScheme.write(customizedSchemeFile);
         }
+        ColorSchemeManager.loadCustomColorScheme(customizedSchemeFile);
     }
 
     Component.onCompleted: initialize()

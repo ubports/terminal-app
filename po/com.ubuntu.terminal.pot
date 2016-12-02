@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-01 10:04+0100\n"
+"POT-Creation-Date: 2016-12-02 15:30+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,19 +158,19 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:78
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:79
 msgid "R:"
 msgstr ""
 
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:86
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:87
 msgid "G:"
 msgstr ""
 
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:94
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:95
 msgid "B:"
 msgstr ""
 
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:98
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:99
 msgid "Undo"
 msgstr ""
 
@@ -230,27 +230,27 @@ msgstr ""
 msgid "Customized"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:144
 msgid "Background:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:168
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:152
 msgid "Text:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
 msgid "Normal palette:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:183
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:167
 msgid "Bright palette:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:192
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
 msgid "Preset:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:209
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:193
 msgid "Layouts"
 msgstr ""
 
@@ -299,12 +299,12 @@ msgstr ""
 msgid "SSH server not found. Do you want to proceed in confined mode?"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:287
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:316
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:320
 msgid "Un-named Color Scheme"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:464
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:468
 msgid "Accessible Color Scheme"
 msgstr ""
 

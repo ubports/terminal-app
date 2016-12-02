@@ -130,6 +130,7 @@ ColorScheme::ColorScheme(const ColorScheme& other)
        ,_table(0)
        ,_randomTable(0)
 {
+    setParent(other.parent());
     setName(other.name());
     setDescription(other.description());
 
@@ -212,8 +213,11 @@ QColor ColorScheme::getColor(int index) const
 void ColorScheme::setColor(int index, QColor color)
 {
     ColorEntry colorEntry = ColorScheme::colorEntry(index);
-    colorEntry.color = color;
-    setColorTableEntry(index, colorEntry);
+    if (colorEntry.color != color) {
+        colorEntry.color = color;
+        setColorTableEntry(index, colorEntry);
+        Q_EMIT colorChanged(index);
+    }
 }
 void ColorScheme::getColorTable(ColorEntry* table , uint randomSeed) const
 {
@@ -500,7 +504,7 @@ ColorScheme* KDE3ColorSchemeReader::read()
     Q_ASSERT( _device->openMode() == QIODevice::ReadOnly ||
               _device->openMode() == QIODevice::ReadWrite  );
 
-    ColorScheme* scheme = new ColorScheme();
+    ColorScheme* scheme = new ColorScheme(ColorSchemeManager::instance());
 
     QRegExp comment("#.*$");
     while ( !_device->atEnd() )
@@ -585,7 +589,7 @@ ColorSchemeManager::ColorSchemeManager()
 }
 ColorSchemeManager::~ColorSchemeManager()
 {
-    QHashIterator<QString,const ColorScheme*> iter(_colorSchemes);
+    QHashIterator<QString,ColorScheme*> iter(_colorSchemes);
     while (iter.hasNext())
     {
         iter.next();
@@ -624,7 +628,7 @@ void ColorSchemeManager::loadAllColorSchemes()
 
     _haveLoadedAll = true;
 }
-QList<const ColorScheme*> ColorSchemeManager::allColorSchemes()
+QList<ColorScheme*> ColorSchemeManager::allColorSchemes()
 {
     if ( !_haveLoadedAll )
     {
@@ -696,7 +700,7 @@ bool ColorSchemeManager::loadColorScheme(const QString& filePath)
 
     const QString& schemeName = info.baseName();
     
-    ColorScheme* scheme = new ColorScheme();
+    ColorScheme* scheme = new ColorScheme(this);
     scheme->setName(schemeName);
     scheme->read(filePath);
 
@@ -744,8 +748,8 @@ QList<QString> ColorSchemeManager::listColorSchemes()
 //                                             "konsole/*.colorscheme",
 //                                             KStandardDirs::NoDuplicates);
 }
-const ColorScheme ColorSchemeManager::_defaultColorScheme;
-const ColorScheme* ColorSchemeManager::defaultColorScheme() const
+ColorScheme ColorSchemeManager::_defaultColorScheme;
+ColorScheme* ColorSchemeManager::defaultColorScheme() const
 {
     return &_defaultColorScheme;
 }
@@ -778,7 +782,7 @@ QString ColorSchemeManager::findColorSchemePath(const QString& name) const
 
     return path;
 }
-const ColorScheme* ColorSchemeManager::findColorScheme(const QString& name) 
+Konsole::ColorScheme* ColorSchemeManager::findColorScheme(const QString& name)
 {
     if ( name.isEmpty() )
         return defaultColorScheme();
@@ -802,16 +806,6 @@ const ColorScheme* ColorSchemeManager::findColorScheme(const QString& name)
         qDebug() << "Could not find color scheme - " << name;
 
         return 0; 
-    }
-}
-
-Konsole::ColorScheme* ColorSchemeManager::copyColorScheme(const QString& name)
-{
-    const ColorScheme* scheme = findColorScheme(name);
-    if (scheme) {
-        return new ColorScheme(*scheme);
-    } else {
-        return 0;
     }
 }
 

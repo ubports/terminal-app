@@ -19,18 +19,33 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
+import QMLTermWidget 1.0
 
 Column {
     id: colorRow
 
     property string title
-    property var model
+    property var colorScheme
+    property int start
+    property int count
 
-    function getColor(model) {
-        return "black";
+    signal colorPickerOpened
+    signal colorPickerClosed
+
+    onColorPickerClosed: colorScheme.write(terminalAppRoot.customizedSchemeFile)
+    onColorPickerOpened: switchToCustomizedScheme()
+
+    function switchToCustomizedScheme() {
+        if (settings.colorScheme != terminalAppRoot.customizedSchemeName) {
+            colorScheme.write(terminalAppRoot.customizedSchemeFile);
+            ColorSchemeManager.loadCustomColorScheme(terminalAppRoot.customizedSchemeFile);
+            settings.colorScheme = terminalAppRoot.customizedSchemeName;
+        }
     }
 
-    function setColor(model, color) {
+    Connections {
+        target: colorScheme
+        onColorChanged: colorRow.colorSchemeChanged()
     }
 
     spacing: units.gu(1)
@@ -44,30 +59,34 @@ Column {
         elide: Text.ElideRight
         text: colorRow.title
     }
-    
+
     Row {
         id: colors
         spacing: units.gu(1)
         Repeater {
-            model: colorRow.model
+            model: colorRow.count
             Rectangle {
                 radius: units.dp(3)
                 width: units.gu(3)
                 height: width
                 border.color: theme.palette.normal.base
                 border.width: units.dp(1)
-                color: colorRow.getColor(modelData)
+                color: colorScheme.getColor(start+index)
 
                 function setColor(color) {
-                    colorRow.setColor(modelData, color);
+                    colorScheme.setColor(start+index, color);
                 }
 
                 MouseArea {
                     anchors.fill: parent
-                    onClicked: PopupUtils.open(Qt.resolvedUrl("ColorPickerPopup.qml"),
+                    onClicked: {
+                        var colorPicker = PopupUtils.open(Qt.resolvedUrl("ColorPickerPopup.qml"),
                                                parent,
-                                               {"originalColor": colorRow.getColor(modelData),
-                                                "setColor": setColor})
+                                               {"originalColor": colorScheme.getColor(start+index),
+                                                "setColor": setColor});
+                        colorPicker.Component.onDestruction.connect(colorRow.colorPickerClosed);
+                        colorRow.colorPickerOpened();
+                    }
                 }
             }
         }
