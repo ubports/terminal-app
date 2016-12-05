@@ -67,11 +67,7 @@ if(CLICK_MODE)
 
     add_custom_target(com_ubuntu_terminal_CLICKFiles ALL SOURCES ${CLICK_FILES})
 else(CLICK_MODE)
-    execute_process(
-        COMMAND qmake -query QT_INSTALL_QML
-        OUTPUT_VARIABLE QT_IMPORTS_DIR
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-    )
+    set(QT_IMPORTS_DIR "${CMAKE_INSTALL_LIBDIR}/qt5/qml")
     set(DATA_DIR ${CMAKE_INSTALL_DATADIR}/${APP_NAME})
     set(ICON ${CMAKE_INSTALL_PREFIX}/${DATA_DIR}/${ICON_FILE})
     set(DESKTOP_DIR ${CMAKE_INSTALL_DATADIR}/applications)
