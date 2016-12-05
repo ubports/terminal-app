@@ -20,6 +20,7 @@ import QtQuick 2.5
 import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 
 Window {
     id: terminalWindow
