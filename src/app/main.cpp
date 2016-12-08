@@ -63,51 +63,27 @@ bool sshdRunning() {
     return !process.readAllStandardOutput().isEmpty();
 }
 
-static QObject *fileio_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
+#define MAKE_SINGLETON_FACTORY(type) \
+    static QObject* type##_singleton_factory(QQmlEngine* engine, QJSEngine* scriptEngine) { \
+        Q_UNUSED(engine); \
+        Q_UNUSED(scriptEngine); \
+        return new type(); \
+    }
 
-    FileIO *fileIO = new FileIO();
-    return fileIO;
-}
-
-static QObject *fonts_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
-
-    Fonts *fonts = new Fonts();
-    return fonts;
-}
-
-static QObject *shortcuts_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
-
-    Shortcuts *shortcuts = new Shortcuts();
-    return shortcuts;
-}
-
-static QObject *standardpaths_provider(QQmlEngine *engine, QJSEngine *scriptEngine)
-{
-    Q_UNUSED(engine)
-    Q_UNUSED(scriptEngine)
-
-    StandardPaths *standardPaths = new StandardPaths();
-    return standardPaths;
-}
+MAKE_SINGLETON_FACTORY(FileIO)
+MAKE_SINGLETON_FACTORY(Fonts)
+MAKE_SINGLETON_FACTORY(Shortcuts)
+MAKE_SINGLETON_FACTORY(StandardPaths)
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QQmlApplicationEngine engine;
 
-    qmlRegisterSingletonType<FileIO>("Terminal", 0, 1, "FileIO", fileio_provider);
-    qmlRegisterSingletonType<Fonts>("Terminal", 0, 1, "Fonts", fonts_provider);
-    qmlRegisterSingletonType<Shortcuts>("Terminal", 0, 1, "Shortcuts", shortcuts_provider);
-    qmlRegisterSingletonType<StandardPaths>("Terminal", 0, 1, "StandardPaths", standardpaths_provider);
+    qmlRegisterSingletonType<FileIO>("Terminal", 0, 1, "FileIO", FileIO_singleton_factory);
+    qmlRegisterSingletonType<Fonts>("Terminal", 0, 1, "Fonts", Fonts_singleton_factory);
+    qmlRegisterSingletonType<Shortcuts>("Terminal", 0, 1, "Shortcuts", Shortcuts_singleton_factory);
+    qmlRegisterSingletonType<StandardPaths>("Terminal", 0, 1, "StandardPaths", StandardPaths_singleton_factory);
 
     // Set up import paths
     QStringList importPathList = engine.importPathList();
