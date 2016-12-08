@@ -33,6 +33,7 @@
 #include "fonts.h"
 #include "shortcuts.h"
 #include "standardpaths.h"
+#include "qml/Tabs/drag-helper.h"
 
 #include <QDebug>
 
@@ -74,6 +75,7 @@ MAKE_SINGLETON_FACTORY(FileIO)
 MAKE_SINGLETON_FACTORY(Fonts)
 MAKE_SINGLETON_FACTORY(Shortcuts)
 MAKE_SINGLETON_FACTORY(StandardPaths)
+MAKE_SINGLETON_FACTORY(DragHelper)
 
 int main(int argc, char *argv[])
 {
@@ -84,6 +86,7 @@ int main(int argc, char *argv[])
     qmlRegisterSingletonType<Fonts>("Terminal", 0, 1, "Fonts", Fonts_singleton_factory);
     qmlRegisterSingletonType<Shortcuts>("Terminal", 0, 1, "Shortcuts", Shortcuts_singleton_factory);
     qmlRegisterSingletonType<StandardPaths>("Terminal", 0, 1, "StandardPaths", StandardPaths_singleton_factory);
+    qmlRegisterSingletonType<DragHelper>("Tabs.DragHelper", 0, 1, "DragHelper", DragHelper_singleton_factory);
 
     // Set up import paths
     QStringList importPathList = engine.importPathList();

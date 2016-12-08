@@ -14,12 +14,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * Authored-by: Florian Boucault <florian.boucault@canonical.com>
+ *              Andrew Hayzen <andrew.hayzen@canonical.com>
  */
 import QtQuick 2.4
 import QtQml.Models 2.2
 import QtQuick.Window 2.2
 import Ubuntu.Components 1.3
 import "." as LocalTabs
+
+import Tabs.DragHelper 0.1
 
 Rectangle {
     id: tabsBar
@@ -40,6 +43,41 @@ Rectangle {
     */
     property var model
     property list<Action> actions
+
+    /* To enable drag and drop set to enabled
+     *
+     * Use expose to set any information you need the DropArea to access
+     * Then use drag.source.expose.myproperty
+     * 
+     * Set mimeType to one of the keys in the DropArea's you want to accept
+     * 
+     * Set a function for previewUrlFromIndex which is given the index
+     * and returns a url to an image, which will be shown in the handle
+     */
+    readonly property DragAndDropSettings dragAndDrop: DragAndDropSettings {
+
+    }
+
+    property string fallbackIcon: ""
+
+    signal contextMenu(var tabDelegate, int index)
+    signal requestNewWindowFromTab(var tab, var callback)
+
+    function iconNameFromModelItem(modelItem, index) {
+        return "";
+    }
+
+    function iconSourceFromModelItem(modelItem, index) {
+        return "";
+    }
+
+    /* When a tab is being removed due to it being moved to another window
+     * This allows for different code to be run when moving, such as not
+     * destroying the tab components
+     */
+    function removeTabButMoving(index) {
+        return model.removeTab(index);
+    }
 
     function titleFromModelItem(modelItem) {
         return modelItem.title;
@@ -96,6 +134,7 @@ Rectangle {
         orientation: ListView.Horizontal
         clip: true
         highlightMoveDuration: UbuntuAnimation.FastDuration
+        objectName: "tabListView"
 
         UbuntuNumberAnimation { id: scrollAnimation; target: tabs; property: "contentX" }
 
@@ -121,21 +160,25 @@ Rectangle {
         displaced: Transition {
             UbuntuNumberAnimation { property: "x" }
         }
-
         currentIndex: tabsBar.model.selectedIndex
         model: tabsBar.model
         delegate: MouseArea {
             id: tabMouseArea
+            objectName: "tabDelegate"
 
+            acceptedButtons: Qt.LeftButton | Qt.RightButton | Qt.MiddleButton
             width: tab.width
             height: tab.height
             drag {
-                target: tabs.count > 1 && tab.isFocused ? tab : null
-                axis: Drag.XAxis
+                target: (tabs.count > 1 || dragAndDrop.enabled) && tab.isFocused ? tab : null
+                axis: dragAndDrop.enabled ? Drag.XAndYAxis : Drag.XAxis
                 minimumX: tab.isDragged ? -tab.width/2 : -Infinity
                 maximumX: tab.isDragged ? tabs.width - tab.width/2 : Infinity
             }
             z: tab.isFocused ? 1 : 0
+
+            readonly property int tabIndex: index  // for autopilot
+
             Binding {
                 target: tabsBar
                 property: "selectedTabX"
@@ -148,8 +191,24 @@ Rectangle {
                 value: tab.width
                 when: tab.isFocused
             }
+            NumberAnimation {
+                id: resetVerticalAnimation
+                target: tab
+                duration: 250
+                property: "y"
+                to: 0
+            }
 
-            onPressed: tabsBar.model.selectTab(index)
+            onPressed: {
+                if (mouse.button === Qt.LeftButton) {
+                    tabsBar.model.selectTab(index)
+                } else if (mouse.button === Qt.RightButton) {
+                    tabsBar.contextMenu(tabMouseArea, index)
+                } else if (mouse.button === Qt.MiddleButton) {
+                    tabsBar.model.removeTab(index)
+                }
+            }
+            onReleased: resetVerticalAnimation.start()
             onWheel: {
                 if (wheel.angleDelta.y >= 0) {
                     tabsBar.model.selectTab(tabsBar.model.selectedIndex - 1);
@@ -162,11 +221,16 @@ Rectangle {
 
             LocalTabs.Tab {
                 id: tab
+                objectName: "tabItem"
 
                 anchors.left: tabMouseArea.left
                 implicitWidth: tabs.availableWidth / 2
                 width: tabs.overflow ? tabs.availableWidth / tabs.maximumTabsCount : Math.min(tabs.maximumTabWidth, implicitWidth)
                 height: tabs.height
+
+                // Reference the tab and window so that the dropArea can determine what to do
+                readonly property var thisTab: tabsBar.model.get(index)
+                readonly property var thisWindow: dragAndDrop.thisWindow
 
                 property bool isDragged: tabMouseArea.drag.active
                 Drag.active: tab.isDragged
@@ -195,10 +259,13 @@ Rectangle {
                     }
                 }
 
+                fallbackIcon: tabsBar.fallbackIcon
+                iconName: tabsBar.iconNameFromModelItem(typeof(modelData) === "undefined" ? model : modelData, index)
+                iconSource: tabsBar.iconSourceFromModelItem(typeof(modelData) === "undefined" ? model : modelData, index)
                 isHovered: tabMouseArea.containsMouse
                 isFocused: tabsBar.model.selectedIndex == index
                 isBeforeFocusedTab: index == tabsBar.model.selectedIndex - 1
-                title: tabsBar.titleFromModelItem(modelData)
+                title: tabsBar.titleFromModelItem(typeof(modelData) === "undefined" ? model : modelData)
                 backgroundColor: tabsBar.backgroundColor
                 foregroundColor: tabsBar.foregroundColor
                 contourColor: tabsBar.contourColor
@@ -216,6 +283,59 @@ Rectangle {
                         tabs.animatedPositionAtIndex(tabs.indexLastVisibleItem + 1);
                     } else if (tabMouseArea.DelegateModel.itemsIndex == tabs.indexFirstVisibleItem) {
                         tabs.animatedPositionAtIndex(tabs.indexFirstVisibleItem - 1);
+                    }
+                }
+            }
+
+            onPositionChanged: {
+                if (!dragAndDrop.enabled || !tabMouseArea.drag.active) {
+                    return;
+                }
+
+                // Keep the visual tab within maxYDiff of starting point when
+                // dragging vertically so that it doesn't cover other elements
+                // or appear to be detached
+                tab.y = Math.abs(tab.y) > dragAndDrop.maxYDiff ? (tab.y > 0 ? 1 : -1) * dragAndDrop.maxYDiff : tab.y
+
+                // Initiate drag and drop if mouse y has gone further than the height from the object
+                if (mouse.y > height * 2 || mouse.y < -height) {
+                    // Reset visual position of tab delegate
+                    resetVerticalAnimation.start();
+
+                    // Generate tab preview for drag handle
+                    DragHelper.expectedAction = dragAndDrop.expectedAction
+                    DragHelper.mimeType = dragAndDrop.mimeType
+                    DragHelper.previewBorderWidth = dragAndDrop.previewBorderWidth
+                    DragHelper.previewSize = dragAndDrop.previewSize
+                    DragHelper.previewTopCrop = dragAndDrop.previewTopCrop
+                    DragHelper.previewUrl = dragAndDrop.previewUrlFromIndex(index)
+                    DragHelper.source = tab
+
+                    var dropAction = DragHelper.execDrag(index);
+
+                    // IgnoreAction - no DropArea accepted so New Window
+                    // MoveAction   - DropArea accept but different window
+                    // CopyAction   - DropArea accept but same window
+
+                    if (dropAction === Qt.MoveAction) {
+                        // Moved into another window
+
+                        // Just remove from model and do not destroy
+                        // as webview is used in other window
+                        tabsBar.removeTabButMoving(index);
+                    } else if (dropAction === Qt.CopyAction) {
+                        // Moved into the same window
+
+                        // So no action
+                    } else if (dropAction === Qt.IgnoreAction) {
+                        // Moved outside of any window
+
+                        // callback function only removes from model
+                        // and not destroy as webview is in new window
+                        tabsBar.requestNewWindowFromTab(tab.thisTab, function() { tabsBar.removeTabButMoving(index); })
+                    } else {
+                        // Unknown state
+                        console.debug("Unknown drop action:", dropAction);
                     }
                 }
             }
@@ -266,6 +386,7 @@ Rectangle {
             model: tabsBar.actions
 
             LocalTabs.TabButton {
+                objectName: modelData.objectName
                 iconColor: tabsBar.actionColor
                 iconSource: modelData.iconSource
                 onClicked: modelData.trigger()
@@ -279,6 +400,7 @@ Rectangle {
         anchors.fill: parent
         color: backgroundColor
         opacity: 0.4
-        visible: !Window.active
+        // Show when the window is not active or drag and drop is enabled and a drag is being performed outside of the dropArea threshold
+        visible: !Window.active || (dragAndDrop.enabled && dragAndDrop.dropArea ? (DragHelper.dragging && !dragAndDrop.dropArea.inThreshold) : false)
     }
 }

@@ -14,6 +14,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * Authored-by: Florian Boucault <florian.boucault@canonical.com>
+ *              Andrew Hayzen <andrew.hayzen@canonical.com>
  */
 import QtQuick 2.4
 import Ubuntu.Components 1.3
@@ -30,6 +31,9 @@ Item {
     property bool isFocused
     property bool isBeforeFocusedTab
     property bool isHovered: false
+    property string iconName: ""
+    property url iconSource: ""
+    property string fallbackIcon: ""
     signal close
 
     implicitHeight: units.gu(3)
@@ -74,6 +78,7 @@ Item {
 
     MouseArea {
         id: tabCloseButton
+        objectName: "tabCloseButton"
 
         anchors {
             top: parent.top
@@ -108,10 +113,35 @@ Item {
         }
     }
 
+    Loader {
+        id: iconContainer
+        active: iconName !== "" || iconSource.toString() !== "" || fallbackIcon !== ""
+        anchors {
+            left: tabCloseButton.right
+            verticalCenter: parent.verticalCenter
+        }
+        asynchronous: true
+        height: parent.height - units.gu(1)
+        width: height
+        visible: status === Loader.Ready
+
+        Component.onCompleted: {
+            setSource(
+                Qt.resolvedUrl("TabIcon.qml"),
+                {
+                    "iconName": Qt.binding(function() { return iconName; }),
+                    "iconSource": Qt.binding(function() { return iconSource; }),
+                    "fallbackIcon": Qt.binding(function() { return fallbackIcon; })
+                }
+            )
+        }
+    }
+
     Label {
         textSize: Label.Small
         anchors {
-            left: tabCloseButton.right
+            left: iconContainer.visible ? iconContainer.right : tabCloseButton.right
+            leftMargin: iconContainer.visible ? units.gu(0.5) : 0
             verticalCenter: parent.verticalCenter
             right: parent.right
             rightMargin: units.gu(0.5)
