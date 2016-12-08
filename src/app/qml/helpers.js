@@ -9,7 +9,7 @@ function createComponentInstance(component, parent, properties, callback) {
             }
         }
         incubator.onStatusChanged = objectCreated;
-
+        incubator.forceCompletion();
     } else if (component.status == Component.Error) {
         console.log("Error loading component:", component.errorString());
     }
