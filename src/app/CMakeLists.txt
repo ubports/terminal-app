@@ -6,7 +6,6 @@ set(terminal_SRCS
     fonts.cpp
     shortcuts.cpp
     standardpaths.cpp
-    qml/Tabs/drag-helper.cpp
     ${QML_SRCS}
 )
 

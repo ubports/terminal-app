@@ -18,8 +18,8 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
+import Ubuntu.Components.Extras 0.3
 import QMLTermWidget 1.0
-import "Tabs"
 
 // For FastBlur
 import QtGraphicalEffects 1.0

@@ -52,3 +52,15 @@ parts:
     snap:
       - -usr/share/doc
       - -usr/include
+
+  ubuntu-ui-extras:
+    plugin: cmake
+    configflags: [-DCMAKE_INSTALL_PREFIX=/usr]
+    source: http://code.launchpad.net/~phablet-team/ubuntu-ui-extras/tabs
+    source-type: bzr
+    build-packages:
+      - gettext
+      - pkg-config
+      - qtbase5-dev
+      - qtdeclarative5-dev
+      - libexiv2-dev
