@@ -12,6 +12,7 @@ set(terminal_SRCS
 add_executable(terminal ${terminal_SRCS})
 
 qt5_use_modules(terminal Gui Qml Quick Widgets)
+target_link_libraries(terminal stdc++)
 
 if(NOT "${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
 add_custom_target(terminal-qmlfiles ALL
