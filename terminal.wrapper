@@ -1,7 +1,7 @@
 #!/bin/sh
 
-# FIXME: this is a workaround for nvidia driver not being selected on Yakkety
-export LD_LIBRARY_PATH=/var/lib/snapd/hostfs/usr/lib/nvidia-367/:$LD_LIBRARY_PATH
+# FIXME: this is a workaround for nvidia driver not being selected
+export LD_LIBRARY_PATH=/var/lib/snapd/lib/gl:$LD_LIBRARY_PATH
 
 export HOME=/home/$USER
 exec $SNAP/usr/bin/terminal --ssh --desktop_file_hint=unity8 "$@"
