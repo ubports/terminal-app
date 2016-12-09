@@ -68,7 +68,7 @@ Page {
         actions: [
             Action {
                 // FIXME: icon from theme is fuzzy at many GUs
-                iconSource: Qt.resolvedUrl("Tabs/tab_add.png")
+                iconSource: Qt.resolvedUrl("tab_add.png")
     //            iconName: "add"
                 onTriggered: terminalPage.tabsModel.addTab()
             },

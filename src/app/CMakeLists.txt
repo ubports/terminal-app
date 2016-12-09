@@ -1,4 +1,4 @@
-file(GLOB_RECURSE QML_SRCS *.qml *.js *.json)
+file(GLOB_RECURSE QML_SRCS *.qml *.js *.json *.png)
 
 set(terminal_SRCS
     main.cpp
