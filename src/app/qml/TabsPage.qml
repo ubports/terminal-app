@@ -31,7 +31,7 @@ Page {
             iconName: "add"
             text: i18n.tr("New tab")
             onTriggered: {
-                tabsModel.addTab();
+                tabsModel.addTerminalTab();
             }
         }
     }
@@ -63,7 +63,7 @@ Page {
 
                 ShaderEffectSource {
                     id: thumb
-                    sourceItem: model.terminal
+                    sourceItem: tabsModel.itemAt(index)
 
                     live: tabsPage.visible
 
@@ -88,7 +88,7 @@ Page {
                         border {color: UbuntuColors.orange; width: units.dp(1)}
                         action: Action {
                             iconName: "close"
-                            onTriggered: tabsModel.removeTab(index);
+                            onTriggered: tabsModel.removeItem(index);
                         }
                     }
 
@@ -102,8 +102,8 @@ Page {
 
                     Label {
                         anchors { fill: blackRect; margins: units.dp(2) }
-                        property var tab: tabsModel.get(index)
-                        text: tab ? tab.terminal.session.title : ""
+                        property var tab: tabsModel.itemAt(index)
+                        text: tab ? tab.session.title : ""
                         wrapMode: Text.Wrap
                         color: "white"
                     }
@@ -112,7 +112,7 @@ Page {
                         id: highlightArea
                         anchors.fill: parent
                         color: "white"
-                        opacity: tabsModel.selectedIndex == index ? 0.2 : 0
+                        opacity: tabsModel.currentIndex == index ? 0.2 : 0
                         Behavior on opacity {
                             NumberAnimation { duration: 200 }
                         }
@@ -121,7 +121,7 @@ Page {
                     MouseArea {
                         anchors.fill: parent
                         onClicked: {
-                            tabsModel.selectTab(index);
+                            tabsModel.currentIndex = index;
                             pageStack.pop();
                         }
                     }

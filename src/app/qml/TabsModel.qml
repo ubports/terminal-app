@@ -18,99 +18,99 @@
 import QtQuick 2.4
 
 ListModel {
-    property int selectedIndex: -1
-    property var selectedTerminal
-
     id: tabsModel
+
+    // FIXME: compatibility layer for TabsBar
+    property alias selectedIndex: tabsModel.currentIndex
+    function selectTab(index) {
+        if (index >= 0 && index < tabsModel.count) {
+            currentIndex = index;
+        }
+    }
+    function removeTab(index) {
+        removeItem(index);
+    }
+    function moveTab(from, to) {
+        moveItem(from, to);
+    }
 
     property Component terminalComponent: TerminalComponent {}
 
-    function addTab(initialWorkingDirectory) {
-        if (selectedTerminal) {
-            initialWorkingDirectory = selectedTerminal.session.getWorkingDirectory();
+    function addTerminalTab(initialWorkingDirectory) {
+        if (currentItem) {
+            initialWorkingDirectory = currentItem.session.getWorkingDirectory();
         }
 
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer,
-                                                        {"initialWorkingDirectory": initialWorkingDirectory});
-        tabsModel.append({terminal: termObject});
-        if (selectedIndex == -1) {
-            selectedIndex = 0;
+                                                        {"initialWorkingDirectory": initialWorkingDirectory,
+                                                         "visible": Qt.binding(function () { return tabsModel.currentItem === termObject})});
+        tabsModel.addItem(termObject);
+        currentIndex = tabsModel.count - 1;
+    }
+
+
+    function incrementCurrentIndex() {
+        currentIndex = (tabsModel.currentIndex + 1) % tabsModel.count;
+    }
+
+    function decrementCurrentIndex() {
+        currentIndex = (tabsModel.currentIndex - 1 + tabsModel.count) % tabsModel.count;
+    }
+
+    function removeAllItems() {
+        for (var i = tabsModel.count - 1; i >= 0; i--) {
+            tabsModel.removeItem(i);
         }
-
-        termObject.visible = false;
-        tabsModel.selectTab(tabsModel.count - 1);
     }
 
-    function __disableTerminal(term) {
-        term.visible = false;
-        term.z = 0;
-        term.focus = false;
-        terminalPage.terminal = null;
-    }
-
-    function __enableTerminal(term) {
-        term.visible = true;
-        term.z = 1;
-        term.forceActiveFocus();
-        terminalPage.terminal = term;
-    }
-
-    function selectTab(index) {
-        if (index < 0 || index >= tabsModel.count) return;
-
-        __disableTerminal(get(selectedIndex).terminal);
-        selectedTerminal = get(index).terminal;
-        __enableTerminal(selectedTerminal);
-        selectedIndex = index;
-    }
-
-    function selectNextTab() {
-        selectTab((tabsModel.selectedIndex + 1) % tabsModel.count);
-    }
-
-    function selectPreviousTab() {
-        selectTab((tabsModel.selectedIndex - 1 + tabsModel.count) % tabsModel.count);
-    }
-
-    function removeTabWithSession(session) {
+    function indexOf(value) {
         for (var i = 0; i < count; i++) {
-            if (session === get(i).terminal.session) {
-                removeTab(i);
-                return;
+            if (itemAt(i) === value) {
+                return i;
             }
         }
+        return -1;
     }
 
-    function removeTab(index) {
-        if (count === 0 || index >= count)
+
+    // QtQuick Controls 2 TabBar compatible API
+    property int currentIndex: -1
+    readonly property Item currentItem: itemAt(currentIndex)
+
+    function addItem(item) {
+        tabsModel.append({"item": item});
+    }
+
+    function itemAt(index) {
+        if (index < 0 || index >= count)
+            return null;
+
+        return get(index)["item"];
+    }
+
+    function removeItem(index) {
+        if (index < 0 || index >= count)
             return;
 
-        get(index).terminal.destroy();
+        itemAt(index).destroy();
         remove(index);
 
         // Decrease the selected index to keep the state consistent.
-        if (index <= selectedIndex)
-            selectedIndex = Math.max(selectedIndex - 1, 0);
-        selectTab(selectedIndex);
+        if (index <= currentIndex)
+            currentIndex = Math.max(currentIndex - 1, 0);
     }
 
-    function removeAllTabs() {
-        for (var i = tabsModel.count - 1; i >= 0; i--) {
-            tabsModel.removeTab(i);
-        }
-    }
 
-    function moveTab(from, to) {
+    function moveItem(from, to) {
         if (from == to
             || from < 0 || from >= tabsModel.count
             || to < 0 || to >= tabsModel.count) {
-            return false;
+            return;
         }
 
         tabsModel.move(from, to, 1);
-        if (selectedIndex == from) {
-            selectedIndex = to;
+        if (currentIndex == from) {
+            currentIndex = to;
         }
-        return true;
     }
 }

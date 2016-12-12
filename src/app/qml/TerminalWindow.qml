@@ -25,7 +25,7 @@ import Ubuntu.Components.Popups 1.3
 Window {
     id: terminalWindow
 
-    title: tabsModel.selectedTerminal ? tabsModel.selectedTerminal.session.title : ""
+    title: tabsModel.currentItem ? tabsModel.currentItem.session.title : ""
     color: terminalPage.active && terminalPage.terminal ? terminalPage.terminal.backgroundColor : theme.palette.selected.overlay
     contentOrientation: Screen.orientation
 
@@ -35,7 +35,7 @@ Window {
     Binding {
         target: terminalAppRoot
         property: "focusedTerminal"
-        value: tabsModel.selectedTerminal
+        value: tabsModel.currentItem
         when: terminalWindow.active
     }
 
@@ -58,8 +58,8 @@ Window {
         onGranted: {
             if (sshUser != "") {
                 terminalAppRoot.userPassword = password
-                tabsModel.addTab()
-                tabsModel.removeTab(0)
+                tabsModel.addTerminalTab()
+                tabsModel.removeItem(0)
             }
         }
     }
@@ -73,37 +73,37 @@ Window {
 
     Shortcut {
         sequence: settings.shortcutNewTab
-        onActivated: tabsModel.addTab()
+        onActivated: tabsModel.addTerminalTab()
     }
 
     Shortcut {
         sequence: settings.shortcutCloseTab
-        onActivated: tabsModel.removeTabWithSession(tabsModel.selectedTerminal.session)
+        onActivated: tabsModel.removeItem(tabsModel.indexOf(tabsModel.currentItem))
     }
 
     Shortcut {
         sequence: settings.shortcutCloseAllTabs
-        onActivated: tabsModel.removeAllTabs()
+        onActivated: tabsModel.removeAllItems()
     }
 
     Shortcut {
         sequence: settings.shortcutPreviousTab
-        onActivated: tabsModel.selectPreviousTab()
+        onActivated: tabsModel.decrementCurrentIndex()
     }
 
     Shortcut {
         sequence: settings.shortcutNextTab
-        onActivated: tabsModel.selectNextTab()
+        onActivated: tabsModel.incrementCurrentIndex()
     }
 
     Shortcut {
         sequence: settings.shortcutCopy
-        onActivated: tabsModel.selectedTerminal.copyClipboard()
+        onActivated: tabsModel.currentItem.copyClipboard()
     }
 
     Shortcut {
         sequence: settings.shortcutPaste
-        onActivated: tabsModel.selectedTerminal.pasteClipboard()
+        onActivated: tabsModel.currentItem.pasteClipboard()
     }
 
     Shortcut {
@@ -141,6 +141,7 @@ Window {
         TerminalPage {
             id: terminalPage
             tabsModel: tabsModel
+            terminal: tabsModel.currentItem
             narrowLayout: terminalWindow.narrowLayout
             // Hide terminal data when the access is still not granted
             layer.enabled: authService.isDialogVisible
@@ -158,8 +159,7 @@ Window {
     property string initialWorkingDirectory
 
     Component.onCompleted: {
-        tabsModel.addTab(initialWorkingDirectory);
-        tabsModel.selectTab(0);
+        tabsModel.addTerminalTab(initialWorkingDirectory);
 
         // The margins for the terminal canvas are 2px
         // Hardcoded value from TerminalDisplay.h

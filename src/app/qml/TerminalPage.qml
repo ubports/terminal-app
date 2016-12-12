@@ -70,7 +70,7 @@ Page {
                 // FIXME: icon from theme is fuzzy at many GUs
                 iconSource: Qt.resolvedUrl("tab_add.png")
     //            iconName: "add"
-                onTriggered: terminalPage.tabsModel.addTab()
+                onTriggered: terminalPage.tabsModel.addTerminalTab()
             },
             Action {
                 iconName: "settings"
@@ -89,6 +89,12 @@ Page {
             right: parent.right;
             bottom: keyboardBarLoader.top
             margins: units.gu(1)
+        }
+
+        Binding {
+            target: tabsModel.currentItem
+            property: "focus"
+            value: true
         }
     }
 

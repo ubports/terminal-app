@@ -68,7 +68,7 @@ QMLTermWidget {
              "-o", "LogLevel=Error",
              "mkdir -p `dirname %1`; echo -n $$ > %1; cd %2; bash".arg(sshShellPidFile).arg(initialWorkingDirectory)]
             : [])
-        onFinished: tabsModel.removeTabWithSession(terminalSession);
+        onFinished: tabsModel.removeItem(tabsModel.indexOf(terminal))
     }
 
     property int totalLines: terminal.scrollbarMaximum - terminal.scrollbarMinimum + terminal.lines
