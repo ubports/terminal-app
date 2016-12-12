@@ -598,7 +598,6 @@ ColorSchemeManager::~ColorSchemeManager()
 }
 void ColorSchemeManager::loadAllColorSchemes()
 {
-    qDebug() << "loadAllColorSchemes";
     int success = 0;
     int failed = 0;
 

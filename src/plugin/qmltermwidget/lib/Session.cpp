@@ -222,9 +222,6 @@ void Session::addView(TerminalDisplay * widget)
 
     QObject::connect( widget ,SIGNAL(destroyed(QObject *)) , this ,
                       SLOT(viewDestroyed(QObject *)) );
-//slot for close
-    QObject::connect(this, SIGNAL(finished()), widget, SLOT(close()));
-
 }
 
 void Session::viewDestroyed(QObject * view)
@@ -347,7 +344,6 @@ void Session::run()
     }
 
     _shellProcess->setWriteable(false);  // We are reachable via kwrited.
-    qDebug() << "started!";
     emit started();
 }
 
