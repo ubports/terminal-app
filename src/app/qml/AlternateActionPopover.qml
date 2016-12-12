@@ -40,6 +40,18 @@ Component {
                 enabled: !terminal.isClipboardEmpty()
                 onTriggered: terminal.pasteClipboard();
             }
+            Action {
+                text: i18n.tr("New tab")
+                onTriggered: tabsModel.addTerminalTab()
+            }
+            Action {
+                text: i18n.tr("New window")
+                onTriggered: terminalAppRoot.createTerminalWindow()
+            }
+            Action {
+                text: i18n.tr("Close")
+                onTriggered: tabsModel.removeItem(tabsModel.indexOf(tabsModel.currentItem))
+            }
         }
     }
 }

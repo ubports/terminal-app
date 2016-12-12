@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-12 13:41+0000\n"
+"POT-Creation-Date: 2016-12-12 14:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,6 +27,18 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:39
 msgid "Paste"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:44 ../src/app/qml/TabsPage.qml:32
+msgid "New tab"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:48
+msgid "New window"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:52
+msgid "Close"
 msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
@@ -289,10 +301,6 @@ msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:26
 msgid "Tabs"
-msgstr ""
-
-#: ../src/app/qml/TabsPage.qml:32
-msgid "New tab"
 msgstr ""
 
 #: ../src/app/qml/TerminalPage.qml:258
