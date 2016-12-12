@@ -166,20 +166,6 @@ Window {
         terminalWindow.width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
         terminalWindow.height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
         terminalWindow.narrowLayout = Qt.binding(function () {return terminalWindow.width <= units.gu(50)});
-
-        if (sshRequired && !sshIsAvailable) {
-            console.debug("Ask for confirmation")
-            var proceed_dialog =
-                PopupUtils.open( Qt.resolvedUrl( "ConfirmationDialog.qml" ),
-                                 null,
-                                 {'title': i18n.tr("No SSH server running."),
-                                  'text': i18n.tr("SSH server not found. Do you want to proceed in confined mode?")});
-
-            proceed_dialog.dialogCanceled.connect( Qt.quit );
-            proceed_dialog.dialogAccepted.connect( function() {
-                PopupUtils.close(proceed_dialog)
-            })
-        }
         terminalWindow.show()
     }
 }

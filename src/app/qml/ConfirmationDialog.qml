@@ -25,11 +25,6 @@ Dialog {
     signal dialogCanceled
     signal dialogAccepted
 
-    title: "oi"
-    text: "teste"
-    width: units.gu(80)
-    height: units.gu(80)
-
     Button {
         id: okButton
         objectName: "continueButton"

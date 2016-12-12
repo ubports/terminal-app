@@ -34,6 +34,9 @@ QtObject {
     signal denied()
 
     Component.onCompleted: {
+        if (sshRequired && !sshIsAvailable) {
+            displaySshDialog();
+        }
         if ( (sshIsAvailable && sshRequired) || (systemAuthentication.requireAuthentication() && !noAuthentication)) {
             if (!alreadyGranted) {
                 displayLoginDialog();
@@ -71,6 +74,19 @@ QtObject {
         authentication_dialog.dialogCanceled.connect( denied );
 
         __authDialog = authentication_dialog
+    }
+
+    function displaySshDialog() {
+        var sshDialog =
+            PopupUtils.open( Qt.resolvedUrl( "ConfirmationDialog.qml" ),
+                             null,
+                             {'title': i18n.tr("No SSH server running."),
+                              'text': i18n.tr("SSH server not found. Do you want to proceed in confined mode?")});
+
+        sshDialog.dialogCanceled.connect( Qt.quit );
+        sshDialog.dialogAccepted.connect( function() {
+            PopupUtils.close(sshDialog)
+        })
     }
 
     property var systemAuthentication: PamAuthentication {

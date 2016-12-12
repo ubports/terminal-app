@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-12 12:42+0000\n"
+"POT-Creation-Date: 2016-12-12 13:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,15 +46,23 @@ msgid "OK"
 msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:70
-#: ../src/app/qml/ConfirmationDialog.qml:47
+#: ../src/app/qml/ConfirmationDialog.qml:42
 msgid "Cancel"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationService.qml:61
+#: ../src/app/qml/AuthenticationService.qml:64
 msgid "Authentication failed"
 msgstr ""
 
-#: ../src/app/qml/ConfirmationDialog.qml:37
+#: ../src/app/qml/AuthenticationService.qml:83
+msgid "No SSH server running."
+msgstr ""
+
+#: ../src/app/qml/AuthenticationService.qml:84
+msgid "SSH server not found. Do you want to proceed in confined mode?"
+msgstr ""
+
+#: ../src/app/qml/ConfirmationDialog.qml:32
 msgid "Continue"
 msgstr ""
 
@@ -287,16 +295,8 @@ msgstr ""
 msgid "New tab"
 msgstr ""
 
-#: ../src/app/qml/TerminalPage.qml:256
+#: ../src/app/qml/TerminalPage.qml:258
 msgid "Selection Mode"
-msgstr ""
-
-#: ../src/app/qml/TerminalWindow.qml:175
-msgid "No SSH server running."
-msgstr ""
-
-#: ../src/app/qml/TerminalWindow.qml:176
-msgid "SSH server not found. Do you want to proceed in confined mode?"
 msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
