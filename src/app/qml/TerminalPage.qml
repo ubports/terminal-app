@@ -16,6 +16,7 @@
  * Authored-by: Filippo Scognamiglio <flscogna@gmail.com>
  */
 import QtQuick 2.4
+import QtQuick.Layouts 1.3
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Extras 0.3
@@ -80,7 +81,7 @@ Page {
         visible: !terminalPage.narrowLayout
     }
 
-    Item {
+    StackLayout {
         id: terminalContainer
 
         anchors {
@@ -96,6 +97,7 @@ Page {
             property: "focus"
             value: true
         }
+        currentIndex: tabsModel.currentIndex
     }
 
     QMLTermScrollbar {

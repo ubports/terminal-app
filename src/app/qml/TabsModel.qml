@@ -42,8 +42,7 @@ ListModel {
         }
 
         var termObject = terminalComponent.createObject(terminalPage.terminalContainer,
-                                                        {"initialWorkingDirectory": initialWorkingDirectory,
-                                                         "visible": Qt.binding(function () { return tabsModel.currentItem === termObject})});
+                                                        {"initialWorkingDirectory": initialWorkingDirectory});
         tabsModel.addItem(termObject);
         currentIndex = tabsModel.count - 1;
     }
