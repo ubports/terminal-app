@@ -47,5 +47,6 @@ Item {
     Scrollbar {
         flickableItem: terminalProxyFlickable
         align: Qt.AlignTrailing
+        enabled: flickableItem.visibleArea.heightRatio != 1.0
     }
 }
