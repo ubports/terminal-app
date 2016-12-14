@@ -688,20 +688,7 @@ void TerminalDisplay::drawCursor(QPainter& painter,
 
        if ( _cursorShape == BlockCursor )
        {
-            // draw the cursor outline, adjusting the area so that
-            // it is draw entirely inside 'rect'
-            int penWidth = qMax(1,painter.pen().width());
-
-            // QMLTermWidget: we need to add penWidth%2 to have a perfectly squared cursor
-//            painter.drawRect(cursorRect.adjusted(penWidth/2 + penWidth%2,
-//                                                 penWidth/2 + penWidth%2,
-
-            painter.drawRect(cursorRect.adjusted(+ penWidth/2 + penWidth%2,
-                                                 + penWidth/2 + penWidth%2,
-                                                 - penWidth/2 - penWidth%2,
-                                                 - penWidth/2 - penWidth%2));
-            //if ( hasFocus() )
-            if ( true ) //QMLTermWidget: Always fill the cursor. Even when not in focus.
+            if ( hasActiveFocus() )
             {
                 painter.fillRect(cursorRect, _cursorColor.isValid() ? _cursorColor : foregroundColor);
             
@@ -711,6 +698,8 @@ void TerminalDisplay::drawCursor(QPainter& painter,
                     // the cursor position is readable
                     invertCharacterColor = true;
                 }
+            } else {
+                painter.drawRect(cursorRect);
             }
        }
        else if ( _cursorShape == UnderlineCursor )
@@ -1674,7 +1663,7 @@ void TerminalDisplay::updateImageSize()
   int oldcol = _columns;
 
   makeImage();
-  
+
   // copy the old image to reduce flicker
   int lines = qMin(oldlin,_lines);
   int columns = qMin(oldcol,_columns);
