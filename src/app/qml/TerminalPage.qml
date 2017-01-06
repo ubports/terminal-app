@@ -43,10 +43,6 @@ Page {
         visible: false
     }
 
-    AlternateActionPopover {
-        id: alternateActionPopover
-    }
-
     TabsBar {
         id: tabsBar
         anchors {
@@ -213,7 +209,7 @@ Page {
             // Force the hiddenButton in the event position.
             hiddenButton.x = x;
             hiddenButton.y = y;
-            PopupUtils.open(alternateActionPopover, hiddenButton);
+            PopupUtils.open(Qt.resolvedUrl("AlternateActionPopover.qml"), hiddenButton);
         }
     }
 
@@ -271,7 +267,7 @@ Page {
             iconName: "close"
             onTriggered: {
                 terminalPage.state = "DEFAULT";
-                PopupUtils.open(alternateActionPopover, hiddenButton);
+                PopupUtils.open(Qt.resolvedUrl("AlternateActionPopover.qml"), hiddenButton);
             }
         }
     }
