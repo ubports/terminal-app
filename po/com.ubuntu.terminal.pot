@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-12 14:14+0000\n"
+"POT-Creation-Date: 2017-01-06 08:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/app/qml/AlternateActionPopover.qml:30
+#: ../src/app/qml/AlternateActionPopover.qml:68
 msgid "Select"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:34
+#: ../src/app/qml/AlternateActionPopover.qml:73
 msgid "Copy"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:39
+#: ../src/app/qml/AlternateActionPopover.qml:79
 msgid "Paste"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:44 ../src/app/qml/TabsPage.qml:32
+#: ../src/app/qml/AlternateActionPopover.qml:86 ../src/app/qml/TabsPage.qml:32
 msgid "New tab"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:48
+#: ../src/app/qml/AlternateActionPopover.qml:91
 msgid "New window"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:52
+#: ../src/app/qml/AlternateActionPopover.qml:96
 msgid "Close"
 msgstr ""
 
@@ -303,7 +303,7 @@ msgstr ""
 msgid "Tabs"
 msgstr ""
 
-#: ../src/app/qml/TerminalPage.qml:258
+#: ../src/app/qml/TerminalPage.qml:252
 msgid "Selection Mode"
 msgstr ""
 
@@ -344,17 +344,17 @@ msgstr ""
 msgid "Higlight all matches"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:980
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:982
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 msgid "Color Scheme Error"
 msgstr ""
 
-#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:407
 #, qt-format
 msgid "Cannot load color scheme: %1"
 msgstr ""
