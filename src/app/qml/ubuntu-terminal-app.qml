@@ -50,14 +50,18 @@ QtObject {
     }
 
     property var focusedTerminal
+    property int terminalWindowCount: 0
+    onTerminalWindowCountChanged: if (terminalWindowCount == 0) Qt.quit()
     function createTerminalWindow() {
         var workingDirectory = focusedTerminal ? focusedTerminal.session.getWorkingDirectory()
                                                : "$HOME";
         Helpers.createComponentInstance(terminalWindowComponent, terminalAppRoot,
                                         {"initialWorkingDirectory": workingDirectory});
+        terminalWindowCount += 1;
     }
 
     property Component terminalWindowComponent: TerminalWindow {
+        onClosing: terminalAppRoot.terminalWindowCount -= 1;
     }
 
     function openSettingsPage() {
