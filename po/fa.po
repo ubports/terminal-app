@@ -1,298 +1,178 @@
 # Persian translation for ubuntu-terminal-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-07 19:27+0100\n"
-"PO-Revision-Date: 2016-03-03 01:15+0000\n"
+"POT-Creation-Date: 2014-10-07 04:16-0700\n"
+"PO-Revision-Date: 2014-12-01 08:18+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-10-07 06:54+0000\n"
-"X-Generator: Launchpad (build 18217)\n"
-
-#: ../src/app/qml/AlternateActionPopover.qml:13
-msgid "Select"
-msgstr "گزینش"
-
-#: ../src/app/qml/AlternateActionPopover.qml:17
-msgid "Copy"
-msgstr "رونوشت"
-
-#: ../src/app/qml/AlternateActionPopover.qml:21
-msgid "Paste"
-msgstr "جاگذاری"
+"X-Launchpad-Export-Date: 2017-01-07 06:23+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
 msgstr "تأیید هویت لازم است"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
-msgid "Enter passcode or passphrase:"
-msgstr "رمزعبور یا عبارت‌عبور را وارد کنید"
+msgid "Enter password:"
+msgstr "گذرواژه را وارد کنید:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:40
-msgid "passcode or passphrase"
-msgstr "رمزعبور یا عبارت‌عبور"
+msgid "password"
+msgstr "گذرواژه"
 
-#: ../src/app/qml/AuthenticationDialog.qml:50
-msgid "OK"
-msgstr "قبول"
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr "تأیید"
 
-#: ../src/app/qml/AuthenticationDialog.qml:62
+#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/ConfirmationDialog.qml:42
 msgid "Cancel"
 msgstr "لغو"
 
-#: ../src/app/qml/AuthenticationService.qml:55
+#: ../src/app/qml/AuthenticationService.qml:64
 msgid "Authentication failed"
 msgstr "تأیید هویت شکست خورد"
 
-#: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:129
-msgid "Color Scheme"
-msgstr "شمای رنگ"
+#: ../src/app/qml/ColorDialog.qml:25
+msgid "Pick a color"
+msgstr "رنگی برگزینید"
 
-#: ../src/app/qml/KeyboardBar.qml:174
-msgid "Change Keyboard"
-msgstr "تعویض صفحه‌کلید"
+#: ../src/app/qml/AuthenticationDialog.qml:58
+msgid "OK"
+msgstr "قبول"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
-msgid "Control Keys"
-msgstr "کلیدهای واپایش"
+#: ../src/app/qml/Configs.qml:69
+msgid "Color Scheme:"
+msgstr "طرح رنگ:"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
-msgid "Function Keys"
-msgstr "کلیدهای تابع"
+#: ../src/app/qml/Configs.qml:81
+msgid "Select Font:"
+msgstr "گزینش قلم:"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
-msgid "Scroll Keys"
-msgstr "کلیدهای لغزش"
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
+msgid "Font Size:"
+msgstr "اندازه‌ی قلم:"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
-msgid "Command Keys"
-msgstr "کلیدهای فرمان"
+#: ../src/app/qml/Configs.qml:136
+msgid "Enable Effects:"
+msgstr "فعّال کردن جلوه‌ها:"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
-msgid "CTRL"
-msgstr "مهار"
+#: ../src/app/qml/Configs.qml:155
+msgid "Screen color"
+msgstr "رنگ صفحه"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
-msgid "FNS"
-msgstr "تابع"
+#: ../src/app/qml/Configs.qml:168
+msgid "Color intensity"
+msgstr "شدّت رنگ"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
-msgid "SCR"
-msgstr "لغزش"
+#: ../src/app/qml/Configs.qml:196
+msgid "Bloom"
+msgstr "رشد"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
-msgid "CMD"
-msgstr "فرمان"
+#: ../src/app/qml/Configs.qml:224
+msgid "Curvature"
+msgstr "انحنا"
 
-#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
-msgid "ALT"
-msgstr "دگرساز"
+#: ../src/app/qml/Configs.qml:252
+msgid "Noise"
+msgstr "خش"
 
-#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
-msgid "SHIFT"
-msgstr "تبدیل"
-
-#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
-msgid "ESC"
-msgstr "فرار"
+#: ../src/app/qml/Configs.qml:280
+msgid "Jitter"
+msgstr "لرزش"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr "صفحه بالا"
 
-#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
-msgid "PG_DN"
-msgstr "صفحه پایین"
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
+msgid "TAB"
+msgstr "جهش"
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
 msgid "DEL"
 msgstr "حذف"
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:109
 msgid "HOME"
 msgstr "خانه"
 
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
+msgid "PG_DN"
+msgstr "صفحه پایین"
+
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr "انتها"
 
-#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
-msgid "TAB"
-msgstr "جهش"
-
-#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
-msgid "ENTER"
-msgstr "ورود"
-
-#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:41
-msgid "Layouts"
-msgstr "چینش‌ها"
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "پایانه"
 
 #: ../src/app/qml/SettingsPage.qml:26
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: ../src/app/qml/SettingsPage.qml:57
-msgid "Show Keyboard Bar"
-msgstr "نمایش نوار صفحه‌کلید"
+#: ../src/app/qml/ubuntu-terminal-app.qml:57
+msgid "Hide all key panels"
+msgstr "مخفی کردن تمام تابلو‌های کلید"
 
-#: ../src/app/qml/SettingsPage.qml:73
-msgid "Show Keyboard Button"
-msgstr "نمایش دکمهٔ صفحه‌کلید"
+#: ../src/app/qml/ubuntu-terminal-app.qml:64
+msgid "Control keys"
+msgstr "کلیدهای کنترلی"
 
-#: ../src/app/qml/SettingsPage.qml:96
-msgid "Font Size:"
-msgstr "اندازه‌ی قلم:"
+#: ../src/app/qml/ubuntu-terminal-app.qml:71
+msgid "Function keys"
+msgstr "کلیدهای تابعی"
 
-#: ../src/app/qml/TabsPage.qml:7
-msgid "Tabs"
-msgstr "زبانه‌ها"
+#: ../src/app/qml/ubuntu-terminal-app.qml:78
+msgid "Arrow keys"
+msgstr "کلیدهای جهتی"
 
-#: ../src/app/qml/TabsPage.qml:13
-msgid "New tab"
-msgstr "زبانه‌ی جدید"
-
-#: ../src/app/qml/TerminalPage.qml:170
-msgid "Selection Mode"
-msgstr "حالت گزینش"
-
-#. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Green on black"
-msgstr "سبز روی سیاه"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "White on black"
-msgstr "سفید روی سیاه"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Black on white"
-msgstr "سیاه روی سفید"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Black on random light"
-msgstr "شیاه روی روشن تصادفی"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Linux"
-msgstr "لینوکس"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Cool retro term"
-msgstr "پایانهٔ قدیمی باحال"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Dark pastels / Ubuntu (old)"
-msgstr "مداد شمعی تیره / اوبونتو (قدیمی)"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Black on light yellow"
-msgstr "سیاه روی زرد روشن"
-
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
-msgid "Ubuntu"
-msgstr "اوبونتو"
-
-#: ../src/plugin/konsole/ColorScheme.cpp:276
-#: ../src/plugin/konsole/ColorScheme.cpp:291
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:320
 msgid "Un-named Color Scheme"
 msgstr "طرح رنگ بی‌نام"
 
-#: ../src/plugin/konsole/ColorScheme.cpp:426
-#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:468
 msgid "Accessible Color Scheme"
 msgstr "طرح رنگ دست‌رس پذیر"
 
-#: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr "گشودن پیوند"
 
-#: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr "رونوشت از نشانی پیوند"
 
-#: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr "ارسال ای‌میل به…"
 
-#: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr "رونوشت برداشت از نشانی ای‌میل"
 
-#: ../src/plugin/konsole/Vt102Emulation.cpp:961
-#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:982
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
 "هیچ مترجم صفحه‌کلیدی موجود نیست. اطَلاعات مورد نیاز برای تبدیل کلیدهای فشرده "
 "شده به نویسه‌ها برای ارسال به پایانه وجود ندارند."
-
-#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
-msgid "Match case"
-msgstr "تطابق کوچک و بزرگی حروف"
-
-#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
-msgid "Regular expression"
-msgstr "عبارت باقاعده"
-
-#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
-msgid "Higlight all matches"
-msgstr "روشن کردن تمام موارد مطابق"
-
-#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
-msgid "Color Scheme Error"
-msgstr "خطای شمای رنگ"
-
-#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
-#, qt-format
-msgid "Cannot load color scheme: %1"
-msgstr "نمی‌توان شمای رنگ را بار کرد: %1"
-
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "پایانه"
-
-#~ msgid "Enter password:"
-#~ msgstr "گذرواژه را وارد کنید:"
-
-#~ msgid "password"
-#~ msgstr "گذرواژه"
-
-#~ msgid "Ok"
-#~ msgstr "تأیید"

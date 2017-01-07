@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-26 08:27-0700\n"
+"POT-Creation-Date: 2014-10-07 04:16-0700\n"
 "PO-Revision-Date: 2014-09-01 07:30+0000\n"
-"Last-Translator: Sok Sophea <sksophea@gmail.com>\n"
+"Last-Translator: Sophea Sok <sksophea@gmail.com>\n"
 "Language-Team: Khmer <km@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-10-02 06:33+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2017-01-07 06:23+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -29,17 +29,16 @@ msgstr ""
 msgid "password"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:50
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:61
-#: ../src/app/qml/ColorDialog.qml:149
+#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/ConfirmationDialog.qml:42
 msgid "Cancel"
 msgstr "បោះបង់"
 
-#: ../src/app/qml/AuthenticationService.qml:55
+#: ../src/app/qml/AuthenticationService.qml:64
 msgid "Authentication failed"
 msgstr ""
 
@@ -47,77 +46,85 @@ msgstr ""
 msgid "Pick a color"
 msgstr "ជ្រើស​ពណ៌"
 
-#: ../src/app/qml/ColorDialog.qml:129
+#: ../src/app/qml/AuthenticationDialog.qml:58
 msgid "OK"
 msgstr "យល់ព្រម"
 
 #: ../src/app/qml/Configs.qml:69
-msgid "Color scheme"
-msgstr "ពណ៌​ចម្រុះ"
+msgid "Color Scheme:"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:85
-msgid "Font size"
-msgstr "ទំហំ​ពុម្ព​អក្សរ"
+#: ../src/app/qml/Configs.qml:81
+msgid "Select Font:"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:108
-msgid "Enable effects:"
-msgstr "បើក​បែបផែន៖"
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
+msgid "Font Size:"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:126
+#: ../src/app/qml/Configs.qml:136
+msgid "Enable Effects:"
+msgstr ""
+
+#: ../src/app/qml/Configs.qml:155
 msgid "Screen color"
 msgstr "ពណ៌​អេក្រង់"
 
-#: ../src/app/qml/Configs.qml:139
+#: ../src/app/qml/Configs.qml:168
 msgid "Color intensity"
 msgstr "អាំងតង់ស៊ីតេ​ពណ៌"
 
-#: ../src/app/qml/Configs.qml:167
+#: ../src/app/qml/Configs.qml:196
 msgid "Bloom"
 msgstr "ពង្រីក"
 
-#: ../src/app/qml/Configs.qml:195
+#: ../src/app/qml/Configs.qml:224
 msgid "Curvature"
 msgstr "កំណោង"
 
-#: ../src/app/qml/Configs.qml:223
+#: ../src/app/qml/Configs.qml:252
 msgid "Noise"
 msgstr "​ជ្រៀតជ្រែក"
 
-#: ../src/app/qml/Configs.qml:251
+#: ../src/app/qml/Configs.qml:280
 msgid "Jitter"
 msgstr "ញ័រ"
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:25
+#. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr "ទំព័រ​លើ"
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:31
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
 msgid "TAB"
 msgstr "ថេប"
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:43
+#. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
 msgid "DEL"
 msgstr "លុប"
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:49
+#. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:109
 msgid "HOME"
 msgstr "ដើម"
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:59
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
 msgid "PG_DN"
 msgstr "ទំព័រ​ក្រោម"
 
-#: ../src/app/qml/extraPanel/ScrlKeys.qml:83
+#. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr "ចុង"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:32
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "ស្ថានីយ"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:51
-#: ../src/app/qml/ubuntu-terminal-app.qml:88
+#: ../src/app/qml/SettingsPage.qml:26
 msgid "Settings"
 msgstr "ការកំណត់"
 
@@ -137,32 +144,32 @@ msgstr "គ្រាប់​ចុច​មុខងារ"
 msgid "Arrow keys"
 msgstr "គ្រាប់​ចុច​ព្រួញ"
 
-#: ../src/plugin/konsole/ColorScheme.cpp:276
-#: ../src/plugin/konsole/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:320
 msgid "Un-named Color Scheme"
 msgstr "ពណ៌​ចម្រុះ​ដែល​មិនបាន​ដាក់ឈ្មោះ"
 
-#: ../src/plugin/konsole/ColorScheme.cpp:426
+#: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:468
 msgid "Accessible Color Scheme"
 msgstr "ពណ៌​ចម្រុះ​ដែល​អាច​ចូល​ប្រើ​បាន"
 
-#: ../src/plugin/konsole/Filter.cpp:518
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
 msgstr "បើក​តំណ"
 
-#: ../src/plugin/konsole/Filter.cpp:519
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
 msgstr "ចម្លង​អាសយដ្ឋាន​តំណ"
 
-#: ../src/plugin/konsole/Filter.cpp:523
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
 msgstr "ផ្ញើ​អ៊ីមែល​ទៅ..."
 
-#: ../src/plugin/konsole/Filter.cpp:524
+#: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
 msgstr "ចម្លង​អាសយដ្ឋាន​អ៊ីមែល"
 
-#: ../src/plugin/konsole/Vt102Emulation.cpp:961
+#: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:982
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
