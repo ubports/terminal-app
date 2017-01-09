@@ -1,0 +1,107 @@
+/*
+ * Copyright (C) 2016-2017 Canonical Ltd
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 3 as
+ * published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * Authored-by: Florian Boucault <florian.boucault@canonical.com>
+ */
+import QtQuick 2.5
+import "binarytree.js" as BinaryTree
+
+FocusScope {
+    id: tiledView
+
+    property Component handleDelegate: Rectangle {
+        implicitWidth: units.dp(1)
+        implicitHeight: units.dp(1)
+        color: "white"
+    }
+
+    property int count: 0
+
+    // FIXME: odd semantics: what if setRootItem is called later?
+    function setRootItem(rootItem) {
+        if (rootItem && !__rootNode.value) {
+            count += 1;
+        } else if (!rootItem && __rootNode.value) {
+            count -= 1;
+        }
+        __rootNode.setValue(rootItem);
+    }
+
+    property var __rootNode: new BinaryTree.Node()
+    Component.onDestruction: __rootNode.cleanup()
+
+    onWidthChanged: __rootNode.setWidth(width)
+    onHeightChanged: __rootNode.setHeight(height)
+
+    Component {
+        id: separatorComponent
+        TiledViewSeparator {
+            handleDelegate: tiledView.handleDelegate
+        }
+    }
+
+    function split(obj, newObj, side) {
+        var node = __rootNode.findNodeWithValue(obj);
+        var otherSide;
+        if (side == Qt.AlignLeading) {
+            otherSide = Qt.AlignTrailing;
+        } else {
+            otherSide = Qt.AlignLeading;
+        }
+
+        node.value = null;
+        node.setLeftRatio(0.5);
+        var separator = separatorComponent.createObject(tiledView, {"node": node});
+        node.setSeparator(separator);
+
+        var nodeSide = new BinaryTree.Node();
+        nodeSide.setValue(newObj);
+        node.setChild(side, nodeSide);
+
+        var nodeOtherSide = new BinaryTree.Node();
+        nodeOtherSide.setValue(obj);
+        node.setChild(otherSide, nodeOtherSide);
+        count += 1;
+    }
+
+    function unsplit(obj) {
+        var node = __rootNode.findNodeWithValue(obj);
+        var sibling = node.getSibling();
+        if (sibling) {
+            node.parent.copy(sibling);
+        }
+        count -= 1;
+    }
+
+    function closestTile(obj) {
+        var node = __rootNode.findNodeWithValue(obj);
+        var sibling = node.closestNodeWithValue();
+        if (sibling) {
+            return sibling.value;
+        } else {
+            return null;
+        }
+    }
+
+    function setOrientation(obj, orientation) {
+        var node = __rootNode.findNodeWithValue(obj);
+        node.setOrientation(orientation);
+    }
+
+    function move(obj, targetObj, side) {
+        unsplit(obj);
+        split(targetObj, obj, side);
+    }
+}

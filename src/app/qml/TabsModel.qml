@@ -34,17 +34,18 @@ ListModel {
         moveItem(from, to);
     }
 
-    property Component terminalComponent: TerminalComponent {}
+    property Component tiledViewComponent: TiledTerminalView {}
 
     function addTerminalTab(initialWorkingDirectory) {
         if (currentItem) {
-            initialWorkingDirectory = currentItem.session.getWorkingDirectory();
+            initialWorkingDirectory = currentItem.focusedTerminal.session.getWorkingDirectory();
         }
 
-        var termObject = terminalComponent.createObject(terminalPage.terminalContainer,
+        var tiledView = tiledViewComponent.createObject(terminalPage.terminalContainer,
                                                         {"initialWorkingDirectory": initialWorkingDirectory,
-                                                         "visible": Qt.binding(function () { return tabsModel.currentItem === termObject})});
-        tabsModel.addItem(termObject);
+                                                         "visible": Qt.binding(function () { return tabsModel.currentItem === tiledView})});
+        tiledView.emptied.connect(function () {tabsModel.removeItem(tabsModel.indexOf(tiledView));})
+        tabsModel.addItem(tiledView);
         currentIndex = tabsModel.count - 1;
     }
 

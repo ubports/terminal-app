@@ -34,6 +34,8 @@ QtObject {
     property alias shortcutCopy: innerSettings.shortcutCopy
     property alias shortcutPaste: innerSettings.shortcutPaste
     property alias shortcutFullscreen: innerSettings.shortcutFullscreen
+    property alias shortcutSplitHorizontally: innerSettings.shortcutSplitHorizontally
+    property alias shortcutSplitVertically: innerSettings.shortcutSplitVertically
 
     readonly property int defaultFontSize: 12
     readonly property int minFontSize: 4
@@ -73,6 +75,8 @@ QtObject {
         property string shortcutCopy: "Ctrl+Shift+C"
         property string shortcutPaste: "Ctrl+Shift+V"
         property string shortcutFullscreen: "F11"
+        property string shortcutSplitHorizontally: "Ctrl+Shift+E"
+        property string shortcutSplitVertically: "Ctrl+Shift+O"
     }
 
     // Load the keyboard profiles.

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-06 08:38+0000\n"
+"POT-Creation-Date: 2017-01-09 14:27+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,15 +29,23 @@ msgstr ""
 msgid "Paste"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:86 ../src/app/qml/TabsPage.qml:32
+#: ../src/app/qml/AlternateActionPopover.qml:86
+msgid "Split horizontally"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:92
+msgid "Split vertically"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:99 ../src/app/qml/TabsPage.qml:32
 msgid "New tab"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:91
+#: ../src/app/qml/AlternateActionPopover.qml:104
 msgid "New window"
 msgstr ""
 
-#: ../src/app/qml/AlternateActionPopover.qml:96
+#: ../src/app/qml/AlternateActionPopover.qml:109
 msgid "Close"
 msgstr ""
 
@@ -303,7 +311,7 @@ msgstr ""
 msgid "Tabs"
 msgstr ""
 
-#: ../src/app/qml/TerminalPage.qml:252
+#: ../src/app/qml/TerminalPage.qml:132
 msgid "Selection Mode"
 msgstr ""
 

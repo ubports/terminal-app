@@ -27,7 +27,7 @@ import QtGraphicalEffects 1.0
 Page {
     id: terminalPage
     property alias terminalContainer: terminalContainer
-    property Item terminal
+    property Terminal terminal
     property var tabsModel
     property bool narrowLayout
     theme: ThemeSettings {
@@ -50,15 +50,15 @@ Page {
             top: parent.top
             right: parent.right
         }
-        property bool isDarkBackground: ColorUtils.luminance(backgroundColor) <= 0.85
+        property bool isDarkBackground: terminalPage.terminal && terminalPage.terminal.isDarkBackground
         actionColor: isDarkBackground ? "white" : "black"
         backgroundColor: terminalPage.terminal ? terminalPage.terminal.backgroundColor : ""
         foregroundColor: terminalPage.terminal ? terminalPage.terminal.foregroundColor : ""
-        contourColor: isDarkBackground ? Qt.rgba(1.0, 1.0, 1.0, 0.4) : Qt.rgba(0.0, 0.0, 0.0, 0.2)
+        contourColor: terminalPage.terminal ? terminalPage.terminal.contourColor : ""
         color: isDarkBackground ? Qt.tint(backgroundColor, "#0DFFFFFF") : Qt.tint(backgroundColor, "#0D000000")
         model: terminalPage.tabsModel
         function titleFromModelItem(modelItem) {
-            return modelItem.session.title;
+            return modelItem.focusedTerminal ? modelItem.focusedTerminal.session.title : "";
         }
 
         actions: [
@@ -84,132 +84,12 @@ Page {
             top: terminalPage.narrowLayout ? parent.top : tabsBar.bottom;
             right: parent.right;
             bottom: keyboardBarLoader.top
-            margins: units.gu(1)
         }
 
         Binding {
             target: tabsModel.currentItem
             property: "focus"
             value: true
-        }
-    }
-
-    QMLTermScrollbar {
-        anchors {
-            top: terminalContainer.anchors.top
-            bottom: terminalContainer.anchors.bottom
-            left: terminalContainer.anchors.left
-            right: terminalContainer.anchors.right
-        }
-
-        terminal: terminalPage.terminal
-        z: inputArea.z + 1
-    }
-
-    // TODO: This invisible button is used to position the popover where the
-    // alternate action was called. Terrible terrible workaround!
-    Button {
-        id: hiddenButton
-        width: 5
-        height: 5
-        visible: false
-        enabled: false
-    }
-
-    TerminalInputArea{
-        id: inputArea
-        anchors {
-            left: terminalContainer.anchors.left
-            top: terminalContainer.anchors.top
-            right: terminalContainer.anchors.right
-            bottom: parent.bottom
-            margins: terminalContainer.anchors.margins
-        }
-        enabled: terminal
-
-        // This is the minimum wheel event registered by the plugin (with the current settings).
-        property real wheelValue: 40
-
-        // This is needed to fake a "flickable" scrolling.
-        swipeDelta: terminal ? terminal.fontMetrics.height : 0
-
-        // Mouse actions
-        onMouseMoveDetected: terminal.simulateMouseMove(x, y, button, buttons, modifiers);
-        onDoubleClickDetected: terminal.simulateMouseDoubleClick(x, y, button, buttons, modifiers);
-        onMousePressDetected: terminal.simulateMousePress(x, y, button, buttons, modifiers);
-        onMouseReleaseDetected: terminal.simulateMouseRelease(x, y, button, buttons, modifiers);
-        onMouseWheelDetected: terminal.simulateWheel(x, y, buttons, modifiers, angleDelta);
-
-        // Touch actions
-        onTouchClick: terminal.simulateKeyPress(Qt.Key_Tab, Qt.NoModifier, true, 0, "");
-        onTouchPressAndHold: alternateAction(x, y);
-
-        // Swipe actions
-        onSwipeYDetected: {
-            if (steps > 0) {
-                simulateSwipeDown(steps);
-            } else {
-                simulateSwipeUp(-steps);
-            }
-        }
-        onSwipeXDetected: {
-            if (steps > 0) {
-                simulateSwipeRight(steps);
-            } else {
-                simulateSwipeLeft(-steps);
-            }
-        }
-        onTwoFingerSwipeYDetected: {
-            if (steps > 0) {
-                simulateDualSwipeDown(steps);
-            } else {
-                simulateDualSwipeUp(-steps);
-            }
-        }
-
-        function simulateSwipeUp(steps) {
-            while(steps > 0) {
-                terminal.simulateKeyPress(Qt.Key_Up, Qt.NoModifier, true, 0, "");
-                steps--;
-            }
-        }
-        function simulateSwipeDown(steps) {
-            while(steps > 0) {
-                terminal.simulateKeyPress(Qt.Key_Down, Qt.NoModifier, true, 0, "");
-                steps--;
-            }
-        }
-        function simulateSwipeLeft(steps) {
-            while(steps > 0) {
-                terminal.simulateKeyPress(Qt.Key_Left, Qt.NoModifier, true, 0, "");
-                steps--;
-            }
-        }
-        function simulateSwipeRight(steps) {
-            while(steps > 0) {
-                terminal.simulateKeyPress(Qt.Key_Right, Qt.NoModifier, true, 0, "");
-                steps--;
-            }
-        }
-        function simulateDualSwipeUp(steps) {
-            while(steps > 0) {
-                terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, -wheelValue));
-                steps--;
-            }
-        }
-        function simulateDualSwipeDown(steps) {
-            while(steps > 0) {
-                terminal.simulateWheel(width * 0.5, height * 0.5, Qt.NoButton, Qt.NoModifier, Qt.point(0, wheelValue));
-                steps--;
-            }
-        }
-
-        // Semantic actions
-        onAlternateAction: {
-            // Force the hiddenButton in the event position.
-            hiddenButton.x = x;
-            hiddenButton.y = y;
-            PopupUtils.open(Qt.resolvedUrl("AlternateActionPopover.qml"), hiddenButton);
         }
     }
 
@@ -227,7 +107,7 @@ Page {
             backgroundColor: tabsBar.color
             foregroundColor: tabsBar.foregroundColor
             onSimulateKey: terminal.simulateKeyPress(key, mod, true, 0, "");
-            onSimulateCommand: terminal.session.sendText(command);
+            onSimulateCommand: terminal.focusedTerminal.session.sendText(command);
         }
     }
 
@@ -267,7 +147,7 @@ Page {
             iconName: "close"
             onTriggered: {
                 terminalPage.state = "DEFAULT";
-                PopupUtils.open(Qt.resolvedUrl("AlternateActionPopover.qml"), hiddenButton);
+                PopupUtils.open(Qt.resolvedUrl("AlternateActionPopover.qml"));
             }
         }
     }
@@ -333,7 +213,6 @@ Page {
             PropertyChanges { target: keyboardButton; visible: false }
             PropertyChanges { target: bottomMessage; active: true }
             PropertyChanges { target: keyboardBarLoader; enabled: false }
-            PropertyChanges { target: inputArea; enabled: false }
         }
     ]
 }

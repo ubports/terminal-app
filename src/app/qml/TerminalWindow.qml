@@ -25,7 +25,7 @@ import Ubuntu.Components.Popups 1.3
 Window {
     id: terminalWindow
 
-    title: tabsModel.currentItem ? tabsModel.currentItem.session.title : ""
+    title: tabsModel.currentItem && tabsModel.currentItem.focusedTerminal ? tabsModel.currentItem.focusedTerminal.session.title : ""
     color: terminalPage.active && terminalPage.terminal ? terminalPage.terminal.backgroundColor : theme.palette.selected.overlay
     contentOrientation: Screen.orientation
 
@@ -35,7 +35,7 @@ Window {
     Binding {
         target: terminalAppRoot
         property: "focusedTerminal"
-        value: tabsModel.currentItem
+        value: tabsModel.currentItem ? tabsModel.currentItem.focusedTerminal : null
         when: terminalWindow.active
     }
 
@@ -71,6 +71,21 @@ Window {
                         }
     }
 
+    property TiledTerminalView tiledTerminalView: tabsModel.currentItem
+    Shortcut {
+        sequence: settings.shortcutSplitHorizontally
+        onActivated: tiledTerminalView.splitTerminal(tiledTerminalView.focusedTerminal,
+                                                     Qt.Horizontal)
+        enabled: tiledTerminalView.focusedTerminal.width >= 2 * tiledTerminalView.minimumTileWidth
+    }
+
+    Shortcut {
+        sequence: settings.shortcutSplitVertically
+        onActivated: tiledTerminalView.splitTerminal(tiledTerminalView.focusedTerminal,
+                                                     Qt.Vertical)
+        enabled: tiledTerminalView.focusedTerminal.height >= 2 * tiledTerminalView.minimumTileHeight
+    }
+
     Shortcut {
         sequence: settings.shortcutNewTab
         onActivated: tabsModel.addTerminalTab()
@@ -98,12 +113,12 @@ Window {
 
     Shortcut {
         sequence: settings.shortcutCopy
-        onActivated: tabsModel.currentItem.copyClipboard()
+        onActivated: tabsModel.currentItem.focusedTerminal.copyClipboard()
     }
 
     Shortcut {
         sequence: settings.shortcutPaste
-        onActivated: tabsModel.currentItem.pasteClipboard()
+        onActivated: tabsModel.currentItem.focusedTerminal.pasteClipboard()
     }
 
     Shortcut {
@@ -141,7 +156,7 @@ Window {
         TerminalPage {
             id: terminalPage
             tabsModel: tabsModel
-            terminal: tabsModel.currentItem
+            terminal: tabsModel.currentItem ? tabsModel.currentItem.focusedTerminal : null
             narrowLayout: terminalWindow.narrowLayout
             // Hide terminal data when the access is still not granted
             layer.enabled: authService.isDialogVisible
