@@ -36,6 +36,10 @@ QtObject {
     property alias shortcutFullscreen: innerSettings.shortcutFullscreen
     property alias shortcutSplitHorizontally: innerSettings.shortcutSplitHorizontally
     property alias shortcutSplitVertically: innerSettings.shortcutSplitVertically
+    property alias shortcutMoveToTileAbove: innerSettings.shortcutMoveToTileAbove
+    property alias shortcutMoveToTileBelow: innerSettings.shortcutMoveToTileBelow
+    property alias shortcutMoveToTileLeft: innerSettings.shortcutMoveToTileLeft
+    property alias shortcutMoveToTileRight: innerSettings.shortcutMoveToTileRight
 
     readonly property int defaultFontSize: 12
     readonly property int minFontSize: 4
@@ -77,6 +81,10 @@ QtObject {
         property string shortcutFullscreen: "F11"
         property string shortcutSplitHorizontally: "Ctrl+Shift+E"
         property string shortcutSplitVertically: "Ctrl+Shift+O"
+        property string shortcutMoveToTileAbove: "Alt+Up"
+        property string shortcutMoveToTileBelow: "Alt+Down"
+        property string shortcutMoveToTileLeft: "Alt+Left"
+        property string shortcutMoveToTileRight: "Alt+Right"
     }
 
     // Load the keyboard profiles.

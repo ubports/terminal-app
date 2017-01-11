@@ -354,3 +354,38 @@ Node.prototype.closestNodeWithValue = function closestNodeWithValue() {
     }
     return null;
 };
+
+Node.prototype.closestChildWithValueInSide = function closestChildWithValueInSide(side) {
+    if (this.value) {
+        return this;
+    }
+
+    var firstNode = (side == Qt.AlignLeading) ? this.left : this.right;
+    var secondNode = (side == Qt.AlignLeading) ? this.right : this.left;
+
+    if (firstNode) {
+        return firstNode.closestChildWithValueInSide(side);
+    } else if (secondNode) {
+        return secondNode.closestChildWithValueInSide(side);
+    }
+    return null;
+}
+
+Node.prototype.closestNodeWithValueInDirection = function closestNodeWithValueInDirection(direction) {
+    if (this.parent) {
+        if (this.parent.left === this) {
+            if ((direction == Qt.AlignRight && this.parent.orientation == Qt.Horizontal) ||
+                (direction == Qt.AlignBottom && this.parent.orientation == Qt.Vertical)) {
+                return this.parent.right.closestChildWithValueInSide(Qt.AlignLeading);
+            }
+        } else if (this.parent.right === this) {
+            if ((direction == Qt.AlignLeft && this.parent.orientation == Qt.Horizontal) ||
+                (direction == Qt.AlignTop && this.parent.orientation == Qt.Vertical)) {
+                return this.parent.left.closestChildWithValueInSide(Qt.AlignTrailing);
+            }
+        }
+        return this.parent.closestNodeWithValueInDirection(direction);
+    } else {
+        return null;
+    }
+}

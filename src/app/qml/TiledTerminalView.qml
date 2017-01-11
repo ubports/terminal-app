@@ -15,7 +15,7 @@
  *
  * Authored-by: Florian Boucault <florian.boucault@canonical.com>
  */
-import QtQuick 2.4
+import QtQuick 2.5
 import Ubuntu.Components 1.3
 
 TiledView {
@@ -45,6 +45,37 @@ TiledView {
         var newTerminal = terminalComponent.createObject(tiledTerminalView,
                                                          {"initialWorkingDirectory": initialWorkingDirectory});
         setRootItem(newTerminal);
+    }
+
+    function moveFocus(direction) {
+        var terminal = tiledTerminalView.closestTileInDirection(focusedTerminal, direction);
+        if (terminal) {
+            terminal.focus = true;
+        }
+    }
+
+    Shortcut {
+        sequence: settings.shortcutMoveToTileRight
+        enabled: tiledTerminalView.focus
+        onActivated: moveFocus(Qt.AlignRight)
+    }
+
+    Shortcut {
+        sequence: settings.shortcutMoveToTileLeft
+        enabled: tiledTerminalView.focus
+        onActivated: moveFocus(Qt.AlignLeft)
+    }
+
+    Shortcut {
+        sequence: settings.shortcutMoveToTileAbove
+        enabled: tiledTerminalView.focus
+        onActivated: moveFocus(Qt.AlignTop)
+    }
+
+    Shortcut {
+        sequence: settings.shortcutMoveToTileBelow
+        enabled: tiledTerminalView.focus
+        onActivated: moveFocus(Qt.AlignBottom)
     }
 
     property real minimumTileWidth: units.gu(10)

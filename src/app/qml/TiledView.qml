@@ -95,6 +95,16 @@ FocusScope {
         }
     }
 
+    function closestTileInDirection(obj, direction) {
+        var node = __rootNode.findNodeWithValue(obj);
+        var closestNode = node.closestNodeWithValueInDirection(direction);
+        if (closestNode && closestNode.value) {
+            return closestNode.value;
+        } else {
+            return null;
+        }
+    }
+
     function setOrientation(obj, orientation) {
         var node = __rootNode.findNodeWithValue(obj);
         node.setOrientation(orientation);
