@@ -186,6 +186,16 @@ SettingsSection {
                         actionLabel: QT_TR_NOOP("Toggle fullscreen")
                         shortcutSetting: "shortcutFullscreen"
                     }
+                    ListElement {
+                        section: QT_TR_NOOP("View")
+                        actionLabel: QT_TR_NOOP("Split terminal horizontally")
+                        shortcutSetting: "shortcutSplitHorizontally"
+                    }
+                    ListElement {
+                        section: QT_TR_NOOP("View")
+                        actionLabel: QT_TR_NOOP("Split terminal vertically")
+                        shortcutSetting: "shortcutSplitVertically"
+                    }
                 }
 
                 delegate: ShortcutRow {
