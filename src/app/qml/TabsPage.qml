@@ -103,7 +103,7 @@ Page {
                     Label {
                         anchors { fill: blackRect; margins: units.dp(2) }
                         property var tab: tabsModel.itemAt(index)
-                        text: tab ? tab.session.title : ""
+                        text: tab && tab.focusedTerminal ? tab.focusedTerminal.session.title : ""
                         wrapMode: Text.Wrap
                         color: "white"
                     }

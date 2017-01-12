@@ -83,6 +83,19 @@ ActionSelectionPopover {
             property bool divider: true
         }
         Action {
+            text: i18n.tr("Split horizontally")
+            onTriggered: tiledTerminalView.splitTerminal(terminal, Qt.Vertical)
+            shortcut: settings.shortcutSplitHorizontally
+            enabled: terminal.height >= 2 * tiledTerminalView.minimumTileHeight
+        }
+        Action {
+            text: i18n.tr("Split vertically")
+            onTriggered: tiledTerminalView.splitTerminal(terminal, Qt.Horizontal)
+            shortcut: settings.shortcutSplitVertically
+            enabled: terminal.width >= 2 * tiledTerminalView.minimumTileWidth
+            property bool divider: true
+        }
+        Action {
             text: i18n.tr("New tab")
             onTriggered: tabsModel.addTerminalTab()
             shortcut: settings.shortcutNewTab
@@ -94,7 +107,7 @@ ActionSelectionPopover {
         }
         Action {
             text: i18n.tr("Close")
-            onTriggered: tabsModel.removeItem(tabsModel.indexOf(tabsModel.currentItem))
+            onTriggered: terminal.finished()
             shortcut: settings.shortcutCloseTab
         }
     }
