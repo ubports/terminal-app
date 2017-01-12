@@ -414,5 +414,55 @@ TiledView {
                 objects[i].destroy();
             }
         }
+
+        function verifyResize(leftObject, rightObject, orientation, dragDistance) {
+            var horizontalMove = (orientation == Qt.Horizontal ? dragDistance : 0);
+            var verticalMove = (orientation == Qt.Vertical ? dragDistance : 0);
+            var expectedLeft = {"x": leftObject.x,
+                                "y": leftObject.y,
+                                "width": leftObject.width + horizontalMove,
+                                "height": leftObject.height + verticalMove};
+            var expectedRight = {"x": rightObject.x + horizontalMove,
+                                 "y": rightObject.y + verticalMove,
+                                 "width": rightObject.width - horizontalMove,
+                                 "height": rightObject.height - verticalMove};
+
+            if (orientation == Qt.Horizontal) {
+                mouseDrag(tiledView, rightObject.x, rightObject.y/2, dragDistance, 0);
+            } else if (orientation == Qt.Vertical) {
+                mouseDrag(tiledView, rightObject.x/2, rightObject.y, 0, dragDistance);
+            }
+
+            compare(leftObject.x, expectedLeft.x);
+            compare(leftObject.y, expectedLeft.y);
+            compare(leftObject.width, expectedLeft.width);
+            compare(leftObject.height, expectedLeft.height);
+            compare(rightObject.x, expectedRight.x);
+            compare(rightObject.y, expectedRight.y);
+            compare(rightObject.width, expectedRight.width);
+            compare(rightObject.height, expectedRight.height);
+        }
+
+        function test_resizeSplit_data() {
+            return [
+                        {orientation: Qt.Horizontal, distance: 100},
+                        {orientation: Qt.Vertical, distance: 100},
+            ];
+        }
+
+        function test_resizeSplit(data) {
+            var leftObject = objectComponent.createObject(tiledView);
+            verifySetRootItem(leftObject);
+            verifySetOrientation(leftObject, data.orientation);
+
+            var rightObject = objectComponent.createObject(tiledView);
+            verifyAdd(leftObject, rightObject, Qt.AlignTrailing);
+
+            verifyResize(leftObject, rightObject, data.orientation, data.distance);
+
+            tiledView.setRootItem(null);
+            leftObject.destroy();
+            rightObject.destroy();
+        }
     }
 }
