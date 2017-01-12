@@ -311,7 +311,7 @@ Node.prototype.findNodeWithValue = function findNodeWithValue(value) {
     return null;
 };
 
-Node.prototype.closestChildWithValue = function closestChildWithValue() {
+Node.prototype.closestChildWithValue = function closestChildWithValue(sides) {
     var currentLevelNodes = [this];
     var nextLevelNodes = [];
     while (currentLevelNodes.length != 0) {
@@ -320,10 +320,10 @@ Node.prototype.closestChildWithValue = function closestChildWithValue() {
             if (node.value) {
                 return node;
             }
-            if (node.left) {
+            if ((sides == undefined || sides & Qt.AlignLeading) && node.left) {
                 nextLevelNodes.push(node.left);
             }
-            if (node.right) {
+            if ((sides == undefined || sides & Qt.AlignTrailing) && node.right) {
                 nextLevelNodes.push(node.right);
             }
         }
@@ -337,7 +337,7 @@ Node.prototype.closestNodeWithValue = function closestNodeWithValue() {
     // explore sibling hierarchy
     var sibling = this.getSibling();
     if (sibling) {
-        var closestChild = sibling.closestChildWithValue();
+        var closestChild = sibling.closestChildWithValue(Qt.AlignLeading | Qt.AlignTrailing);
         if (closestChild) {
             return closestChild;
         }
@@ -346,7 +346,7 @@ Node.prototype.closestNodeWithValue = function closestNodeWithValue() {
     if (this.parent) {
         var parentSibling = this.parent.getSibling();
         if (parentSibling) {
-            var closestChild = parentSibling.closestChildWithValue();
+            var closestChild = parentSibling.closestChildWithValue(Qt.AlignLeading | Qt.AlignTrailing);
             if (closestChild) {
                 return closestChild;
             }
@@ -355,33 +355,17 @@ Node.prototype.closestNodeWithValue = function closestNodeWithValue() {
     return null;
 };
 
-Node.prototype.closestChildWithValueInSide = function closestChildWithValueInSide(side) {
-    if (this.value) {
-        return this;
-    }
-
-    var firstNode = (side == Qt.AlignLeading) ? this.left : this.right;
-    var secondNode = (side == Qt.AlignLeading) ? this.right : this.left;
-
-    if (firstNode) {
-        return firstNode.closestChildWithValueInSide(side);
-    } else if (secondNode) {
-        return secondNode.closestChildWithValueInSide(side);
-    }
-    return null;
-}
-
 Node.prototype.closestNodeWithValueInDirection = function closestNodeWithValueInDirection(direction) {
     if (this.parent) {
         if (this.parent.left === this) {
             if ((direction == Qt.AlignRight && this.parent.orientation == Qt.Horizontal) ||
                 (direction == Qt.AlignBottom && this.parent.orientation == Qt.Vertical)) {
-                return this.parent.right.closestChildWithValueInSide(Qt.AlignLeading);
+                return this.parent.right.closestChildWithValue(Qt.AlignLeading);
             }
         } else if (this.parent.right === this) {
             if ((direction == Qt.AlignLeft && this.parent.orientation == Qt.Horizontal) ||
                 (direction == Qt.AlignTop && this.parent.orientation == Qt.Vertical)) {
-                return this.parent.left.closestChildWithValueInSide(Qt.AlignTrailing);
+                return this.parent.left.closestChildWithValue(Qt.AlignTrailing);
             }
         }
         return this.parent.closestNodeWithValueInDirection(direction);
