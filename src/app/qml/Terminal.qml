@@ -23,8 +23,6 @@ import Terminal 0.1
 
 QMLTermWidget {
     id: terminal
-    width: parent.width
-    height: parent.height
 
     colorScheme: settings.colorScheme
     font.family: settings.fontStyle
