@@ -84,15 +84,15 @@ ActionSelectionPopover {
         }
         Action {
             text: i18n.tr("Split horizontally")
-            onTriggered: tiledTerminalView.splitTerminal(terminal, Qt.Horizontal)
+            onTriggered: tiledTerminalView.splitTerminal(terminal, Qt.Vertical)
             shortcut: settings.shortcutSplitHorizontally
-            enabled: terminal.width >= 2 * tiledTerminalView.minimumTileWidth
+            enabled: terminal.height >= 2 * tiledTerminalView.minimumTileHeight
         }
         Action {
             text: i18n.tr("Split vertically")
-            onTriggered: tiledTerminalView.splitTerminal(terminal, Qt.Vertical)
+            onTriggered: tiledTerminalView.splitTerminal(terminal, Qt.Horizontal)
             shortcut: settings.shortcutSplitVertically
-            enabled: terminal.height >= 2 * tiledTerminalView.minimumTileHeight
+            enabled: terminal.width >= 2 * tiledTerminalView.minimumTileWidth
             property bool divider: true
         }
         Action {

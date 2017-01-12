@@ -73,14 +73,14 @@ Window {
 
     property TiledTerminalView tiledTerminalView: tabsModel.currentItem
     Shortcut {
-        sequence: settings.shortcutSplitHorizontally
+        sequence: settings.shortcutSplitVertically
         onActivated: tiledTerminalView.splitTerminal(tiledTerminalView.focusedTerminal,
                                                      Qt.Horizontal)
         enabled: tiledTerminalView.focusedTerminal.width >= 2 * tiledTerminalView.minimumTileWidth
     }
 
     Shortcut {
-        sequence: settings.shortcutSplitVertically
+        sequence: settings.shortcutSplitHorizontally
         onActivated: tiledTerminalView.splitTerminal(tiledTerminalView.focusedTerminal,
                                                      Qt.Vertical)
         enabled: tiledTerminalView.focusedTerminal.height >= 2 * tiledTerminalView.minimumTileHeight
