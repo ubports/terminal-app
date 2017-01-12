@@ -31,16 +31,29 @@ FocusScope {
 
     // FIXME: odd semantics: what if setRootItem is called later?
     function setRootItem(rootItem) {
-        if (rootItem && !__rootNode.value) {
-            count += 1;
-        } else if (!rootItem && __rootNode.value) {
-            count -= 1;
+        if (rootItem && rootItem === __rootNode.value) {
+            return null;
+        }
+
+        var oldRoot = __rootNode.value;
+        if (rootItem) {
+            count = 1;
+        } else {
+            count = 0;
+            __rootNode.cleanup();
         }
         __rootNode.setValue(rootItem);
+
+        return oldRoot;
     }
 
     property var __rootNode: new BinaryTree.Node()
     Component.onDestruction: __rootNode.cleanup()
+
+    Component.onCompleted: {
+        __rootNode.setWidth(width);
+        __rootNode.setHeight(height);
+    }
 
     onWidthChanged: __rootNode.setWidth(width)
     onHeightChanged: __rootNode.setHeight(height)
@@ -103,6 +116,11 @@ FocusScope {
         } else {
             return null;
         }
+    }
+
+    function getOrientation(obj) {
+        var node = __rootNode.findNodeWithValue(obj);
+        return node.orientation;
     }
 
     function setOrientation(obj, orientation) {

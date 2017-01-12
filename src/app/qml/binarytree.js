@@ -53,6 +53,10 @@ Node.prototype.cleanup = function cleanup(value) {
 
 Node.prototype.setValue = function setValue(value) {
     this.value = value;
+    this.updateX();
+    this.updateY();
+    this.updateWidth();
+    this.updateHeight();
 }
 
 Node.prototype.updateWidth = function updateWidth() {
@@ -74,7 +78,6 @@ Node.prototype.updateWidth = function updateWidth() {
             this.right.setX(this.left.width);
         }
     } else if (this.orientation == Qt.Vertical) {
-        // FIXME: not symmetric with horizontal case
         if (this.left) {
             this.left.setWidth(this.width);
             this.left.setX(0);
