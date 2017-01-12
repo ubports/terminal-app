@@ -152,14 +152,14 @@ Node.prototype.setChild = function setChild(side, childNode) {
     switch (side) {
         case Qt.AlignLeading:
             if (this.left) {
-                // FIXME: breaks copy() and unsplit()
+                // FIXME: breaks copy()
 //                this.left.cleanup();
             }
             this.left = childNode;
             break;
         case Qt.AlignTrailing:
             if (this.right) {
-                // FIXME: breaks copy() and unsplit()
+                // FIXME: breaks copy()
 //                this.right.cleanup();
             }
             this.right = childNode;

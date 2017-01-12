@@ -52,7 +52,7 @@ FocusScope {
         }
     }
 
-    function split(obj, newObj, side) {
+    function add(obj, newObj, side) {
         var node = __rootNode.findNodeWithValue(obj);
         var otherSide;
         if (side == Qt.AlignLeading) {
@@ -76,7 +76,7 @@ FocusScope {
         count += 1;
     }
 
-    function unsplit(obj) {
+    function remove(obj) {
         var node = __rootNode.findNodeWithValue(obj);
         var sibling = node.getSibling();
         if (sibling) {
@@ -111,7 +111,7 @@ FocusScope {
     }
 
     function move(obj, targetObj, side) {
-        unsplit(obj);
-        split(targetObj, obj, side);
+        remove(obj);
+        add(targetObj, obj, side);
     }
 }

@@ -32,7 +32,7 @@ TiledView {
         var newTerminal = terminalComponent.createObject(tiledTerminalView,
                                                          {"initialWorkingDirectory": initialWorkingDirectory});
         tiledTerminalView.setOrientation(terminal, orientation);
-        tiledTerminalView.split(terminal, newTerminal, Qt.AlignTrailing);
+        tiledTerminalView.add(terminal, newTerminal, Qt.AlignTrailing);
     }
 
     handleDelegate: Rectangle {
@@ -89,7 +89,7 @@ TiledView {
                 var nextTerminal = tiledTerminalView.closestTile(terminal);
                 if (nextTerminal) nextTerminal.focus = true;
             }
-            tiledTerminalView.unsplit(terminal);
+            tiledTerminalView.remove(terminal);
             terminal.destroy();
         }
     }
