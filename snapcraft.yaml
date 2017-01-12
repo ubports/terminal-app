@@ -1,5 +1,5 @@
 name: ubuntu-terminal-app
-version: "0.10"
+version: "0.11"
 summary: Ubuntu Terminal app
 description: The terminal app for all Ubuntu devices.
 confinement: devmode
