@@ -1,36 +1,68 @@
 # Breton translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-10-07 04:16-0700\n"
-"PO-Revision-Date: 2014-11-05 07:09+0000\n"
+"POT-Creation-Date: 2017-01-12 14:17+0100\n"
+"PO-Revision-Date: 2016-08-29 06:25+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-07 06:22+0000\n"
+"X-Launchpad-Export-Date: 2017-01-13 06:34+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:68
+msgid "Select"
+msgstr "Diuzañ"
+
+#: ../src/app/qml/AlternateActionPopover.qml:73
+msgid "Copy"
+msgstr "Eilañ"
+
+#: ../src/app/qml/AlternateActionPopover.qml:79
+msgid "Paste"
+msgstr "Pegañ"
+
+#: ../src/app/qml/AlternateActionPopover.qml:86
+msgid "Split horizontally"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:92
+msgid "Split vertically"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:99 ../src/app/qml/TabsPage.qml:32
+msgid "New tab"
+msgstr "Ivinell nevez"
+
+#: ../src/app/qml/AlternateActionPopover.qml:104
+msgid "New window"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:109
+msgid "Close"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
 msgstr "Dilesadur rekis"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
-msgid "Enter password:"
-msgstr "Merkañ ar ger-tremen :"
+msgid "Enter passcode or passphrase:"
+msgstr "Ebarzhit ar c'hod ar ger-tremen :"
 
-#: ../src/app/qml/AuthenticationDialog.qml:40
-msgid "password"
-msgstr "ger-tremen"
+#: ../src/app/qml/AuthenticationDialog.qml:48
+msgid "passcode or passphrase"
+msgstr "kod pe ger-tremen"
 
-#: ../src/app/qml/NotifyDialog.qml:25
-msgid "Ok"
+#: ../src/app/qml/AuthenticationDialog.qml:58
+msgid "OK"
 msgstr "Mat eo"
 
 #: ../src/app/qml/AuthenticationDialog.qml:70
@@ -42,63 +74,88 @@ msgstr "Nullañ"
 msgid "Authentication failed"
 msgstr "C'hwitet eo an dilesadur"
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr "Dibab ul liv"
+#: ../src/app/qml/AuthenticationService.qml:83
+msgid "No SSH server running."
+msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
-msgid "OK"
-msgstr "Mat eo"
+#: ../src/app/qml/AuthenticationService.qml:84
+msgid "SSH server not found. Do you want to proceed in confined mode?"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:69
-msgid "Color Scheme:"
-msgstr "Steuñv liv :"
+#: ../src/app/qml/ConfirmationDialog.qml:32
+msgid "Continue"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:81
-msgid "Select Font:"
-msgstr "Diuzañ ar font :"
+#: ../src/app/qml/KeyboardBar.qml:196
+msgid "Change Keyboard"
+msgstr "Cheñch klavier"
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
-msgid "Font Size:"
-msgstr "Ment ar font :"
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
+msgid "Control Keys"
+msgstr "Stokelloù kontroll"
 
-#: ../src/app/qml/Configs.qml:136
-msgid "Enable Effects:"
-msgstr "Gweredekaat an efedoù :"
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
+msgid "Function Keys"
+msgstr "Stokelloù arc'hwel"
 
-#: ../src/app/qml/Configs.qml:155
-msgid "Screen color"
-msgstr "Liv ar skramm"
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
+msgid "Scroll Keys"
+msgstr "Stokelloù dibunañ"
 
-#: ../src/app/qml/Configs.qml:168
-msgid "Color intensity"
-msgstr "Splannder al liv"
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
+msgid "Command Keys"
+msgstr "Stokelloù urzhiañ"
 
-#: ../src/app/qml/Configs.qml:196
-msgid "Bloom"
-msgstr "Bleuñv"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:52
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:78
+msgid "CTRL"
+msgstr "KTRL"
 
-#: ../src/app/qml/Configs.qml:224
-msgid "Curvature"
-msgstr "Krommadur"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:55
+msgid "FNS"
+msgstr "FNS"
 
-#: ../src/app/qml/Configs.qml:252
-msgid "Noise"
-msgstr "Trouz"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:58
+msgid "SCR"
+msgstr "SCR"
 
-#: ../src/app/qml/Configs.qml:280
-msgid "Jitter"
-msgstr "Distabilder"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
+msgid "CMD"
+msgstr "CMD"
+
+#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:81
+msgid "ALT"
+msgstr "ALT"
+
+#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:84
+msgid "SHIFT"
+msgstr "Pennlizh."
+
+#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:97
+msgid "ESC"
+msgstr "ACH"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr "PAJ_LEIN"
 
-#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
-msgid "TAB"
-msgstr "TAOLENN"
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
+msgid "PG_DN"
+msgstr "PAJ_TRAOÑ"
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
@@ -110,39 +167,153 @@ msgstr "DIL"
 msgid "HOME"
 msgstr "DEROÙ"
 
-#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
-msgid "PG_DN"
-msgstr "PAJ_TRAOÑ"
-
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr "DIB"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "Termenell"
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
+msgid "TAB"
+msgstr "TAOLENN"
 
-#: ../src/app/qml/SettingsPage.qml:26
-msgid "Settings"
-msgstr "Arventennoù"
+#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:118
+msgid "ENTER"
+msgstr "KAS"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
-msgstr "Kuzhat an holl banelloù stokelloù"
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr "Mat eo"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Stokelloù kontroll"
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:79
+msgid "R:"
+msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Stokelloù arc'hwel"
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:87
+msgid "G:"
+msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "Biroù ar c'hlavier"
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:95
+msgid "B:"
+msgstr ""
+
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:99
+msgid "Undo"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:55
+msgid "Text"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:66
+msgid "Font:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
+msgid "Font Size:"
+msgstr "Ment ar font :"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:119
+msgid "Colors"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:124
+msgid "Ubuntu"
+msgstr "Ubuntu"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:125
+msgid "Green on black"
+msgstr "Gwer war du"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:126
+msgid "White on black"
+msgstr "Gwenn war du"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:127
+msgid "Black on white"
+msgstr "Du war gwenn"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:128
+msgid "Black on random light"
+msgstr "Du war ul liv sklaer bennak"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:129
+msgid "Linux"
+msgstr "Linux"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:130
+msgid "Cool retro term"
+msgstr "Termenell mod-kozh hag a-vod"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:131
+msgid "Dark pastels"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:132
+msgid "Black on light yellow"
+msgstr "Du war melen sklaer"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:133
+msgid "Customized"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:144
+msgid "Background:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:152
+msgid "Text:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
+msgid "Normal palette:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:167
+msgid "Bright palette:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
+msgid "Preset:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:193
+msgid "Layouts"
+msgstr "Aozadurioù"
+
+#: ../src/app/qml/Settings/SettingsPage.qml:32
+msgid "Preferences"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:43
+msgid "Interface"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:47
+msgid "Shortcuts"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsShortcutsSection.qml:60
+#, qt-format
+msgid "Showing %1 of %2"
+msgstr ""
+
+#: ../src/app/qml/Settings/ShortcutRow.qml:78
+msgid "Enter shortcut..."
+msgstr ""
+
+#: ../src/app/qml/Settings/ShortcutRow.qml:80
+msgid "Disabled"
+msgstr ""
+
+#: ../src/app/qml/TabsPage.qml:26
+msgid "Tabs"
+msgstr "Ivinelloù"
+
+#: ../src/app/qml/TerminalPage.qml:132
+msgid "Selection Mode"
+msgstr "Mod diuzañ"
 
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:320
@@ -169,6 +340,18 @@ msgstr "Kas ur postel da..."
 msgid "Copy Email Address"
 msgstr "Eilañ ar chomlec'h postel"
 
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr "Klotaat ar c'hef"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "Troienn reolataet"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "Uslinennañ an holl draoù a glot"
+
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:982
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
@@ -177,3 +360,25 @@ msgstr ""
 "N'eus troer ebet da gaout evit ar c'hlavier. Mankout a ra an titouroù a zo "
 "ezhomm evit amdreiñ ar pouezañ war ar stokelloù en arouezennoù da gas d'an "
 "dermenell."
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+msgid "Color Scheme Error"
+msgstr "Fazi steuñv liv"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:407
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "Ne c'haller ket kargañ ar steuñv liv : %1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Termenell"
+
+#~ msgid "Settings"
+#~ msgstr "Arventennoù"
+
+#~ msgid "Enter password:"
+#~ msgstr "Merkañ ar ger-tremen :"
+
+#~ msgid "password"
+#~ msgstr "ger-tremen"

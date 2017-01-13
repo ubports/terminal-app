@@ -1,36 +1,68 @@
 # Chinese (Traditional) translation for ubuntu-terminal-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-10-07 04:16-0700\n"
-"PO-Revision-Date: 2014-11-19 13:57+0000\n"
-"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
+"POT-Creation-Date: 2017-01-12 14:17+0100\n"
+"PO-Revision-Date: 2016-05-17 03:13+0000\n"
+"Last-Translator: Po-Hsu Lin <po-hsu.lin@canonical.com>\n"
 "Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-07 06:23+0000\n"
+"X-Launchpad-Export-Date: 2017-01-13 06:34+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
+
+#: ../src/app/qml/AlternateActionPopover.qml:68
+msgid "Select"
+msgstr "選取"
+
+#: ../src/app/qml/AlternateActionPopover.qml:73
+msgid "Copy"
+msgstr "複製"
+
+#: ../src/app/qml/AlternateActionPopover.qml:79
+msgid "Paste"
+msgstr "貼上"
+
+#: ../src/app/qml/AlternateActionPopover.qml:86
+msgid "Split horizontally"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:92
+msgid "Split vertically"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:99 ../src/app/qml/TabsPage.qml:32
+msgid "New tab"
+msgstr "新增分頁"
+
+#: ../src/app/qml/AlternateActionPopover.qml:104
+msgid "New window"
+msgstr ""
+
+#: ../src/app/qml/AlternateActionPopover.qml:109
+msgid "Close"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
 msgstr "要求核對身分"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
-msgid "Enter password:"
-msgstr "輸入密碼："
+msgid "Enter passcode or passphrase:"
+msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:40
-msgid "password"
-msgstr "密碼"
+#: ../src/app/qml/AuthenticationDialog.qml:48
+msgid "passcode or passphrase"
+msgstr ""
 
-#: ../src/app/qml/NotifyDialog.qml:25
-msgid "Ok"
+#: ../src/app/qml/AuthenticationDialog.qml:58
+msgid "OK"
 msgstr "確定"
 
 #: ../src/app/qml/AuthenticationDialog.qml:70
@@ -42,63 +74,88 @@ msgstr "取消"
 msgid "Authentication failed"
 msgstr "身分核對失敗"
 
-#: ../src/app/qml/ColorDialog.qml:25
-msgid "Pick a color"
-msgstr "挑選色彩"
+#: ../src/app/qml/AuthenticationService.qml:83
+msgid "No SSH server running."
+msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
-msgid "OK"
-msgstr "確定"
+#: ../src/app/qml/AuthenticationService.qml:84
+msgid "SSH server not found. Do you want to proceed in confined mode?"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:69
-msgid "Color Scheme:"
-msgstr "色彩方案："
+#: ../src/app/qml/ConfirmationDialog.qml:32
+msgid "Continue"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:81
-msgid "Select Font:"
-msgstr "選取字型："
+#: ../src/app/qml/KeyboardBar.qml:196
+msgid "Change Keyboard"
+msgstr "變換鍵盤"
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
-msgid "Font Size:"
-msgstr "字型大小："
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
+msgid "Control Keys"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:136
-msgid "Enable Effects:"
-msgstr "啟用特效："
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
+msgid "Function Keys"
+msgstr "功能鍵"
 
-#: ../src/app/qml/Configs.qml:155
-msgid "Screen color"
-msgstr "螢幕色彩"
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
+msgid "Scroll Keys"
+msgstr "捲動鍵"
 
-#: ../src/app/qml/Configs.qml:168
-msgid "Color intensity"
-msgstr "色彩強度"
+#. TRANSLATORS: This a keyboard layout name
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
+msgid "Command Keys"
+msgstr ""
 
-#: ../src/app/qml/Configs.qml:196
-msgid "Bloom"
-msgstr "光暈"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:52
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:78
+msgid "CTRL"
+msgstr "CTRL"
 
-#: ../src/app/qml/Configs.qml:224
-msgid "Curvature"
-msgstr "曲率"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:55
+msgid "FNS"
+msgstr "FNS"
 
-#: ../src/app/qml/Configs.qml:252
-msgid "Noise"
-msgstr "雜訊"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:58
+msgid "SCR"
+msgstr "SCR"
 
-#: ../src/app/qml/Configs.qml:280
-msgid "Jitter"
-msgstr "抖動"
+#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
+msgid "CMD"
+msgstr "CMD"
+
+#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:81
+msgid "ALT"
+msgstr "ALT"
+
+#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:84
+msgid "SHIFT"
+msgstr "SHIFT"
+
+#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:97
+msgid "ESC"
+msgstr "ESC"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr "PG_UP"
 
-#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
-msgid "TAB"
-msgstr "TAB"
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
+msgid "PG_DN"
+msgstr "PG_DN"
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
@@ -110,39 +167,153 @@ msgstr "DEL"
 msgid "HOME"
 msgstr "HOME"
 
-#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
-msgid "PG_DN"
-msgstr "PG_DN"
-
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr "END"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "終端機"
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
+msgid "TAB"
+msgstr "TAB"
 
-#: ../src/app/qml/SettingsPage.qml:26
-msgid "Settings"
-msgstr "設定"
+#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:118
+msgid "ENTER"
+msgstr "ENTER"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:57
-msgid "Hide all key panels"
-msgstr "隱藏所有按鍵面板"
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr "確定"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:64
-msgid "Control keys"
-msgstr "Control 鍵"
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:79
+msgid "R:"
+msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:71
-msgid "Function keys"
-msgstr "Function 鍵"
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:87
+msgid "G:"
+msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:78
-msgid "Arrow keys"
-msgstr "方向鍵"
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:95
+msgid "B:"
+msgstr ""
+
+#: ../src/app/qml/Settings/ColorPickerPopup.qml:99
+msgid "Undo"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:55
+msgid "Text"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:66
+msgid "Font:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
+msgid "Font Size:"
+msgstr "字型大小："
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:119
+msgid "Colors"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:124
+msgid "Ubuntu"
+msgstr "Ubuntu"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:125
+msgid "Green on black"
+msgstr "黑底綠字"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:126
+msgid "White on black"
+msgstr "黑底白字"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:127
+msgid "Black on white"
+msgstr "白底黑字"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:128
+msgid "Black on random light"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:129
+msgid "Linux"
+msgstr "Linux"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:130
+msgid "Cool retro term"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:131
+msgid "Dark pastels"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:132
+msgid "Black on light yellow"
+msgstr "淺黃底黑字"
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:133
+msgid "Customized"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:144
+msgid "Background:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:152
+msgid "Text:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
+msgid "Normal palette:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:167
+msgid "Bright palette:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
+msgid "Preset:"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:193
+msgid "Layouts"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:32
+msgid "Preferences"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:43
+msgid "Interface"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsPage.qml:47
+msgid "Shortcuts"
+msgstr ""
+
+#: ../src/app/qml/Settings/SettingsShortcutsSection.qml:60
+#, qt-format
+msgid "Showing %1 of %2"
+msgstr ""
+
+#: ../src/app/qml/Settings/ShortcutRow.qml:78
+msgid "Enter shortcut..."
+msgstr ""
+
+#: ../src/app/qml/Settings/ShortcutRow.qml:80
+msgid "Disabled"
+msgstr ""
+
+#: ../src/app/qml/TabsPage.qml:26
+msgid "Tabs"
+msgstr "分頁"
+
+#: ../src/app/qml/TerminalPage.qml:132
+msgid "Selection Mode"
+msgstr "選取模式"
 
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:320
@@ -169,8 +340,42 @@ msgstr "傳送電子郵件到..."
 msgid "Copy Email Address"
 msgstr "複製電子郵子位址"
 
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
+msgid "Match case"
+msgstr "區分大小寫"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
+msgid "Regular expression"
+msgstr "正則表述式"
+
+#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
+msgid "Higlight all matches"
+msgstr "標明所有符合項目"
+
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:982
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr "沒有可用的鍵盤轉換器。缺少要將鍵盤輸入的字元轉換並送到終端機的資訊。"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
+msgid "Color Scheme Error"
+msgstr "色彩方案錯誤"
+
+#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:407
+#, qt-format
+msgid "Cannot load color scheme: %1"
+msgstr "無法載入色彩方案：%1"
+
+#: com.ubuntu.terminal.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "終端機"
+
+#~ msgid "Settings"
+#~ msgstr "設定"
+
+#~ msgid "Enter password:"
+#~ msgstr "輸入密碼："
+
+#~ msgid "password"
+#~ msgstr "密碼"
