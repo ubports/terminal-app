@@ -76,14 +76,16 @@ Window {
         sequence: settings.shortcutSplitVertically
         onActivated: tiledTerminalView.splitTerminal(tiledTerminalView.focusedTerminal,
                                                      Qt.Horizontal)
-        enabled: tiledTerminalView.focusedTerminal.width >= 2 * tiledTerminalView.minimumTileWidth
+        enabled: tiledTerminalView &&
+                 tiledTerminalView.focusedTerminal.width >= 2 * tiledTerminalView.minimumTileWidth
     }
 
     Shortcut {
         sequence: settings.shortcutSplitHorizontally
         onActivated: tiledTerminalView.splitTerminal(tiledTerminalView.focusedTerminal,
                                                      Qt.Vertical)
-        enabled: tiledTerminalView.focusedTerminal.height >= 2 * tiledTerminalView.minimumTileHeight
+        enabled: tiledTerminalView &&
+                 tiledTerminalView.focusedTerminal.height >= 2 * tiledTerminalView.minimumTileHeight
     }
 
     Shortcut {
