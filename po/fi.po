@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-12 14:17+0100\n"
-"PO-Revision-Date: 2016-11-23 07:45+0000\n"
+"PO-Revision-Date: 2017-01-13 08:37+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-13 06:34+0000\n"
+"X-Launchpad-Export-Date: 2017-01-14 06:11+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:68
@@ -31,11 +31,11 @@ msgstr "Liitä"
 
 #: ../src/app/qml/AlternateActionPopover.qml:86
 msgid "Split horizontally"
-msgstr ""
+msgstr "Jaa vaakatasossa"
 
 #: ../src/app/qml/AlternateActionPopover.qml:92
 msgid "Split vertically"
-msgstr ""
+msgstr "Jaa pystytasossa"
 
 #: ../src/app/qml/AlternateActionPopover.qml:99 ../src/app/qml/TabsPage.qml:32
 msgid "New tab"
@@ -43,11 +43,11 @@ msgstr "Uusi välilehti"
 
 #: ../src/app/qml/AlternateActionPopover.qml:104
 msgid "New window"
-msgstr ""
+msgstr "Uusi ikkuna"
 
 #: ../src/app/qml/AlternateActionPopover.qml:109
 msgid "Close"
-msgstr ""
+msgstr "Sulje"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -76,15 +76,15 @@ msgstr "Tunnistautuminen epäonnistui"
 
 #: ../src/app/qml/AuthenticationService.qml:83
 msgid "No SSH server running."
-msgstr ""
+msgstr "Ei käynnissä olevaa SSH-palvelinta."
 
 #: ../src/app/qml/AuthenticationService.qml:84
 msgid "SSH server not found. Do you want to proceed in confined mode?"
-msgstr ""
+msgstr "SSH-palvelinta ei löydy. Haluatko jatkaa rajoitetussa tilassa?"
 
 #: ../src/app/qml/ConfirmationDialog.qml:32
 msgid "Continue"
-msgstr ""
+msgstr "Jatka"
 
 #: ../src/app/qml/KeyboardBar.qml:196
 msgid "Change Keyboard"
@@ -200,15 +200,15 @@ msgstr ""
 
 #: ../src/app/qml/Settings/ColorPickerPopup.qml:99
 msgid "Undo"
-msgstr ""
+msgstr "Kumoa"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:55
 msgid "Text"
-msgstr ""
+msgstr "Teksti"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:66
 msgid "Font:"
-msgstr ""
+msgstr "Fontti:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
 msgid "Font Size:"
@@ -216,7 +216,7 @@ msgstr "Fontin koko:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:119
 msgid "Colors"
-msgstr ""
+msgstr "Värit"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:124
 msgid "Ubuntu"
@@ -248,7 +248,7 @@ msgstr "Hieno retropääte"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:131
 msgid "Dark pastels"
-msgstr ""
+msgstr "Tummat pastellit"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:132
 msgid "Black on light yellow"
@@ -256,27 +256,27 @@ msgstr "Musta keltaisella"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:133
 msgid "Customized"
-msgstr ""
+msgstr "Mukautettu"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:144
 msgid "Background:"
-msgstr ""
+msgstr "Tausta:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:152
 msgid "Text:"
-msgstr ""
+msgstr "Teksti:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
 msgid "Normal palette:"
-msgstr ""
+msgstr "Normaali paletti:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:167
 msgid "Bright palette:"
-msgstr ""
+msgstr "Kirkas paletti:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
 msgid "Preset:"
-msgstr ""
+msgstr "Esiasetus:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:193
 msgid "Layouts"
@@ -284,28 +284,28 @@ msgstr "Asettelut"
 
 #: ../src/app/qml/Settings/SettingsPage.qml:32
 msgid "Preferences"
-msgstr ""
+msgstr "Asetukset"
 
 #: ../src/app/qml/Settings/SettingsPage.qml:43
 msgid "Interface"
-msgstr ""
+msgstr "Käyttöliittymä"
 
 #: ../src/app/qml/Settings/SettingsPage.qml:47
 msgid "Shortcuts"
-msgstr ""
+msgstr "Pikanäppäimet"
 
 #: ../src/app/qml/Settings/SettingsShortcutsSection.qml:60
 #, qt-format
 msgid "Showing %1 of %2"
-msgstr ""
+msgstr "Näytetään %1/%2"
 
 #: ../src/app/qml/Settings/ShortcutRow.qml:78
 msgid "Enter shortcut..."
-msgstr ""
+msgstr "Anna pikanäppäin..."
 
 #: ../src/app/qml/Settings/ShortcutRow.qml:80
 msgid "Disabled"
-msgstr ""
+msgstr "Ei käytössä"
 
 #: ../src/app/qml/TabsPage.qml:26
 msgid "Tabs"
