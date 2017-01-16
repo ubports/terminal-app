@@ -3269,6 +3269,7 @@ void TerminalDisplay::setColorScheme(const QString &name)
         }
 
         connect(_colorSchemeRef, SIGNAL(colorChanged(int)), this, SLOT(applyColorScheme()));
+        connect(_colorSchemeRef, SIGNAL(opacityChanged()), this, SLOT(applyColorScheme()));
         applyColorScheme();
         _colorScheme = name;
         emit colorSchemeChanged();
@@ -3285,7 +3286,10 @@ void TerminalDisplay::applyColorScheme()
     ColorEntry table[TABLE_COLORS];
     _colorSchemeRef->getColorTable(table);
     setColorTable(table);
-    setFillColor(_colorSchemeRef->backgroundColor());
+    QColor backgroundColor = _colorTable[DEFAULT_BACK_COLOR].color;
+    backgroundColor.setAlphaF(_colorSchemeRef->opacity());
+    setBackgroundColor(backgroundColor);
+    setFillColor(backgroundColor);
 }
 
 void TerminalDisplay::simulateKeyPress(int key, int modifiers, bool pressed, quint32 nativeScanCode, const QString &text)

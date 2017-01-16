@@ -26,7 +26,7 @@ Window {
     id: terminalWindow
 
     title: tabsModel.currentItem && tabsModel.currentItem.focusedTerminal ? tabsModel.currentItem.focusedTerminal.session.title : ""
-    color: terminalPage.active && terminalPage.terminal ? terminalPage.terminal.backgroundColor : theme.palette.selected.overlay
+    color: "transparent"
     contentOrientation: Screen.orientation
 
     minimumWidth: units.gu(20)

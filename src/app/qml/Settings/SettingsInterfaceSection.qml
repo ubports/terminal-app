@@ -156,6 +156,10 @@ SettingsSection {
                             }
                         }
 
+                        BackgroundOpacityEditor {
+                            colorScheme: colorsCard.currentScheme
+                        }
+
                         ColorRow {
                             title: i18n.tr("Normal palette:")
                             colorScheme: colorsCard.currentScheme

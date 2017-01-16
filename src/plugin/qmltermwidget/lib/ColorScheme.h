@@ -133,12 +133,13 @@ public:
      *
      * TODO: More documentation
      */
-    void setOpacity(qreal opacity);
+    Q_INVOKABLE void setOpacity(qreal opacity);
     /** 
      * Returns the opacity level for this color scheme, see setOpacity()
      * TODO: More documentation
      */
-    qreal opacity() const;
+    Q_INVOKABLE qreal opacity() const;
+    Q_SIGNAL void opacityChanged();
 
     /** 
      * Enables randomization of the background color.  This will cause
