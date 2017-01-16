@@ -21,44 +21,13 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import QMLTermWidget 1.0
 
-Column {
+ColorSchemeEditor {
     id: colorRow
 
-    property string title
-    property var colorScheme
     property int start
     property int count
 
-    signal colorPickerOpened
-    signal colorPickerClosed
-
-    onColorPickerClosed: colorScheme.write(terminalAppRoot.customizedSchemeFile)
-    onColorPickerOpened: switchToCustomizedScheme()
-
-    function switchToCustomizedScheme() {
-        if (settings.colorScheme != terminalAppRoot.customizedSchemeName) {
-            colorScheme.write(terminalAppRoot.customizedSchemeFile);
-            ColorSchemeManager.loadCustomColorScheme(terminalAppRoot.customizedSchemeFile);
-            settings.colorScheme = terminalAppRoot.customizedSchemeName;
-        }
-    }
-
-    Connections {
-        target: colorScheme
-        onColorChanged: colorRow.colorSchemeChanged()
-    }
-
     spacing: units.gu(1)
-    width: colors.width
-
-    Label {
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
-        elide: Text.ElideRight
-        text: colorRow.title
-    }
 
     Row {
         id: colors
@@ -84,8 +53,8 @@ Column {
                                                parent,
                                                {"originalColor": colorScheme.getColor(start+index),
                                                 "setColor": setColor});
-                        colorPicker.Component.onDestruction.connect(colorRow.colorPickerClosed);
-                        colorRow.colorPickerOpened();
+                        colorPicker.Component.onDestruction.connect(colorRow.saveCustomizedScheme);
+                        colorRow.switchToCustomizedScheme();
                     }
                 }
             }
