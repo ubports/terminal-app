@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-12 14:17+0100\n"
+"POT-Creation-Date: 2017-01-17 21:46+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -186,6 +186,10 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
+#: ../src/app/qml/Settings/BackgroundOpacityEditor.qml:26
+msgid "Background opacity:"
+msgstr ""
+
 #: ../src/app/qml/Settings/ColorPickerPopup.qml:79
 msgid "R:"
 msgstr ""
@@ -266,19 +270,19 @@ msgstr ""
 msgid "Text:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:164
 msgid "Normal palette:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:167
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:171
 msgid "Bright palette:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:180
 msgid "Preset:"
 msgstr ""
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:193
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:197
 msgid "Layouts"
 msgstr ""
 
