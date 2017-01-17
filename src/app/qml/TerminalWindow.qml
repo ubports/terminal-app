@@ -95,7 +95,7 @@ Window {
 
     Shortcut {
         sequence: settings.shortcutCloseTab
-        onActivated: tabsModel.removeItem(tabsModel.indexOf(tabsModel.currentItem))
+        onActivated: tabsModel.currentItem.focusedTerminal.finished()
     }
 
     Shortcut {
