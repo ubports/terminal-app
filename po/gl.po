@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-12 14:17+0100\n"
-"PO-Revision-Date: 2016-02-08 20:11+0000\n"
+"PO-Revision-Date: 2017-01-17 02:09+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-13 06:34+0000\n"
+"X-Launchpad-Export-Date: 2017-01-17 07:08+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:68
@@ -43,11 +43,11 @@ msgstr "Nova lapela"
 
 #: ../src/app/qml/AlternateActionPopover.qml:104
 msgid "New window"
-msgstr ""
+msgstr "Nova xanela"
 
 #: ../src/app/qml/AlternateActionPopover.qml:109
 msgid "Close"
-msgstr ""
+msgstr "Pechar"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -84,7 +84,7 @@ msgstr ""
 
 #: ../src/app/qml/ConfirmationDialog.qml:32
 msgid "Continue"
-msgstr ""
+msgstr "Continuar"
 
 #: ../src/app/qml/KeyboardBar.qml:196
 msgid "Change Keyboard"
