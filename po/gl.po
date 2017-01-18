@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-12 14:17+0100\n"
-"PO-Revision-Date: 2017-01-17 02:09+0000\n"
+"POT-Creation-Date: 2017-01-17 21:46+0100\n"
+"PO-Revision-Date: 2017-01-18 02:09+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-17 07:08+0000\n"
+"X-Launchpad-Export-Date: 2017-01-18 05:57+0000\n"
 "X-Generator: Launchpad (build 18302)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:68
@@ -31,11 +31,11 @@ msgstr "Pegar"
 
 #: ../src/app/qml/AlternateActionPopover.qml:86
 msgid "Split horizontally"
-msgstr ""
+msgstr "Dividir horizontalmente"
 
 #: ../src/app/qml/AlternateActionPopover.qml:92
 msgid "Split vertically"
-msgstr ""
+msgstr "Dividir verticalmente"
 
 #: ../src/app/qml/AlternateActionPopover.qml:99 ../src/app/qml/TabsPage.qml:32
 msgid "New tab"
@@ -76,7 +76,7 @@ msgstr "Fallou a autenticación"
 
 #: ../src/app/qml/AuthenticationService.qml:83
 msgid "No SSH server running."
-msgstr ""
+msgstr "Non hai ningún servidor SSH funcionando."
 
 #: ../src/app/qml/AuthenticationService.qml:84
 msgid "SSH server not found. Do you want to proceed in confined mode?"
@@ -186,6 +186,10 @@ msgstr "INTRO"
 msgid "Ok"
 msgstr "Aceptar"
 
+#: ../src/app/qml/Settings/BackgroundOpacityEditor.qml:26
+msgid "Background opacity:"
+msgstr "Opacidade do fondo:"
+
 #: ../src/app/qml/Settings/ColorPickerPopup.qml:79
 msgid "R:"
 msgstr ""
@@ -200,15 +204,15 @@ msgstr ""
 
 #: ../src/app/qml/Settings/ColorPickerPopup.qml:99
 msgid "Undo"
-msgstr ""
+msgstr "Desfacer"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:55
 msgid "Text"
-msgstr ""
+msgstr "Texto"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:66
 msgid "Font:"
-msgstr ""
+msgstr "Tipo de letra:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
 msgid "Font Size:"
@@ -216,7 +220,7 @@ msgstr "Tamaño da letra:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:119
 msgid "Colors"
-msgstr ""
+msgstr "Cores"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:124
 msgid "Ubuntu"
@@ -248,7 +252,7 @@ msgstr "Terminal retro"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:131
 msgid "Dark pastels"
-msgstr ""
+msgstr "Pasteis escuros"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:132
 msgid "Black on light yellow"
@@ -256,56 +260,56 @@ msgstr "Negro sobre amarelo claro"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:133
 msgid "Customized"
-msgstr ""
+msgstr "Personalizado"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:144
 msgid "Background:"
-msgstr ""
+msgstr "Fondo:"
 
 #: ../src/app/qml/Settings/SettingsInterfaceSection.qml:152
 msgid "Text:"
-msgstr ""
+msgstr "Texto:"
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:160
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:164
 msgid "Normal palette:"
-msgstr ""
+msgstr "Paleta normal:"
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:167
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:171
 msgid "Bright palette:"
-msgstr ""
+msgstr "Paleta luminosa:"
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:176
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:180
 msgid "Preset:"
-msgstr ""
+msgstr "Preconfiguración:"
 
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:193
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:197
 msgid "Layouts"
 msgstr "Disposicións"
 
 #: ../src/app/qml/Settings/SettingsPage.qml:32
 msgid "Preferences"
-msgstr ""
+msgstr "Preferencias"
 
 #: ../src/app/qml/Settings/SettingsPage.qml:43
 msgid "Interface"
-msgstr ""
+msgstr "Interface"
 
 #: ../src/app/qml/Settings/SettingsPage.qml:47
 msgid "Shortcuts"
-msgstr ""
+msgstr "Atallos do teclado"
 
 #: ../src/app/qml/Settings/SettingsShortcutsSection.qml:60
 #, qt-format
 msgid "Showing %1 of %2"
-msgstr ""
+msgstr "Mostrando %1 de %2"
 
 #: ../src/app/qml/Settings/ShortcutRow.qml:78
 msgid "Enter shortcut..."
-msgstr ""
+msgstr "Introducir atallo..."
 
 #: ../src/app/qml/Settings/ShortcutRow.qml:80
 msgid "Disabled"
-msgstr ""
+msgstr "Desactivado"
 
 #: ../src/app/qml/TabsPage.qml:26
 msgid "Tabs"
