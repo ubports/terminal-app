@@ -38,21 +38,20 @@ QMLTermWidget {
         initialWorkingDirectory: terminal.initialWorkingDirectory
 
         /* FIXME: this is a workaround to retrieve the current working directory
-           of the shell executed by ssh.
-           When opening an ssh session we write the PID of the shell process
-           in a temporary file (sshShellPidFile) which is then used when needed
+           of the sub shell executed by a parent shell.
+           When opening a session we write the PID of the parent shell process
+           in a temporary file (shellPidFile) which is then used when needed
            to query its current working directory.
          */
-        property string sshShellPidFile: "%1/%2_sshpid_%3".arg(StandardPaths.writableLocation(StandardPaths.AppDataLocation))
-                                                          .arg(applicationPid)
-                                                          .arg(sessionId)
-        Component.onDestruction: FileIO.remove(sshShellPidFile);
+        property string shellPidFile: "%1/%2_shellpid_%3".arg(StandardPaths.writableLocation(StandardPaths.AppDataLocation))
+                                                         .arg(applicationPid)
+                                                         .arg(sessionId)
+        Component.onDestruction: FileIO.remove(shellPidFile);
 
         function getWorkingDirectory() {
             if (terminalAppRoot.sshMode) {
-                var pid = FileIO.read(sshShellPidFile);
-                // actual shell process is the first of the children of the process
-                // executed by ssh
+                var pid = FileIO.read(shellPidFile);
+                // sub shell process is the first of the children of the parent shell process
                 pid = FileIO.read("/proc/%1/task/%1/children".arg(pid)).split(' ')[0];
                 return FileIO.symLinkTarget("/proc/%1/cwd".arg(pid));
             } else {
@@ -60,6 +59,8 @@ QMLTermWidget {
             }
         }
 
+        property string writePidCommand: "mkdir -p `dirname %1`; echo -n $$ > %1; cd %2".arg(shellPidFile)
+                                                                                        .arg(initialWorkingDirectory)
         shellProgram: (terminalAppRoot.sshMode ? "sshpass" : "$SHELL")
         shellProgramArgs: (terminalAppRoot.sshMode ?
             ["-p", terminalAppRoot.userPassword,
@@ -67,7 +68,7 @@ QMLTermWidget {
              "-o", "UserKnownHostsFile=/dev/null",
              "-o", "StrictHostKeyChecking=no", "%1@localhost".arg(sshUser),
              "-o", "LogLevel=Error",
-             "mkdir -p `dirname %1`; echo -n $$ > %1; cd %2; bash".arg(sshShellPidFile).arg(initialWorkingDirectory)]
+             writePidCommand + "; bash"]
             : [])
         onFinished: terminal.finished()
     }
