@@ -11,22 +11,18 @@ apps:
     plugs: [unity7, unity8, opengl, network, network-bind, home, platform]
 
 plugs:
-    platform:
-        interface: content
-        content: ubuntu-app-platform1
-        target: ubuntu-app-platform
-        default-provider: ubuntu-app-platform
+  platform:
+    interface: content
+    content: ubuntu-app-platform1
+    target: ubuntu-app-platform
+    default-provider: ubuntu-app-platform
 
 parts:
   wrapper:
-    source: .
+    source: snap
     plugin: dump
     organize:
       terminal.wrapper: bin/terminal.wrapper
-    stage:
-      - bin/terminal.wrapper
-      - ubuntu-app-platform
-    after: [desktop-ubuntu-app-platform]
 
   terminal:
     plugin: cmake
@@ -48,6 +44,7 @@ parts:
     prime:
       - -usr/share/doc
       - -usr/include
+    after: [desktop-ubuntu-app-platform]
 
   ubuntu-ui-extras:
     plugin: cmake
