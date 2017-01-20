@@ -26,9 +26,6 @@ parts:
     stage:
       - bin/terminal.wrapper
       - ubuntu-app-platform
-    snap:
-      - bin/terminal.wrapper
-      - ubuntu-app-platform
     after: [desktop-ubuntu-app-platform]
 
   terminal:
@@ -48,7 +45,7 @@ parts:
     stage-packages:
       - sshpass
       - fonts-inconsolata
-    snap:
+    prime:
       - -usr/share/doc
       - -usr/include
 
