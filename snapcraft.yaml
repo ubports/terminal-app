@@ -39,6 +39,7 @@ parts:
       - qtdeclarative5-dev
       - libqtermwidget5-0-dev
       - libpam0g-dev
+      - xvfb
     stage-packages:
       - sshpass
       - fonts-inconsolata
