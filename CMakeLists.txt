@@ -1,4 +1,4 @@
-project(com.ubuntu.terminal C CXX)
+project(ubuntu-terminal-app C CXX)
 cmake_minimum_required(VERSION 2.8.9)
 find_program(INTLTOOL_MERGE intltool-merge)
 find_program(INTLTOOL_EXTRACT intltool-extract)
@@ -65,7 +65,7 @@ if(CLICK_MODE)
          RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
          *.json *.json.in *.apparmor)
 
-    add_custom_target(com_ubuntu_terminal_CLICKFiles ALL SOURCES ${CLICK_FILES})
+    add_custom_target(ubuntu-terminal-app_CLICKFiles ALL SOURCES ${CLICK_FILES})
 else(CLICK_MODE)
     set(QT_IMPORTS_DIR "${CMAKE_INSTALL_LIBDIR}/qt5/qml")
     set(DATA_DIR ${CMAKE_INSTALL_DATADIR}/${APP_NAME})

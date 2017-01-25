@@ -120,7 +120,7 @@ msgstr "ទំព័រ​ក្រោម"
 msgid "END"
 msgstr "ចុង"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "ស្ថានីយ"
 

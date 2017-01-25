@@ -374,7 +374,7 @@ msgstr "Fout in kleurenschema"
 msgid "Cannot load color scheme: %1"
 msgstr "Laden van kleurenschema mislukt: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
 

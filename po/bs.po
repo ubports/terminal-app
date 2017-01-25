@@ -373,7 +373,7 @@ msgstr "Greška u šemi boja"
 msgid "Cannot load color scheme: %1"
 msgstr "Ne mogu da učitam šemu boja: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
 

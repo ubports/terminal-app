@@ -226,14 +226,14 @@ int main(int argc, char *argv[])
     // Look for user-defined layouts
     QStringList configLocations = QStandardPaths::standardLocations(QStandardPaths::ConfigLocation);
     foreach (const QString &path, configLocations) {
-        QString fullPath = path + "/com.ubuntu.terminal/Layouts/";
+        QString fullPath = path + "/ubuntu-terminal-app/Layouts/";
         qDebug() << "Retrieving keyboard profiles from folder: " << fullPath;
         keyboardLayouts << getProfileFromDir(fullPath);
     }
 
     engine.rootContext()->setContextProperty("keyboardLayouts", keyboardLayouts);
 
-    QCoreApplication::setApplicationName("com.ubuntu.terminal");
+    QCoreApplication::setApplicationName("ubuntu-terminal-app");
     // Unset organization to skip an extra folder component
     QCoreApplication::setOrganizationName(QString());
     // Get Qtlabs.settings to use a sane path

@@ -373,7 +373,7 @@ msgstr "Error del tema de colors"
 msgid "Cannot load color scheme: %1"
 msgstr "No s'ha pogut carregar el tema de colors: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
 

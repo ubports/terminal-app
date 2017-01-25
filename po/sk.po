@@ -373,7 +373,7 @@ msgstr "Chyba farebnej schémy"
 msgid "Cannot load color scheme: %1"
 msgstr "Farebná schéma nemôže byť načítaná: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminál"
 

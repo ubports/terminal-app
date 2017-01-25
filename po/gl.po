@@ -373,7 +373,7 @@ msgstr "Erro no esquema de cor"
 msgid "Cannot load color scheme: %1"
 msgstr "Non foi posíbel cargar o esquema de cor: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
 

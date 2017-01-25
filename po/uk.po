@@ -374,7 +374,7 @@ msgstr "Помилка у схемі кольорів"
 msgid "Cannot load color scheme: %1"
 msgstr "Не вдалося завантажити схему кольорів: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Термінал"
 

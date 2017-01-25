@@ -5,7 +5,7 @@
     "hooks": {
         "terminal": {
             "apparmor": "terminal.apparmor",
-            "desktop": "com.ubuntu.terminal.desktop"
+            "desktop": "ubuntu-terminal-app.desktop"
         }
     },
     "icon": "terminal64.png",

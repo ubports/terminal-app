@@ -374,7 +374,7 @@ msgstr "Error en combinación de colores"
 msgid "Cannot load color scheme: %1"
 msgstr "No se puede cargar la combinación de colores: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
 

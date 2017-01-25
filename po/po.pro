@@ -9,14 +9,14 @@ TEMPLATE = subdirs
 
 PROJECTNAME = ubuntu-terminal-app
 
-DESKTOPFILE = ../com.ubuntu.terminal.desktop.in
+DESKTOPFILE = ../ubuntu-terminal-app.desktop.in
 
 SOURCECODE = ../src/app/qml/*.qml \
              ../src/app/qml/config/*.qml \
              ../src/app/qml/extraPanel/*.qml
 
 BUILDDIR = ../.build
-DESKTOPFILETEMP = $${BUILDDIR}/com.ubuntu.terminal_terminal.desktop.in
+DESKTOPFILETEMP = $${BUILDDIR}/ubuntu-terminal-app_terminal.desktop.in
 
 message("")
 message(" Project Name: $$PROJECTNAME ")

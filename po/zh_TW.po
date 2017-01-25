@@ -371,7 +371,7 @@ msgstr "色彩方案錯誤"
 msgid "Cannot load color scheme: %1"
 msgstr "無法載入色彩方案：%1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "終端機"
 

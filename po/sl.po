@@ -373,7 +373,7 @@ msgstr "Napaka barvne sheme"
 msgid "Cannot load color scheme: %1"
 msgstr "Barvne sheme ni mogoče naložiti: %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminal"
 

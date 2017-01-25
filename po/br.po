@@ -374,7 +374,7 @@ msgstr "Fazi steuñv liv"
 msgid "Cannot load color scheme: %1"
 msgstr "Ne c'haller ket kargañ ar steuñv liv : %1"
 
-#: com.ubuntu.terminal.desktop.in.in.h:1
+#: ubuntu-terminal-app.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Termenell"
 
