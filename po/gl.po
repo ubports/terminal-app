@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-17 21:46+0100\n"
-"PO-Revision-Date: 2017-01-18 02:09+0000\n"
+"PO-Revision-Date: 2017-01-20 16:05+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-19 06:11+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
+"X-Launchpad-Export-Date: 2017-01-26 06:43+0000\n"
+"X-Generator: Launchpad (build 18315)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:68
 msgid "Select"
@@ -80,7 +80,7 @@ msgstr "Non hai ningún servidor SSH funcionando."
 
 #: ../src/app/qml/AuthenticationService.qml:84
 msgid "SSH server not found. Do you want to proceed in confined mode?"
-msgstr ""
+msgstr "Non se encontrou o servidor SSH. Desexa continuar en modo confinado?"
 
 #: ../src/app/qml/ConfirmationDialog.qml:32
 msgid "Continue"
