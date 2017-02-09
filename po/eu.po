@@ -1,68 +1,36 @@
 # Basque translation for ubuntu-terminal-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-17 21:46+0100\n"
-"PO-Revision-Date: 2015-01-21 00:32+0000\n"
-"Last-Translator: Ibai Oihanguren Sala <Unknown>\n"
+"POT-Creation-Date: 2014-10-07 04:16-0700\n"
+"PO-Revision-Date: 2014-11-12 21:52+0000\n"
+"Last-Translator: Asier Iturralde Sarasola <Unknown>\n"
 "Language-Team: Basque <eu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2017-01-26 06:43+0000\n"
-"X-Generator: Launchpad (build 18315)\n"
-
-#: ../src/app/qml/AlternateActionPopover.qml:68
-msgid "Select"
-msgstr "Hautatu"
-
-#: ../src/app/qml/AlternateActionPopover.qml:73
-msgid "Copy"
-msgstr "Kopiatu"
-
-#: ../src/app/qml/AlternateActionPopover.qml:79
-msgid "Paste"
-msgstr "Itsatsi"
-
-#: ../src/app/qml/AlternateActionPopover.qml:86
-msgid "Split horizontally"
-msgstr ""
-
-#: ../src/app/qml/AlternateActionPopover.qml:92
-msgid "Split vertically"
-msgstr ""
-
-#: ../src/app/qml/AlternateActionPopover.qml:99 ../src/app/qml/TabsPage.qml:32
-msgid "New tab"
-msgstr "Fitxa berria"
-
-#: ../src/app/qml/AlternateActionPopover.qml:104
-msgid "New window"
-msgstr ""
-
-#: ../src/app/qml/AlternateActionPopover.qml:109
-msgid "Close"
-msgstr ""
+"X-Launchpad-Export-Date: 2017-02-09 05:47+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
 msgstr "Autentifikazioa behar da"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
-msgid "Enter passcode or passphrase:"
-msgstr ""
+msgid "Enter password:"
+msgstr "Sartu pasahitza:"
 
-#: ../src/app/qml/AuthenticationDialog.qml:48
-msgid "passcode or passphrase"
-msgstr ""
+#: ../src/app/qml/AuthenticationDialog.qml:40
+msgid "password"
+msgstr "pasahitza"
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
-msgid "OK"
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
 msgstr "Ados"
 
 #: ../src/app/qml/AuthenticationDialog.qml:70
@@ -74,88 +42,63 @@ msgstr "Utzi"
 msgid "Authentication failed"
 msgstr "Autentifikazioak huts egin du"
 
-#: ../src/app/qml/AuthenticationService.qml:83
-msgid "No SSH server running."
-msgstr ""
+#: ../src/app/qml/ColorDialog.qml:25
+msgid "Pick a color"
+msgstr "Hartu kolore bat"
 
-#: ../src/app/qml/AuthenticationService.qml:84
-msgid "SSH server not found. Do you want to proceed in confined mode?"
-msgstr ""
+#: ../src/app/qml/AuthenticationDialog.qml:58
+msgid "OK"
+msgstr "Ados"
 
-#: ../src/app/qml/ConfirmationDialog.qml:32
-msgid "Continue"
-msgstr ""
+#: ../src/app/qml/Configs.qml:69
+msgid "Color Scheme:"
+msgstr "Kolore-eskema:"
 
-#: ../src/app/qml/KeyboardBar.qml:196
-msgid "Change Keyboard"
-msgstr "Aldatu teklatua"
+#: ../src/app/qml/Configs.qml:81
+msgid "Select Font:"
+msgstr "Hautatu letra-tipoa:"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
-msgid "Control Keys"
-msgstr ""
+#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
+msgid "Font Size:"
+msgstr "Letra-tamaina:"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
-msgid "Function Keys"
-msgstr ""
+#: ../src/app/qml/Configs.qml:136
+msgid "Enable Effects:"
+msgstr "Gaitu efektuak:"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
-msgid "Scroll Keys"
-msgstr ""
+#: ../src/app/qml/Configs.qml:155
+msgid "Screen color"
+msgstr "Pantailaren kolorea"
 
-#. TRANSLATORS: This a keyboard layout name
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
-msgid "Command Keys"
-msgstr ""
+#: ../src/app/qml/Configs.qml:168
+msgid "Color intensity"
+msgstr "Kolorearen intentsitatea"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:52
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:78
-msgid "CTRL"
-msgstr ""
+#: ../src/app/qml/Configs.qml:196
+msgid "Bloom"
+msgstr "Lorea"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:55
-msgid "FNS"
-msgstr ""
+#: ../src/app/qml/Configs.qml:224
+msgid "Curvature"
+msgstr "Kurbatura"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:58
-msgid "SCR"
-msgstr ""
+#: ../src/app/qml/Configs.qml:252
+msgid "Noise"
+msgstr "Zarata"
 
-#. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
-msgid "CMD"
-msgstr ""
-
-#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:81
-msgid "ALT"
-msgstr ""
-
-#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:84
-msgid "SHIFT"
-msgstr ""
-
-#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:97
-msgid "ESC"
-msgstr ""
+#: ../src/app/qml/Configs.qml:280
+msgid "Jitter"
+msgstr "Fluktuazioa"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
 msgid "PG_UP"
 msgstr "ORR_GO"
 
-#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
-msgid "PG_DN"
-msgstr "ORR_BE"
+#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
+msgid "TAB"
+msgstr "TAB"
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
@@ -167,157 +110,39 @@ msgstr "EZAB"
 msgid "HOME"
 msgstr "ETXEA"
 
+#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
+msgid "PG_DN"
+msgstr "ORR_BE"
+
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
 msgid "END"
 msgstr "AMAIERA"
 
-#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
-msgid "TAB"
-msgstr "TAB"
+#: ubuntu-terminal-app.desktop.in.in.h:1
+msgid "Terminal"
+msgstr "Terminala"
 
-#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
-#: ../src/app/qml/KeyboardRows/JsonTranslator.qml:118
-msgid "ENTER"
-msgstr ""
+#: ../src/app/qml/SettingsPage.qml:26
+msgid "Settings"
+msgstr "Ezarpenak"
 
-#: ../src/app/qml/NotifyDialog.qml:25
-msgid "Ok"
-msgstr "Ados"
+#: ../src/app/qml/ubuntu-terminal-app.qml:57
+msgid "Hide all key panels"
+msgstr "Ezkutatu tekla-panel guztiak"
 
-#: ../src/app/qml/Settings/BackgroundOpacityEditor.qml:26
-msgid "Background opacity:"
-msgstr ""
+#: ../src/app/qml/ubuntu-terminal-app.qml:64
+msgid "Control keys"
+msgstr "Kontrol-teklak"
 
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:79
-msgid "R:"
-msgstr ""
+#: ../src/app/qml/ubuntu-terminal-app.qml:71
+msgid "Function keys"
+msgstr "Funtzio-teklak"
 
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:87
-msgid "G:"
-msgstr ""
-
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:95
-msgid "B:"
-msgstr ""
-
-#: ../src/app/qml/Settings/ColorPickerPopup.qml:99
-msgid "Undo"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:55
-msgid "Text"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:66
-msgid "Font:"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:91
-msgid "Font Size:"
-msgstr "Letra-tamaina:"
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:119
-msgid "Colors"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:124
-msgid "Ubuntu"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:125
-msgid "Green on black"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:126
-msgid "White on black"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:127
-msgid "Black on white"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:128
-msgid "Black on random light"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:129
-msgid "Linux"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:130
-msgid "Cool retro term"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:131
-msgid "Dark pastels"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:132
-msgid "Black on light yellow"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:133
-msgid "Customized"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:144
-msgid "Background:"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:152
-msgid "Text:"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:164
-msgid "Normal palette:"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:171
-msgid "Bright palette:"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:180
-msgid "Preset:"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsInterfaceSection.qml:197
-msgid "Layouts"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsPage.qml:32
-msgid "Preferences"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsPage.qml:43
-msgid "Interface"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsPage.qml:47
-msgid "Shortcuts"
-msgstr ""
-
-#: ../src/app/qml/Settings/SettingsShortcutsSection.qml:60
-#, qt-format
-msgid "Showing %1 of %2"
-msgstr ""
-
-#: ../src/app/qml/Settings/ShortcutRow.qml:78
-msgid "Enter shortcut..."
-msgstr ""
-
-#: ../src/app/qml/Settings/ShortcutRow.qml:80
-msgid "Disabled"
-msgstr ""
-
-#: ../src/app/qml/TabsPage.qml:26
-msgid "Tabs"
-msgstr "Fitxak"
-
-#: ../src/app/qml/TerminalPage.qml:132
-msgid "Selection Mode"
-msgstr "Hautapen modua"
+#: ../src/app/qml/ubuntu-terminal-app.qml:78
+msgid "Arrow keys"
+msgstr "Gezi-teklak"
 
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:320
@@ -344,18 +169,6 @@ msgstr "Bidali posta elektronikoa honi..."
 msgid "Copy Email Address"
 msgstr "Kopiatu helbide elektronikoa"
 
-#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
-msgid "Match case"
-msgstr "Bereizi maiuskula/minuskulak"
-
-#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
-msgid "Regular expression"
-msgstr "Adierazpen erregularra"
-
-#: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
-msgid "Higlight all matches"
-msgstr "Nabarmendu bat etortzeak"
-
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:982
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
@@ -363,25 +176,3 @@ msgid ""
 msgstr ""
 "Ez dago teklatuaren itzultzailerik erabilgarri. Teklen sakatzeak terminalera "
 "bidaliko diren karaktereetan bihurtzeko behar den informazioa falta da."
-
-#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
-msgid "Color Scheme Error"
-msgstr "Kolore-eskemaren errorea"
-
-#: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:407
-#, qt-format
-msgid "Cannot load color scheme: %1"
-msgstr "Ezin izan da kolore-eskema kargatu: %1"
-
-#: ubuntu-terminal-app.desktop.in.in.h:1
-msgid "Terminal"
-msgstr "Terminala"
-
-#~ msgid "Settings"
-#~ msgstr "Ezarpenak"
-
-#~ msgid "Enter password:"
-#~ msgstr "Sartu pasahitza:"
-
-#~ msgid "password"
-#~ msgstr "pasahitza"
