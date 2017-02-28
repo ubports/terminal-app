@@ -9,7 +9,7 @@ apps:
   ubuntu-terminal-app:
     command: desktop-launch $SNAP/bin/terminal.wrapper
     desktop: usr/share/applications/ubuntu-terminal-app.desktop
-    plugs: [unity7, unity8, opengl, network, network-bind, home, platform]
+    plugs: [unity7, unity8, opengl, network, network-bind, home, platform, mir]
 
 plugs:
   platform:
