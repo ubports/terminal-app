@@ -8,3 +8,4 @@ _Name=Terminal
 X-Ubuntu-Touch=true
 X-Ubuntu-Default-Department-ID=accessories
 X-Ubuntu-Splash-Color=#111111
+OnlyShowIn=Unity8
