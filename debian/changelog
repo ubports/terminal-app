@@ -1,13 +1,48 @@
-ubuntu-terminal-app (0.7ubuntu1) UNRELEASED; urgency=medium
+ubuntu-terminal-app (0.7.218ubuntu2) yakkety; urgency=medium
 
-  * Get packaging ready for inclusion in yakkety (LP: #1623845)
+  * Use OnlyShowIn=Unity8 instead. Apparently the situation changed and the
+    previous formulation ("NotShowIn=Unity") started working on Unity 8, which
+    hid the terminal there.
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Wed, 05 Oct 2016 14:27:03 +0100
+
+ubuntu-terminal-app (0.7.218ubuntu1) yakkety; urgency=medium
+
+  * Make the .desktop file be NotShowIn=Unity. This will prevent two
+    applications called "Terminal" from showing up in the Unity 7 dash. This
+    only works because Unity 8 doesn't respect the NotShowIn key at the
+    current time - and therefore this solution is only a temporary measure for
+    the 16.10 release and will be reverted shortly thereafter.
+
+ -- Iain Lane <iain.lane@canonical.com>  Mon, 03 Oct 2016 17:50:29 +0100
+
+ubuntu-terminal-app (0.7.218) yakkety; urgency=medium
+
+  [ Michael Sheldon ]
+  * Add transitional packages for qml-module renaming. (LP: #1628781)
+
+ -- Luke Yelavich <themuso@ubuntu.com>  Fri, 30 Sep 2016 12:54:32 +1000
+
+ubuntu-terminal-app (0.7.216) yakkety; urgency=medium
+
+  * Get packaging ready for inclusion in yakkety (LP: #1623845, #1626457)
   * Update standards version
   * Fix up build dependency formatting
   * Added manpage
   * Update copyright
   * Update Vcs-bzr field
+  * Adjust version to be similar to as used in the snap
 
- -- Luke Yelavich <themuso@ubuntu.com>  Fri, 16 Sep 2016 09:04:28 +1000
+  [ Michael Sheldon ]
+  * Use dh_python3
+  * Rename QML modules to new qml-module format.
+
+  [ Larry Price ]
+  * Add runtime dependency for qml-module-qt-labs-settings package.
+  * Update QMLTermWidget to latest version and remove duplicate konsole
+    application code.
+
+ -- Luke Yelavich <themuso@ubuntu.com>  Wed, 28 Sep 2016 12:43:59 +1000
 
 ubuntu-terminal-app (0.7) wily; urgency=medium
 
