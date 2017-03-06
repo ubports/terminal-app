@@ -13,7 +13,8 @@ Build-Depends: cmake,
                qt5-default,
                xvfb,
                qml-module-qtquick2,
-               qml-module-qttest
+               qml-module-qttest,
+               qml-module-ubuntu-components
 Standards-Version: 3.9.8
 Section: misc
 Homepage: https://launchpad.net/ubuntu-terminal-app
