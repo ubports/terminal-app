@@ -31,6 +31,7 @@ Depends: ${misc:Depends},
          qml-module-ubuntu-components,
          qml-module-qt-labs-settings,
          qml-module-qtsysteminfo (>= 5.0~),
+         qtdeclarative5-ubuntu-ui-extras0.2,
 Description: Terminal application
  Core Terminal application
 
