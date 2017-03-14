@@ -25,6 +25,7 @@
 #include <QObject>
 #include <QList>
 #include <QFontDatabase>
+#include <QStringList>
 
 class Fonts : public QObject
 {
