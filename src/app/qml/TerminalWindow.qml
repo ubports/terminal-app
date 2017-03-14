@@ -58,8 +58,8 @@ Window {
         alreadyGranted: terminalAppRoot.userPassword != ""
         onDenied: Qt.quit();
         onGranted: {
+            terminalAppRoot.userPassword = password
             if (sshUser != "") {
-                terminalAppRoot.userPassword = password
                 tabsModel.addTerminalTab()
                 tabsModel.removeItem(0)
             }
