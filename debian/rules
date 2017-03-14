@@ -9,3 +9,11 @@
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DCLICK_MODE=OFF
+
+# Skip tests on the archs they are known to be flaky with current configuration
+testskip_architectures := powerpc
+
+override_dh_auto_test:
+ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(testskip_architectures)))
+	dh_auto_test
+endif
