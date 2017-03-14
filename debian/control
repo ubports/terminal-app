@@ -14,7 +14,8 @@ Build-Depends: cmake,
                xvfb,
                qml-module-qtquick2,
                qml-module-qttest,
-               qml-module-ubuntu-components
+               qml-module-ubuntu-components,
+               qtdeclarative5-gsettings1.0
 Standards-Version: 3.9.8
 Section: misc
 Homepage: https://launchpad.net/ubuntu-terminal-app
@@ -32,6 +33,7 @@ Depends: ${misc:Depends},
          qml-module-qt-labs-settings,
          qml-module-qtsysteminfo (>= 5.0~),
          qtdeclarative5-ubuntu-ui-extras0.2,
+         qtdeclarative5-gsettings1.0,
 Description: Terminal application
  Core Terminal application
 

@@ -20,6 +20,7 @@ import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Extras 0.3
 import QMLTermWidget 1.0
+import GSettings 1.0
 
 // For FastBlur
 import QtGraphicalEffects 1.0
@@ -180,9 +181,14 @@ Page {
         visible: terminalPage.narrowLayout
     }
 
+    GSettings {
+        id: unity8Settings
+        schema.id: "com.canonical.Unity8"
+    }
+
     Loader {
         id: keyboardButton
-        active: !QuickUtils.keyboardAttached
+        active: !QuickUtils.keyboardAttached || unity8Settings.alwaysShowOsk
         anchors {right: parent.right; margins: units.gu(1)}
 
         y: parent.height - height - units.gu(1) - keyboardBarLoader.height
