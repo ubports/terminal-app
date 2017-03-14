@@ -31,6 +31,8 @@ Window {
 
     minimumWidth: units.gu(20)
     minimumHeight: units.gu(20)
+    width: units.gu(92)
+    height: units.gu(56)
 
     Binding {
         target: terminalAppRoot
@@ -177,11 +179,6 @@ Window {
 
     Component.onCompleted: {
         tabsModel.addTerminalTab(initialWorkingDirectory);
-
-        // The margins for the terminal canvas are 2px
-        // Hardcoded value from TerminalDisplay.h
-        terminalWindow.width = 90 * terminalPage.terminal.fontMetrics.width + 2 + units.gu(2)
-        terminalWindow.height = 24 * terminalPage.terminal.fontMetrics.height + 2 + units.gu(2) + units.gu(3)
         terminalWindow.narrowLayout = Qt.binding(function () {return terminalWindow.width <= units.gu(50)});
         terminalWindow.show()
     }
