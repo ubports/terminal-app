@@ -63,6 +63,8 @@ Window {
                 tabsModel.addTerminalTab()
                 tabsModel.removeItem(0)
             }
+            var tab = tabsModel.itemAt(tabsModel.currentIndex);
+            tab.forceActiveFocus();
         }
     }
 
