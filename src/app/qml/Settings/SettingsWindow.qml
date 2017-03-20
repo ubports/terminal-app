@@ -23,7 +23,7 @@ Window {
     id: settingsWindow
 
     visible: true
-    title: "Terminal"
+    title: i18n.tr("Terminal Preferences")
     color: settingsPage.windowColor
     contentOrientation: Screen.orientation
 
