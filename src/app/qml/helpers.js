@@ -1,7 +1,7 @@
 function createComponentInstance(component, parent, properties, callback) {
     var incubator;
     if (component.status == Component.Ready) {
-        incubator = component.incubateObject(parent, properties, Qt.Asynchronous);
+        incubator = component.incubateObject(parent, properties, Qt.Synchronous);
 
         function objectCreated(status) {
             if (status == Component.Ready && callback != null) {
