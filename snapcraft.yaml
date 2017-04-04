@@ -9,7 +9,7 @@ apps:
   ubuntu-terminal-app:
     command: desktop-launch $SNAP/bin/terminal.wrapper
     desktop: usr/share/applications/ubuntu-terminal-app.desktop
-    plugs: [unity7, unity8, opengl, network, network-bind, home, platform, mir]
+    plugs: [unity7, unity8, opengl, network, network-bind, home, platform, mir, mir-libs]
 
 plugs:
   platform:
@@ -17,6 +17,11 @@ plugs:
     content: ubuntu-app-platform1
     target: ubuntu-app-platform
     default-provider: ubuntu-app-platform
+  mir-libs:
+    interface: content
+    content: mir0
+    target: mir-libs
+    default-provider: mir-libs
 
 parts:
   wrapper:
