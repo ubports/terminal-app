@@ -29,8 +29,8 @@ Window {
     color: "transparent"
     contentOrientation: Screen.orientation
 
-    minimumWidth: units.gu(20)
-    minimumHeight: units.gu(20)
+    minimumWidth: units.gu(40)
+    minimumHeight: units.gu(30)
     width: units.gu(92)
     height: units.gu(56)
 
