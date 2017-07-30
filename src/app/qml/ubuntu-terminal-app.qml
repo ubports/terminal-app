@@ -42,6 +42,7 @@ MainView {
         Component.onCompleted: push(terminalPage)
 
         property bool prevKeyboardVisible: false
+        property string runits
 
         onCurrentPageChanged: {
             if(currentPage == terminalPage) {
@@ -128,7 +129,13 @@ MainView {
             // TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
             namesModel: [i18n.tr("Green on black"),i18n.tr("White on black"),i18n.tr("Black on white"),i18n.tr("Black on random light"),i18n.tr("Linux"),i18n.tr("Cool retro term"),i18n.tr("Dark pastels / Ubuntu (old)"),i18n.tr("Black on light yellow"),i18n.tr("Ubuntu")]
         }
+
+        LoginPage {
+            id: loginPage
+            visible: false
+        }
     }
+
 
     Component.onCompleted: {
         tabsModel.selectTab(0);

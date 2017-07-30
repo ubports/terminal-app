@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-07 19:27+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-30 22:07+0000\n"
 "PO-Revision-Date: 2015-11-10 06:48+0000\n"
 "Last-Translator: Mutlu Can YILMAZ <mtlcnylmz@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +26,7 @@ msgstr "Seç"
 msgid "Copy"
 msgstr "Kopyala"
 
-#: ../src/app/qml/AlternateActionPopover.qml:21
+#: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
 msgstr "Yapıştır"
 
@@ -37,23 +38,23 @@ msgstr "Kimlik doğrulama gerekli"
 msgid "Enter passcode or passphrase:"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:40
+#: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:50
+#: ../src/app/qml/AuthenticationDialog.qml:58
 msgid "OK"
 msgstr "Tamam"
 
-#: ../src/app/qml/AuthenticationDialog.qml:62
+#: ../src/app/qml/AuthenticationDialog.qml:70
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../src/app/qml/AuthenticationService.qml:55
+#: ../src/app/qml/AuthenticationService.qml:61
 msgid "Authentication failed"
 msgstr "Kimlik denetimi başarısız"
 
-#: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:129
+#: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
 msgstr "Renk Şeması"
 
@@ -153,72 +154,88 @@ msgstr "TAB"
 msgid "ENTER"
 msgstr "ENTER"
 
-#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:41
+#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
 msgstr "Yerleşimler:"
 
-#: ../src/app/qml/SettingsPage.qml:26
+#: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
+msgid "Login"
+msgstr ""
+
+#: ../src/app/qml/LoginPage.qml:42
+msgid "Require login"
+msgstr ""
+
+#: ../src/app/qml/LoginPage.qml:43
+msgid "Enable or disable login at start"
+msgstr ""
+
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr "Tamam"
+
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: ../src/app/qml/SettingsPage.qml:57
-msgid "Show Keyboard Bar"
-msgstr "Klavye Çubuğunu Göster"
-
-#: ../src/app/qml/SettingsPage.qml:73
-msgid "Show Keyboard Button"
-msgstr ""
-
-#: ../src/app/qml/SettingsPage.qml:96
+#: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
 msgstr "Yazıt Tipi Boyutu:"
 
-#: ../src/app/qml/TabsPage.qml:7
+#: ../src/app/qml/SettingsPage.qml:126
+msgid "Required"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:128
+msgid "Not required"
+msgstr ""
+
+#: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
 msgstr "Sekmeler"
 
-#: ../src/app/qml/TabsPage.qml:13
+#: ../src/app/qml/TabsPage.qml:15
 msgid "New tab"
 msgstr "Yeni sekme"
 
-#: ../src/app/qml/TerminalPage.qml:170
+#: ../src/app/qml/TerminalPage.qml:179
 msgid "Selection Mode"
 msgstr "Seçim Kipi"
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
 msgstr ""
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
 msgstr ""
 
@@ -288,11 +305,11 @@ msgstr "Renk şeması yüklenemiyor: %1"
 msgid "Terminal"
 msgstr "Uçbirim"
 
+#~ msgid "Show Keyboard Bar"
+#~ msgstr "Klavye Çubuğunu Göster"
+
 #~ msgid "Enter password:"
 #~ msgstr "Parolayı girin:"
-
-#~ msgid "Ok"
-#~ msgstr "Tamam"
 
 #~ msgid "password"
 #~ msgstr "parola"

@@ -5,10 +5,12 @@ import "KeyboardRows/jsonParser.js" as Parser
 
 Item {
     id: rootItem
+    property alias authReq: innerSettings.authReq
     property alias fontSize: innerSettings.fontSize
     property alias fontStyle: innerSettings.fontStyle
     property alias colorScheme: innerSettings.colorScheme
 
+    readonly property bool defaultAuthReq: true
     readonly property int defaultFontSize: 10
     readonly property int minFontSize: 4
     readonly property int maxFontSize: 50
@@ -34,6 +36,7 @@ Item {
 
     Settings {
         id: innerSettings
+        property bool authReq: defaultAuthReq
         property int fontSize: defaultFontSize
         property string fontStyle: "Ubuntu Mono"
         property string colorScheme: "Ubuntu"

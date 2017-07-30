@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-07 19:27+0100\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-07-30 22:07+0000\n"
 "PO-Revision-Date: 2016-03-07 13:36+0000\n"
 "Last-Translator: P_E_T_O <Unknown>\n"
 "Language-Team: Slovak <sk@li.org>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +26,7 @@ msgstr "Vybrať"
 msgid "Copy"
 msgstr "Kopírovať"
 
-#: ../src/app/qml/AlternateActionPopover.qml:21
+#: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
 msgstr "Vložiť"
 
@@ -37,23 +38,23 @@ msgstr "Vyžaduje sa overenie totožnosti"
 msgid "Enter passcode or passphrase:"
 msgstr "Zadajte heslo alebo prístupovú frázu:"
 
-#: ../src/app/qml/AuthenticationDialog.qml:40
+#: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
 msgstr "heslo alebo prístupová fráza"
 
-#: ../src/app/qml/AuthenticationDialog.qml:50
+#: ../src/app/qml/AuthenticationDialog.qml:58
 msgid "OK"
 msgstr "OK"
 
-#: ../src/app/qml/AuthenticationDialog.qml:62
+#: ../src/app/qml/AuthenticationDialog.qml:70
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: ../src/app/qml/AuthenticationService.qml:55
+#: ../src/app/qml/AuthenticationService.qml:61
 msgid "Authentication failed"
 msgstr "Autentifikácia neúspešná"
 
-#: ../src/app/qml/ColorSchemePage.qml:26 ../src/app/qml/SettingsPage.qml:129
+#: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
 msgstr "Farebná schéma"
 
@@ -153,72 +154,88 @@ msgstr "TAB"
 msgid "ENTER"
 msgstr "ENTER"
 
-#: ../src/app/qml/LayoutsPage.qml:26 ../src/app/qml/SettingsPage.qml:41
+#: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
 msgstr "Rozloženia"
 
-#: ../src/app/qml/SettingsPage.qml:26
+#: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
+msgid "Login"
+msgstr ""
+
+#: ../src/app/qml/LoginPage.qml:42
+msgid "Require login"
+msgstr ""
+
+#: ../src/app/qml/LoginPage.qml:43
+msgid "Enable or disable login at start"
+msgstr ""
+
+#: ../src/app/qml/NotifyDialog.qml:25
+msgid "Ok"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: ../src/app/qml/SettingsPage.qml:57
-msgid "Show Keyboard Bar"
-msgstr "Zobraziť panel klávesnice"
-
-#: ../src/app/qml/SettingsPage.qml:73
-msgid "Show Keyboard Button"
-msgstr "Zobraziť tlačidlo klávesnice"
-
-#: ../src/app/qml/SettingsPage.qml:96
+#: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
 msgstr "Veľkosť písma:"
 
-#: ../src/app/qml/TabsPage.qml:7
+#: ../src/app/qml/SettingsPage.qml:126
+msgid "Required"
+msgstr ""
+
+#: ../src/app/qml/SettingsPage.qml:128
+msgid "Not required"
+msgstr ""
+
+#: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
 msgstr "Karty"
 
-#: ../src/app/qml/TabsPage.qml:13
+#: ../src/app/qml/TabsPage.qml:15
 msgid "New tab"
 msgstr "Nová karta"
 
-#: ../src/app/qml/TerminalPage.qml:170
+#: ../src/app/qml/TerminalPage.qml:179
 msgid "Selection Mode"
 msgstr "Režim výberu"
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
 msgstr "Zelená na čiernom"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
 msgstr "Biela na čiernom"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
 msgstr "Čierna na bielom"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
 msgstr "Čierna na náhodne svetlej"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
 msgstr "Linux"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
 msgstr "Cool retro term"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
 msgstr "Tmavé pastely / Ubuntu (staré)"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
 msgstr "Čierna na svetložltom"
 
-#: ../src/app/qml/ubuntu-terminal-app.qml:128
+#: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
 msgstr "Ubuntu"
 
@@ -287,3 +304,9 @@ msgstr "Farebná schéma nemôže byť načítaná: %1"
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
 msgstr "Terminál"
+
+#~ msgid "Show Keyboard Bar"
+#~ msgstr "Zobraziť panel klávesnice"
+
+#~ msgid "Show Keyboard Button"
+#~ msgstr "Zobraziť tlačidlo klávesnice"

@@ -113,6 +113,33 @@ Page {
 
                 onClicked: pageStack.push(colorSchemePage);
             }
+              ListItem {
+                ListItemLayout {
+                    anchors.fill: parent
+                    title.text: i18n.tr("Login")
+
+                    Label {
+                        SlotsLayout.position: SlotsLayout.Trailing
+			function getstate() {
+                                var state = "Required";
+				if (settings.authReq)
+		                state = i18n.tr("Required");
+ 		                else
+                                state = i18n.tr("Not required");
+                                return state;
+				}
+                        text: getstate()
+                    }
+
+                    Icon {
+                        SlotsLayout.position: SlotsLayout.Last
+                        width: units.gu(2); height: width
+                        name: "go-next"
+                    }
+                }
+
+                onClicked: pageStack.push(loginPage);
+            }
         }
     }
 }
