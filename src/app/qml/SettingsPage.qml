@@ -120,15 +120,7 @@ Page {
 
                     Label {
                         SlotsLayout.position: SlotsLayout.Trailing
-			function getstate() {
-                                var state = "Required";
-				if (settings.authReq)
-		                state = i18n.tr("Required");
- 		                else
-                                state = i18n.tr("Not required");
-                                return state;
-				}
-                        text: getstate()
+                        text: settings.authReq ? i18n.tr("Required") : i18n.tr("Not required")
                     }
 
                     Icon {
