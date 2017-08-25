@@ -22,10 +22,6 @@ set(EXEC "${APP_NAME}")
 set(UBUNTU_MANIFEST_PATH "manifest.json.in" CACHE INTERNAL "Relative path to the manifest file")
 
 if(CLICK_MODE)
-    if(NOT DEFINED BZR_SOURCE)
-        set(BZR_SOURCE "lp:${APP_HARDCODE}")
-        message("-- Setting BZR_SOURCE to ${BZR_SOURCE}")
-    endif(NOT DEFINED BZR_SOURCE)
     # Find out the architecture for package building
     # to determine the plugin's installation path
     execute_process(
@@ -40,14 +36,18 @@ if(CLICK_MODE)
     set(ICON ${ICON_FILE})
     set(QT_IMPORTS_DIR "/lib/${ARCH_TRIPLET}")
     set(BIN_DIR /lib/${ARCH_TRIPLET}/bin)
-    if(NOT BZR_REVNO)
-      execute_process(
-        COMMAND bzr revno
-        OUTPUT_VARIABLE BZR_REVNO
-        WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
-        OUTPUT_STRIP_TRAILING_WHITESPACE
-      )
-    endif(NOT BZR_REVNO)
+
+    if(NOT GIT_REVNO)
+        execute_process(
+          COMMAND git rev-list --first-parent --all --count
+          WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+          OUTPUT_VARIABLE GIT_REVNO
+          OUTPUT_STRIP_TRAILING_WHITESPACE
+        )
+    endif(NOT GIT_REVNO)
+    if(NOT GIT_REVNO)
+        set(GIT_REVNO "latest")
+    endif(NOT GIT_REVNO)
 
     execute_process(
       COMMAND dpkg-architecture -qDEB_HOST_ARCH

@@ -34,10 +34,9 @@ Item {
 
     Component.onCompleted: {
         if ( systemAuthentication.requireAuthentication() && !noAuthentication) {
-        if (settings.authReq)
-        {
-            displayLoginDialog();
-        }
+            if (settings.authReq) {
+                displayLoginDialog();
+            }
         }
     }
 

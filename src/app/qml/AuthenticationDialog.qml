@@ -49,6 +49,9 @@ Dialog {
         echoMode: TextInput.Password
 
         onAccepted: okButton.clicked(text)
+
+        // WORKAROUND: UITK Dialog is closed when 'Esc' is pressed. For us it's a security leak.
+        Keys.forwardTo: [ esc_workaround ]
     }
 
     Button {
@@ -74,5 +77,13 @@ Dialog {
         onClicked: {
             dialogCanceled();
         }
+    }
+
+    // WORKAROUND: UITK Dialog is closed when 'Esc' is pressed. For us it's a security leak.
+    Item {
+        id: esc_workaround
+        parent: __foreground
+        anchors.fill: parent
+        Keys.onEscapePressed: dialogCanceled()
     }
 }
