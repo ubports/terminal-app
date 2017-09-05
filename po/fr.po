@@ -54,7 +54,7 @@ msgstr "Annuler"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
-msgstr "Échec d'authentification"
+msgstr "Échec de l'authentification"
 
 #: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
