@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-06 00:01+0000\n"
+"PO-Revision-Date: 2017-09-06 01:29+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://ubpweblate.tnvcomp.com/projects/ubports"
 "/terminal-app/cs/>\n"
@@ -42,7 +42,7 @@ msgstr "Zadejte heslo nebo vstupní kód:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr "heslo nebo vstupní kód"
+msgstr "heslo nebo přístupový kód"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
@@ -194,11 +194,11 @@ msgstr "Není požadováno"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
-msgstr "Panely"
+msgstr "Záložky"
 
 #: ../src/app/qml/TabsPage.qml:15
 msgid "New tab"
-msgstr "Nový panel"
+msgstr "Nová záložka"
 
 #: ../src/app/qml/TerminalPage.qml:179
 msgid "Selection Mode"
@@ -246,7 +246,7 @@ msgstr "Ubuntu"
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "Barevné schéma bez názvu"
+msgstr "Barevná kombinace bez názvu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
@@ -280,11 +280,11 @@ msgid ""
 "presses into characters to send to the terminal is missing."
 msgstr ""
 "Není k dispozici překladač klávesnice. Chybí informace potřebné k převodu "
-"klávesových tlačítek na znaky odesílané do terminálu."
+"kláves na znaky odesílané do terminálu."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "Rozlišovat velké/malé"
+msgstr "Rozlišovat velká/malá"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
