@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-11 11:55+0000\n"
+"PO-Revision-Date: 2017-09-13 21:10+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sq/>\n"
@@ -53,7 +53,7 @@ msgstr "Anulo"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
-msgstr "Legjitimimi dështoi"
+msgstr "Autentifikimi dështoi"
 
 #: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
@@ -173,7 +173,7 @@ msgstr "Kyqja në fillim on/off"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
