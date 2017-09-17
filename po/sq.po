@@ -1,97 +1,94 @@
-# Russian translation for ubuntu-terminal-app
-# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the ubuntu-terminal-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Canonical Ltd.
+# This file is distributed under the same license as the package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: ubuntu-terminal-app\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-16 20:39+0000\n"
-"Last-Translator: Ivan Semkin <ivan@semkin.ru>\n"
-"Language-Team: Russian <https://translate.ubports.com/projects/ubports"
-"/terminal-app/ru/>\n"
-"Language: ru\n"
+"PO-Revision-Date: 2017-09-13 21:10+0000\n"
+"Last-Translator: Jeff <jeffi27@live.at>\n"
+"Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
+"/terminal-app/sq/>\n"
+"Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.15\n"
-"X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr "Выбрать"
+msgstr "Zgjidhë"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr "Копировать"
+msgstr "Kopjo"
 
 #: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
-msgstr "Вставить"
+msgstr "Fut"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "Требуется аутентификация"
+msgstr "Kërkohet autentifikim"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr "Введите пароль:"
+msgstr "Ju lutemi shkruani PIN ose fjalëkalimin tuaj:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr "4-значный код или кодовая фраза"
+msgstr "PIN ose Fjalëkalim"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "OK"
+msgstr "Ok"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
-msgstr "Отменить"
+msgstr "Anulo"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
-msgstr "Ошибка аутентификации"
+msgstr "Autentifikimi dështoi"
 
 #: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
-msgstr "Цветовая схема"
+msgstr "Skema e ngjyrave"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
-msgstr "Смена клавиатуры"
+msgstr "Ndryshoni tastierën"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
 msgid "Control Keys"
-msgstr "Клавиши Ctrl"
+msgstr "Butonat e Kontrollit"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
 msgid "Function Keys"
-msgstr "Клавиши Fn"
+msgstr "Tastierët e fukncionev"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
 msgid "Scroll Keys"
-msgstr "Клавиши навигации"
+msgstr "Butonat rrotullues"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
-#, fuzzy
 msgid "Command Keys"
-msgstr "Клавиши команд"
+msgstr "Butonat e komandës"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CTRL"
-msgstr "CTRL"
+msgstr "CTRL/STRG"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
@@ -126,102 +123,102 @@ msgstr "ESC"
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
 msgid "PG_UP"
-msgstr "Стр_Вверх"
+msgstr "Faqën_lartë"
 
 #. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
 msgid "PG_DN"
-msgstr "Стр_Вниз"
+msgstr "Faqën_poshtë"
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr "Удалить"
+msgstr "DEL/Entf"
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr "НАЧАЛО"
+msgstr "Home"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr "КОНЕЦ"
+msgstr "Fund"
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr "ТАБ"
+msgstr "TAB"
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
 msgid "ENTER"
-msgstr "ENTER"
+msgstr "Enter"
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
-msgstr "Раскладки"
+msgstr "Layouts"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
-msgstr "Авторизация"
+msgstr "Lidhu"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
-msgstr "Запрашивать авторизацию"
+msgstr "Kërkohet hyrja"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
-msgstr ""
+msgstr "Kyqja në fillim on/off"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "ОК"
+msgstr "OK"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Настройки"
+msgstr "Konfigurimi"
 
 #: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
-msgstr "Размер шрифта:"
+msgstr "Madhësia e shkrimit:"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
-msgstr "Требуется"
+msgstr "Domosdoshme"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
-msgstr "Не требуется"
+msgstr "Nuk kërkohet"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
-msgstr "Вкладки"
+msgstr "Tabs"
 
 #: ../src/app/qml/TabsPage.qml:15
 msgid "New tab"
-msgstr "Новая вкладка"
+msgstr "Tab i ri"
 
 #: ../src/app/qml/TerminalPage.qml:179
 msgid "Selection Mode"
-msgstr "Режим выбора"
+msgstr "Mënyra e zgjedhjes"
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr "Зелёный на чёрном"
+msgstr "Gjelbër në të zezë"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr "Белый на чёрном"
+msgstr "E bardhë në të zezë"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr "Чёрный на белом"
+msgstr "E zezë në të bardhë"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
-msgstr "Чёрный на случайном светлом"
+msgstr "E zezë në ngjyrë të rastit"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
@@ -229,15 +226,15 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr "Ретро терминал"
+msgstr "Temë Retro e ftohët"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
-msgstr "Тёмная пастель / Ubuntu (старая)"
+msgstr "Pastels e ërret / Ubuntu (e vjetër)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
-msgstr "Чёрный на светло-жёлтом"
+msgstr "E zezë në dritë të verdhë"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
@@ -248,32 +245,32 @@ msgstr "Ubuntu"
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "Цветовая схема без названия"
+msgstr "Skema e pa emër"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "Доступная цветовая схема"
+msgstr "Skema për persona më shiqim të kufizuar"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "Открыть ссылку"
+msgstr "Hapë linkun"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "Копировать адрес ссылки"
+msgstr "Kopjo adresen e linkut"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "Отправить письмо..."
+msgstr "Dërgo E-mail tek…"
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "Копировать адрес эл. почты"
+msgstr "Kopjo E-Mail Adresen"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -281,39 +278,30 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
-"Преобразование клавиатуры невозможно. Отсутствует информация для "
-"преобразования нажатий клавиш в символы, отправляемые в терминал."
+"Nuk ka përkthyes të tastierës. Informacioni i nevojshëm për të konvertuar "
+"printimin e këmbyesve në karaktere dhe për të dërguar në terminal mungon."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "Учитывать регист"
+msgstr "Konsideroj shkronjat e mëdha dhe të vogla"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "Регулярное выражение"
+msgstr "Shprehje e rregullt"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "Выделить все совпадения"
+msgstr "Theksoni të gjitha hitet"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "Ошибка цветовой схемы"
+msgstr "Gabimi i skemës së ngjyrave"
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "Не удалось загрузить цветовую схему: %1"
+msgstr "Dështoi në ngarkimin e skemës së ngjyrave: %1"
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
-msgstr "Терминал"
-
-#~ msgid "Show Keyboard Bar"
-#~ msgstr "Показать панель клавиатуры"
-
-#~ msgid "password"
-#~ msgstr "пароль"
-
-#~ msgid "Enter password:"
-#~ msgstr "Введите пароль:"
+msgstr "Dritarja e komanos"
