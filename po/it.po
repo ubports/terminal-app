@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-07 20:29+0000\n"
-"Last-Translator: Mike <miguel2000@livecom.it>\n"
+"PO-Revision-Date: 2017-09-20 15:02+0000\n"
+"Last-Translator: Stefano Verzegnassi <verzegnassi.stefano@gmail.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/it/>\n"
 "Language: it\n"
@@ -72,13 +72,11 @@ msgstr "Tasti Controllo"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
-#, fuzzy
 msgid "Function Keys"
 msgstr "Tasti Funzione"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
-#, fuzzy
 msgid "Scroll Keys"
 msgstr "Tasti Scorrimento"
 
@@ -98,11 +96,10 @@ msgstr "CTRL"
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "FNS"
-msgstr ""
+msgstr "FN"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
-#, fuzzy
 msgid "SCR"
 msgstr "SCR"
 
@@ -166,12 +163,10 @@ msgid "Layouts"
 msgstr "Disposizioni"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
-#, fuzzy
 msgid "Login"
 msgstr "Login"
 
 #: ../src/app/qml/LoginPage.qml:42
-#, fuzzy
 msgid "Require login"
 msgstr "Login richiesto"
 
@@ -192,12 +187,10 @@ msgid "Font Size:"
 msgstr "Dimensione carattere:"
 
 #: ../src/app/qml/SettingsPage.qml:123
-#, fuzzy
 msgid "Required"
 msgstr "Richiesto"
 
 #: ../src/app/qml/SettingsPage.qml:123
-#, fuzzy
 msgid "Not required"
 msgstr "Non richiesto"
 
@@ -227,9 +220,8 @@ msgid "Black on white"
 msgstr "Nero su bianco"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
-#, fuzzy
 msgid "Black on random light"
-msgstr "Nero su colore chiaro"
+msgstr "Nero su colore chiaro casuale"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
@@ -237,7 +229,7 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr ""
+msgstr "Cool retro term"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
