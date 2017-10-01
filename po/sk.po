@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-07 19:15+0000\n"
-"Last-Translator: t-h-e-p-e-t-e-r <peter.valachovic@gmail.com>\n"
+"PO-Revision-Date: 2017-09-30 06:51+0000\n"
+"Last-Translator: Peter Valachovič <peter.valachovic@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sk/>\n"
 "Language: sk\n"
@@ -227,7 +227,7 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr "Cool retro term"
+msgstr "Cool retro terminál"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
