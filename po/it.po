@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-20 21:11+0000\n"
+"PO-Revision-Date: 2017-10-02 18:34+0000\n"
 "Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/it/>\n"
@@ -94,7 +94,7 @@ msgstr "CTRL"
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "FNS"
-msgstr "FN"
+msgstr "Fn"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
