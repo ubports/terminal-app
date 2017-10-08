@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-25 19:12+0000\n"
+"PO-Revision-Date: 2017-10-02 15:09+0000\n"
 "Last-Translator: Henrik Holm <hbir@post10.tele.dk>\n"
 "Language-Team: Danish <https://translate.ubports.com/projects/ubports"
 "/terminal-app/da/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr ""
+msgstr "Vælg"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"

@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-06 01:29+0000\n"
+"PO-Revision-Date: 2017-10-02 08:16+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
-"Language-Team: Czech <https://ubpweblate.tnvcomp.com/projects/ubports"
+"Language-Team: Czech <https://translate.ubports.com/projects/ubports"
 "/terminal-app/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -139,12 +139,12 @@ msgstr "DEL"
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr "HOME"
+msgstr "DOMU"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr "END"
+msgstr "KONEC"
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
@@ -174,7 +174,7 @@ msgstr "Povolit nebo zakázat přihlášení při spuštění"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
