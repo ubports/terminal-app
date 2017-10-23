@@ -7,16 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-30 22:07+0000\n"
-"PO-Revision-Date: 2015-08-31 17:16+0000\n"
-"Last-Translator: Meriuță Cornel <meriutacornel@neacornel.eu>\n"
-"Language-Team: Romanian <ro@li.org>\n"
+"POT-Creation-Date: 2017-08-08 12:47+0200\n"
+"PO-Revision-Date: 2017-10-23 17:47+0000\n"
+"Last-Translator: pix <dinamic6661@yahoo.com>\n"
+"Language-Team: Romanian <https://translate.ubports.com/projects/ubports"
+"/terminal-app/ro/>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -42,21 +45,21 @@ msgstr ""
 msgid "passcode or passphrase"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
+#: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
 msgstr "În regulă"
 
-#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
 msgstr "Anulează"
 
-#: ../src/app/qml/AuthenticationService.qml:61
+#: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
 msgstr "Autentificare eşuată"
 
 #: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
-msgstr ""
+msgstr "Paleta de culori"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
@@ -182,11 +185,11 @@ msgstr "Configurări"
 msgid "Font Size:"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:126
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:128
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
 msgstr ""
 
