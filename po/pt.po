@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-28 13:27+0000\n"
+"PO-Revision-Date: 2017-10-18 11:19+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports"
 "/terminal-app/pt/>\n"
@@ -34,7 +34,7 @@ msgstr "Colar"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "É necessário autenticar"
+msgstr "Autenticação pedida"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
@@ -162,15 +162,15 @@ msgstr "Esquemas"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
-msgstr ""
+msgstr "Iniciar sessão"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
-msgstr ""
+msgstr "Exige inicio de sessão"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
-msgstr ""
+msgstr "Ativar ou desativar inicio de sessão no arranque"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
@@ -186,11 +186,11 @@ msgstr "Tamanho do tipo de letra:"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
-msgstr ""
+msgstr "Exigido"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
-msgstr ""
+msgstr "Não exigido"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
