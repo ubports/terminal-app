@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-10-29 19:32+0000\n"
+"PO-Revision-Date: 2017-10-29 22:10+0000\n"
 "Last-Translator: Brînzariu Cristian <info@ebeton.ro>\n"
 "Language-Team: Romanian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/ro/>\n"
@@ -47,7 +47,7 @@ msgstr "parola sau expresia de acces"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "În regulă"
+msgstr "Ok"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -179,7 +179,7 @@ msgstr "Ok"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Configurări"
+msgstr "Setări"
 
 #: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
