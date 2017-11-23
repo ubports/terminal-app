@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-11-22 16:54+0000\n"
+"PO-Revision-Date: 2017-11-23 10:28+0000\n"
 "Last-Translator: Pablo Foche <pablo.foche@gmail.com>\n"
 "Language-Team: Esperanto <https://translate.ubports.com/projects/ubports"
 "/terminal-app/eo/>\n"
@@ -34,7 +34,7 @@ msgstr "Alglui"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr "Aŭtentokontrolo bezonatas"
+msgstr "Ensaluto nepra"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
@@ -54,7 +54,7 @@ msgstr "Nuligi"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
-msgstr "Aŭtentokontrolo malsukcesis"
+msgstr "Ensaluta eraro"
 
 #: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
