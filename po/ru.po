@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-10-15 10:15+0000\n"
-"Last-Translator: Ivan Semkin <ivan@semkin.ru>\n"
+"PO-Revision-Date: 2017-11-22 01:07+0000\n"
+"Last-Translator: Alexey Balmashnov <a.balmashnov@gmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/ru/>\n"
 "Language: ru\n"
@@ -47,7 +47,7 @@ msgstr "4-значный код или кодовая фраза"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "OK"
+msgstr "ОК"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -82,9 +82,8 @@ msgstr "Клавиши навигации"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
-#, fuzzy
 msgid "Command Keys"
-msgstr "Клавиши команд"
+msgstr "Командные клавиши"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
