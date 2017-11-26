@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-30 22:07+0000\n"
-"PO-Revision-Date: 2015-11-10 06:48+0000\n"
-"Last-Translator: Mutlu Can YILMAZ <mtlcnylmz@gmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"POT-Creation-Date: 2017-08-08 12:47+0200\n"
+"PO-Revision-Date: 2017-11-26 00:15+0000\n"
+"Last-Translator: Arda Canbolat <oardacn@gmail.com>\n"
+"Language-Team: Turkish <https://translate.ubports.com/projects/ubports"
+"/terminal-app/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -36,21 +38,21 @@ msgstr "Kimlik doğrulama gerekli"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Şifre veya parolayı girin:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "Şifre veya parola"
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
+#: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
 msgstr "Tamam"
 
-#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
 msgstr "İptal"
 
-#: ../src/app/qml/AuthenticationService.qml:61
+#: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
 msgstr "Kimlik denetimi başarısız"
 
@@ -160,15 +162,15 @@ msgstr "Yerleşimler:"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
-msgstr ""
+msgstr "Giriş Yap"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
-msgstr ""
+msgstr "Giriş gerekiyor"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
-msgstr ""
+msgstr "Başlangıçta oturum açmayı etkinleştirin veya devre dışı bırakın"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
@@ -182,13 +184,13 @@ msgstr "Ayarlar"
 msgid "Font Size:"
 msgstr "Yazıt Tipi Boyutu:"
 
-#: ../src/app/qml/SettingsPage.qml:126
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
-msgstr ""
+msgstr "Gerekli"
 
-#: ../src/app/qml/SettingsPage.qml:128
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
-msgstr ""
+msgstr "Gerekli değil"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
@@ -205,39 +207,39 @@ msgstr "Seçim Kipi"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr ""
+msgstr "Siyah üzerinde yeşil"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr ""
+msgstr "Siyah üzerinde beyaz"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr ""
+msgstr "Beyaz üzerinde siyah"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
-msgstr ""
+msgstr "Rasgele ışıkta siyah"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr ""
+msgstr "Retro dönem retro"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
+msgstr "Koyu pastel / Ubuntu (eski)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Açık sarı üstünde siyah"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
