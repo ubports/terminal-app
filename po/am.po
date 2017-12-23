@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-30 22:07+0000\n"
-"PO-Revision-Date: 2016-03-10 20:09+0000\n"
-"Last-Translator: samson <Unknown>\n"
-"Language-Team: Amharic <am@li.org>\n"
+"POT-Creation-Date: 2017-08-08 12:47+0200\n"
+"PO-Revision-Date: 2017-12-23 18:19+0000\n"
+"Last-Translator: Samson <sambelet@yahoo.com>\n"
+"Language-Team: Amharic <https://translate.ubports.com/projects/ubports"
+"/terminal-app/am/>\n"
 "Language: am\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2016-03-11 05:56+0000\n"
-"X-Generator: Launchpad (build 17939)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -42,15 +44,15 @@ msgstr "የ ማለፊያ ኮድ ወይንም የ ማለፊያ ሀረግ ያስ�
 msgid "passcode or passphrase"
 msgstr "የ ማለፊያ ኮድ ወይንም የ ማለፊያ ሀረግ"
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
+#: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
 msgstr "እሺ"
 
-#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
 msgstr "መሰረዣ"
 
-#: ../src/app/qml/AuthenticationService.qml:61
+#: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
 msgstr "ማረጋገጫው ወድቋል"
 
@@ -156,19 +158,19 @@ msgstr "ENTER"
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
-msgstr "Layouts"
+msgstr "እቅድ"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
-msgstr ""
+msgstr "መግቢያ"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
-msgstr ""
+msgstr "መግቢያ ያስፈልጋል"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
-msgstr ""
+msgstr "መግቢያ በ መጀመሪያ ላይ ማስቻያ ወይንም ማሰናከያ"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
@@ -176,19 +178,19 @@ msgstr "እሺ"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "ማሰናጃ"
+msgstr "ማሰናጃዎች"
 
 #: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
 msgstr "የ ፊደል መጠን:"
 
-#: ../src/app/qml/SettingsPage.qml:126
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
-msgstr ""
+msgstr "ያስፈልጋል"
 
-#: ../src/app/qml/SettingsPage.qml:128
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
-msgstr ""
+msgstr "አያስፈልግም"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
