@@ -1,3 +1,10 @@
+ubuntu-terminal-app (0.8.2ubports) xenial; urgency=medium
+
+  * Revert "Add missing change that was introduced in the Ubuntu archive version of terminal"
+  * Bump version
+
+ -- Marius Gripsgard <marius@ubports.com>  Thu, 04 Jan 2018 20:33:48 +0100
+
 ubuntu-terminal-app (0.7.218ubuntu2) yakkety; urgency=medium
 
   * Use OnlyShowIn=Unity8 instead. Apparently the situation changed and the
