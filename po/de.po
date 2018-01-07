@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-05 20:16+0000\n"
-"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
-"Language-Team: German <https://ubpweblate.tnvcomp.com/projects/ubports"
+"PO-Revision-Date: 2018-01-03 12:42+0000\n"
+"Last-Translator: Peter Nerlich <peter.nerlich+ubports@googlemail.com>\n"
+"Language-Team: German <https://translate.ubports.com/projects/ubports"
 "/terminal-app/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr "Legitimierung erforderlich"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr "Bitte geben Sie Ihre PIN bzw. Ihr Passwort ein:"
+msgstr "PIN oder Passwort eingeben:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
@@ -266,7 +266,7 @@ msgstr "Verweisadresse kopieren"
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "E-Mail senden an …"
+msgstr "E-Mail senden an…"
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
