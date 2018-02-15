@@ -1,4 +1,7 @@
 {
   "template": "cmake",
-  "kill": "qmlscene"
+  "kill": "terminal",
+  "dependencies": [
+    "libpam0g-dev"
+  ]
 }
