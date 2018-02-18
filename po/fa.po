@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-30 22:07+0000\n"
+"POT-Creation-Date: 2017-08-08 12:47+0200\n"
 "PO-Revision-Date: 2016-03-03 01:15+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -42,15 +42,15 @@ msgstr "رمزعبور یا عبارت‌عبور را وارد کنید"
 msgid "passcode or passphrase"
 msgstr "رمزعبور یا عبارت‌عبور"
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
+#: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
 msgstr "قبول"
 
-#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
 msgstr "لغو"
 
-#: ../src/app/qml/AuthenticationService.qml:61
+#: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
 msgstr "تأیید هویت شکست خورد"
 
@@ -182,11 +182,11 @@ msgstr "تنظیمات"
 msgid "Font Size:"
 msgstr "اندازه‌ی قلم:"
 
-#: ../src/app/qml/SettingsPage.qml:126
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:128
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
 msgstr ""
 

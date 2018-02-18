@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-30 22:07+0000\n"
+"POT-Creation-Date: 2017-08-08 12:47+0200\n"
 "PO-Revision-Date: 2015-08-25 13:43+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
@@ -42,15 +42,15 @@ msgstr ""
 msgid "passcode or passphrase"
 msgstr ""
 
-#: ../src/app/qml/AuthenticationDialog.qml:58
+#: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
 msgstr "Mat eo"
 
-#: ../src/app/qml/AuthenticationDialog.qml:70
+#: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
 msgstr "Nullañ"
 
-#: ../src/app/qml/AuthenticationService.qml:61
+#: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
 msgstr "C'hwitet eo an dilesadur"
 
@@ -182,11 +182,11 @@ msgstr "Arventennoù"
 msgid "Font Size:"
 msgstr "Ment ar font :"
 
-#: ../src/app/qml/SettingsPage.qml:126
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
 msgstr ""
 
-#: ../src/app/qml/SettingsPage.qml:128
+#: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
 msgstr ""
 
