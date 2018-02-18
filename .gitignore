@@ -1,2 +1,3 @@
-# Ignore build directory so that it is not committed
-/build/
+build
+*.user*
+.clickable
