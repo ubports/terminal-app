@@ -1,0 +1,43 @@
+# Number of days of inactivity before an issue becomes stale
+daysUntilStale: 90
+
+# Number of days of inactivity before a stale issue is closed
+daysUntilClose: 14
+
+# Issues with these labels will never be considered stale
+exemptLabels:
+  - pinned
+  - security
+  - critical
+  - critical (devel)
+  - critical (rc)
+  - regression
+  - release blocker
+  - attached PR
+
+# Label to use when marking an issue as stale
+staleLabel: stale
+
+# Comment to post when marking an issue as stale. Set to `false` to disable
+markComment: >
+  This issue has been automatically marked as stale because it has not had recent activity in the last three months.
+
+  Because the UBports team has a limited amount of resources, we need your help to ensure the issue is still actual.
+
+   1. Please verify that you can still reproduce the issue in the latest version of the software
+   2. Comment that the issue is still reproducible or still matters for you
+   3. Include the following informations:
+      * What version of the software you reproduced the issue on
+      * What OS and version you reproduced the issue on
+      * What steps you followed to reproduce the issue
+
+  Thank you for your contributions.
+
+# Comment to post when removing the stale label. Set to `false` to disable
+unmarkComment: false
+
+# Comment to post when closing a stale issue. Set to `false` to disable
+closeComment: false
+
+# Limit to only `issues` or `pulls`
+only: issues
