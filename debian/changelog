@@ -1,4 +1,4 @@
-ubuntu-terminal-app (0.8.2ubports) xenial; urgency=medium
+ubuntu-terminal-app (0.8.2ubports) bionic; urgency=medium
 
   * Revert "Add missing change that was introduced in the Ubuntu archive version of terminal"
   * Bump version
