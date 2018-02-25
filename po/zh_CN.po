@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-10-08 04:07+0000\n"
-"Last-Translator: Mutse Young <yyhoo2.young@gmail.com>\n"
+"PO-Revision-Date: 2018-02-24 07:05+0000\n"
+"Last-Translator: Luo Yufan <njlyf2011@hotmail.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://translate.ubports.com/projects/ubports/terminal-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -186,11 +186,11 @@ msgstr "字体大小："
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
-msgstr ""
+msgstr "需要"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
-msgstr ""
+msgstr "不需要"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
@@ -207,15 +207,15 @@ msgstr "选择模式"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr ""
+msgstr "黑底绿字"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr ""
+msgstr "黑底白字"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr ""
+msgstr "白底黑字"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
@@ -235,7 +235,7 @@ msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
-msgstr ""
+msgstr "亮黄底黑色"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
