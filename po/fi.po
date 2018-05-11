@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-07 11:32+0000\n"
-"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://ubpweblate.tnvcomp.com/projects/ubports"
+"PO-Revision-Date: 2018-05-11 21:06+0000\n"
+"Last-Translator: Tatuus <tatuus@riseup.net>\n"
+"Language-Team: Finnish <https://translate.ubports.com/projects/ubports"
 "/terminal-app/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -45,12 +45,14 @@ msgid "passcode or passphrase"
 msgstr "suojakoodi tai salasana"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
+#, fuzzy
 msgid "OK"
-msgstr "OK"
+msgstr "Selvä"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
+#, fuzzy
 msgid "Cancel"
-msgstr "Peru"
+msgstr "Keskeytä"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
