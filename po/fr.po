@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-09-06 14:43+0000\n"
-"Last-Translator: Reda <adered7@gmail.com>\n"
-"Language-Team: French <https://ubpweblate.tnvcomp.com/projects/ubports"
+"PO-Revision-Date: 2018-05-11 20:00+0000\n"
+"Last-Translator: Anne Onyme <anneonyme017@openmailbox.org>\n"
+"Language-Team: French <https://translate.ubports.com/projects/ubports"
 "/terminal-app/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -50,7 +50,9 @@ msgstr "Valider"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
+"La couleur du texte est déterminée en fonction de l'arrière-plan, donc "
+"définie à partir du HTML"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
