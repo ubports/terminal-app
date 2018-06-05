@@ -9,7 +9,7 @@
         }
     },
     "icon": "terminal64.png",
-    "maintainer": "Ubuntu App Cats <ubuntu-touch-coreapps@lists.launchpad.net>",
+    "maintainer": "UBports <dev@ubports.com>",
     "name": "com.ubuntu.terminal",
     "title": "Terminal",
     "version": "0.7.@BZR_REVNO@",
