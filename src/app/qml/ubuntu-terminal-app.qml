@@ -64,25 +64,6 @@ QtObject {
         onClosing: terminalAppRoot.terminalWindowCount -= 1;
     }
 
-    function openSettingsPage() {
-        if (!settingsLoader.item) {
-            settingsLoader.active = true;
-        } else {
-            settingsLoader.item.requestActivate();
-        }
-    }
-
-    property Loader settingsLoader: Loader {
-        source: Qt.resolvedUrl("Settings/SettingsWindow.qml")
-        active: false
-        asynchronous: true
-
-        Connections {
-            target: settingsLoader.item
-            onClosing: settingsLoader.active = false
-        }
-    }
-
     property QtObject settings: TerminalSettings {
     }
 

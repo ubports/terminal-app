@@ -36,6 +36,27 @@ Page {
                                        : "Ubuntu.Components.Themes.Ambiance"
     }
 
+    function openSettingsPage() {
+        if (!settingsLoader.item) {
+            settingsLoader.active = true;
+        } else {
+            settingsLoader.item.requestActivate();
+        }
+    }
+
+    Loader {
+        id: settingsLoader
+        source: Qt.resolvedUrl("Settings/SettingsWindow.qml")
+        active: false
+        asynchronous: true
+
+        Connections {
+            target: settingsLoader.item
+            onClosing: settingsLoader.active = false
+        }
+    }
+
+
     anchors.fill: parent
 
     header: PageHeader {
@@ -71,7 +92,7 @@ Page {
             },
             Action {
                 iconName: "settings"
-                onTriggered: terminalAppRoot.openSettingsPage()
+                onTriggered: openSettingsPage()
             }
         ]
         visible: !terminalPage.narrowLayout
@@ -162,7 +183,7 @@ Page {
         iconColor: tabsBar.actionColor
         action: Action {
             iconName: "settings"
-            onTriggered: terminalAppRoot.openSettingsPage()
+            onTriggered: openSettingsPage()
         }
         visible: terminalPage.narrowLayout
     }
