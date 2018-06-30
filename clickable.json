@@ -1,0 +1,7 @@
+{
+  "template": "cmake",
+  "kill": "terminal-app",
+  "dependencies": [
+    "libpam0g-dev"
+  ]
+}
