@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2017-12-25 21:01+0000\n"
+"PO-Revision-Date: 2018-05-13 20:51+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports"
 "/terminal-app/am/>\n"
@@ -178,7 +178,7 @@ msgstr "እሺ"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "ማሰናጃዎች"
+msgstr "ማሰናጃ"
 
 #: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"

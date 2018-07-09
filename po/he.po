@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-05-11 20:27+0000\n"
+"PO-Revision-Date: 2018-07-09 22:13+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports"
 "/terminal-app/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.17\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -26,11 +26,11 @@ msgstr "בחירה"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr "העתקה"
+msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
-msgstr "הדבקה"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -38,11 +38,11 @@ msgstr "נדרש אימות"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr "הכניסו קוד או משפט מפתח:"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr "קוד או משפט מפתח"
+msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
@@ -62,103 +62,105 @@ msgstr "סכמת צבע"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
-msgstr "שינוי מקלדת"
+msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
+#, fuzzy
 msgid "Control Keys"
-msgstr "מקשי Control"
+msgstr "מקשי שליטה"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:21
+#, fuzzy
 msgid "Function Keys"
 msgstr "מקשי פונקציות"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:24
 msgid "Scroll Keys"
-msgstr "מקשי גלילה"
+msgstr ""
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:27
 msgid "Command Keys"
-msgstr "מקשי Command"
+msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:35
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
 msgid "CTRL"
-msgstr "CTRL"
+msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:38
 msgid "FNS"
-msgstr "FNS"
+msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
 msgid "SCR"
-msgstr "SCR"
+msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
 msgid "CMD"
-msgstr "CMD"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
 msgid "ALT"
-msgstr "ALT"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
 msgid "SHIFT"
-msgstr "SHIFT"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
 msgid "ESC"
-msgstr "ESC"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
 msgid "PG_UP"
-msgstr "PG_UP"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:86
 msgid "PG_DN"
-msgstr "PG_DN"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr "DEL"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr "HOME"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr "END"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr "TAB"
+msgstr ""
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
 msgid "ENTER"
-msgstr "ENTER"
+msgstr ""
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
-msgstr "פריסות"
+msgstr ""
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
@@ -182,7 +184,7 @@ msgstr "הגדרות"
 
 #: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
-msgstr "גודל פונט:"
+msgstr ""
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
@@ -194,40 +196,40 @@ msgstr "לא נדרש"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
-msgstr "לשוניות"
+msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:15
 msgid "New tab"
-msgstr "לשונית חדשה"
+msgstr ""
 
 #: ../src/app/qml/TerminalPage.qml:179
 msgid "Selection Mode"
-msgstr "מצב בחירה"
+msgstr ""
 
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr "ירוק על גבי שחור"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr "לבן על שחור"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr "שחור על לבן"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
-msgstr "שחור על תאורה אקראית"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
-msgstr "לינוקס"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr "מסוף רטרו מגניב"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
@@ -235,43 +237,43 @@ msgstr "פסטלים כהים / אובונטו (ישן)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
-msgstr "שחור על גבי צהוב בהיר"
+msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
-msgstr "אובונטו"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr "ערכת צבע ללא שם"
+msgstr ""
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr "ערכת צבע נגישה"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr "פתיחת קישור"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr "העתקת כתובת קישור"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr "שליחו אימייל ל…"
+msgstr ""
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr "העתקת כתובת אימייל"
+msgstr ""
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -279,29 +281,27 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
-"לא נמצא מתרגם מקלדת.  המידע שנדרש כדי להמיר לחיצות מקשים לתווים לשליחה למסוף "
-"חסר."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
-msgstr "התאמת רשיות"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "ביטוי רגולרי"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
-msgstr "הדגשת כל ההתאמות"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:405
 msgid "Color Scheme Error"
-msgstr "שגיאת ערכת צבע"
+msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "לא ניתן לטעון את ערכת הצבע: %1"
+msgstr ""
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"

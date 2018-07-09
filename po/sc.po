@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-04-27 13:38+0000\n"
+"PO-Revision-Date: 2018-07-05 16:08+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sc/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr ""
+msgstr "Seletziona"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr ""
+msgstr "Còpia"
 
 #: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr ""
+msgstr "Autenticatzione rechèdida"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
@@ -45,7 +45,7 @@ msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr ""
+msgstr "AB"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -53,7 +53,7 @@ msgstr "Annulla"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
-msgstr ""
+msgstr "Autenticatzione faddida"
 
 #: ../src/app/qml/ColorSchemePage.qml:27 ../src/app/qml/SettingsPage.qml:100
 msgid "Color Scheme"
@@ -173,7 +173,7 @@ msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr ""
+msgstr "AB"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"

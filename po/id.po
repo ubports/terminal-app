@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-04-30 12:46+0000\n"
+"PO-Revision-Date: 2018-05-14 12:10+0000\n"
 "Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/id/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "OK"
+msgstr "OKE"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -174,7 +174,7 @@ msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oke"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"

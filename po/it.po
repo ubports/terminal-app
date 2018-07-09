@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-05-11 21:13+0000\n"
+"PO-Revision-Date: 2018-05-12 16:31+0000\n"
 "Last-Translator: Simone <19simok89@gmail.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/it/>\n"
@@ -174,7 +174,7 @@ msgstr "Abilita o disabilita il login all'apertura"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
