@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-13 10:29+0000\n"
-"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
+"PO-Revision-Date: 2018-07-13 10:30+0000\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sc/>\n"
 "Language: sc\n"
@@ -169,7 +169,7 @@ msgstr "Rechede inghitzu de sessione"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
-msgstr "Ativa o disativa su cumintzu de sessione"
+msgstr "Ativa o disativa s'inghitzu de sessione"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
