@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-13 09:26+0000\n"
+"PO-Revision-Date: 2018-07-13 10:28+0000\n"
 "Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sc/>\n"
@@ -98,27 +98,27 @@ msgstr "FNTZ"
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:41
 msgid "SCR"
-msgstr ""
+msgstr "ISC"
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:44
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:64
 msgid "ALT"
-msgstr ""
+msgstr "ALT"
 
 #. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:67
 msgid "SHIFT"
-msgstr ""
+msgstr "MAJÙS"
 
 #. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:80
 msgid "ESC"
-msgstr ""
+msgstr "ESC"
 
 #. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:83
@@ -133,7 +133,7 @@ msgstr ""
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr ""
+msgstr "CANTZ"
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
@@ -148,7 +148,7 @@ msgstr ""
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr ""
+msgstr "TAB"
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
