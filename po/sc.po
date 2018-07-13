@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-13 10:39+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"PO-Revision-Date: 2018-07-13 10:49+0000\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sc/>\n"
 "Language: sc\n"
@@ -143,7 +143,7 @@ msgstr "Inghitzu"
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr ""
+msgstr "FINE"
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
