@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-13 10:30+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"PO-Revision-Date: 2018-07-13 10:32+0000\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sc/>\n"
 "Language: sc\n"
@@ -206,23 +206,23 @@ msgstr "Modalidade de seletzione"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr ""
+msgstr "Birde subra nieddu"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr ""
+msgstr "Biancu subra nieddu"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr ""
+msgstr "Nieddu subra biancu"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
-msgstr ""
+msgstr "Nieddu subra lughe casuale"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
@@ -234,43 +234,43 @@ msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Nieddu subra grogu craru"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:277
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:292
 msgid "Un-named Color Scheme"
-msgstr ""
+msgstr "Ischema de colore sena nùmene"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:426
 #: ../src/plugin/qmltermwidget/lib/ColorScheme.cpp:427
 msgid "Accessible Color Scheme"
-msgstr ""
+msgstr "Ischema de colore atzessìbile"
 
 #: ../src/plugin/konsole/Filter.cpp:518
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:533
 msgid "Open Link"
-msgstr ""
+msgstr "Aberi su ligàmene"
 
 #: ../src/plugin/konsole/Filter.cpp:519
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:534
 msgid "Copy Link Address"
-msgstr ""
+msgstr "Còpia s'indiritzu de su ligàmene"
 
 #: ../src/plugin/konsole/Filter.cpp:523
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
 msgid "Send Email To..."
-msgstr ""
+msgstr "Imbia messàgiu eletrònicu a..."
 
 #: ../src/plugin/konsole/Filter.cpp:524
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
 msgid "Copy Email Address"
-msgstr ""
+msgstr "Còpia indiritzu eletrònicu"
 
 #: ../src/plugin/konsole/Vt102Emulation.cpp:961
 #: ../src/plugin/qmltermwidget/lib/Vt102Emulation.cpp:977
@@ -278,6 +278,9 @@ msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
 msgstr ""
+"Non bi sunt tradutores de tastiera. Ammancant is informatziones netzessàrias "
+"pro furriare is teclas incarcadas a càrateres chi tocat a imbiare a su "
+"terminale."
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
