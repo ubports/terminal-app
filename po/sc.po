@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-13 10:53+0000\n"
+"PO-Revision-Date: 2018-07-22 00:00+0000\n"
 "Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/terminal-app/sc/>\n"
@@ -138,7 +138,7 @@ msgstr "CANTZ"
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr "Inghitzu"
+msgstr "INGHITZU"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
