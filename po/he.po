@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-09 22:13+0000\n"
+"PO-Revision-Date: 2018-07-15 00:00+0000\n"
 "Last-Translator: Eran <etherpulse@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports"
 "/terminal-app/he/>\n"
@@ -26,11 +26,11 @@ msgstr "בחירה"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr ""
+msgstr "העתקה"
 
 #: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
-msgstr ""
+msgstr "הדבקה"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
@@ -38,7 +38,7 @@ msgstr "נדרש אימות"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "הכניסו קוד או סיסמה:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
@@ -199,8 +199,9 @@ msgid "Tabs"
 msgstr ""
 
 #: ../src/app/qml/TabsPage.qml:15
+#, fuzzy
 msgid "New tab"
-msgstr ""
+msgstr "טאב חדש"
 
 #: ../src/app/qml/TerminalPage.qml:179
 msgid "Selection Mode"
