@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-05-21 11:14+0000\n"
+"PO-Revision-Date: 2018-07-22 00:00+0000\n"
 "Last-Translator: Joachim Lazaroms <joachim.pc@gmail.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports"
 "/terminal-app/nl/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 2.17\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -38,11 +38,11 @@ msgstr "Authenticatie vereist"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Toegangscode of wachtwoord-zin invoeren:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "Toegangscode of wachtwoord-zin"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
@@ -161,12 +161,13 @@ msgid "Layouts"
 msgstr "Indelingen"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
+#, fuzzy
 msgid "Login"
-msgstr ""
+msgstr "Aanmelden"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
-msgstr ""
+msgstr "Aanmelden vereist"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
@@ -186,11 +187,11 @@ msgstr "Tekengrootte:"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Required"
-msgstr ""
+msgstr "Vereist"
 
 #: ../src/app/qml/SettingsPage.qml:123
 msgid "Not required"
-msgstr ""
+msgstr "Niet vereist"
 
 #: ../src/app/qml/TabsPage.qml:9
 msgid "Tabs"
@@ -207,39 +208,39 @@ msgstr "Selectiemodus"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr ""
+msgstr "Groen op zwart"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr ""
+msgstr "Wit op zwart"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr ""
+msgstr "Zwart op wit"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
-msgstr ""
+msgstr "Zwart op een willekeurige lichte kleur"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr ""
+msgstr "Retro terminal"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
-msgstr ""
+msgstr "Donkere pastelkleuren / Ubuntu (old)"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
-msgstr ""
+msgstr "Zwart op licht geel"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Ubuntu"
-msgstr ""
+msgstr "Ubuntu"
 
 #: ../src/plugin/konsole/ColorScheme.cpp:276
 #: ../src/plugin/konsole/ColorScheme.cpp:291
