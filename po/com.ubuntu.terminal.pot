@@ -111,79 +111,79 @@ msgid "Command Keys"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-#. TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Control key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:52
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:78
-msgid "CTRL"
+msgid "Ctrl"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:55
-msgid "FNS"
+msgid "Fn"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:58
-msgid "SCR"
+msgid "Scr"
 msgstr ""
 
 #. TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:61
-msgid "CMD"
+msgid "Cmd"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Alt key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:81
-msgid "ALT"
+msgid "Alt"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Shift key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:84
-msgid "SHIFT"
+msgid "Shift"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Escape key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:97
-msgid "ESC"
+msgid "Esc"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Page Up key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:100
-msgid "PG_UP"
+msgid "PgUp"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Page Down key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:103
-msgid "PG_DN"
+msgid "PgDn"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Delete key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:106
-msgid "DEL"
+msgid "Del"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Home key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:109
-msgid "HOME"
+msgid "Home"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the End key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:112
-msgid "END"
+msgid "End"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Tab key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:115
-msgid "TAB"
+msgid "Tab"
 msgstr ""
 
-#. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
+#. TRANSLATORS: This is the name of the Enter key.
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:118
-msgid "ENTER"
+msgid "Enter"
 msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
-msgid "Ok"
+msgid "OK"
 msgstr ""
 
 #: ../src/app/qml/Settings/BackgroundOpacityEditor.qml:26
@@ -304,7 +304,7 @@ msgid "Showing %1 of %2"
 msgstr ""
 
 #: ../src/app/qml/Settings/ShortcutRow.qml:78
-msgid "Enter shortcut..."
+msgid "Enter shortcut…"
 msgstr ""
 
 #: ../src/app/qml/Settings/ShortcutRow.qml:80
@@ -337,7 +337,7 @@ msgid "Copy Link Address"
 msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:538
-msgid "Send Email To..."
+msgid "Send Email To…"
 msgstr ""
 
 #: ../src/plugin/qmltermwidget/lib/Filter.cpp:539
