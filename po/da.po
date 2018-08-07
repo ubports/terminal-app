@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-08-05 01:01+0000\n"
+"PO-Revision-Date: 2018-08-07 14:28+0000\n"
 "Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
 "Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
 "terminal-app/da/>\n"
@@ -30,15 +30,15 @@ msgstr "Kopiér"
 
 #: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
-msgstr ""
+msgstr "Indsæt"
 
 #: ../src/app/qml/AuthenticationDialog.qml:25
 msgid "Authentication required"
-msgstr ""
+msgstr "Tilladelse kræves"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Skriv kodeord eller kodesætning"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
