@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-08-08 15:52+0000\n"
+"PO-Revision-Date: 2018-08-08 15:54+0000\n"
 "Last-Translator: ierihon <idekovets@mail.ru>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "terminal-app/be/>\n"
@@ -39,7 +39,7 @@ msgstr "Патрабуецца ідэнтыфікацыя"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr "Увядзіце пароль або фразу:"
+msgstr "Увядзіце код доступу або ключавую фразу :"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
@@ -163,7 +163,7 @@ msgstr "Раскладкі"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
-msgstr ""
+msgstr "Увайсці"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
