@@ -8,15 +8,18 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2015-09-14 13:41+0000\n"
-"Last-Translator: Siamion Šachalevič <semen.shah@gmail.com>\n"
-"Language-Team: Belarusian <be@li.org>\n"
+"PO-Revision-Date: 2018-08-12 01:02+0000\n"
+"Last-Translator: ierihon <idekovets@mail.ru>\n"
+"Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
+"terminal-app/be/>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2.20\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
@@ -24,7 +27,7 @@ msgstr "Выбраць"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
-msgstr "Капіяваць"
+msgstr "Капіраваць"
 
 #: ../src/app/qml/AlternateActionPopover.qml:22
 msgid "Paste"
@@ -36,15 +39,15 @@ msgstr "Патрабуецца ідэнтыфікацыя"
 
 #: ../src/app/qml/AuthenticationDialog.qml:27
 msgid "Enter passcode or passphrase:"
-msgstr ""
+msgstr "Увядзіце код доступу або ключавую фразу :"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "код доступу або ключавая фраза"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "Добра"
+msgstr "ОК"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -172,11 +175,11 @@ msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr ""
+msgstr "ОК"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
-msgstr "Наладкі"
+msgstr "Налады"
 
 #: ../src/app/qml/SettingsPage.qml:67
 msgid "Font Size:"
@@ -205,23 +208,24 @@ msgstr "Рэжым вылучэння"
 #. TRANSLATORS: This is the name of a terminal color scheme which is displayed in the settings
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Green on black"
-msgstr ""
+msgstr "Зялёны на чорным"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "White on black"
-msgstr ""
+msgstr "Белы на чорным"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on white"
-msgstr ""
+msgstr "Чорны на белым"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
 msgstr ""
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
+#, fuzzy
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
