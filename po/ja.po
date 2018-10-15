@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
 "PO-Revision-Date: 2018-10-21 00:00+0000\n"
-"Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
+"Last-Translator: ArashiHino <hinoaras.hi82@gmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "terminal-app/ja/>\n"
 "Language: ja\n"
@@ -135,35 +135,35 @@ msgstr "PG_DN"
 #. TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:89
 msgid "DEL"
-msgstr ""
+msgstr "DEL"
 
 #. TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:92
 msgid "HOME"
-msgstr ""
+msgstr "HOME"
 
 #. TRANSLATORS: This is the name of the End key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:95
 msgid "END"
-msgstr ""
+msgstr "END"
 
 #. TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:98
 msgid "TAB"
-msgstr ""
+msgstr "TAB"
 
 #. TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:101
 msgid "ENTER"
-msgstr ""
+msgstr "ENTER"
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
-msgstr ""
+msgstr "レイアウト"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 #: ../src/app/qml/LoginPage.qml:42
 msgid "Require login"
