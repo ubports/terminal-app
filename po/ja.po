@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
 "PO-Revision-Date: 2018-10-15 07:17+0000\n"
-"Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
+"Last-Translator: ArashiHino <hinoaras.hi82@gmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "terminal-app/ja/>\n"
 "Language: ja\n"
@@ -42,11 +42,11 @@ msgstr "PINまたはパスワードを入力:"
 
 #: ../src/app/qml/AuthenticationDialog.qml:48
 msgid "passcode or passphrase"
-msgstr ""
+msgstr "パスワード"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -62,7 +62,7 @@ msgstr "カラースキーム"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
-msgstr ""
+msgstr "キーボードの変更"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
