@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-10-23 16:17+0000\n"
+"PO-Revision-Date: 2018-10-25 22:51+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/terminal-app/zh_Hant/>\n"
@@ -62,7 +62,7 @@ msgstr "色彩方案"
 
 #: ../src/app/qml/KeyboardBar.qml:174
 msgid "Change Keyboard"
-msgstr "變換鍵盤"
+msgstr "切換鍵盤"
 
 #. TRANSLATORS: This a keyboard layout name
 #: ../src/app/qml/KeyboardRows/JsonTranslator.qml:18
@@ -158,7 +158,7 @@ msgstr "ENTER"
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
-msgstr "佈局"
+msgstr "版面"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
@@ -170,7 +170,7 @@ msgstr "需要登錄"
 
 #: ../src/app/qml/LoginPage.qml:43
 msgid "Enable or disable login at start"
-msgstr "啟動時啟用或禁用登錄"
+msgstr "啟動時使用或禁用登錄"
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
@@ -219,7 +219,7 @@ msgstr "白底黑字"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on random light"
-msgstr "黑色隨機光"
+msgstr "任意色底黑字"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Linux"
@@ -227,7 +227,7 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr "傳統復古風"
+msgstr "CRT復古終端"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
@@ -286,7 +286,7 @@ msgstr "區分大小寫"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "正則表述式"
+msgstr "正規表示式"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
