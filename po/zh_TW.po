@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-10-25 22:51+0000\n"
+"PO-Revision-Date: 2018-10-28 00:00+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/terminal-app/zh_Hant/>\n"
@@ -158,7 +158,7 @@ msgstr "ENTER"
 
 #: ../src/app/qml/LayoutsPage.qml:27 ../src/app/qml/SettingsPage.qml:44
 msgid "Layouts"
-msgstr "版面"
+msgstr "佈局"
 
 #: ../src/app/qml/LoginPage.qml:28 ../src/app/qml/SettingsPage.qml:119
 msgid "Login"
@@ -227,11 +227,11 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr "CRT復古終端"
+msgstr "CRT復古終端主題"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
-msgstr "深色粉彩/ Ubuntu（舊）"
+msgstr "深色粉彩/Ubuntu（舊）"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Black on light yellow"
@@ -278,7 +278,7 @@ msgstr "複製電子郵子位址"
 msgid ""
 "No keyboard translator available.  The information needed to convert key "
 "presses into characters to send to the terminal is missing."
-msgstr "沒有可用的鍵盤轉換器。缺少要將鍵盤輸入的字元轉換並送到終端機的資訊。"
+msgstr "沒有可用的鍵盤轉換器。 缺少將按鍵轉換為字元發送到終端所需的資訊。"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:39
 msgid "Match case"
@@ -286,7 +286,7 @@ msgstr "區分大小寫"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:45
 msgid "Regular expression"
-msgstr "正規表示式"
+msgstr "正規表示法"
 
 #: ../src/plugin/qmltermwidget/lib/SearchBar.cpp:49
 msgid "Higlight all matches"
@@ -299,7 +299,7 @@ msgstr "色彩方案錯誤"
 #: ../src/plugin/qmltermwidget/lib/qtermwidget.cpp:406
 #, qt-format
 msgid "Cannot load color scheme: %1"
-msgstr "無法載入色彩方案：%1"
+msgstr "無法載入色彩方案:%1"
 
 #: com.ubuntu.terminal.desktop.in.in.h:1
 msgid "Terminal"
