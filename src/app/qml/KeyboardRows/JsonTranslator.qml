@@ -48,16 +48,16 @@ QtObject {
         case shortName:
             var translation = "";
             if (id === "ctrl_keys") {
-                // TRANSLATORS: This the short display name of a keyboard layout.
+                // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
                 translation = i18n.tr("Ctrl");
             } else if (id === "fn_keys") {
-                // TRANSLATORS: This the short display name of a keyboard layout.
+                // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
                 translation = i18n.tr("Fn");
             } else if (id === "scroll_keys") {
-                // TRANSLATORS: This the short display name of a keyboard layout.
+                // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
                 translation = i18n.tr("Scr");
             } else if (id === "simple_cmds") {
-                // TRANSLATORS: This the short display name of a keyboard layout.
+                // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
                 translation = i18n.tr("Cmd");
             }
 
