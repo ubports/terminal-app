@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-10-28 00:00+0000\n"
+"PO-Revision-Date: 2018-11-11 00:02+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/terminal-app/zh_Hant/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -227,7 +227,7 @@ msgstr "Linux"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Cool retro term"
-msgstr "CRT復古終端主題"
+msgstr "復古終端主題"
 
 #: ../src/app/qml/ubuntu-terminal-app.qml:130
 msgid "Dark pastels / Ubuntu (old)"
