@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-07-22 00:00+0000\n"
-"Last-Translator: Joachim Lazaroms <joachim.pc@gmail.com>\n"
-"Language-Team: Dutch <https://translate.ubports.com/projects/ubports"
-"/terminal-app/nl/>\n"
+"PO-Revision-Date: 2018-11-11 13:06+0000\n"
+"Last-Translator: Sander <sander.k1007@kpnmail.nl>\n"
+"Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
+"terminal-app/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.17\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -46,7 +46,7 @@ msgstr "Toegangscode of wachtwoord-zin"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "OK"
+msgstr "Oké"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oké"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
