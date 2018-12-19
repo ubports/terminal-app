@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-05-12 16:31+0000\n"
-"Last-Translator: Simone <19simok89@gmail.com>\n"
-"Language-Team: Italian <https://translate.ubports.com/projects/ubports"
-"/terminal-app/it/>\n"
+"PO-Revision-Date: 2018-12-23 00:00+0000\n"
+"Last-Translator: Mike <miguel2000@livecom.it>\n"
+"Language-Team: Italian <https://translate.ubports.com/projects/ubports/"
+"terminal-app/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -46,7 +46,7 @@ msgstr "codice o frase segreta"
 
 #: ../src/app/qml/AuthenticationDialog.qml:61
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
