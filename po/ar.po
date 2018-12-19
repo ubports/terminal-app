@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-02-03 08:56+0000\n"
-"Last-Translator: ubports_arabic <ubportsarabic@gmail.com>\n"
-"Language-Team: Arabic <https://translate.ubports.com/projects/ubports"
-"/terminal-app/ar/>\n"
+"PO-Revision-Date: 2018-12-23 00:00+0000\n"
+"Last-Translator: Hussain Hashem Aljafri <baddea14@gmail.com>\n"
+"Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
+"terminal-app/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
@@ -51,7 +51,7 @@ msgstr "موافق"
 
 #: ../src/app/qml/AuthenticationDialog.qml:73
 msgid "Cancel"
-msgstr "ألغاء"
+msgstr "إلغاء;الإلغاء"
 
 #: ../src/app/qml/AuthenticationService.qml:60
 msgid "Authentication failed"
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr "تمام"
+msgstr "موافق"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
