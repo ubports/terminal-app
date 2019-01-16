@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: ubuntu-terminal-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-08-08 12:47+0200\n"
-"PO-Revision-Date: 2018-05-25 00:21+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
-"Language-Team: Swedish <https://translate.ubports.com/projects/ubports"
-"/terminal-app/sv/>\n"
+"PO-Revision-Date: 2018-12-26 11:01+0000\n"
+"Last-Translator: Rondy Andersson <rondarius@gmail.com>\n"
+"Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
+"terminal-app/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2016-02-08 05:36+0000\n"
 
 #: ../src/app/qml/AlternateActionPopover.qml:13
 msgid "Select"
-msgstr "Markera"
+msgstr "Välj"
 
 #: ../src/app/qml/AlternateActionPopover.qml:17
 msgid "Copy"
@@ -174,7 +174,7 @@ msgstr ""
 
 #: ../src/app/qml/NotifyDialog.qml:25
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../src/app/qml/SettingsPage.qml:27
 msgid "Settings"
