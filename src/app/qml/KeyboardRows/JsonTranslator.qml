@@ -49,16 +49,16 @@ QtObject {
             var translation = "";
             if (id === "ctrl_keys") {
                 // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-                translation = i18n.tr("CTRL");
+                translation = i18n.tr("Ctrl");
             } else if (id === "fn_keys") {
                 // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-                translation = i18n.tr("FNS");
+                translation = i18n.tr("Fn");
             } else if (id === "scroll_keys") {
                 // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-                translation = i18n.tr("SCR");
+                translation = i18n.tr("Scr");
             } else if (id === "simple_cmds") {
                 // TRANSLATORS: This the short display name of a keyboard layout. It should be no longer than 4 characters!
-                translation = i18n.tr("CMD");
+                translation = i18n.tr("Cmd");
             }
 
             if (translation !== "") {
@@ -74,14 +74,14 @@ QtObject {
         case modifier:
             var translation = "";
             if (id === "Control") {
-                // TRANSLATORS: This is the name of the Control key. All letters should be uppercase!
+                // TRANSLATORS: This is the name of the Control key.
                 translation = i18n.tr("CTRL");
             } else if (id === "Alt") {
-                // TRANSLATORS: This is the name of the Alt key. All letters should be uppercase!
-                translation = i18n.tr("ALT");
+                // TRANSLATORS: This is the name of the Alt key.
+                translation = i18n.tr("Alt");
             } else if (id === "Shift") {
-                // TRANSLATORS: This is the name of the Shift key. All letters should be uppercase!
-                translation = i18n.tr("SHIFT");
+                // TRANSLATORS: This is the name of the Shift key.
+                translation = i18n.tr("Shift");
             }
 
             if (translation !== "") {
@@ -93,34 +93,29 @@ QtObject {
         case key:
             var translation = "";
             if (id === "esc_key") {
-                // TRANSLATORS: This is the name of the Escape key. All letters should be uppercase!
-                translation = i18n.tr("ESC");
+                // TRANSLATORS: This is the name of the Escape key.
+                translation = i18n.tr("Esc");
             } else if (id === "pg_up_key") {
-                // TRANSLATORS: This is the name of the Page Up key. All letters should be uppercase!
-                translation = i18n.tr("PG_UP");
+                // TRANSLATORS: This is the name of the Page Up key.
+                translation = i18n.tr("PgUp");
             } else if (id === "pg_dn_key") {
-                // TRANSLATORS: This is the name of the Page Down key. All letters should be uppercase!
-                translation = i18n.tr("PG_DN");
+                // TRANSLATORS: This is the name of the Page Down key.
+                translation = i18n.tr("PgDn");
             } else if (id === "del_key") {
-                // TRANSLATORS: This is the name of the Delete key. All letters should be uppercase!
-                translation = i18n.tr("DEL");
+                // TRANSLATORS: This is the name of the Delete key.
+                translation = i18n.tr("Del");
             } else if (id === "home_key") {
-                // TRANSLATORS: This is the name of the Home key. All letters should be uppercase!
-                translation = i18n.tr("HOME");
+                // TRANSLATORS: This is the name of the Home key.
+                translation = i18n.tr("Home");
             } else if (id === "end_key") {
-                // TRANSLATORS: This is the name of the End key. All letters should be uppercase!
-                translation = i18n.tr("END");
+                // TRANSLATORS: This is the name of the End key.
+                translation = i18n.tr("End");
             } else if (id === "tab_key") {
-                // TRANSLATORS: This is the name of the Tab key. All letters should be uppercase!
-                translation = i18n.tr("TAB");
+                // TRANSLATORS: This is the name of the Tab key.
+                translation = i18n.tr("Tab");
             } else if (id === "enter_key") {
-                // TRANSLATORS: This is the name of the Enter key. All letters should be uppercase!
-                translation = i18n.tr("ENTER");
-            }
-
-            if (translation !== "") {
-                // Always return the translation in uppercase letters
-                return translation.toUpperCase();
+                // TRANSLATORS: This is the name of the Enter key.
+                translation = i18n.tr("Enter");
             }
 
             return id;

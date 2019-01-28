@@ -75,7 +75,7 @@ FocusScope {
         Label {
             Layout.minimumWidth: units.gu(16)
             verticalAlignment: Text.AlignVCenter
-            text: shortcutEditor.editing ? i18n.tr("Enter shortcut...")
+            text: shortcutEditor.editing ? i18n.tr("Enter shortcut…")
                                          : (shortcutEditor.sequence ? shortcutEditor.label
                                                                     : i18n.tr("Disabled"))
             elide: Text.ElideRight
